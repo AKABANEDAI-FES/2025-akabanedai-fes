@@ -2,6 +2,7 @@
   "recommendations": [
     "biomejs.biome",
     "editorconfig.editorconfig",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "mizdra.css-modules-kit-vscode"
   ]
 }
