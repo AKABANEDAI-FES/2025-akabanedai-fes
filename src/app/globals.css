@@ -4,42 +4,54 @@
 
 @layer base {
   :root {
-    :root {
-      /* ---------- Primitive: Grayscale (light -> dark) ---------- */
-      --color-gray-1: #fff;
-      --color-gray-2: #dbdbdb;
-      --color-gray-3: #b6b6b6;
-      --color-gray-4: #929292;
-      --color-gray-5: #6d6d6d;
-      --color-gray-6: #494949;
-      --color-gray-7: #242424;
-      --color-gray-8: #000;
+    /* ---------- Primitive: Grayscale (light -> dark) ---------- */
+    --color-gray-1: #fff;
+    --color-gray-2: #dbdbdb;
+    --color-gray-3: #b6b6b6;
+    --color-gray-4: #929292;
+    --color-gray-5: #6d6d6d;
+    --color-gray-6: #494949;
+    --color-gray-7: #242424;
+    --color-gray-8: #000;
 
-      /* ---------- Primitive: Accent (light -> dark) ---------- */
-      --color-accent-1: #d0d2f0;
-      --color-accent-2: #b1b4e7;
-      --color-accent-3: #777cd4;
-      --color-accent-4: #3d44c2;
-      --color-accent-5: #2b2f88;
-      --color-accent-6: #191c4f; /* default */
-      --color-accent-7: #151742;
-      --color-accent-8: #111336;
+    /* ---------- Primitive: Accent (light -> dark) ---------- */
+    --color-accent-1: #d0d2f0;
+    --color-accent-2: #b1b4e7;
+    --color-accent-3: #777cd4;
+    --color-accent-4: #3d44c2;
+    --color-accent-5: #2b2f88;
+    --color-accent-6: #191c4f; /* default */
+    --color-accent-7: #151742;
+    --color-accent-8: #111336;
 
-      /* ---------- Semantic: Foreground ---------- */
-      --fg-default: var(--color-gray-8);
-      --fg-muted: var(--color-gray-5);
+    /* ---------- Semantic: Foreground ---------- */
+    --fg-default: var(--color-gray-8);
+    --fg-muted: var(--color-gray-5);
 
-      /* ---------- Semantic: Background ---------- */
-      --bg-default: var(--color-gray-1);
-      --bg-muted: var(--color-gray-2);
+    /* ---------- Semantic: Background ---------- */
+    --bg-default: var(--color-gray-1);
+    --bg-muted: var(--color-gray-2);
 
-      /* ---------- Semantic: Accent ---------- */
-      --accent-default: var(--color-accent-6);
+    /* ---------- Semantic: Accent ---------- */
+    --accent-default: var(--color-accent-6);
+    --accent-fg: var(--color-gray-1);
 
-      /* ---------- Semantic: Border ---------- */
-      --border-default: var(--color-gray-3);
-      --border-muted: var(--color-gray-2);
-    }
+    /* ---------- Semantic: Border ---------- */
+    --border-default: var(--color-gray-3);
+    --border-muted: var(--color-gray-2);
+
+    /* ---------- Spacing ---------- */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* ---------- Border Radius ---------- */
+    --radius-l1: 0.25rem;
+    --radius-l2: 0.5rem;
+    --radius-l3: 0.75rem;
+    --radius-full: 9999px;
   }
 
   html,
