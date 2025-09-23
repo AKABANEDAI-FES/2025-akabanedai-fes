@@ -6,10 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
+    "lint": "run-p lint:*",
     "lint:biome": "biome check",
-    "lint:style": "stylelint '**/*.{css}'",
+    "lint:style": "stylelint '**/*.css'",
+    "format": "run-p format:*",
     "format:biome": "biome format --write",
-    "format:style": "stylelint '**/*.{css}' --fix"
+    "format:style": "stylelint '**/*.css' --fix"
   },
   "dependencies": {
     "next": "15.5.3",
@@ -21,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "npm-run-all2": "^8.0.4",
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",
     "typescript": "^5"
