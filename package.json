@@ -11,7 +11,7 @@
     "lint:biome": "biome check",
     "lint:style": "stylelint '**/*.css'",
     "format": "run-p format:*",
-    "format:biome": "biome format --write",
+    "format:biome": "biome check --write",
     "format:style": "stylelint '**/*.css' --fix"
   },
   "dependencies": {
