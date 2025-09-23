@@ -13,6 +13,15 @@
     --color-gray-6: #494949;
     --color-gray-7: #242424;
     --color-gray-8: #000;
+    --color-gray-a1: #0000001a;
+    --color-gray-a2: #0003;
+    --color-gray-a3: #0000004d;
+    --color-gray-a4: #0006;
+    --color-gray-a5: #00000080;
+    --color-gray-a6: #0009;
+    --color-gray-a7: #000000b2;
+    --color-gray-a8: #000c;
+    --color-gray-a9: #000000e6;
 
     /* ---------- Primitive: Accent (light -> dark) ---------- */
     --color-accent-1: #d0d2f0;
@@ -23,6 +32,15 @@
     --color-accent-6: #191c4f; /* default */
     --color-accent-7: #151742;
     --color-accent-8: #111336;
+    --color-accent-a1: #191c4f1a;
+    --color-accent-a2: #191c4f33;
+    --color-accent-a3: #191c4f4d;
+    --color-accent-a4: #191c4f66;
+    --color-accent-a5: #191c4f80;
+    --color-accent-a6: #191c4f99;
+    --color-accent-a7: #191c4fb2;
+    --color-accent-a8: #191c4fcc;
+    --color-accent-a9: #191c4fe6;
 
     /* ---------- Semantic: Foreground ---------- */
     --fg-default: var(--color-gray-8);
@@ -52,6 +70,17 @@
     --radius-l2: 0.5rem;
     --radius-l3: 0.75rem;
     --radius-full: 9999px;
+
+    /* ---------- Shadows ---------- */
+    --shadow-xs:
+      0 1px 2px var(--color-gray-a2), 0 0.5px 0.5px var(--color-gray-a2);
+    --shadow-sm:
+      0 1px 3px var(--color-gray-a2), 0 1px 1.5px var(--color-gray-a2);
+    --shadow-md: 0 2px 6px var(--color-gray-a2), 0 1px 3px var(--color-gray-a3);
+    --shadow-lg:
+      0 6px 12px var(--color-gray-a2), 0 2px 6px var(--color-gray-a3);
+    --shadow-xl:
+      0 12px 24px var(--color-gray-a2), 0 4px 12px var(--color-gray-a3);
   }
 
   html,

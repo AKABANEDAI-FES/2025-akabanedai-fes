@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  background-color: var(--accent-default);
+  color: var(--accent-fg);
+  border-radius: var(--radius-full);
+  padding: var(--space-md) var(--space-lg);
+  padding-right: var(--space-xl);
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
+
+.symbol {
+  color: var(--accent-fg);
+}
+
+.navigation {
+  margin-left: auto;
+}
+
+.navigationList {
+  list-style: none;
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.navigationItem[aria-disabled="true"] {
+  opacity: 0.7;
+}
