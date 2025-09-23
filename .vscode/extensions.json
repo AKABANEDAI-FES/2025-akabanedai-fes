@@ -3,6 +3,7 @@
     "biomejs.biome",
     "editorconfig.editorconfig",
     "stylelint.vscode-stylelint",
-    "mizdra.css-modules-kit-vscode"
+    "mizdra.css-modules-kit-vscode",
+    "phoenisx.cssvar"
   ]
 }
