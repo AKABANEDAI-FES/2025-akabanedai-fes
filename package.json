@@ -28,6 +28,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "npm-run-all2": "^8.0.4",
+    "postcss-header": "^3.0.3",
+    "postcss-import": "^16.1.1",
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",
     "typescript": "^5"
