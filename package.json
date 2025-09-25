@@ -9,10 +9,10 @@
     "start": "next start",
     "lint": "run-p lint:*",
     "lint:biome": "biome check",
-    "lint:style": "stylelint '**/*.css'",
+    "lint:style": "stylelint '**/*.css' --ignore-path .gitignore",
     "format": "run-p format:*",
     "format:biome": "biome check --write",
-    "format:style": "stylelint '**/*.css' --fix"
+    "format:style": "stylelint '**/*.css' --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "next": "15.5.3",
