@@ -1,13 +1,9 @@
 import Link from "next/link";
 import SymbolIcon from "@/assets/symbol.svg";
+import { Text } from "../ui/text";
 import styles from "./header.module.css";
 
-type NavItem = {
-  label: string;
-  href?: string;
-};
-
-const navItems: NavItem[] = [
+const navItems = [
   { label: "企画情報" },
   { label: "赤羽台祭について" },
   { label: "公式コンテンツ" },
@@ -25,14 +21,10 @@ export function Header() {
           {navItems.map((item) => (
             <li
               key={item.label}
-              aria-disabled={!item.href}
               className={styles.navigationItem}
+              aria-disabled
             >
-              {item.href ? (
-                <Link href={item.href}>{item.label}</Link>
-              ) : (
-                <span>{item.label}</span>
-              )}
+              <Text as="span">{item.label}</Text>
             </li>
           ))}
         </ul>
