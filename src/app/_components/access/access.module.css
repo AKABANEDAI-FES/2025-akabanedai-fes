@@ -1,0 +1,64 @@
+.access {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.accessContent {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  flex-direction: column-reverse;
+}
+
+.accessInfo {
+  flex: 1;
+}
+
+.entranceImage {
+  margin-bottom: var(--space-md);
+  display: none;
+}
+
+.transportItem {
+  position: relative;
+  padding-left: var(--space-lg);
+  font-feature-settings: "palt";
+}
+
+.transportItem::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+}
+
+.notice {
+  padding-left: var(--space-lg);
+  position: relative;
+}
+
+.notice::before {
+  content: "※";
+  position: absolute;
+  left: 0;
+}
+
+.mapImage {
+  flex: 1;
+}
+
+@media (width >= 48rem) {
+  .access {
+    gap: var(--space-xl);
+  }
+
+  .accessContent {
+    flex-direction: row;
+    gap: var(--space-3xl);
+  }
+
+  .entranceImage {
+    display: block;
+  }
+}

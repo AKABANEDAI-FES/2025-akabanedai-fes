@@ -1,0 +1,127 @@
+.theme {
+  max-width: var(--size-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  gap: var(--space-sm);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto 5fr auto;
+  width: var(--size-full);
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.header h2 {
+  font-size: var(--font-size-md);
+}
+
+.star {
+  color: var(--accent-default);
+  stroke-width: 2px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.divider {
+  background-color: var(--accent-default);
+}
+
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  width: var(--size-full);
+  align-items: center;
+  gap: var(--space-md);
+  line-height: var(--line-heights-tight);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  font-feature-settings: "palt";
+}
+
+.description {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-md);
+  text-align: center;
+  font-weight: var(--font-weight-light);
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 2s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 2s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 1px solid var(--accent-default);
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.highlight[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight[data-visible="true"]::after {
+  animation: rippleEffect 2s linear forwards;
+}
+
+@media (width >= 48rem) {
+  .header h2 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .star {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .divider {
+    height: 2px;
+  }
+
+  .title {
+    font-size: var(--font-size-8xl);
+  }
+
+  .description {
+    margin-top: var(--space-lg);
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  50% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
