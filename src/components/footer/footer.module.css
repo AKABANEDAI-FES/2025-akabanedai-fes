@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  color: var(--accent-fg);
+  background-color: var(--accent-default);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  column-gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.sns {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent-fg);
+}
