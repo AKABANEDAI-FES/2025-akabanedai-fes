@@ -1,0 +1,15 @@
+@layer components {
+  .divider {
+    background-color: var(--fg-default);
+  }
+
+  .horizontal {
+    height: 1px;
+    width: var(--size-full);
+  }
+
+  .vertical {
+    width: 1px;
+    height: var(--size-full);
+  }
+}

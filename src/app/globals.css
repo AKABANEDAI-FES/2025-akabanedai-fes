@@ -1,4 +1,4 @@
-@layer reset, base;
+@layer reset, base, components;
 
 @import url("reset.css") layer(reset);
 
@@ -42,6 +42,25 @@
     --color-accent-a8: #191c4fcc;
     --color-accent-a9: #191c4fe6;
 
+    /* ---------- Primitive: Complementary ---------- */
+    --color-complementary-1: #fffbf0;
+    --color-complementary-2: #fff5db;
+    --color-complementary-3: #ffebb8;
+    --color-complementary-4: #ffe194;
+    --color-complementary-5: #ffe194;
+    --color-complementary-6: #ffcd4d; /* default */
+    --color-complementary-7: #ffbe1a;
+    --color-complementary-8: #e6a400;
+    --color-complementary-a1: #ffcd4d1a;
+    --color-complementary-a2: #ffcd4d33;
+    --color-complementary-a3: #ffcd4d4d;
+    --color-complementary-a4: #ffcd4d66;
+    --color-complementary-a5: #ffcd4d80;
+    --color-complementary-a6: #ffcd4d99;
+    --color-complementary-a7: #ffcd4db2;
+    --color-complementary-a8: #ffcd4dcc;
+    --color-complementary-a9: #ffcd4de6;
+
     /* ---------- Semantic: Foreground ---------- */
     --fg-default: var(--color-gray-8);
     --fg-muted: var(--color-gray-5);
@@ -64,6 +83,13 @@
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+    --space-6xl: 12rem;
+    --space-7xl: 16rem;
+    --space-8xl: 24rem;
 
     /* ---------- Border Radius ---------- */
     --radius-l1: 0.25rem;
@@ -81,6 +107,69 @@
       0 6px 12px var(--color-gray-a2), 0 2px 6px var(--color-gray-a3);
     --shadow-xl:
       0 12px 24px var(--color-gray-a2), 0 4px 12px var(--color-gray-a3);
+
+    /* ---------- Size ---------- */
+    --size-xs: 20rem;
+    --size-sm: 24rem;
+    --size-md: 28rem;
+    --size-lg: 32rem;
+    --size-xl: 36rem;
+    --size-2xl: 42rem;
+    --size-3xl: 48rem;
+    --size-4xl: 56rem;
+    --size-5xl: 64rem;
+    --size-6xl: 72rem;
+    --size-7xl: 80rem;
+    --size-8xl: 90rem;
+    --size-full: 100%;
+
+    /* Font Family */
+    --font-sans-jp:
+      "Hiragino Kaku Gothic ProN",
+      "Hiragino Sans",
+      "Noto Sans JP",
+      "Noto Sans CJK JP",
+      -apple-system,
+      blinkmacsystemfont,
+      "Segoe UI",
+      roboto,
+      "Helvetica Neue",
+      arial,
+      "Yu Gothic UI",
+      meiryo,
+      sans-serif;
+
+    /* ---------- Font ---------- */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
+    --font-size-8xl: 6rem;
+
+    /* ---------- Font Weight ---------- */
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* ---------- Line Height ---------- */
+    --line-heights-none: 1;
+    --line-heights-tight: 1.25;
+    --line-heights-normal: 1.5;
+    --line-heights-relaxed: 1.75;
+    --line-heights-loose: 2;
   }
 
   html,
@@ -88,5 +177,6 @@
     background-color: var(--bg-default);
     color: var(--fg-default);
     min-height: 100dvh;
+    font-family: var(--font-sans-jp);
   }
 }

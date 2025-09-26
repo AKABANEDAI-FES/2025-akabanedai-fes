@@ -1,0 +1,11 @@
+@layer components {
+  .text {
+    font-size: var(--font-size-sm);
+  }
+
+  @media (width >= 48rem) {
+    .text {
+      font-size: var(--font-size-md);
+    }
+  }
+}

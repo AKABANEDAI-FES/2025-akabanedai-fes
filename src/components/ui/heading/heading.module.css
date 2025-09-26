@@ -1,0 +1,21 @@
+@layer components {
+  .primary {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .secondary {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  @media (width >= 48rem) {
+    .primary {
+      font-size: var(--font-size-4xl);
+    }
+
+    .secondary {
+      font-size: var(--font-size-xl);
+    }
+  }
+}
