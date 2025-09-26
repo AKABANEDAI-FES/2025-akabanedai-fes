@@ -25,4 +25,5 @@
 
 .navigationItem[aria-disabled="true"] {
   opacity: 0.7;
+  pointer-events: none;
 }
