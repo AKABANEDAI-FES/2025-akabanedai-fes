@@ -1,0 +1,50 @@
+.parallax {
+  --perspective: 800px;
+
+  perspective: var(--perspective);
+  height: 100dvh;
+  overflow: hidden auto;
+  transform-style: preserve-3d;
+  display: grid;
+}
+
+.content,
+.layer {
+  grid-area: 1 / 1;
+}
+
+.content {
+  transform: translateZ(0);
+  z-index: 1;
+}
+
+.layer {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.layerScene {
+  --step: 200px;
+  --depth: calc(var(--parallax-layer) * var(--step));
+
+  transform: translateZ(var(--depth));
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 30vmin;
+  width: 30vmin;
+}
+
+.item {
+  border: 4px solid var(--accent-default);
+  border-radius: var(--radius-full);
+  filter: blur(2px);
+  height: var(--size-full);
+  width: var(--size-full);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer {
+    display: none;
+  }
+}
