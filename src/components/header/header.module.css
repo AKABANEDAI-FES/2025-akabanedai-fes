@@ -1,3 +1,11 @@
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-inline: var(--space-md);
+  padding-top: var(--space-sm);
+}
+
 .header {
   display: flex;
   background-color: var(--accent-default);

@@ -12,23 +12,25 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className={styles.header}>
-      <Link href="/" aria-label="赤羽台祭 ホームへ">
-        <SymbolIcon className={styles.symbol} />
-      </Link>
-      <nav className={styles.navigation}>
-        <ul className={styles.navigationList}>
-          {navItems.map((item) => (
-            <li
-              key={item.label}
-              className={styles.navigationItem}
-              aria-disabled
-            >
-              <Text as="span">{item.label}</Text>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <Link href="/" aria-label="赤羽台祭 ホームへ">
+          <SymbolIcon className={styles.symbol} />
+        </Link>
+        <nav className={styles.navigation}>
+          <ul className={styles.navigationList}>
+            {navItems.map((item) => (
+              <li
+                key={item.label}
+                className={styles.navigationItem}
+                aria-disabled
+              >
+                <Text as="span">{item.label}</Text>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+    </div>
   );
 }
