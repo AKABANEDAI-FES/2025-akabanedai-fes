@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { JSX } from "react";
 import styles from "./parallax.module.css";
 
 type ParallaxItem = {
@@ -26,29 +26,33 @@ const PARALLAX_ITEMS: ParallaxItem[] = [
   { top: "65%", left: "20%", layer: 2 },
 ];
 
-interface Props {
-  children?: ReactNode;
-  className?: string;
+export type RootProps = JSX.IntrinsicElements["div"];
+
+export function Root({ className, ...props }: RootProps) {
+  return <div className={clsx(styles.parallax, className)} {...props} />;
 }
 
-export function Parallax({ children, className, ...props }: Props) {
+export function Layer() {
   return (
-    <div className={clsx(styles.parallax, className)} {...props}>
-      <div className={styles.layer}>
-        {PARALLAX_ITEMS.map(({ top, left, layer }, index) => (
-          <div
-            // biome-ignore lint/suspicious/noArrayIndexKey: static array
-            key={index}
-            className={styles.layerScene}
-            style={
-              { top, left, "--parallax-layer": layer } as React.CSSProperties
-            }
-          >
-            <div className={styles.item} />
-          </div>
-        ))}
-      </div>
-      <div className={styles.content}>{children}</div>
+    <div className={styles.layer}>
+      {PARALLAX_ITEMS.map(({ top, left, layer }, index) => (
+        <div
+          // biome-ignore lint/suspicious/noArrayIndexKey: static array
+          key={index}
+          className={styles.layerScene}
+          style={
+            { top, left, "--parallax-layer": layer } as React.CSSProperties
+          }
+        >
+          <div className={styles.item} />
+        </div>
+      ))}
     </div>
   );
+}
+
+export type ContentProps = JSX.IntrinsicElements["div"];
+
+export function Content({ className, ...props }: ContentProps) {
+  return <div className={styles.content} {...props} />;
 }
