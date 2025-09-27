@@ -1,0 +1,23 @@
+.container {
+  padding-block: var(--space-xl);
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.overlay {
+  grid-area: 1 / 1;
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.overlay > * {
+  pointer-events: auto;
+}
+
+@media (width >= 48rem) {
+  .container {
+    padding-block: var(--space-4xl);
+    gap: var(--space-4xl);
+  }
+}
