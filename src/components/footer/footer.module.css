@@ -5,7 +5,7 @@
   gap: var(--space-xl);
   color: var(--accent-fg);
   background-color: var(--accent-default);
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-3xl) var(--space-md);
 }
 
 .contact {
