@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./access.module.css";
-import map from "./map.png";
+import map from "./map.webp";
 
 export function Access() {
   return (
@@ -42,7 +42,12 @@ export function Access() {
             お車でのご来場はご遠慮ください。
           </Text>
         </div>
-        <Image src={map} alt="会場地図" className={styles.mapImage} />
+        <Image
+          src={map}
+          alt="会場地図"
+          className={styles.mapImage}
+          width={350}
+        />
       </div>
     </section>
   );
