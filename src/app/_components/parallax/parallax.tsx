@@ -32,9 +32,11 @@ export function Root({ className, ...props }: RootProps) {
   return <div className={clsx(styles.parallax, className)} {...props} />;
 }
 
-export function Layer() {
+export type LayerProps = JSX.IntrinsicElements["div"];
+
+export function Layer({ className, ...props }: LayerProps) {
   return (
-    <div className={styles.layer}>
+    <div className={clsx(styles.layer, className)} {...props}>
       {PARALLAX_ITEMS.map(({ top, left, layer }, index) => (
         <div
           // biome-ignore lint/suspicious/noArrayIndexKey: static array
@@ -54,5 +56,5 @@ export function Layer() {
 export type ContentProps = JSX.IntrinsicElements["div"];
 
 export function Content({ className, ...props }: ContentProps) {
-  return <div className={styles.content} {...props} />;
+  return <div className={clsx(styles.content, className)} {...props} />;
 }

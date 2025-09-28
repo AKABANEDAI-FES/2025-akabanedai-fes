@@ -1,7 +1,11 @@
+import clsx from "clsx";
 import Link from "next/link";
+import type { JSX } from "react";
 import SymbolIcon from "@/assets/symbol.svg";
 import { Text } from "../ui/text";
 import styles from "./header.module.css";
+
+export type Props = Omit<JSX.IntrinsicElements["div"], "children">;
 
 const navItems = [
   { label: "企画情報" },
@@ -10,9 +14,9 @@ const navItems = [
   { label: "ご来場の皆様へ" },
 ];
 
-export function Header() {
+export function Header({ className, ...props }: Props) {
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, className)} {...props}>
       <header className={styles.header}>
         <Link href="/" aria-label="赤羽台祭 ホームへ">
           <SymbolIcon className={styles.symbol} />

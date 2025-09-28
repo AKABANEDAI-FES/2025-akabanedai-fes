@@ -4,6 +4,7 @@
   z-index: 10;
   padding-inline: var(--space-md);
   padding-top: var(--space-sm);
+  display: none;
 }
 
 .header {
@@ -34,4 +35,10 @@
 .navigationItem[aria-disabled="true"] {
   opacity: 0.7;
   pointer-events: none;
+}
+
+@media (width >= 48rem) {
+  .container {
+    display: block;
+  }
 }
