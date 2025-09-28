@@ -5,9 +5,10 @@
   "scripts": {
     "gen": "cmk",
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "run-p -c gen build:*",
+    "build:next": "next build --turbopack",
     "start": "next start",
-    "lint": "run-p lint:*",
+    "lint": "run-p -c gen lint:*",
     "lint:biome": "biome check",
     "lint:style": "stylelint '**/*.css' --ignore-path .gitignore",
     "format": "run-p format:*",
