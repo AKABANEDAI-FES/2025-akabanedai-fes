@@ -1,0 +1,205 @@
+.container {
+  --backdrop-in: 400ms;
+  --backdrop-out: 350ms;
+  --content-delay: calc(var(--backdrop-in) - 100ms);
+  --content-in: 400ms;
+  --content-out: 150ms;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding-inline: var(--space-md);
+  padding-top: var(--space-sm);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top {
+  background-color: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(2px);
+  border-radius: var(--radius-full);
+  padding: var(--space-xs);
+}
+
+.top > svg {
+  height: 2em;
+  width: 2em;
+  color: var(--accent-default);
+}
+
+.container > * {
+  pointer-events: auto;
+}
+
+.menuButton {
+  background-color: var(--accent-default);
+  border-radius: var(--radius-full);
+  padding: var(--space-sm);
+  color: var(--accent-fg);
+  display: grid;
+  place-items: center;
+  place-content: center;
+  z-index: 10;
+  position: relative;
+}
+
+.menuButton > svg {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-default);
+  z-index: 1;
+  clip-path: circle(0 at var(--cx, 50%) var(--cy, 50%));
+  will-change: clip-path;
+  pointer-events: auto;
+}
+
+.backdrop[data-state="open"] {
+  animation: circleReveal var(--backdrop-in) ease-out forwards;
+}
+
+.backdrop[data-state="closed"] {
+  animation: circleHide var(--backdrop-out) ease-in forwards;
+  pointer-events: none;
+}
+
+.positioner {
+  position: fixed;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.content {
+  width: var(--size-full);
+  height: var(--size-full);
+  display: grid;
+  place-items: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(64px);
+  will-change: transform, opacity;
+}
+
+.content[hidden] {
+  display: none;
+}
+
+.content[data-state="open"] {
+  animation: slideIn var(--content-in) cubic-bezier(0.2, 0.8, 0.2, 1)
+    var(--content-delay) forwards;
+}
+
+.content[data-state="closed"] {
+  animation: slideOut var(--content-out) ease-in forwards;
+}
+
+.accordionTrigger {
+  font-size: var(--font-size-xl);
+  color: var(--accent-fg);
+  display: flex;
+  gap: var(--space-md);
+  width: var(--size-full);
+  align-items: center;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.accordionTrigger:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.accordionTrigger svg {
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 2px;
+}
+
+@keyframes circleReveal {
+  from {
+    clip-path: circle(0 at var(--cx, 50%) var(--cy, 50%));
+  }
+
+  to {
+    clip-path: circle(var(--maxr, 150vmax) at var(--cx, 50%) var(--cy, 50%));
+  }
+}
+
+@keyframes circleHide {
+  from {
+    clip-path: circle(var(--maxr, 150vmax) at var(--cx, 50%) var(--cy, 50%));
+  }
+
+  to {
+    clip-path: circle(0 at var(--cx, 50%) var(--cy, 50%));
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(64px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(64px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .backdrop[data-state="open"],
+  .backdrop[data-state="closed"] {
+    animation: none;
+    transition: none;
+    clip-path: none;
+  }
+
+  .content,
+  .content[data-state="open"],
+  .content[data-state="closed"] {
+    animation: none;
+  }
+
+  .content[data-state="open"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .content[data-state="closed"] {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@media (width >= 48rem) {
+  .container {
+    display: none;
+  }
+}

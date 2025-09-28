@@ -1,0 +1,37 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width="32" height="32"
+  stroke="currentColor" fill="none" stroke-linecap="round" stroke-width="2"
+  aria-expanded="false"
+  aria-hidden="true" role="img"
+>
+  <style>
+    :root{ --dur: 320ms; --ease: cubic-bezier(.4,0,.2,1); }
+    .line{
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      transition:
+        transform var(--dur) var(--ease),
+        opacity calc(var(--dur) * .6) var(--ease);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .line{ transition: none; }
+    }
+
+    [aria-expanded="true"] .top{
+      transform: translateY(6px) rotate(45deg);
+    }
+    [aria-expanded="true"] .middle{
+      opacity: 0;
+    }
+    [aria-expanded="true"] .bottom{
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  </style>
+
+  <line class="line top"    x1="3" y1="6"  x2="21" y2="6"  />
+  <line class="line middle" x1="3" y1="12" x2="21" y2="12" />
+  <line class="line bottom" x1="3" y1="18" x2="21" y2="18" />
+</svg>

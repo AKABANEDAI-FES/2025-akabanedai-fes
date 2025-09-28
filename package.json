@@ -15,6 +15,7 @@
     "format:style": "stylelint '**/*.css' --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@ark-ui/react": "^5.25.1",
     "clsx": "^2.1.1",
     "next": "15.5.3",
     "react": "19.1.0",

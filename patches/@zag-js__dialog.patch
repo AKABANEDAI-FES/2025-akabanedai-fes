@@ -1,0 +1,13 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index c36f2924cb0a010216f5328c2a0d34a4a1f52274..df0138763d965621540c00dde9a7faef0f07e2f7 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -268,7 +268,7 @@ var machine = createMachine({
+       },
+       hideContentBelow({ scope, prop }) {
+         if (!prop("modal")) return;
+-        const getElements = () => [getContentEl(scope)];
++        const getElements = () => [getContentEl(scope), ...(prop("persistentElements") ?? []).map((getEl) => getEl())];
+         return ariaHidden(getElements, { defer: true });
+       }
+     },
