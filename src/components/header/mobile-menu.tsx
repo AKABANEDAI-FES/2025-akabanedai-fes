@@ -57,13 +57,11 @@ export function MobileMenu() {
   }, []);
 
   useEffect(() => {
+    measure();
     const onResize = () => measure();
-    const onScroll = () => measure();
-    window.addEventListener("resize", onResize);
-    window.addEventListener("scroll", onScroll, true);
+    window.addEventListener("resize", onResize, true);
     return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("scroll", onScroll, true);
+      window.removeEventListener("resize", onResize, true);
     };
   }, [measure]);
 
