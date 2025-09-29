@@ -58,10 +58,9 @@ export function MobileMenu() {
 
   useEffect(() => {
     measure();
-    const onResize = () => measure();
-    window.addEventListener("resize", onResize, true);
+    window.addEventListener("resize", measure, true);
     return () => {
-      window.removeEventListener("resize", onResize, true);
+      window.removeEventListener("resize", measure, true);
     };
   }, [measure]);
 
