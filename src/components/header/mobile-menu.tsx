@@ -73,12 +73,12 @@ export function MobileMenu() {
       <Dialog.Root
         persistentElements={[() => triggerRef.current]}
         trapFocus={false}
+        onOpenChange={measure}
       >
         <Dialog.Trigger
           className={clsx(styles.menuButton)}
           aria-label="メニュー"
           ref={triggerRef}
-          onClickCapture={measure}
         >
           <Menu />
         </Dialog.Trigger>
