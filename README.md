@@ -1,36 +1,221 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 赤羽台祭 2025 公式サイト
 
-## Getting Started
+赤羽台祭の公式ウェブサイトです。
 
-First, run the development server:
+## 開発環境
+
+### 必要なソフトウェア
+
+- **Node.js**: v22
+- **pnpm**: v10
+
+### 使用技術
+
+- **Next.js 15.5.3** - App Router & Turbopack
+- **React 19.1.0** - TypeScript
+- **CSS Modules** - コンポーネントスタイリング
+- **Ark UI React** - アクセシブルUIコンポーネント
+- **Biome** - リンター・フォーマッター
+- **Stylelint** - CSSリンター
+
+## セットアップ方法
+
+### 1. リポジトリのクローン
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/AKABANEDAI-FES/2025-akabanedai-fes.git
+cd 2025-akabanedai-fes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 依存関係のインストール
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. 開発サーバーの起動
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてサイトを確認できます。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 開発コマンド
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 基本コマンド
 
-## Deploy on Vercel
+```bash
+# 開発サーバー起動（Turbopack使用）
+pnpm dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 本番ビルド
+pnpm build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 本番サーバー起動
+pnpm start
+```
+
+### コード品質
+
+```bash
+# 全てのリンターを実行
+pnpm lint
+
+# TypeScript/JavaScript のリント
+pnpm lint:biome
+
+# CSS のリント
+pnpm lint:style
+
+# 全てのフォーマット修正
+pnpm format
+
+# Biome でフォーマット修正
+pnpm format:biome
+
+# CSS フォーマット修正
+pnpm format:style
+```
+
+### コード生成
+
+```bash
+# CSS Modules の型定義生成
+pnpm gen
+```
+
+## プロジェクト構造
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── _components/        # ページ専用コンポーネント
+│   │   ├── access/         # アクセス情報
+│   │   ├── banner/         # ヒーローバナー
+│   │   ├── parallax/       # パララックス効果
+│   │   └── theme/          # テーマ設定
+│   ├── layout.tsx         # ルートレイアウト
+│   ├── page.tsx           # ホームページ
+│   ├── globals.css        # グローバルスタイル
+│   └── reset.css          # CSS リセット
+├── components/            # 再利用可能コンポーネント
+│   ├── header/           # ヘッダーナビゲーション
+│   ├── footer/           # フッター
+│   └── ui/               # 汎用UIコンポーネント
+└── assets/               # 静的アセット
+```
+
+## 開発ガイドライン
+
+### スタイリング
+
+- CSS Modules を使用し、クラス名は camelCase
+- レスポンシブデザインはモバイルファースト
+- CSS カスタムプロパティでテーマ管理
+
+### コンポーネント
+
+- 各コンポーネントは `component.tsx`, `component.module.css`, `index.ts` で構成
+- SVG アセットは SVGR で React コンポーネント化
+- パス `@/*` で `src/*` にアクセス可能
+
+## UIコンポーネント
+
+プロジェクトで使用可能な汎用UIコンポーネントの使い方です。
+
+### Container - レイアウトコンテナ
+
+コンテンツを中央に配置し、最大幅を制限するコンポーネント。
+
+```tsx
+import { Container } from "@/components/ui/container";
+
+// 基本的な使用方法
+<Container>
+  <p>中央に配置されたコンテンツ</p>
+</Container>
+
+// main要素として使用
+<Container as="main">
+  <h2>セクションタイトル</h2>
+</Container>
+```
+
+### Heading - 見出し
+
+統一されたスタイルの見出し要素を提供するコンポーネント。
+
+```tsx
+import { Heading } from "@/components/ui/heading";
+
+// メインタイトル（h1、primaryスタイル）
+<Heading as="h1">赤羽台祭 2025</Heading>
+
+// セクションタイトル（h2、secondaryスタイル）
+<Heading as="h2" variant="secondary">イベント情報</Heading>
+```
+
+### Text - テキスト
+
+統一されたテキストスタイルを提供するコンポーネント。
+
+```tsx
+import { Text } from "@/components/ui/text";
+
+// 基本的な段落テキスト
+<Text>これは基本的なテキストです。</Text>
+
+// span要素として使用
+<Text as="span">インライン要素として表示</Text>
+```
+
+### Divider - 区切り線
+
+コンテンツを視覚的に分離する区切り線コンポーネント。
+
+```tsx
+import { Divider } from "@/components/ui/divider";
+
+// 水平区切り線（デフォルト）
+<Divider />
+
+// 垂直区切り線
+<Divider variant="vertical" />
+```
+
+### VisuallyHidden - スクリーンリーダー専用
+
+視覚的には隠れているが、支援技術には読み上げられる要素。
+
+```tsx
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
+
+// ボタンの補足説明として
+<button>
+  <MenuIcon />
+  <VisuallyHidden>メニュー</VisuallyHidden>
+</button>
+```
+
+### ヘルパー関数
+
+各UIコンポーネントは、CSSクラス名を返すヘルパー関数も提供しています。
+
+```tsx
+import { container } from "@/components/ui/container";
+import { heading } from "@/components/ui/heading";
+import { text } from "@/components/ui/text";
+import { divider } from "@/components/ui/divider";
+
+// カスタムコンポーネントにスタイルを適用
+<div className={container()}>
+  <h2 className={heading({ variant: "primary" })}>タイトル</h2>
+  <p className={text()}>テキスト内容</p>
+  <hr className={divider({ variant: "horizontal" })} />
+</div>
+```
+
+## デプロイ
+
+本プロジェクトは GitHub Pages にデプロイされます。`main` ブランチへのプッシュで自動デプロイが実行されます。
