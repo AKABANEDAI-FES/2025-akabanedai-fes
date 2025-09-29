@@ -57,13 +57,10 @@ export function MobileMenu() {
   }, []);
 
   useEffect(() => {
-    const onResize = () => measure();
-    const onScroll = () => measure();
-    window.addEventListener("resize", onResize);
-    window.addEventListener("scroll", onScroll, true);
+    measure();
+    window.addEventListener("resize", measure, true);
     return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("scroll", onScroll, true);
+      window.removeEventListener("resize", measure, true);
     };
   }, [measure]);
 
@@ -75,12 +72,12 @@ export function MobileMenu() {
       <Dialog.Root
         persistentElements={[() => triggerRef.current]}
         trapFocus={false}
+        onOpenChange={measure}
       >
         <Dialog.Trigger
           className={clsx(styles.menuButton)}
           aria-label="メニュー"
           ref={triggerRef}
-          onClickCapture={measure}
         >
           <Menu />
         </Dialog.Trigger>
