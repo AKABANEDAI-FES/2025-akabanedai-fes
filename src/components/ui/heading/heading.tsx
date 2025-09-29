@@ -5,18 +5,22 @@ import styles from "./heading.module.css";
  * 見出しのバリアント別CSSクラス名を返すヘルパー関数
  * @example
  * // カスタムコンポーネントに見出しスタイルを適用
- * <Title className={heading("primary")}>タイトル</Title>
- * @param variant - 見出しのスタイルバリアント
+ * <Title className={heading({ variant: "primary" })}>タイトル</Title>
+ * @param params - 見出しのパラメータオブジェクト
  * @returns バリアントに対応するCSSクラス名
  */
-export function heading(variant: "primary" | "secondary") {
+export function heading({
+  variant = "primary",
+}: {
+  variant?: "primary" | "secondary";
+}) {
   return variant === "primary" ? styles.primary : styles.secondary;
 }
 
 export type Props = {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  variant?: Parameters<typeof heading>[0];
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & Parameters<typeof heading>[0] &
+  React.HTMLAttributes<HTMLHeadingElement>;
 
 /**
  * 見出し表示用のUIコンポーネント
@@ -47,5 +51,7 @@ export function Heading({
   className,
   ...props
 }: Props) {
-  return <Component className={clsx(heading(variant), className)} {...props} />;
+  return (
+    <Component className={clsx(heading({ variant }), className)} {...props} />
+  );
 }

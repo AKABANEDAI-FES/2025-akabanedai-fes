@@ -6,20 +6,23 @@ import styles from "./divider.module.css";
  * 区切り線のバリアント別CSSクラス名を返すヘルパー関数
  * @example
  * // カスタムコンポーネントに区切り線スタイルを適用
- * <Separator className={divider("vertical")} />
- * @param variant - 区切り線の向き（水平または垂直）
+ * <Separator className={divider({ variant: "vertical" })} />
+ * @param params - 区切り線のパラメータオブジェクト
  * @returns バリアントに対応するCSSクラス名の組み合わせ
  */
-export function divider(variant: "vertical" | "horizontal") {
+export function divider({
+  variant = "horizontal",
+}: {
+  variant?: "vertical" | "horizontal";
+}) {
   return clsx(
     styles.divider,
     variant === "vertical" ? styles.vertical : styles.horizontal,
   );
 }
 
-export type Props = {
-  variant?: Parameters<typeof divider>[0];
-} & JSX.IntrinsicElements["div"];
+export type Props = Parameters<typeof divider>[0] &
+  JSX.IntrinsicElements["div"];
 
 /**
  * 視覚的な区切り線を表示するUIコンポーネント
@@ -46,6 +49,10 @@ export type Props = {
  *
  * @param props - DividerコンポーネントのProps
  */
-export function Divider({ variant = "horizontal", className }: Props) {
-  return <div className={clsx(divider(variant), className)} />;
+export function Divider({
+  variant = "horizontal",
+  className,
+  ...props
+}: Props) {
+  return <div className={clsx(divider({ variant }), className)} {...props} />;
 }
