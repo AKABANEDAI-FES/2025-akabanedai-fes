@@ -51,9 +51,6 @@ pnpm dev
 
 # 本番ビルド
 pnpm build
-
-# 本番サーバー起動
-pnpm start
 ```
 
 ### コード品質
