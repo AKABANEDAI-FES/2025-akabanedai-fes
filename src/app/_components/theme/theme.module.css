@@ -21,7 +21,7 @@
 
 .star {
   color: var(--accent-default);
-  stroke-width: 2px;
+  stroke-width: 4px;
   width: 1rem;
   height: 1rem;
 }
