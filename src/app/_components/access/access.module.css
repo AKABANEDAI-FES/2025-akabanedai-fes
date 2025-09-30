@@ -21,6 +21,13 @@
   display: none;
 }
 
+.infoText {
+  width: var(--size-full);
+  padding: var(--space-xs);
+  background-color: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(4px);
+}
+
 .transportItem {
   position: relative;
   padding-left: var(--space-lg);
