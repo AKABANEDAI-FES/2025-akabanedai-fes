@@ -42,7 +42,7 @@ export function Theme() {
       <div className={styles.title}>
         <Star className={styles.star} />
         <Divider className={styles.divider} />
-        <p>「LINK」</p>
+        <p>「Link（繋ぐ）」</p>
         <Divider className={styles.divider} />
         <Star className={styles.star} />
       </div>
