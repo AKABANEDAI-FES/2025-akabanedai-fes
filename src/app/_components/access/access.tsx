@@ -17,30 +17,32 @@ export function Access() {
             alt="入口"
             className={styles.entranceImage}
           />
-          <ul>
-            <Text as="li" className={styles.transportItem}>
-              JR
+          <div className={styles.infoText}>
+            <ul>
+              <Text as="li" className={styles.transportItem}>
+                JR
+                <br />
+                「赤羽駅」西口から徒歩10分
+              </Text>
+              <Text as="li" className={styles.transportItem}>
+                東京メトロ南北線・埼玉高速鉄道
+                <br />
+                「赤羽岩淵駅」出入り口2から徒歩12分
+              </Text>
+              <Text as="li" className={styles.transportItem}>
+                国際興業バス
+                <br />
+                「赤羽台三丁目」バス停から徒歩3分
+                <br />
+                「法善寺交番」バス停から徒歩3分
+              </Text>
+            </ul>
+            <Text className={styles.notice}>
+              駐車場はございません。
               <br />
-              「赤羽駅」西口から徒歩10分
+              お車でのご来場はご遠慮ください。
             </Text>
-            <Text as="li" className={styles.transportItem}>
-              東京メトロ南北線・埼玉高速鉄道
-              <br />
-              「赤羽岩淵駅」出入り口2から徒歩12分
-            </Text>
-            <Text as="li" className={styles.transportItem}>
-              国際興業バス
-              <br />
-              「赤羽台三丁目」バス停から徒歩3分
-              <br />
-              「法善寺交番」バス停から徒歩3分
-            </Text>
-          </ul>
-          <Text className={styles.notice}>
-            駐車場はございません。
-            <br />
-            お車でのご来場はご遠慮ください。
-          </Text>
+          </div>
         </div>
         <Image
           src={map}
