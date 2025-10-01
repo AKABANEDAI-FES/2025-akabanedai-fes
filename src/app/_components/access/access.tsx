@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./access.module.css";
+import entrance from "./entrance.webp";
 import map from "./map.webp";
 
 export function Access() {
@@ -11,8 +12,7 @@ export function Access() {
       <div className={styles.accessContent}>
         <div className={styles.accessInfo}>
           <Image
-            src="https://placehold.jp/350x200.png"
-            height={200}
+            src={entrance}
             width={350}
             alt="入口"
             className={styles.entranceImage}
