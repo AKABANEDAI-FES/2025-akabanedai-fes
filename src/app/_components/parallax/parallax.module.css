@@ -25,14 +25,14 @@
 }
 
 .layerScene {
-  --step: 200px;
+  --step: 300px;
   --depth: calc(var(--parallax-layer) * var(--step));
 
   transform: translateZ(var(--depth));
   transform-style: preserve-3d;
   position: absolute;
-  height: 30vmin;
-  width: 30vmin;
+  height: 40vmin;
+  aspect-ratio: 1 / 1;
 }
 
 .item {
