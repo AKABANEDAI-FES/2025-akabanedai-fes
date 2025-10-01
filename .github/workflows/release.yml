@@ -45,7 +45,7 @@ jobs:
       - name: Generate timestamp
         shell: bash
         id: timestamp
-        run: echo "timestamp=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+        run: echo "timestamp=$(TZ=Asia/Tokyo date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
 
       - name: Compress
         shell: bash
