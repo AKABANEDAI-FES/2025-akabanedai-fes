@@ -20,10 +20,10 @@ const PARALLAX_ITEMS: ParallaxItem[] = [
   { top: "45%", left: "50%", layer: 0 },
 
   // 中手前
-  { top: "60%", left: "70%", layer: 1 },
+  // { top: "60%", left: "70%", layer: 1 },
 
-  // 手前
-  { top: "65%", left: "20%", layer: 2 },
+  // // 手前
+  // { top: "65%", left: "20%", layer: 2 },
 ];
 
 export type RootProps = JSX.IntrinsicElements["div"];
