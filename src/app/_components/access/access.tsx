@@ -27,7 +27,7 @@ export function Access() {
               <Text as="li" className={styles.transportItem}>
                 東京メトロ南北線・埼玉高速鉄道
                 <br />
-                「赤羽岩淵駅」出入り口2から徒歩12分
+                「赤羽岩淵駅」出入口2から徒歩12分
               </Text>
               <Text as="li" className={styles.transportItem}>
                 国際興業バス
@@ -38,9 +38,7 @@ export function Access() {
               </Text>
             </ul>
             <Text className={styles.notice}>
-              駐車場はございません。
-              <br />
-              お車でのご来場はご遠慮ください。
+              駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
             </Text>
           </div>
         </div>

@@ -22,16 +22,15 @@
 }
 
 .infoText {
-  width: var(--size-full);
   padding: var(--space-xs);
   background-color: rgb(255 255 255 / 80%);
   backdrop-filter: blur(4px);
+  width: 350px;
 }
 
 .transportItem {
   position: relative;
   padding-left: var(--space-lg);
-  font-feature-settings: "palt";
 }
 
 .transportItem::before {
@@ -43,6 +42,7 @@
 .notice {
   padding-left: var(--space-lg);
   position: relative;
+  text-wrap: wrap;
 }
 
 .notice::before {
