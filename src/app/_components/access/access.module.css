@@ -31,7 +31,6 @@
 .transportItem {
   position: relative;
   padding-left: var(--space-lg);
-  font-feature-settings: "palt";
 }
 
 .transportItem::before {
