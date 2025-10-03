@@ -125,18 +125,8 @@
 
     /* Font Family */
     --font-sans-jp:
-      "Hiragino Kaku Gothic ProN",
-      "Hiragino Sans",
-      "Noto Sans JP",
-      "Noto Sans CJK JP",
-      -apple-system,
-      blinkmacsystemfont,
-      "Segoe UI",
-      roboto,
-      "Helvetica Neue",
-      arial,
-      "Yu Gothic UI",
-      meiryo,
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+      "Noto Sans CJK JP", roboto, "Helvetica Neue", arial, "Yu Gothic", meiryo,
       sans-serif;
 
     /* ---------- Font ---------- */
