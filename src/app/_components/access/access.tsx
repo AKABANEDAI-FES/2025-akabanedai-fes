@@ -38,9 +38,7 @@ export function Access() {
               </Text>
             </ul>
             <Text className={styles.notice}>
-              駐車場はございません。
-              <br />
-              お車でのご来場はご遠慮ください。
+              駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
             </Text>
           </div>
         </div>
