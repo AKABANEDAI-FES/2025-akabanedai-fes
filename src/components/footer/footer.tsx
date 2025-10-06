@@ -30,7 +30,7 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <Text>&copy;2025 赤羽台祭実行委員会</Text>
+      <Text>&copy;2025 東洋大学赤羽台祭実行委員会</Text>
     </footer>
   );
 }
