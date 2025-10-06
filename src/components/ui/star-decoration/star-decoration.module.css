@@ -1,0 +1,40 @@
+@layer components {
+  .container {
+    --star-size: 1rem;
+
+    width: var(--size-full);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  .decoration {
+    display: flex;
+    width: var(--size-full);
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: calc(var(--star-size) * -1 / 2);
+  }
+
+  .star {
+    color: var(--accent-default);
+    stroke-width: 4px;
+    width: var(--star-size);
+    height: var(--star-size);
+  }
+
+  .divider {
+    background-color: var(--accent-default);
+  }
+
+  @media (width >= 48rem) {
+    .container {
+      --star-size: 2.5rem;
+    }
+
+    .divider {
+      height: 2px;
+    }
+  }
+}
