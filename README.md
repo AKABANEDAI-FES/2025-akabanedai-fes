@@ -195,6 +195,19 @@ import { VisuallyHidden } from "@/components/ui/visually-hidden";
 </button>
 ```
 
+### StarDecoration - 星飾り
+
+コンテンツに装飾的な星と線を追加するコンポーネント。
+
+```tsx
+import { StarDecoration } from "@/components/ui/star-decoration";
+
+// 基本的な使用方法
+<StarDecoration>
+  <h2>タイトル</h2>
+</StarDecoration>
+```
+
 ### ヘルパー関数
 
 各UIコンポーネントは、CSSクラス名を返すヘルパー関数も提供しています。
