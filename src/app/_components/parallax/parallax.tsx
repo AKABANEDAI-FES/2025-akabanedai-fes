@@ -25,13 +25,15 @@ type ParallaxItem = (
     layer: number;
   };
 const PARALLAX_ITEMS: ParallaxItem[] = [
+  { top: "-40%", left: "-10%", layer: -2 },
+  { top: "-26%", right: "-40%", layer: -3 },
   { top: "42%", left: "-12%", layer: 0 },
   { bottom: "16%", right: "-15%", layer: 0 },
   { top: "12%", left: "-25%", layer: -1 },
   { bottom: "8%", left: "-18%", layer: -2 },
   { top: "28%", right: "-40%", layer: -4 },
   { bottom: "44%", left: "-20%", layer: -5 },
-  { top: "66%", right: "-35%", layer: -6 },
+  { bottom: "0%", right: "-35%", layer: -6 },
 ];
 
 export type RootProps = JSX.IntrinsicElements["div"];

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header/header";
+import { MobileMenu } from "@/components/header/mobile-menu";
+import { Parallax } from "./_components/parallax";
+import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <MobileMenu />
+        <Parallax.Root className={styles.parallax}>
+          <div className={styles.overlay}>
+            <Header className={styles.header} />
+          </div>
+          <Parallax.Layer className={styles.layer} />
+          <Parallax.Content className={styles.content}>
+            <div>{children}</div>
+            <Footer />
+          </Parallax.Content>
+        </Parallax.Root>
+      </body>
     </html>
   );
 }
