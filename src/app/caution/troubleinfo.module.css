@@ -1,0 +1,121 @@
+ .troubleSection {
+    /* 濃い青色の背景 */
+    background-color:rgb(255, 255, 255,0.80);
+    color: black;
+    padding: 55px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box; 
+    width: 80%;
+    margin: 0 auto; 
+    z-index: 1;
+    padding-bottom: 2rem;
+  }
+  
+  .sectionTitle {
+    position: relative;
+    transform: translateY(-50%); 
+  
+    /* ★本文よりも前面に来るよう設定 (z-index: 2) */
+    z-index: 2; 
+  
+    /* フキダシの見た目 */
+    background-color: #d3d3d3; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-top: 1.5rem;
+    bottom: 3rem;
+    width: 18rem;
+    max-width: 1265px; 
+  }
+  
+  .contentBox {
+    border: 3px solid #6c5ce7;
+    background-color:  rgb(255 255 255 / 80%); 
+    padding: 20px;
+    border-radius: 30px;
+    border-color: black;
+    color: #333;
+    font-family: sans-serif;
+    margin: 0 auto;
+    min-width: 0;
+    max-width: 1265px; 
+    margin-left: auto; 
+    margin-right: auto;
+    flex: 1;
+    position: relative;
+    font-weight: bolder; 
+    bottom: 3rem;
+  }
+  
+  .mainMessage {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .description{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 9px;
+    font-weight: normal;
+  }
+
+  .contactInfo {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .troubleExamples {
+    margin: 26px 0;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 22px;
+  }
+
+ .center{
+    text-align: center;
+    
+ }
+
+ @media (width<=767px) {
+  .sectionTitle {
+    font-size: 16px;
+    position: relative;
+    width: 13rem;
+    margin-top: 0;
+  }
+
+  .mainMessage {
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  .description{
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 9px;
+    font-weight: normal;
+  }
+
+  .troubleExamples {
+    margin: 26px 0;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+
+  .contactInfo {
+    font-size: 13px;
+    font-weight: normal;
+  }
+ }

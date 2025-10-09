@@ -1,0 +1,86 @@
+
+ .noticeSection {     
+    padding: 55px 25px 25px; 
+    position: relative; 
+    background-color: rgb(255, 255, 255,0.8); 
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 35px;
+    padding-top: 6.0rem;
+    font-weight: normal;
+    color: black;
+    z-index: 1;
+  }
+
+
+
+  .content{
+    position: relative;
+    padding-bottom: 0.1rem;
+    margin-top: -0.1rem;
+    padding-top: 0.1rem;
+    z-index: 2;
+  }
+
+  .sectionTitle {
+    position: absolute; 
+    top: 3.0rem; 
+    transform: translateY(-50%); 
+    z-index: 2;
+    background-color: #d3d3d3; 
+    border-radius: 15px; 
+    padding: 12px 20px; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a202c; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-bottom: none; 
+  }
+  
+  .sectionContent {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .noticeSection ul {
+    list-style: disc; 
+    list-style-position: outside; 
+    padding-left: 20px;
+    
+  }
+  
+  .noticeSection li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2d3748; 
+    margin-bottom: 1px;
+    padding-left: 0; 
+    position: static; 
+  }
+
+
+  @media (width<=767px) {
+    .noticeSection { 
+      padding: 5.7rem 20px 0px 35px;
+    }
+
+    .sectionTitle {
+      font-size: 16px;
+    }
+
+    .sectionContent {
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+    }
+
+    .noticeSection li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #2d3748; 
+      margin-bottom: 1px;
+      padding-left: 0; 
+      position: static; 
+    }
+  }
