@@ -27,6 +27,9 @@
             "filenameCases": ["kebab-case"]
           }
         }
+      },
+      "suspicious": {
+        "noConsole": "error"
       }
     },
     "domains": {
