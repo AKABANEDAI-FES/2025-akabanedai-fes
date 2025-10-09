@@ -1,5 +1,8 @@
-.starunderline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mytable {
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+
+.leftAline {
+  text-align: left;
 }
