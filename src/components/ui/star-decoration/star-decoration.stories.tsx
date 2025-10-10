@@ -47,6 +47,16 @@ export const Multiple: Story = {
   ),
 };
 
+export const Composition: Story = {
+  render: () => (
+    <StarDecoration.Root>
+      <h2>上部に装飾</h2>
+      <StarDecoration.Decoration />
+      <p>装飾の下のコンテンツ</p>
+    </StarDecoration.Root>
+  ),
+};
+
 export const WithCustomContent: Story = {
   args: {
     children: (
