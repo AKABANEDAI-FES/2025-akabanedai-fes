@@ -238,7 +238,7 @@ import { BlurredBox } from "@/components/ui/blurred-box";
 </BlurredBox>
 
 // カスタムスタイル適用
-<BlurredBox className="custom-box" style={{ padding: "2rem", borderRadius: "8px" }}>
+<BlurredBox className="custom-box">
   画像の上のテキスト
 </BlurredBox>
 ```
@@ -392,7 +392,7 @@ function EventSection() {
 
       {/* 背景画像の上にテキストを表示 */}
       <div style={{ backgroundImage: "url(/event-bg.jpg)" }}>
-        <BlurredBox style={{ padding: "2rem", borderRadius: "8px" }}>
+        <BlurredBox>
           <Heading as="h3" variant="secondary">特別企画</Heading>
           <Text>豪華ゲストによるトークショーを開催!</Text>
         </BlurredBox>

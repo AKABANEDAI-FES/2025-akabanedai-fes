@@ -232,13 +232,6 @@ import { BlurredBox } from "@/components/ui/blurred-box";
 <BlurredBox>
   <p>背景がぼかされたコンテンツ</p>
 </BlurredBox>
-
-// 画像の上にテキストを表示
-<div style={{ backgroundImage: "url(/bg.jpg)" }}>
-  <BlurredBox style={{ padding: "2rem", borderRadius: "8px" }}>
-    <h2>タイトル</h2>
-  </BlurredBox>
-</div>
 ```
 
 ### ヘルパー関数
