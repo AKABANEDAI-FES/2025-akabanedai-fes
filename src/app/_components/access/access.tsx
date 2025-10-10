@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./access.module.css";
@@ -17,7 +18,7 @@ export function Access() {
             alt="入口"
             className={styles.entranceImage}
           />
-          <div className={styles.infoText}>
+          <BlurredBox className={styles.infoText}>
             <ul>
               <Text as="li" className={styles.transportItem}>
                 JR
@@ -40,7 +41,7 @@ export function Access() {
             <Text className={styles.notice}>
               駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
             </Text>
-          </div>
+          </BlurredBox>
         </div>
         <Image
           src={map}
