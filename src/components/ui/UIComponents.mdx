@@ -213,6 +213,55 @@ import { StarDecoration } from "@/components/ui/star-decoration";
 
 ---
 
+### BlurredBox - ブラーボックス
+
+背景をぼかして半透明にすることで、背景と同化しないようにするコンポーネント。
+
+**主な用途:**
+- 画像や背景の上のテキスト表示
+- オーバーレイコンテンツ
+- 視認性の向上
+
+**使用例:**
+
+```tsx
+import { BlurredBox } from "@/components/ui/blurred-box";
+
+// 基本的な使用方法
+<BlurredBox>
+  <p>背景がぼかされたコンテンツ</p>
+</BlurredBox>
+
+// section要素として使用
+<BlurredBox as="section">
+  <h2>セクションコンテンツ</h2>
+</BlurredBox>
+
+// カスタムスタイル適用
+<BlurredBox className="custom-box" style={{ padding: "2rem", borderRadius: "8px" }}>
+  画像の上のテキスト
+</BlurredBox>
+```
+
+**プロパティ:**
+- `as`: レンダリングするHTML要素 (デフォルト: `div`)
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { blurredBox } from "@/components/ui/blurred-box";
+
+<div className={blurredBox()}>カスタムブラーボックス</div>
+```
+
+**技術仕様:**
+- `backdrop-filter: blur(4px)` でぼかし効果
+- `background-color: rgb(255 255 255 / 80%)` で半透明背景
+
+---
+
 ### VisuallyHidden - スクリーンリーダー専用
 
 視覚的には隠れているが、スクリーンリーダーなどの支援技術には読み上げられる要素。
@@ -319,6 +368,7 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { Divider } from "@/components/ui/divider";
 import { StarDecoration } from "@/components/ui/star-decoration";
+import { BlurredBox } from "@/components/ui/blurred-box";
 
 function EventSection() {
   return (
@@ -339,6 +389,14 @@ function EventSection() {
       <Text>
         メインステージでは、バンド演奏やダンスパフォーマンスを予定しています。
       </Text>
+
+      {/* 背景画像の上にテキストを表示 */}
+      <div style={{ backgroundImage: "url(/event-bg.jpg)" }}>
+        <BlurredBox style={{ padding: "2rem", borderRadius: "8px" }}>
+          <Heading as="h3" variant="secondary">特別企画</Heading>
+          <Text>豪華ゲストによるトークショーを開催!</Text>
+        </BlurredBox>
+      </div>
     </Container>
   );
 }
