@@ -36,5 +36,12 @@
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",
     "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.18.2",
+  "engines": {
+    "pnpm": ">=10",
+    "npm": "⚠️ Please use pnpm instead of npm",
+    "yarn": "⚠️ Please use pnpm instead of yarn",
+    "bun": "⚠️ Please use pnpm instead of bun"
   }
 }
