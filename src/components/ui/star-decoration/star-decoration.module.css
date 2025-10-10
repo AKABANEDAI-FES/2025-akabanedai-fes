@@ -15,6 +15,7 @@
     align-items: center;
     gap: var(--space-md);
     margin-top: calc(var(--star-size) * -1 / 2);
+    pointer-events: none;
   }
 
   .star {

@@ -17,6 +17,7 @@
 - **Ark UI React** - アクセシブルUIコンポーネント
 - **Biome** - リンター・フォーマッター
 - **Stylelint** - CSSリンター
+- **Storybook** - UIコンポーネント開発環境
 
 ## セットアップ方法
 
@@ -81,6 +82,18 @@ pnpm format:style
 # CSS Modules の型定義生成
 pnpm gen
 ```
+
+### Storybook
+
+```bash
+# Storybook開発サーバー起動
+pnpm storybook
+
+# Storybookビルド
+pnpm build-storybook
+```
+
+Storybookでは、UIコンポーネントを個別に確認できます。[http://localhost:6006](http://localhost:6006) でアクセス可能です。
 
 ## プロジェクト構造
 
