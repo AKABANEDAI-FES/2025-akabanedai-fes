@@ -221,6 +221,26 @@ import { StarDecoration } from "@/components/ui/star-decoration";
 </StarDecoration>
 ```
 
+### BlurredBox - ブラーボックス
+
+背景をぼかして半透明にすることで、背景と同化しないようにするコンポーネント。
+
+```tsx
+import { BlurredBox } from "@/components/ui/blurred-box";
+
+// 基本的な使用方法
+<BlurredBox>
+  <p>背景がぼかされたコンテンツ</p>
+</BlurredBox>
+
+// 画像の上にテキストを表示
+<div style={{ backgroundImage: "url(/bg.jpg)" }}>
+  <BlurredBox style={{ padding: "2rem", borderRadius: "8px" }}>
+    <h2>タイトル</h2>
+  </BlurredBox>
+</div>
+```
+
 ### ヘルパー関数
 
 各UIコンポーネントは、CSSクラス名を返すヘルパー関数も提供しています。
@@ -230,12 +250,14 @@ import { container } from "@/components/ui/container";
 import { heading } from "@/components/ui/heading";
 import { text } from "@/components/ui/text";
 import { divider } from "@/components/ui/divider";
+import { blurredBox } from "@/components/ui/blurred-box";
 
 // カスタムコンポーネントにスタイルを適用
 <div className={container()}>
   <h2 className={heading({ variant: "primary" })}>タイトル</h2>
   <p className={text()}>テキスト内容</p>
   <hr className={divider({ variant: "horizontal" })} />
+  <div className={blurredBox()}>ブラー効果</div>
 </div>
 ```
 
