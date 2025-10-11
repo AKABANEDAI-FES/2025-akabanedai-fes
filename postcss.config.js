@@ -1,11 +1,8 @@
 module.exports = {
-  plugins: [
-    "postcss-import",
-    [
-      "postcss-header",
-      {
-        header: "@layer reset, base, components;",
-      },
-    ],
-  ],
+  plugins: {
+    "postcss-import": {},
+    "postcss-header": {
+      header: "@layer reset, base, components;",
+    },
+  },
 };

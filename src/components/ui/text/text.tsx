@@ -12,9 +12,9 @@ export function text() {
   return styles.text;
 }
 
-export type Props = {
-  as?: React.ElementType;
-} & React.HTMLAttributes<HTMLParagraphElement>;
+export type Props<T extends React.ElementType = "p"> = {
+  as?: T;
+} & React.ComponentProps<T>;
 
 /**
  * テキスト表示用のUIコンポーネント
@@ -37,6 +37,10 @@ export type Props = {
  *
  * @param props - TextコンポーネントのProps
  */
-export function Text({ as: Component = "p", className, ...props }: Props) {
+export function Text<T extends React.ElementType = "p">({
+  as: Component = "p",
+  className,
+  ...props
+}: Props<T>) {
   return <Component className={clsx(text(), className)} {...props} />;
 }

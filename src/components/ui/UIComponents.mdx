@@ -1,0 +1,407 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/概要" />
+
+# UIコンポーネント使用ガイド
+
+赤羽台祭2025サイトで使用できる基本UIコンポーネントの使い方を説明します。
+
+## 📦 コンポーネント一覧
+
+### Container - レイアウトコンテナ
+
+コンテンツを中央に配置し、最大幅を制限するコンポーネント。
+
+**主な用途:**
+- ページのメインコンテンツエリア
+- セクションの幅制限
+- 読みやすさの向上
+
+**使用例:**
+
+```tsx
+import { Container } from "@/components/ui/container";
+
+// 基本的な使用方法
+<Container>
+  <p>中央に配置されたコンテンツ</p>
+</Container>
+
+// section要素として使用
+<Container as="section">
+  <h2>セクションコンテンツ</h2>
+</Container>
+```
+
+**プロパティ:**
+- `as`: レンダリングするHTML要素 (デフォルト: `div`)
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { container } from "@/components/ui/container";
+
+<div className={container()}>カスタムコンテナ</div>
+```
+
+---
+
+### Heading - 見出し
+
+統一されたスタイルの見出し要素を提供するコンポーネント。
+
+**主な用途:**
+- ページタイトル
+- セクション見出し
+- 階層構造の明確化
+
+**使用例:**
+
+```tsx
+import { Heading } from "@/components/ui/heading";
+
+// メインタイトル (h1、primaryスタイル)
+<Heading as="h1">赤羽台祭 2025</Heading>
+
+// セクションタイトル (h2、secondaryスタイル)
+<Heading as="h2" variant="secondary">イベント情報</Heading>
+
+// カスタムクラスを追加
+<Heading as="h3" className="custom-heading">
+  特別企画
+</Heading>
+```
+
+**プロパティ:**
+- `as`: 見出しレベル (`h1` | `h2` | `h3` | `h4` | `h5` | `h6`) - **必須**
+- `variant`: スタイルバリアント (`primary` | `secondary`) - デフォルト: `primary`
+- `className`: 追加のCSSクラス名
+
+**バリアント:**
+- `primary`: メインの見出しスタイル
+- `secondary`: サブの見出しスタイル
+
+**ヘルパー関数:**
+
+```tsx
+import { heading } from "@/components/ui/heading";
+
+<h2 className={heading({ variant: "primary" })}>タイトル</h2>
+```
+
+---
+
+### Text - テキスト
+
+統一されたテキストスタイルを提供するコンポーネント。
+
+**主な用途:**
+- 本文テキスト
+- 段落
+- インラインテキスト
+
+**使用例:**
+
+```tsx
+import { Text } from "@/components/ui/text";
+
+// 基本的な段落
+<Text>これは基本的なテキストです。</Text>
+
+// span要素として使用
+<Text as="span">インライン要素として表示</Text>
+
+// カスタムスタイル適用
+<Text className="custom-text">カスタムテキスト</Text>
+```
+
+**プロパティ:**
+- `as`: レンダリングするHTML要素 (デフォルト: `p`)
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { text } from "@/components/ui/text";
+
+<p className={text()}>テキスト内容</p>
+```
+
+---
+
+### Divider - 区切り線
+
+コンテンツを視覚的に分離する区切り線コンポーネント。
+
+**主な用途:**
+- セクション間の区切り
+- コンテンツグループの分離
+- 視覚的な整理
+
+**使用例:**
+
+```tsx
+import { Divider } from "@/components/ui/divider";
+
+// 水平区切り線 (デフォルト)
+<Divider />
+
+// 明示的に水平を指定
+<Divider variant="horizontal" />
+
+// 垂直区切り線
+<Divider variant="vertical" />
+
+// カスタムスタイル
+<Divider className="thick-divider" />
+```
+
+**プロパティ:**
+- `variant`: 区切り線の向き (`horizontal` | `vertical`) - デフォルト: `horizontal`
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { divider } from "@/components/ui/divider";
+
+<hr className={divider({ variant: "horizontal" })} />
+```
+
+---
+
+### StarDecoration - 星飾り
+
+コンテンツに装飾的な星と線を追加するコンポーネント。
+
+**主な用途:**
+- セクションタイトルの装飾
+- 視覚的なアクセント
+- デザイン的な区切り
+
+**使用例:**
+
+```tsx
+import { StarDecoration } from "@/components/ui/star-decoration";
+
+// 基本的な使用方法
+<StarDecoration>
+  <h2>イベント情報</h2>
+</StarDecoration>
+
+// 複数のコンテンツ
+<StarDecoration>
+  <h2>赤羽台祭2025</h2>
+  <p>2025年10月11日-12日開催</p>
+</StarDecoration>
+```
+
+**プロパティ:**
+- `children`: 装飾するコンテンツ
+- `className`: 追加のCSSクラス名
+
+**デザイン構造:**
+
+```
+    ★ ━━━ ★
+  [コンテンツ]
+```
+
+---
+
+### BlurredBox - ブラーボックス
+
+背景をぼかして半透明にすることで、背景と同化しないようにするコンポーネント。
+
+**主な用途:**
+- 画像や背景の上のテキスト表示
+- オーバーレイコンテンツ
+- 視認性の向上
+
+**使用例:**
+
+```tsx
+import { BlurredBox } from "@/components/ui/blurred-box";
+
+// 基本的な使用方法
+<BlurredBox>
+  <p>背景がぼかされたコンテンツ</p>
+</BlurredBox>
+
+// section要素として使用
+<BlurredBox as="section">
+  <h2>セクションコンテンツ</h2>
+</BlurredBox>
+
+// カスタムスタイル適用
+<BlurredBox className="custom-box">
+  画像の上のテキスト
+</BlurredBox>
+```
+
+**プロパティ:**
+- `as`: レンダリングするHTML要素 (デフォルト: `div`)
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { blurredBox } from "@/components/ui/blurred-box";
+
+<div className={blurredBox()}>カスタムブラーボックス</div>
+```
+
+**技術仕様:**
+- `backdrop-filter: blur(4px)` でぼかし効果
+- `background-color: rgb(255 255 255 / 80%)` で半透明背景
+
+---
+
+### VisuallyHidden - スクリーンリーダー専用
+
+視覚的には隠れているが、スクリーンリーダーなどの支援技術には読み上げられる要素。
+
+**主な用途:**
+- アイコンボタンの説明
+- 視覚的な情報の補足
+- アクセシビリティの向上
+
+**使用例:**
+
+```tsx
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
+
+// ボタンの補足説明
+<button>
+  <MenuIcon />
+  <VisuallyHidden>メニュー</VisuallyHidden>
+</button>
+
+// フォームラベル
+<VisuallyHidden as="label" htmlFor="search">
+  検索
+</VisuallyHidden>
+<input id="search" type="search" placeholder="検索..." />
+```
+
+**プロパティ:**
+- `as`: レンダリングするHTML要素 (デフォルト: `div`)
+- `className`: 追加のCSSクラス名
+- その他のHTMLAttributes
+
+**ヘルパー関数:**
+
+```tsx
+import { visuallyHidden } from "@/components/ui/visually-hidden";
+
+<span className={visuallyHidden()}>スクリーンリーダー専用テキスト</span>
+```
+
+---
+
+## 🎯 ベストプラクティス
+
+### セマンティックHTML
+
+コンポーネントの`as`プロパティを使って、適切なHTML要素を選択しましょう。
+
+```tsx
+// ✅ 良い例
+<Container as="main">
+  <Heading as="h1">ページタイトル</Heading>
+  <Text>本文テキスト</Text>
+</Container>
+
+// ❌ 悪い例
+<div>
+  <div style={{ fontSize: "2rem" }}>ページタイトル</div>
+  <div>本文テキスト</div>
+</div>
+```
+
+### アクセシビリティ
+
+視覚的な情報をスクリーンリーダーにも提供しましょう。
+
+```tsx
+// ✅ 良い例
+<button>
+  <HamburgerIcon aria-hidden="true" />
+  <VisuallyHidden>メニューを開く</VisuallyHidden>
+</button>
+
+// ❌ 悪い例
+<button>
+  <HamburgerIcon />
+</button>
+```
+
+### ヘルパー関数の活用
+
+既存のカスタムコンポーネントにスタイルを適用する場合は、ヘルパー関数を使用しましょう。
+
+```tsx
+import { container } from "@/components/ui/container";
+import { heading } from "@/components/ui/heading";
+import { CustomBox } from "./custom-box";
+
+// ✅ 良い例
+<CustomBox className={container()}>
+  <h2 className={heading({ variant: "primary" })}>タイトル</h2>
+</CustomBox>
+```
+
+---
+
+## 📝 組み合わせ例
+
+実際のページで使用する場合の組み合わせ例:
+
+```tsx
+import { Container } from "@/components/ui/container";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
+import { Divider } from "@/components/ui/divider";
+import { StarDecoration } from "@/components/ui/star-decoration";
+import { BlurredBox } from "@/components/ui/blurred-box";
+
+function EventSection() {
+  return (
+    <Container as="section">
+      <StarDecoration>
+        <Heading as="h2">イベント情報</Heading>
+      </StarDecoration>
+
+      <Text>
+        赤羽台祭では、様々なイベントを開催します。
+      </Text>
+
+      <Divider />
+
+      <Heading as="h3" variant="secondary">
+        ステージイベント
+      </Heading>
+      <Text>
+        メインステージでは、バンド演奏やダンスパフォーマンスを予定しています。
+      </Text>
+
+      {/* 背景画像の上にテキストを表示 */}
+      <div style={{ backgroundImage: "url(/event-bg.jpg)" }}>
+        <BlurredBox>
+          <Heading as="h3" variant="secondary">特別企画</Heading>
+          <Text>豪華ゲストによるトークショーを開催!</Text>
+        </BlurredBox>
+      </div>
+    </Container>
+  );
+}
+```
+
+---
+
+詳細な使用例は、各コンポーネントのStorybookページをご確認ください。

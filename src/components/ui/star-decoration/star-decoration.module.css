@@ -2,6 +2,8 @@
   .container {
     --star-size: 1rem;
 
+    position: relative;
+    isolation: isolate;
     width: var(--size-full);
     display: flex;
     flex-direction: column;
@@ -15,6 +17,8 @@
     align-items: center;
     gap: var(--space-md);
     margin-top: calc(var(--star-size) * -1 / 2);
+    margin-bottom: calc(var(--star-size) * -1 / 2);
+    z-index: -1;
   }
 
   .star {
