@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 3rem;
     font-weight: normal;
     color: #1a202c; 
     padding: 10px 0;
@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: column;  
   gap: 30px;
-  margin-bottom: 60px; 
+  margin-bottom: 30px; 
   max-width: 100%; 
   }
   
@@ -64,11 +64,9 @@
     height: 100%;
   }
 
-  .footer{
-    margin-top: -3rem;
-  }
 
-  @media (1097px<=width<=1360px) {
+
+  @media (1207px<=width<=1360px) {
     .dividerWrapper {
       position: relative;
       max-width: 100%; 
@@ -80,10 +78,11 @@
     }
   }
 
-  @media (768px<=width<=1096px) {
-    .mainTitle{
-      font-size: 33px;
+  @media (768px<=width<=1206px) {
+    .mainTitle {
+      font-size: 2.8rem;
     }
+  
 
     .appContainer {
       margin-top: -1rem;
@@ -109,15 +108,16 @@
 
   @media (431px<=width<=767px) {
     .mainTitle {
-        font-size: 1.4rem; 
+        font-size: 1.7rem; 
     }
 
     .appContainer {
-      margin-top: -1rem;
+      margin-top: -1.8rem;
     }
 
     .noticeSectionsWrapper{
       margin-top: -3.0rem;
+      gap: 20px;
     }
 
     .icon {
@@ -141,15 +141,15 @@
 
 @media (width<=430px) {
   .appContainer {
-  margin-top: -1rem;
+  margin-top: -1.7rem;
   }
 
   .mainTitle {
-    font-size: 22px; 
+    font-size: 1.7rem; 
 }
 
   .noticeSectionsWrapper{
-    margin-top: -4.0rem;
+    margin-top: -5.0rem;
   }
 
   .icon {
@@ -166,7 +166,6 @@
     width: 100%; 
     display: block;
     margin: 0 auto;    
-    margin-top: 1.5rem; 
     margin-bottom: 100px; 
   }
 

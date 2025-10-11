@@ -8,14 +8,11 @@ import CautionIcon from './icon-caution.svg';
 import LineDivider from './line-divider.svg'; 
 import { Container } from "@/components/ui/container";
 
-
 export const metadata: Metadata = { /* ... */ };
 
 const CautionPage: React.FC = () => {
     return (
-      <div className={styles.appContainer}>
-
-          <div className={styles.parallaxContentWrapper}>
+      <div className={styles.appContainer}>          
             <main className={styles.mainContent}>
 
               <Container>
@@ -41,13 +38,8 @@ const CautionPage: React.FC = () => {
 
               <TroubleInfo />
               </Container>
-              <span className={styles.footer}>
-      
-              </span>
-              
             </main>
           </div>      
-    </div>
   );
 };
 

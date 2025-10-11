@@ -1,15 +1,16 @@
  .troubleSection {
     /* 濃い青色の背景 */
     background-color:rgb(255, 255, 255,0.80);
+    backdrop-filter: blur(4px); 
     color: black;
-    padding: 55px 20px;
+    padding: 50px 20px;
     border-radius: 15px;
     text-align: center;
     box-sizing: border-box; 
-    width: 80%;
+    width: 100%;
     margin: 0 auto; 
     z-index: 1;
-    padding-bottom: 2rem;
+    padding-bottom: 10px;
   }
   
   .sectionTitle {
@@ -18,18 +19,19 @@
   
     /* ★本文よりも前面に来るよう設定 (z-index: 2) */
     z-index: 2; 
+    margin-bottom: 1rem;
   
     /* フキダシの見た目 */
     background-color: #d3d3d3; 
     border-radius: 15px; 
     padding: 10px 20px; 
-    font-size: 24px;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #000000; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    margin-top: 1.5rem;
-    bottom: 3rem;
-    width: 18rem;
+    margin-top: 0.7rem;
+    bottom: 1.4rem;
+    width: 21rem;
     max-width: 1265px; 
   }
   
@@ -53,7 +55,7 @@
   }
   
   .mainMessage {
-    font-size: 16px;
+    font-size: 1.1rem;
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
@@ -61,14 +63,14 @@
   }
   
   .description{
-    font-size: 16px;
+    font-size: 1.09rem;
     line-height: 1.6;
     margin-bottom: 9px;
     font-weight: normal;
   }
 
   .contactInfo {
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: normal;
   }
 
@@ -76,7 +78,7 @@
     margin: 26px 0;
     display: inline-block;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 1.4rem;
   }
 
  .center{
@@ -85,6 +87,10 @@
  }
 
  @media (width<=767px) {
+  .troubleSection {
+    padding-bottom: 0px;
+  }
+
   .sectionTitle {
     font-size: 16px;
     position: relative;
@@ -108,10 +114,11 @@
   }
 
   .troubleExamples {
-    margin: 26px 0;
+    margin: 13px 0;
     display: inline-block;
     font-weight: bolder;
     font-size: 15px;
+    padding-top: -1rem;
   }
 
   .contactInfo {
