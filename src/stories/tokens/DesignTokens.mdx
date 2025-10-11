@@ -193,6 +193,196 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 ---
 
+### Breakpoints (ブレークポイント)
+
+レスポンシブデザインで使用するブレークポイント。
+
+このプロジェクトでは、モバイルファーストアプローチを採用しています。
+デフォルトはモバイル向けのスタイルを定義し、必要に応じて大きい画面向けのスタイルを追加します。
+
+#### ブレークポイントの定義
+
+現在のコードベースで使用されている主なブレークポイント:
+
+```css
+/* タブレット以上 (width >= 768px) */
+@media (width >= 48rem) {
+  /* タブレット・デスクトップ向けのスタイル */
+}
+
+/* デスクトップ以上 (width >= 1024px) */
+@media (width >= 64rem) {
+  /* デスクトップ向けのスタイル */
+}
+```
+
+**サイズの対応表:**
+
+- `48rem` = `768px` - タブレット以上 (主要ブレークポイント)
+- `64rem` = `1024px` - デスクトップ以上 (主要ブレークポイント)
+
+**より細かい制御が必要な場合:**
+
+- `40rem` = `640px` - 小型タブレット
+- `80rem` = `1280px` - 大型デスクトップ
+
+**Note:** まずは主要な2つのブレークポイント (48rem, 64rem) で対応を試みてください。
+より細かいレイアウト調整が必要な場合のみ、追加のブレークポイントを使用します。
+
+#### 使用方法
+
+**基本パターン (モバイルファースト):**
+
+```css
+/* ✅ 良い例 - モバイルファースト */
+.container {
+  /* モバイル向けのスタイル (デフォルト) */
+  padding: var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+@media (width >= 48rem) {
+  .container {
+    /* タブレット以上 */
+    padding: var(--space-lg);
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (width >= 64rem) {
+  .container {
+    /* デスクトップ以上 */
+    padding: var(--space-xl);
+    font-size: var(--font-size-lg);
+  }
+}
+```
+
+**避けるべきパターン:**
+
+```css
+/* ❌ 悪い例 - デスクトップファースト */
+.container {
+  padding: var(--space-xl);
+  font-size: var(--font-size-lg);
+}
+
+@media (width < 64rem) {
+  .container {
+    padding: var(--space-lg);
+    font-size: var(--font-size-md);
+  }
+}
+
+/* ❌ 悪い例 - ピクセル値を直接使用 */
+@media (width >= 768px) {
+  .container {
+    padding: 24px;
+  }
+}
+```
+
+#### ベストプラクティス
+
+1. **rem単位を使用する**
+   - ブラウザのフォントサイズ設定を尊重するため、`rem`単位を使用します
+   - `1rem` = `16px` (ブラウザデフォルト)
+
+2. **モバイルファーストで設計する**
+   - 基本スタイルはモバイル向けに定義
+   - より大きい画面向けのスタイルを追加的に定義
+
+3. **必要最小限のブレークポイント**
+   - まずは主要な2つのブレークポイント (48rem, 64rem) で対応を試みる
+   - より細かい制御が必要な場合は、40rem や 80rem を使用
+   - むやみにブレークポイントを増やさない
+
+4. **デザイントークンと組み合わせる**
+   - ブレークポイントと一緒にデザイントークンを使用して一貫性を保つ
+
+#### 実践例
+
+**レスポンシブグリッドレイアウト:**
+
+```css
+.grid {
+  /* モバイル: 1カラム */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (width >= 48rem) {
+  .grid {
+    /* タブレット: 2カラム */
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (width >= 64rem) {
+  .grid {
+    /* デスクトップ: 3カラム */
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+```
+
+**レスポンシブタイポグラフィ:**
+
+```css
+.heading {
+  /* モバイル */
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-heights-tight);
+}
+
+@media (width >= 48rem) {
+  .heading {
+    /* タブレット */
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (width >= 64rem) {
+  .heading {
+    /* デスクトップ */
+    font-size: var(--font-size-5xl);
+  }
+}
+```
+
+**要素の表示/非表示:**
+
+```css
+.mobileMenu {
+  /* モバイルでのみ表示 */
+  display: block;
+}
+
+@media (width >= 48rem) {
+  .mobileMenu {
+    /* タブレット以上では非表示 */
+    display: none;
+  }
+}
+
+.desktopMenu {
+  /* モバイルでは非表示 */
+  display: none;
+}
+
+@media (width >= 48rem) {
+  .desktopMenu {
+    /* タブレット以上で表示 */
+    display: block;
+  }
+}
+```
+
+---
+
 ### Typography (タイポグラフィ)
 
 フォントに関するトークン群。
