@@ -1,0 +1,17 @@
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (width >= 48rem) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
