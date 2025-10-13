@@ -1,3 +1,4 @@
+import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
@@ -13,7 +14,7 @@ export default function OverviewPage() {
         </Heading>
       </StarDecoration>
 
-      <Container className={styles.firstGroup}>
+      <BlurredBox className={styles.firstGroup}>
         <Heading as="h2" variant="secondary">
           赤羽台祭について
         </Heading>
@@ -30,9 +31,9 @@ export default function OverviewPage() {
           この大学祭が、あなたと新しい何かを繋ぐきっかけとなりますように。
           <br></br>皆さまのご来場を心よりお待ちしております。
         </Text>
-      </Container>
+      </BlurredBox>
 
-      <Container className={styles.secondGroup}>
+      <BlurredBox className={styles.secondGroup}>
         <Container className={styles.secondHeading}>
           <Heading as="h2" variant="secondary">
             第9回赤羽台祭
@@ -141,7 +142,7 @@ export default function OverviewPage() {
             </tbody>
           </table>
         </Container>
-      </Container>
+      </BlurredBox>
     </Container>
   );
 }
