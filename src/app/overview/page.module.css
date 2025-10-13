@@ -1,29 +1,41 @@
 .mainContainer > * {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-5xl);
 }
 
 .headLine {
   margin-top: var(--space-2xl);
 }
 
-.secondHeading {
-  display: flex;
-  column-gap: var(--space-xl);
-  margin-bottom: var(--space-xl);
-  padding: 0%;
-}
-
-.mytd {
-  padding-left: var(--space-xl);
+.firstGroup {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  padding-bottom: var(--space-md);
 }
 
 .firstGroup * {
   margin-bottom: var(--space-xl);
 }
 
-/* .secondGroup * {
-  margin-left: 0%;
-} */
+.firstGroup > *:last-child {
+  margin-bottom: 0;
+}
+
+.secondGroup {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.secondHeading {
+  display: flex;
+  column-gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: 0;
+}
+
+.mytd {
+  padding-left: var(--space-xl);
+}
 
 @media (width >= 48rem) {
   .headLine {
