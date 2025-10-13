@@ -1,8 +1,36 @@
-.mytable {
-  border-collapse: separate;
-  border-spacing: 1rem;
+.mainContainer > * {
+  margin-bottom: var(--space-2xl);
 }
 
-.leftAline {
-  text-align: left;
+.headLine {
+  margin-top: var(--space-2xl);
+}
+
+.secondHeading {
+  display: flex;
+  column-gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: 0%;
+}
+
+.mytd {
+  padding-left: var(--space-xl);
+}
+
+.firstGroup * {
+  margin-bottom: var(--space-xl);
+}
+
+/* .secondGroup * {
+  margin-left: 0%;
+} */
+
+@media (width >= 48rem) {
+  .headLine {
+    margin-top: var(--space-4xl);
+  }
+
+  .mytd {
+    padding-left: var(--space-5xl);
+  }
 }
