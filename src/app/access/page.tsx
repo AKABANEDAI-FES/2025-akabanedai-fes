@@ -35,43 +35,39 @@ export default function AccessPage() {
 
         {/* --- 交通案内セクション --- */}
         <div className={styles.info}>
-          <section>
-            <Container>
+          <div className={styles.contentWrapper}>
+            <section>
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>電車をご利用の場合</Text>
               </div>
               <StarDecoration />
-            </Container>
-            <ul className={styles.infoList}>
-              <li><Text>JR「赤羽駅」西口から 徒歩10分</Text></li>
-              <li><Text>東京メトロ南北線・埼玉高速鉄道「赤羽岩淵駅」出入り口2から 徒歩12分</Text></li>
-            </ul>
-          </section>
+              <ul className={styles.infoList}>
+                <li><Text>JR「赤羽駅」西口から 徒歩10分</Text></li>
+                <li><Text>東京メトロ南北線・埼玉高速鉄道「赤羽岩淵駅」出入り口2から 徒歩12分</Text></li>
+              </ul>
+            </section>
 
-          <section>
-            <Container>
+            <section>
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>バスをご利用の場合</Text>
               </div>
               <StarDecoration />
-            </Container>
-            <ul className={styles.infoList}>
-              <li><Text>国際興業バス「赤羽台三丁目」バス停 徒歩3分</Text></li>
-              <li><Text>国際興業バス「法善寺交番」バス停 徒歩3分</Text></li>
-            </ul>
-          </section>
-          
-          <section>
-            <Container>
+              <ul className={styles.infoList}>
+                <li><Text>国際興業バス「赤羽台三丁目」バス停　徒歩3分</Text></li>
+                <li><Text>国際興業バス「法善寺交番」バス停　徒歩3分</Text></li>
+              </ul>
+            </section>
+            
+            <section>
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>注意事項</Text>
               </div>
               <StarDecoration />
-            </Container>
-            <Text className={styles.notes}>
-              駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
-            </Text>
-          </section>
+              <Text className={styles.notes}>
+                駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
+              </Text>
+            </section>
+          </div>
         </div>
       </Container>
     </>
