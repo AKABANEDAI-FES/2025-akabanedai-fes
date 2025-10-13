@@ -63,7 +63,7 @@ export default function AccessPage() {
                 <Text className={styles.sectionTitle}>注意事項</Text>
               </div>
               <StarDecoration />
-              <Text className={styles.notes}>
+              <Text className={styles.infoList}>
                 駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
               </Text>
             </section>
