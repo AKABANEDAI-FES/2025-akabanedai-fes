@@ -262,6 +262,51 @@ import { blurredBox } from "@/components/ui/blurred-box";
 
 ---
 
+### LinkButton - リンクボタン
+
+ボタンのような見た目のリンクを提供するコンポーネント。
+
+**主な用途:**
+- ページ内リンク
+- 外部サイトへのリンク
+- アクション喚起
+
+**使用例:**
+
+```tsx
+import { LinkButton } from "@/components/ui/link-button";
+
+// 基本的な使用方法
+<LinkButton href="/access">アクセス情報</LinkButton>
+
+// 外部リンクとして使用
+<LinkButton href="https://example.com" target="_blank" rel="noopener noreferrer">
+  外部サイトへ
+</LinkButton>
+
+// カスタムスタイル適用
+<LinkButton href="#contact" className="custom-link">
+  お問い合わせ
+</LinkButton>
+```
+
+**プロパティ:**
+- `href`: リンク先のURL - **必須**
+- `target`: リンクを開く場所 (`_blank`, `_self`, etc.)
+- `rel`: リンクとの関係性 (外部リンクには `noopener noreferrer` を推奨)
+- `className`: 追加のCSSクラス名
+- その他の標準的なアンカー要素の属性
+
+**ヘルパー関数:**
+
+```tsx
+import { linkButton } from "@/components/ui/link-button";
+
+<a href="#" className={linkButton()}>カスタムリンク</a>
+```
+
+---
+
 ### VisuallyHidden - スクリーンリーダー専用
 
 視覚的には隠れているが、スクリーンリーダーなどの支援技術には読み上げられる要素。
@@ -348,11 +393,13 @@ import { visuallyHidden } from "@/components/ui/visually-hidden";
 ```tsx
 import { container } from "@/components/ui/container";
 import { heading } from "@/components/ui/heading";
+import { linkButton } from "@/components/ui/link-button";
 import { CustomBox } from "./custom-box";
 
 // ✅ 良い例
 <CustomBox className={container()}>
   <h2 className={heading({ variant: "primary" })}>タイトル</h2>
+  <a href="#" className={linkButton()}>詳細を見る</a>
 </CustomBox>
 ```
 
@@ -369,6 +416,7 @@ import { Text } from "@/components/ui/text";
 import { Divider } from "@/components/ui/divider";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { BlurredBox } from "@/components/ui/blurred-box";
+import { LinkButton } from "@/components/ui/link-button";
 
 function EventSection() {
   return (
@@ -389,6 +437,8 @@ function EventSection() {
       <Text>
         メインステージでは、バンド演奏やダンスパフォーマンスを予定しています。
       </Text>
+
+      <LinkButton href="/events">イベント詳細を見る</LinkButton>
 
       {/* 背景画像の上にテキストを表示 */}
       <div style={{ backgroundImage: "url(/event-bg.jpg)" }}>
