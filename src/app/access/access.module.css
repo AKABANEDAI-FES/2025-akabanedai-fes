@@ -2,7 +2,7 @@
 .pageContainer {
     padding-top: 4rem;
     padding-bottom: 6rem;
-    font-family: sans-serif; /* お使いのフォントに合わせて調整してください */
+    font-family: sans-serif; 
 }
 
 /* --- メインタイトル関連 --- */
@@ -41,7 +41,7 @@
 
 .mapButton {
     display: flex;
-    justify-content: flex-end; /* 中の要素（aタグ）を右に寄せる */
+    justify-content: flex-end; 
     margin-top: 1.5rem;
 }
 
@@ -105,4 +105,9 @@
     margin-top: 30;
     margin-left: 10;
     line-height: 1.8;
+}
+
+.decorationImage {
+    width: 100%; 
+    height: auto; 
 }

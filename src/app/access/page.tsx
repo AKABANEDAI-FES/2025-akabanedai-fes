@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import { MobileMenu } from "@/components/header/mobile-menu";
 import { Container } from "@/components/ui/container";
@@ -5,6 +6,7 @@ import map from '@/app/_components/access/map.webp';
 import styles from "./access.module.css";
 import { StarDecoration } from '@/components/ui/star-decoration';
 import { Text } from '@/components/ui/text';
+import StarDecoration2 from './star_decoration2.svg';
 
 export default function AccessPage() {
   return (
@@ -40,7 +42,7 @@ export default function AccessPage() {
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>電車をご利用の場合</Text>
               </div>
-              <StarDecoration />
+              <StarDecoration2 className={styles.decorationImage} />
               <ul className={styles.infoList}>
                 <li><Text>JR「赤羽駅」西口から 徒歩10分</Text></li>
                 <li><Text>東京メトロ南北線・埼玉高速鉄道「赤羽岩淵駅」出入り口2から 徒歩12分</Text></li>
@@ -51,7 +53,7 @@ export default function AccessPage() {
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>バスをご利用の場合</Text>
               </div>
-              <StarDecoration />
+              <StarDecoration2 className={styles.decorationImage} />
               <ul className={styles.infoList}>
                 <li><Text>国際興業バス「赤羽台三丁目」バス停　徒歩3分</Text></li>
                 <li><Text>国際興業バス「法善寺交番」バス停　徒歩3分</Text></li>
@@ -62,7 +64,7 @@ export default function AccessPage() {
               <div className={styles.sectionTitleWrapper}>
                 <Text className={styles.sectionTitle}>注意事項</Text>
               </div>
-              <StarDecoration />
+              <StarDecoration2 className={styles.decorationImage} />
               <Text className={styles.infoList}>
                 駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
               </Text>
