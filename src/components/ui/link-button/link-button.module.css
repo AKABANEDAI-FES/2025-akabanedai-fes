@@ -1,0 +1,8 @@
+.linkButton {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--color-complementary-6);
+  color: var(--fg-default);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+}
