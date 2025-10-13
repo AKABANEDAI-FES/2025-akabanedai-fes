@@ -25,13 +25,13 @@
     background-color: #d3d3d3; 
     border-radius: 15px; 
     padding: 10px 20px; 
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: bold;
     color: #000000; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-top: 0.7rem;
     bottom: 1.4rem;
-    width: 21rem;
+    width: 17.6rem;
     max-width: 1265px; 
   }
   
@@ -55,7 +55,7 @@
   }
   
   .mainMessage {
-    font-size: 1.1rem;
+    font-size: 16px;
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
@@ -63,22 +63,22 @@
   }
   
   .description{
-    font-size: 1.09rem;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 9px;
     font-weight: normal;
   }
 
   .contactInfo {
-    font-size: 1.1rem;
+    font-size: 16px;
     font-weight: normal;
   }
 
   .troubleExamples {
-    margin: 26px 0;
+    margin: 16px 0;
     display: inline-block;
     font-weight: bolder;
-    font-size: 1.4rem;
+    font-size: 20px;
   }
 
  .center{

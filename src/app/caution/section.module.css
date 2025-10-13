@@ -31,7 +31,7 @@
     margin-top: -0.5rem;
     border-radius: 15px; 
     padding: 12px 20px; 
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: bold;
     color: #1a202c; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -73,15 +73,19 @@
     .sectionContent {
       position: relative;
       z-index: 1;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .noticeSection li {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.6;
       color: #2d3748; 
       margin-bottom: 1px;
       padding-left: 0; 
       position: static; 
     }
+
+    .noticeSection ul {
+      font-size: 13px;
   }
+}

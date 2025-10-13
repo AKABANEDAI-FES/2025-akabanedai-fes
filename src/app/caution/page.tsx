@@ -5,41 +5,41 @@ import CampusNotice from './CampusNotice';
 import TroubleInfo from './TroubleInfo';
 import styles from './page.module.css';
 import CautionIcon from './icon-caution.svg';
-import LineDivider from './line-divider.svg'; 
+import LineDivider from './line-divider.svg';
 import { Container } from "@/components/ui/container";
+import {Text} from "@/components/ui/text";
 
-export const metadata: Metadata = { /* ... */ };
+export const metadata: Metadata = {};
 
 const CautionPage: React.FC = () => {
     return (
-      <div className={styles.appContainer}>          
-            <main className={styles.mainContent}>
-
-              <Container>
-                <div className={styles.mainTitle}>
-                  <span className={styles.icon}>
-                    <CautionIcon />
-                  </span>
-                  <span className={styles.text}>
-                    ご来場の際の注意事項
-                  </span>
-                </div>
-              </Container>
-              
-              <div className={styles.dividerWrapper}>
-                <LineDivider className={styles.lineDivider} />
+      <div className={styles.appContainer}>
+        <main className={styles.mainContent}>
+            <Container>
+              <div className={styles.mainTitle}>
+              <span className={styles.icon}>
+              <CautionIcon />
+              </span>
+              <Text className={styles.text}>
+              ご来場の際の注意事項
+              </Text>
               </div>
+            </Container>
 
-              <Container>
-              <div className={styles.noticeSectionsWrapper}>
-                <EntryNotice />
-                <CampusNotice />
-              </div>
+            <div className={styles.dividerWrapper}>
+              <LineDivider className={styles.lineDivider} />
+            </div>
 
-              <TroubleInfo />
-              </Container>
-            </main>
-          </div>      
+            <Container>
+            <div className={styles.noticeSectionsWrapper}>
+            <EntryNotice />
+            <CampusNotice />
+            </div>
+
+            <TroubleInfo />
+            </Container>
+        </main>
+      </div>      
   );
 };
 

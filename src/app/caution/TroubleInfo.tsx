@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './troubleinfo.module.css'; 
 import { Container } from "@/components/ui/container";
+import {Text} from "@/components/ui/text";
 
 const TroubleInfo: React.FC = () => {
   return (
@@ -10,24 +11,30 @@ const TroubleInfo: React.FC = () => {
       </Container>
       <Container>
       <div className={styles.contentBox}>
-        <p className={styles.mainMessage}>
+        <div className={styles.mainMessage}>
+          <Text>
           困ったときはインフォメーションセンターへ！
-        </p>
+          </Text>
+        </div>
         <div className={styles.center}>
-            <p className={styles.description}>
+            <div className={styles.description}>
+            <Text>
             インフォメーションセンターは迷子や落し物、その他わからないことがあった時などのためにある相談所です。
-            </p>
+            </Text>
+            </div>
             <div className={styles.troubleExamples}>
-                <p>
+                  <Text>
                     イベントの開催場所がわからない<br />
                     持ち物を無くしてしまった・・・<br />
                     など様々なトラブルに対応します。
-                </p>
+                  </Text>
             </div>
-            <p className={styles.contactInfo}>
+            <div className={styles.contactInfo}>
+            <Text>
             お困りの際は周囲のインフォメーションセンターにお声がけください。<br />
             また、会場内をスタッフが巡回しています。ジャンパーを着用したスタッフにお気軽にお声がけください。
-            </p>
+            </Text>
+            </div>
         </div>
       </div>
       </Container>
