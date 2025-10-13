@@ -1,0 +1,591 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="デザイントークン/概要" />
+
+# デザイントークン
+
+赤羽台祭2025サイトで使用されているデザイントークン（CSS Custom Properties）の一覧と使用方法です。
+
+## 📖 デザイントークンとは
+
+デザイントークンは、デザインシステムの基盤となる設計上の決定事項を、再利用可能な値として定義したものです。
+このプロジェクトでは、CSS Custom Properties（カスタムプロパティ）として実装されています。
+
+### メリット
+
+- **一貫性**: デザイン全体で統一された値を使用できます
+- **保守性**: 一箇所で変更すれば、全体に反映されます
+- **スケーラビリティ**: 新しいコンポーネントも既存のトークンで構築できます
+- **コミュニケーション**: デザイナーと開発者の共通言語になります
+
+## 🎨 トークンカテゴリ
+
+### Colors (色)
+
+色のトークンは、プリミティブカラーとセマンティックカラーの2層構造になっています。
+
+#### プリミティブカラー
+
+基本的な色のパレット。直接使用せず、セマンティックカラーを通して使用することを推奨します。
+
+- **Grayscale**: `--color-gray-1` ~ `--color-gray-8`
+- **Grayscale Alpha**: `--color-gray-a1` ~ `--color-gray-a9`
+- **Accent**: `--color-accent-1` ~ `--color-accent-8`
+- **Accent Alpha**: `--color-accent-a1` ~ `--color-accent-a9`
+- **Complementary**: `--color-complementary-1` ~ `--color-complementary-8`
+- **Complementary Alpha**: `--color-complementary-a1` ~ `--color-complementary-a9`
+
+#### セマンティックカラー
+
+用途に応じた意味を持つカラートークン。コンポーネントではこちらを使用します。
+
+```css
+/* Foreground (前景色) */
+--fg-default: var(--color-gray-8);
+--fg-muted: var(--color-gray-5);
+
+/* Background (背景色) */
+--bg-default: var(--color-gray-1);
+--bg-muted: var(--color-gray-2);
+
+/* Accent (アクセント) */
+--accent-default: var(--color-accent-6);
+--accent-fg: var(--color-gray-1);
+
+/* Border (ボーダー) */
+--border-default: var(--color-gray-3);
+--border-muted: var(--color-gray-2);
+```
+
+**使用例:**
+
+```css
+.card {
+  background-color: var(--bg-default);
+  color: var(--fg-default);
+  border: 1px solid var(--border-default);
+}
+
+.button {
+  background-color: var(--accent-default);
+  color: var(--accent-fg);
+}
+```
+
+---
+
+### Spacing (余白)
+
+一貫した余白を提供するトークン。
+
+```css
+--space-xs: 0.5rem;    /* 8px */
+--space-sm: 0.75rem;   /* 12px */
+--space-md: 1rem;      /* 16px */
+--space-lg: 1.5rem;    /* 24px */
+--space-xl: 2rem;      /* 32px */
+--space-2xl: 3rem;     /* 48px */
+--space-3xl: 4rem;     /* 64px */
+--space-4xl: 6rem;     /* 96px */
+--space-5xl: 8rem;     /* 128px */
+--space-6xl: 12rem;    /* 192px */
+--space-7xl: 16rem;    /* 256px */
+--space-8xl: 24rem;    /* 384px */
+```
+
+**使用例:**
+
+```css
+.container {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.card {
+  gap: var(--space-md);
+}
+```
+
+---
+
+### Border Radius (角丸)
+
+統一された角丸のサイズ。
+
+```css
+--radius-l1: 0.25rem;  /* 4px */
+--radius-l2: 0.5rem;   /* 8px */
+--radius-l3: 0.75rem;  /* 12px */
+--radius-full: 9999px; /* 完全な円形 */
+```
+
+**使用例:**
+
+```css
+.button {
+  border-radius: var(--radius-l2);
+}
+
+.avatar {
+  border-radius: var(--radius-full);
+}
+```
+
+---
+
+### Shadows (影)
+
+コンポーネントに奥行きを与える影のトークン。
+
+```css
+--shadow-xs: 0 1px 2px var(--color-gray-a2), 0 0.5px 0.5px var(--color-gray-a2);
+--shadow-sm: 0 1px 3px var(--color-gray-a2), 0 1px 1.5px var(--color-gray-a2);
+--shadow-md: 0 2px 6px var(--color-gray-a2), 0 1px 3px var(--color-gray-a3);
+--shadow-lg: 0 6px 12px var(--color-gray-a2), 0 2px 6px var(--color-gray-a3);
+--shadow-xl: 0 12px 24px var(--color-gray-a2), 0 4px 12px var(--color-gray-a3);
+```
+
+**使用例:**
+
+```css
+.card {
+  box-shadow: var(--shadow-md);
+}
+
+.modal {
+  box-shadow: var(--shadow-xl);
+}
+```
+
+---
+
+### Sizes (サイズ)
+
+最大幅やコンテナサイズに使用するトークン。
+
+```css
+--size-xs: 20rem;    /* 320px */
+--size-sm: 24rem;    /* 384px */
+--size-md: 28rem;    /* 448px */
+--size-lg: 32rem;    /* 512px */
+--size-xl: 36rem;    /* 576px */
+--size-2xl: 42rem;   /* 672px */
+--size-3xl: 48rem;   /* 768px */
+--size-4xl: 56rem;   /* 896px */
+--size-5xl: 64rem;   /* 1024px */
+--size-6xl: 72rem;   /* 1152px */
+--size-7xl: 80rem;   /* 1280px */
+--size-8xl: 90rem;   /* 1440px */
+--size-full: 100%;
+```
+
+**使用例:**
+
+```css
+.container {
+  max-width: var(--size-6xl);
+}
+
+.sidebar {
+  width: var(--size-sm);
+}
+```
+
+---
+
+### Breakpoints (ブレークポイント)
+
+レスポンシブデザインで使用するブレークポイント。
+
+このプロジェクトでは、モバイルファーストアプローチを採用しています。
+デフォルトはモバイル向けのスタイルを定義し、必要に応じて大きい画面向けのスタイルを追加します。
+
+#### ブレークポイントの定義
+
+現在のコードベースで使用されている主なブレークポイント:
+
+```css
+/* タブレット以上 (width >= 768px) */
+@media (width >= 48rem) {
+  /* タブレット・デスクトップ向けのスタイル */
+}
+
+/* デスクトップ以上 (width >= 1024px) */
+@media (width >= 64rem) {
+  /* デスクトップ向けのスタイル */
+}
+```
+
+**サイズの対応表:**
+
+- `48rem` = `768px` - タブレット以上 (主要ブレークポイント)
+- `64rem` = `1024px` - デスクトップ以上 (主要ブレークポイント)
+
+**より細かい制御が必要な場合:**
+
+- `40rem` = `640px` - 小型タブレット
+- `80rem` = `1280px` - 大型デスクトップ
+
+**Note:** まずは主要な2つのブレークポイント (48rem, 64rem) で対応を試みてください。
+より細かいレイアウト調整が必要な場合のみ、追加のブレークポイントを使用します。
+
+#### 使用方法
+
+**基本パターン (モバイルファースト):**
+
+```css
+/* ✅ 良い例 - モバイルファースト */
+.container {
+  /* モバイル向けのスタイル (デフォルト) */
+  padding: var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+@media (width >= 48rem) {
+  .container {
+    /* タブレット以上 */
+    padding: var(--space-lg);
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (width >= 64rem) {
+  .container {
+    /* デスクトップ以上 */
+    padding: var(--space-xl);
+    font-size: var(--font-size-lg);
+  }
+}
+```
+
+**避けるべきパターン:**
+
+```css
+/* ❌ 悪い例 - デスクトップファースト */
+.container {
+  padding: var(--space-xl);
+  font-size: var(--font-size-lg);
+}
+
+@media (width < 64rem) {
+  .container {
+    padding: var(--space-lg);
+    font-size: var(--font-size-md);
+  }
+}
+
+/* ❌ 悪い例 - ピクセル値を直接使用 */
+@media (width >= 768px) {
+  .container {
+    padding: 24px;
+  }
+}
+```
+
+#### ベストプラクティス
+
+1. **rem単位を使用する**
+   - ブラウザのフォントサイズ設定を尊重するため、`rem`単位を使用します
+   - `1rem` = `16px` (ブラウザデフォルト)
+
+2. **モバイルファーストで設計する**
+   - 基本スタイルはモバイル向けに定義
+   - より大きい画面向けのスタイルを追加的に定義
+
+3. **必要最小限のブレークポイント**
+   - まずは主要な2つのブレークポイント (48rem, 64rem) で対応を試みる
+   - より細かい制御が必要な場合は、40rem や 80rem を使用
+   - むやみにブレークポイントを増やさない
+
+4. **デザイントークンと組み合わせる**
+   - ブレークポイントと一緒にデザイントークンを使用して一貫性を保つ
+
+#### 実践例
+
+**レスポンシブグリッドレイアウト:**
+
+```css
+.grid {
+  /* モバイル: 1カラム */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (width >= 48rem) {
+  .grid {
+    /* タブレット: 2カラム */
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (width >= 64rem) {
+  .grid {
+    /* デスクトップ: 3カラム */
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+}
+```
+
+**レスポンシブタイポグラフィ:**
+
+```css
+.heading {
+  /* モバイル */
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-heights-tight);
+}
+
+@media (width >= 48rem) {
+  .heading {
+    /* タブレット */
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (width >= 64rem) {
+  .heading {
+    /* デスクトップ */
+    font-size: var(--font-size-5xl);
+  }
+}
+```
+
+**要素の表示/非表示:**
+
+```css
+.mobileMenu {
+  /* モバイルでのみ表示 */
+  display: block;
+}
+
+@media (width >= 48rem) {
+  .mobileMenu {
+    /* タブレット以上では非表示 */
+    display: none;
+  }
+}
+
+.desktopMenu {
+  /* モバイルでは非表示 */
+  display: none;
+}
+
+@media (width >= 48rem) {
+  .desktopMenu {
+    /* タブレット以上で表示 */
+    display: block;
+  }
+}
+```
+
+---
+
+### Typography (タイポグラフィ)
+
+フォントに関するトークン群。
+
+#### Font Family (フォントファミリー)
+
+```css
+--font-sans-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+                "Noto Sans JP", "Noto Sans CJK JP", roboto,
+                "Helvetica Neue", arial, "Yu Gothic", meiryo, sans-serif;
+```
+
+#### Font Size (フォントサイズ)
+
+```css
+--font-size-xs: 0.75rem;   /* 12px */
+--font-size-sm: 0.875rem;  /* 14px */
+--font-size-md: 1rem;      /* 16px */
+--font-size-lg: 1.125rem;  /* 18px */
+--font-size-xl: 1.25rem;   /* 20px */
+--font-size-2xl: 1.5rem;   /* 24px */
+--font-size-3xl: 1.875rem; /* 30px */
+--font-size-4xl: 2.25rem;  /* 36px */
+--font-size-5xl: 3rem;     /* 48px */
+--font-size-6xl: 3.75rem;  /* 60px */
+--font-size-7xl: 4.5rem;   /* 72px */
+--font-size-8xl: 6rem;     /* 96px */
+```
+
+#### Font Weight (フォントウェイト)
+
+```css
+--font-weight-thin: 100;
+--font-weight-extralight: 200;
+--font-weight-light: 300;
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+--font-weight-bold: 700;
+--font-weight-extrabold: 800;
+--font-weight-black: 900;
+```
+
+#### Line Height (行間)
+
+```css
+--line-heights-none: 1;
+--line-heights-tight: 1.25;
+--line-heights-normal: 1.5;
+--line-heights-relaxed: 1.75;
+--line-heights-loose: 2;
+```
+
+**使用例:**
+
+```css
+h1 {
+  font-family: var(--font-sans-jp);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-heights-tight);
+}
+
+p {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-heights-relaxed);
+}
+```
+
+---
+
+## 🎯 ベストプラクティス
+
+### 1. セマンティックカラーを優先
+
+```css
+/* ✅ 良い例 */
+.text {
+  color: var(--fg-default);
+}
+
+/* ❌ 悪い例 */
+.text {
+  color: var(--color-gray-8);
+}
+```
+
+セマンティックカラーを使用することで、テーマ変更時の対応が容易になります。
+
+### 2. ハードコードされた値を避ける
+
+```css
+/* ✅ 良い例 */
+.card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-l2);
+  box-shadow: var(--shadow-md);
+}
+
+/* ❌ 悪い例 */
+.card {
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+```
+
+デザイントークンを使用することで、一貫性が保たれます。
+
+### 3. 適切なスケールを選択
+
+```css
+/* ✅ 良い例 - 段階的なサイズ変化 */
+.heading-1 { font-size: var(--font-size-5xl); }
+.heading-2 { font-size: var(--font-size-3xl); }
+.heading-3 { font-size: var(--font-size-xl); }
+
+/* ❌ 悪い例 - 不規則なサイズ */
+.heading-1 { font-size: var(--font-size-8xl); }
+.heading-2 { font-size: var(--font-size-2xl); }
+.heading-3 { font-size: var(--font-size-xs); }
+```
+
+視覚的な階層を保つため、適切なスケールを選択しましょう。
+
+---
+
+## 📝 実践例
+
+### カードコンポーネント
+
+```css
+.card {
+  /* スペーシング */
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+
+  /* カラー */
+  background-color: var(--bg-default);
+  color: var(--fg-default);
+  border: 1px solid var(--border-default);
+
+  /* スタイリング */
+  border-radius: var(--radius-l2);
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  /* タイポグラフィ */
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-heights-tight);
+
+  /* スペーシング */
+  margin-bottom: var(--space-sm);
+}
+
+.card-text {
+  /* タイポグラフィ */
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-heights-relaxed);
+
+  /* カラー */
+  color: var(--fg-muted);
+}
+```
+
+### ボタンコンポーネント
+
+```css
+.button {
+  /* スペーシング */
+  padding: var(--space-sm) var(--space-lg);
+
+  /* カラー */
+  background-color: var(--accent-default);
+  color: var(--accent-fg);
+
+  /* タイポグラフィ */
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+
+  /* スタイリング */
+  border: none;
+  border-radius: var(--radius-l2);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:hover {
+  box-shadow: var(--shadow-md);
+}
+```
+
+---
+
+## 🔍 トークンの確認
+
+各カテゴリのStoryで、実際のトークンの見た目と値を確認できます:
+
+- **Colors**: カラーパレットとセマンティックカラーの一覧
+- **Spacing**: スペーシングスケール、角丸、影、サイズの一覧
+- **Typography**: フォントサイズ、ウェイト、行間の一覧
+
+各Storyには使用例も含まれているので、実装の参考にしてください。

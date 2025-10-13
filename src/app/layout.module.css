@@ -17,6 +17,7 @@
 .header {
   grid-column: 1;
   grid-row: 1 / 2;
+  pointer-events: auto;
 }
 
 .layer {

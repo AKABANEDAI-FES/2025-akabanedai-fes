@@ -23,8 +23,6 @@
 
 .infoText {
   padding: var(--space-xs);
-  background-color: rgb(255 255 255 / 80%);
-  backdrop-filter: blur(4px);
   width: 350px;
 }
 

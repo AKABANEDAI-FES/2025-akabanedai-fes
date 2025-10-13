@@ -12,9 +12,9 @@ export function visuallyHidden() {
   return styles.srOnly;
 }
 
-export type Props = {
-  as?: React.ElementType;
-} & React.HTMLAttributes<HTMLElement>;
+export type Props<T extends React.ElementType = "div"> = {
+  as?: T;
+} & React.ComponentProps<T>;
 
 /**
  * スクリーンリーダー専用のコンテンツを提供するUIコンポーネント
@@ -32,10 +32,10 @@ export type Props = {
  *
  * @param props - VisuallyHiddenコンポーネントのProps
  */
-export function VisuallyHidden({
+export function VisuallyHidden<T extends React.ElementType = "div">({
   as: Component = "div",
   className,
   ...props
-}: Props) {
+}: Props<T>) {
   return <Component className={clsx(visuallyHidden(), className)} {...props} />;
 }

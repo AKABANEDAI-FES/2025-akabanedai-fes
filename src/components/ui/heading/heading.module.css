@@ -5,7 +5,7 @@
   }
 
   .secondary {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
   }
 
@@ -15,7 +15,7 @@
     }
 
     .secondary {
-      font-size: var(--font-size-xl);
+      font-size: var(--font-size-2xl);
     }
   }
 }
