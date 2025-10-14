@@ -76,6 +76,7 @@
     /* ---------- Semantic: Border ---------- */
     --border-default: var(--color-gray-3);
     --border-muted: var(--color-gray-2);
+    --bg-canvas: #eff6f9;
 
     /* ---------- Spacing ---------- */
     --space-xs: 0.5rem;
