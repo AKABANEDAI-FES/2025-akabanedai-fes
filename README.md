@@ -234,6 +234,22 @@ import { BlurredBox } from "@/components/ui/blurred-box";
 </BlurredBox>
 ```
 
+### LinkButton - リンクボタン
+
+ボタンのような見た目のリンクを提供するコンポーネント。
+
+```tsx
+import { LinkButton } from "@/components/ui/link-button";
+
+// 基本的な使用方法
+<LinkButton href="/access">アクセス情報</LinkButton>
+
+// 外部リンクとして使用
+<LinkButton href="https://example.com" target="_blank" rel="noopener noreferrer">
+  外部サイトへ
+</LinkButton>
+```
+
 ### ヘルパー関数
 
 各UIコンポーネントは、CSSクラス名を返すヘルパー関数も提供しています。
@@ -244,6 +260,7 @@ import { heading } from "@/components/ui/heading";
 import { text } from "@/components/ui/text";
 import { divider } from "@/components/ui/divider";
 import { blurredBox } from "@/components/ui/blurred-box";
+import { linkButton } from "@/components/ui/link-button";
 
 // カスタムコンポーネントにスタイルを適用
 <div className={container()}>
@@ -251,6 +268,7 @@ import { blurredBox } from "@/components/ui/blurred-box";
   <p className={text()}>テキスト内容</p>
   <hr className={divider({ variant: "horizontal" })} />
   <div className={blurredBox()}>ブラー効果</div>
+  <a href="#" className={linkButton()}>リンク</a>
 </div>
 ```
 
