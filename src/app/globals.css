@@ -68,6 +68,7 @@
     /* ---------- Semantic: Background ---------- */
     --bg-default: var(--color-gray-1);
     --bg-muted: var(--color-gray-2);
+    --bg-canvas: #eff6f9;
 
     /* ---------- Semantic: Accent ---------- */
     --accent-default: var(--color-accent-6);
