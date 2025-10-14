@@ -28,7 +28,7 @@
 .top > svg {
   height: 2em;
   width: 2em;
-  color: var(--accent-default);
+  color: var(--theme-default);
 }
 
 .container > * {
@@ -36,10 +36,10 @@
 }
 
 .menuButton {
-  background-color: var(--accent-default);
+  background-color: var(--theme-default);
   border-radius: var(--radius-full);
   padding: var(--space-sm);
-  color: var(--accent-fg);
+  color: var(--theme-fg);
   display: grid;
   place-items: center;
   place-content: center;
@@ -57,7 +57,7 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--accent-default);
+  background-color: var(--theme-default);
   z-index: 1;
   clip-path: circle(0 at var(--cx, 50%) var(--cy, 50%));
   will-change: clip-path;
@@ -108,7 +108,7 @@
 
 .accordionTrigger {
   font-size: var(--font-size-xl);
-  color: var(--accent-fg);
+  color: var(--theme-fg);
   display: flex;
   gap: var(--space-md);
   width: var(--size-full);

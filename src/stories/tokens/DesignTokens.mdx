@@ -30,10 +30,10 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 - **Grayscale**: `--color-gray-1` ~ `--color-gray-8`
 - **Grayscale Alpha**: `--color-gray-a1` ~ `--color-gray-a9`
+- **Theme**: `--color-theme-1` ~ `--color-theme-8`
+- **Theme Alpha**: `--color-theme-a1` ~ `--color-theme-a9`
 - **Accent**: `--color-accent-1` ~ `--color-accent-8`
 - **Accent Alpha**: `--color-accent-a1` ~ `--color-accent-a9`
-- **Complementary**: `--color-complementary-1` ~ `--color-complementary-8`
-- **Complementary Alpha**: `--color-complementary-a1` ~ `--color-complementary-a9`
 
 #### セマンティックカラー
 
@@ -48,9 +48,13 @@ import { Meta } from '@storybook/addon-docs/blocks';
 --bg-default: var(--color-gray-1);
 --bg-muted: var(--color-gray-2);
 
+/* Theme (テーマ) */
+--theme-default: var(--color-theme-6);
+--theme-fg: var(--color-gray-1);
+
 /* Accent (アクセント) */
 --accent-default: var(--color-accent-6);
---accent-fg: var(--color-gray-1);
+--accent-fg: var(--color-gray-8);
 
 /* Border (ボーダー) */
 --border-default: var(--color-gray-3);
@@ -67,8 +71,8 @@ import { Meta } from '@storybook/addon-docs/blocks';
 }
 
 .button {
-  background-color: var(--accent-default);
-  color: var(--accent-fg);
+  background-color: var(--theme-default);
+  color: var(--theme-fg);
 }
 ```
 
@@ -560,8 +564,8 @@ p {
   padding: var(--space-sm) var(--space-lg);
 
   /* カラー */
-  background-color: var(--accent-default);
-  color: var(--accent-fg);
+  background-color: var(--theme-default);
+  color: var(--theme-fg);
 
   /* タイポグラフィ */
   font-size: var(--font-size-md);
