@@ -1,179 +1,174 @@
 .appContainer {
   box-sizing: border-box;
-  margin-top: -1rem;    
-    min-height: 100vh;
-    font-family: sans-serif;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
-  }
+  margin-top: -1rem;
+  min-height: 100vh;
+  font-family: sans-serif;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
 
-  .mainContent {
-    padding-top: 70px;
-    position: relative;
-    margin: 0 auto; 
-    left: auto;
-    right: auto;
-    top: auto;
-  }
+.mainContent {
+  padding-top: 70px;
+  position: relative;
+  margin: 0 auto;
+  left: auto;
+  right: auto;
+  top: auto;
+}
 
-  .mainTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: normal;
-    color: #1a202c; 
-    padding: 10px ;
-    margin-top: 2rem;
-  }
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: normal;
+  color: #1a202c;
+  padding: 10px;
+  margin-top: 2rem;
+}
 
-  .text{
-    font-size: 36px;
-  }
+.text {
+  font-size: 36px;
+  font-weight: normal;
+}
 
-  .icon {
-    margin-right: 24px;
-    width: 24px; 
-    height: 30px; 
-    position: relative; 
-    top: -13px;
-  }
-  
-  .noticeSectionsWrapper {
-    display: flex;
-    flex-direction: column;  
+.icon {
+  margin-right: 26px;
+  width: 24px;
+  height: 30px;
+  position: relative;
+  top: -12px;
+}
+
+.noticeSectionsWrapper {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-bottom: 30px; 
-  max-width: 100%; 
-  }
-  
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.dividerWrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: -4rem;
+  margin-bottom: 90px;
+}
+
+.lineDivider {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media (1207px <= width <= 1360px) {
   .dividerWrapper {
     position: relative;
-    max-width: 100%; 
-    width: 100%; 
-    display: block;
-    margin: 0 auto;    
-    margin-top: -4rem; 
-    margin-bottom: 90px; 
-  }
-  
-  .lineDivider {
+    max-width: 100%;
     width: 100%;
     display: block;
     margin: 0 auto;
-    height: 100%;
+    margin-top: -4rem;
+    margin-bottom: 45px;
   }
-
-
-
-  @media (1207px<=width<=1360px) {
-    .dividerWrapper {
-      position: relative;
-      max-width: 100%; 
-      width: 100%; 
-      display: block;
-      margin: 0 auto;    
-      margin-top: -4rem; 
-      margin-bottom: 45px; 
-    }
-  }
-
-  @media (768px<=width<=1206px) {
-    .appContainer {
-      margin-top: -3rem;
-    }
-
-    .icon {
-      margin-right: 20px;
-      width: 34px; 
-      height: 32px; 
-      position: relative; 
-  }
-
-
-    .dividerWrapper {
-      position: relative;
-      max-width: 100%; 
-      width: 100%; 
-      display: block;
-      margin: 0 auto;    
-      margin-top: -1.0rem; 
-      margin-bottom: 50px; 
-    }
-  }
-
-  @media (431px<=width<=767px) {
-    .mainTitle {
-        font-size: 30px; 
-    }
-
-
-  .text{
-    font-size: 33px;
-  }
-
-    .appContainer {
-      margin-top: -1.8rem;
-    }
-
-    .noticeSectionsWrapper{
-      margin-top: -3.0rem;
-      gap: 20px;
-    }
-
-    .icon {
-        margin-right: 20px;
-        width: 32px; 
-        height: 32px; 
-        position: relative; 
-    }
-
-    .dividerWrapper {
-        position: relative;
-        max-width: 100%; 
-        width: 100%; 
-        display: block;
-        margin: 0 auto;    
-        margin-top: 0.3rem; 
-        margin-bottom: 85px; 
-      }
-      
 }
 
-@media (width<=430px) {
-  .mainTitle {
-  font-size: 24px; 
-  }
-
+@media (768px <= width <= 1206px) {
   .appContainer {
-  margin-top: -1.7rem;
-  }
-
-  .text{
-    font-size: 24px;
-  }
-
-  .noticeSectionsWrapper{
-    margin-top: -5.0rem;
+    margin-top: -3rem;
   }
 
   .icon {
     margin-right: 20px;
-    width: 32px; 
-    height: 32px; 
-    position: relative; 
+    width: 34px;
+    height: 32px;
+    position: relative;
+  }
+
+  .dividerWrapper {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -1rem;
+    margin-bottom: 50px;
+  }
+}
+
+@media (431px <= width <= 767px) {
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 33px;
+  }
+
+  .appContainer {
+    margin-top: -1.8rem;
+  }
+
+  .noticeSectionsWrapper {
+    margin-top: -3rem;
+    gap: 20px;
+  }
+
+  .icon {
+    margin-right: 20px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+
+  .dividerWrapper {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+    margin-bottom: 85px;
+  }
+}
+
+@media (width <= 430px) {
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .appContainer {
+    margin-top: -1.7rem;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+
+  .noticeSectionsWrapper {
+    margin-top: -5rem;
+  }
+
+  .icon {
+    margin-right: 20px;
+    width: 32px;
+    height: 30px;
+    position: relative;
     top: -13px;
   }
 
   .dividerWrapper {
     position: relative;
-    max-width: 100%; 
-    width: 100%; 
+    max-width: 100%;
+    width: 100%;
     display: block;
-    margin: 0 auto;    
-    margin-bottom: 100px; 
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 90px;
   }
-
 }
-

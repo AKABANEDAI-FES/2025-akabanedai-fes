@@ -1,91 +1,86 @@
+.noticeSection {
+  padding: 55px 25px 25px;
+  position: relative;
+  background-color: rgb(255 255 255 / 80%);
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+  padding-left: 35px;
+  padding-top: 6rem;
+  font-weight: normal;
+  color: black;
+  z-index: 1;
+}
 
- .noticeSection {     
-    padding: 55px 25px 25px; 
-    position: relative; 
-    background-color: rgb(255, 255, 255,0.8);
-    backdrop-filter: blur(4px); 
-    border-radius: 15px;
-    padding-left: 35px;
-    padding-top: 6.0rem;
-    font-weight: normal;
-    color: black;
-    z-index: 1;
-  }
+.content {
+  position: relative;
+  padding-bottom: 0.1rem;
+  margin-top: -0.1rem;
+  padding-top: 0.1rem;
+  z-index: 2;
+}
 
+.sectionTitle {
+  position: absolute;
+  top: 3rem;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: #d3d3d3;
+  margin-top: 0.2rem;
+  border-radius: 15px;
+  padding: 12px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a202c;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  border-bottom: none;
+}
 
+.sectionContent {
+  position: relative;
+  z-index: 1;
+}
 
-  .content{
-    position: relative;
-    padding-bottom: 0.1rem;
-    margin-top: -0.1rem;
-    padding-top: 0.1rem;
-    z-index: 2;
+.noticeSection ul {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.noticeSection li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 1px;
+  padding-left: 0;
+  position: static;
+}
+
+@media (width <= 767px) {
+  .noticeSection {
+    padding: 5rem 20px 1px 29px;
   }
 
   .sectionTitle {
-    position: absolute; 
-    top: 3.0rem; 
-    transform: translateY(-50%); 
-    z-index: 2;
-    background-color: #d3d3d3; 
-    margin-top: -0.5rem;
-    border-radius: 15px; 
-    padding: 12px 20px; 
-    font-size: 24px;
-    font-weight: bold;
-    color: #1a202c; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    border-bottom: none; 
+    font-size: 16px;
+    top: 3rem;
   }
-  
+
   .sectionContent {
     position: relative;
     z-index: 1;
+    font-size: 13px;
   }
-  
-  .noticeSection ul {
-    list-style: disc; 
-    list-style-position: outside; 
-    padding-left: 20px;
-    
-  }
-  
+
   .noticeSection li {
-    font-size: 1.1rem;
+    font-size: 13px;
     line-height: 1.6;
-    color: #2d3748; 
+    color: #2d3748;
     margin-bottom: 1px;
-    padding-left: 0; 
-    position: static; 
+    padding-left: 0;
+    position: static;
   }
 
-
-  @media (width<=767px) {
-    .noticeSection { 
-      padding: 5.0rem 20px 1px 29px;
-    }
-
-    .sectionTitle {
-      font-size: 16px;
-      top: 3.0rem; 
-    }
-
-    .sectionContent {
-      position: relative;
-      z-index: 1;
-      font-size: 13px;
-    }
-
-    .noticeSection li {
-      font-size: 13px;
-      line-height: 1.6;
-      color: #2d3748; 
-      margin-bottom: 1px;
-      padding-left: 0; 
-      position: static; 
-    }
-
-    .noticeSection ul {
-      font-size: 13px;
+  .noticeSection ul {
+    font-size: 13px;
   }
 }
