@@ -343,24 +343,36 @@ export default function AboutPage() {
 #### 色（Colors）
 
 ```css
-/* グレースケール */
+/* プリミティブ: グレースケール (light -> dark) */
 --color-gray-1 から --color-gray-8
 --color-gray-a1 から --color-gray-a9 /* アルファ付き */
 
-/* アクセントカラー（紺色） */
+/* プリミティブ: テーマカラー（紺色、light -> dark） */
+--color-theme-1 から --color-theme-8
+--color-theme-a1 から --color-theme-a9 /* アルファ付き */
+
+/* プリミティブ: アクセントカラー（黄色） */
 --color-accent-1 から --color-accent-8
---accent-default  /* 基本アクセントカラー */
---accent-fg       /* アクセント上のテキスト */
+--color-accent-a1 から --color-accent-a9 /* アルファ付き */
 
-/* 補色（黄色） */
---color-complementary-1 から --color-complementary-8
-
-/* セマンティックカラー */
+/* セマンティック: Foreground */
 --fg-default      /* デフォルトテキスト色 */
 --fg-muted        /* 控えめなテキスト色 */
+
+/* セマンティック: Background */
 --bg-default      /* デフォルト背景色 */
 --bg-muted        /* 控えめな背景色 */
 --bg-canvas       /* キャンバス背景色 */
+
+/* セマンティック: Theme */
+--theme-default   /* テーマカラー（紺色） */
+--theme-fg        /* テーマカラー上のテキスト色 */
+
+/* セマンティック: Accent */
+--accent-default  /* アクセントカラー（黄色） */
+--accent-fg       /* アクセントカラー上のテキスト色 */
+
+/* セマンティック: Border */
 --border-default  /* デフォルトボーダー色 */
 --border-muted    /* 控えめなボーダー色 */
 ```
