@@ -23,43 +23,43 @@
     --color-gray-a8: #000c;
     --color-gray-a9: #000000e6;
 
-    /* ---------- Primitive: Accent (light -> dark) ---------- */
-    --color-accent-1: #d0d2f0;
-    --color-accent-2: #b1b4e7;
-    --color-accent-3: #777cd4;
-    --color-accent-4: #3d44c2;
-    --color-accent-5: #2b2f88;
-    --color-accent-6: #191c4f; /* default */
-    --color-accent-7: #151742;
-    --color-accent-8: #111336;
-    --color-accent-a1: #191c4f1a;
-    --color-accent-a2: #191c4f33;
-    --color-accent-a3: #191c4f4d;
-    --color-accent-a4: #191c4f66;
-    --color-accent-a5: #191c4f80;
-    --color-accent-a6: #191c4f99;
-    --color-accent-a7: #191c4fb2;
-    --color-accent-a8: #191c4fcc;
-    --color-accent-a9: #191c4fe6;
+    /* ---------- Primitive: Theme (light -> dark) ---------- */
+    --color-theme-1: #d0d2f0;
+    --color-theme-2: #b1b4e7;
+    --color-theme-3: #777cd4;
+    --color-theme-4: #3d44c2;
+    --color-theme-5: #2b2f88;
+    --color-theme-6: #191c4f; /* default */
+    --color-theme-7: #151742;
+    --color-theme-8: #111336;
+    --color-theme-a1: #191c4f1a;
+    --color-theme-a2: #191c4f33;
+    --color-theme-a3: #191c4f4d;
+    --color-theme-a4: #191c4f66;
+    --color-theme-a5: #191c4f80;
+    --color-theme-a6: #191c4f99;
+    --color-theme-a7: #191c4fb2;
+    --color-theme-a8: #191c4fcc;
+    --color-theme-a9: #191c4fe6;
 
-    /* ---------- Primitive: Complementary ---------- */
-    --color-complementary-1: #fffbf0;
-    --color-complementary-2: #fff5db;
-    --color-complementary-3: #ffebb8;
-    --color-complementary-4: #ffe194;
-    --color-complementary-5: #ffe194;
-    --color-complementary-6: #ffcd4d; /* default */
-    --color-complementary-7: #ffbe1a;
-    --color-complementary-8: #e6a400;
-    --color-complementary-a1: #ffcd4d1a;
-    --color-complementary-a2: #ffcd4d33;
-    --color-complementary-a3: #ffcd4d4d;
-    --color-complementary-a4: #ffcd4d66;
-    --color-complementary-a5: #ffcd4d80;
-    --color-complementary-a6: #ffcd4d99;
-    --color-complementary-a7: #ffcd4db2;
-    --color-complementary-a8: #ffcd4dcc;
-    --color-complementary-a9: #ffcd4de6;
+    /* ---------- Primitive: Accent ---------- */
+    --color-accent-1: #fffbf0;
+    --color-accent-2: #fff5db;
+    --color-accent-3: #ffebb8;
+    --color-accent-4: #ffe194;
+    --color-accent-5: #ffe194;
+    --color-accent-6: #ffcd4d; /* default */
+    --color-accent-7: #ffbe1a;
+    --color-accent-8: #e6a400;
+    --color-accent-a1: #ffcd4d1a;
+    --color-accent-a2: #ffcd4d33;
+    --color-accent-a3: #ffcd4d4d;
+    --color-accent-a4: #ffcd4d66;
+    --color-accent-a5: #ffcd4d80;
+    --color-accent-a6: #ffcd4d99;
+    --color-accent-a7: #ffcd4db2;
+    --color-accent-a8: #ffcd4dcc;
+    --color-accent-a9: #ffcd4de6;
 
     /* ---------- Semantic: Foreground ---------- */
     --fg-default: var(--color-gray-8);
@@ -70,9 +70,13 @@
     --bg-muted: var(--color-gray-2);
     --bg-canvas: #eff6f9;
 
+    /* ---------- Semantic: Theme ---------- */
+    --theme-default: var(--color-theme-6);
+    --theme-fg: var(--color-gray-1);
+
     /* ---------- Semantic: Accent ---------- */
     --accent-default: var(--color-accent-6);
-    --accent-fg: var(--color-gray-1);
+    --accent-fg: var(--color-gray-8);
 
     /* ---------- Semantic: Border ---------- */
     --border-default: var(--color-gray-3);

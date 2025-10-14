@@ -31,7 +31,7 @@ const SpacingItem = ({
       style={{
         width: value,
         height: "40px",
-        backgroundColor: "var(--accent-default)",
+        backgroundColor: "var(--theme-default)",
         borderRadius: "var(--radius-l1)",
       }}
     />
@@ -104,7 +104,7 @@ export const BorderRadius: StoryObj = {
             style={{
               width: "100px",
               height: "100px",
-              backgroundColor: "var(--accent-default)",
+              backgroundColor: "var(--theme-default)",
               borderRadius: "var(--radius-l1)",
               marginBottom: "0.5rem",
             }}
@@ -135,7 +135,7 @@ export const BorderRadius: StoryObj = {
             style={{
               width: "100px",
               height: "100px",
-              backgroundColor: "var(--accent-default)",
+              backgroundColor: "var(--theme-default)",
               borderRadius: "var(--radius-l2)",
               marginBottom: "0.5rem",
             }}
@@ -166,7 +166,7 @@ export const BorderRadius: StoryObj = {
             style={{
               width: "100px",
               height: "100px",
-              backgroundColor: "var(--accent-default)",
+              backgroundColor: "var(--theme-default)",
               borderRadius: "var(--radius-l3)",
               marginBottom: "0.5rem",
             }}
@@ -197,7 +197,7 @@ export const BorderRadius: StoryObj = {
             style={{
               width: "100px",
               height: "100px",
-              backgroundColor: "var(--accent-default)",
+              backgroundColor: "var(--theme-default)",
               borderRadius: "var(--radius-full)",
               marginBottom: "0.5rem",
             }}
@@ -472,8 +472,8 @@ export const UsageExample: StoryObj = {
             <div
               style={{
                 padding: "var(--space-md)",
-                backgroundColor: "var(--accent-default)",
-                color: "var(--accent-fg)",
+                backgroundColor: "var(--theme-default)",
+                color: "var(--theme-fg)",
                 borderRadius: "var(--radius-l1)",
                 marginBottom: "var(--space-sm)",
               }}

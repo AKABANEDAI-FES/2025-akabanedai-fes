@@ -190,6 +190,113 @@ export const GrayscaleAlpha: StoryObj = {
   ),
 };
 
+export const Theme: StoryObj = {
+  render: () => (
+    <ColorGroup
+      title="Theme (テーマカラー)"
+      colors={[
+        {
+          name: "Theme 1",
+          value: "var(--color-theme-1)",
+          token: "--color-theme-1",
+        },
+        {
+          name: "Theme 2",
+          value: "var(--color-theme-2)",
+          token: "--color-theme-2",
+        },
+        {
+          name: "Theme 3",
+          value: "var(--color-theme-3)",
+          token: "--color-theme-3",
+        },
+        {
+          name: "Theme 4",
+          value: "var(--color-theme-4)",
+          token: "--color-theme-4",
+        },
+        {
+          name: "Theme 5",
+          value: "var(--color-theme-5)",
+          token: "--color-theme-5",
+        },
+        {
+          name: "Theme 6 (Default)",
+          value: "var(--color-theme-6)",
+          token: "--color-theme-6",
+        },
+        {
+          name: "Theme 7",
+          value: "var(--color-theme-7)",
+          token: "--color-theme-7",
+        },
+        {
+          name: "Theme 8",
+          value: "var(--color-theme-8)",
+          token: "--color-theme-8",
+        },
+      ]}
+    />
+  ),
+};
+
+export const ThemeAlpha: StoryObj = {
+  render: () => (
+    <div style={{ backgroundColor: "var(--bg-muted)", padding: "1rem" }}>
+      <ColorGroup
+        title="Theme Alpha (透明度付きテーマ)"
+        colors={[
+          {
+            name: "Theme A1 (10%)",
+            value: "var(--color-theme-a1)",
+            token: "--color-theme-a1",
+          },
+          {
+            name: "Theme A2 (20%)",
+            value: "var(--color-theme-a2)",
+            token: "--color-theme-a2",
+          },
+          {
+            name: "Theme A3 (30%)",
+            value: "var(--color-theme-a3)",
+            token: "--color-theme-a3",
+          },
+          {
+            name: "Theme A4 (40%)",
+            value: "var(--color-theme-a4)",
+            token: "--color-theme-a4",
+          },
+          {
+            name: "Theme A5 (50%)",
+            value: "var(--color-theme-a5)",
+            token: "--color-theme-a5",
+          },
+          {
+            name: "Theme A6 (60%)",
+            value: "var(--color-theme-a6)",
+            token: "--color-theme-a6",
+          },
+          {
+            name: "Theme A7 (70%)",
+            value: "var(--color-theme-a7)",
+            token: "--color-theme-a7",
+          },
+          {
+            name: "Theme A8 (80%)",
+            value: "var(--color-theme-a8)",
+            token: "--color-theme-a8",
+          },
+          {
+            name: "Theme A9 (90%)",
+            value: "var(--color-theme-a9)",
+            token: "--color-theme-a9",
+          },
+        ]}
+      />
+    </div>
+  ),
+};
+
 export const Accent: StoryObj = {
   render: () => (
     <ColorGroup
@@ -297,113 +404,6 @@ export const AccentAlpha: StoryObj = {
   ),
 };
 
-export const Complementary: StoryObj = {
-  render: () => (
-    <ColorGroup
-      title="Complementary (補色カラー)"
-      colors={[
-        {
-          name: "Complementary 1",
-          value: "var(--color-complementary-1)",
-          token: "--color-complementary-1",
-        },
-        {
-          name: "Complementary 2",
-          value: "var(--color-complementary-2)",
-          token: "--color-complementary-2",
-        },
-        {
-          name: "Complementary 3",
-          value: "var(--color-complementary-3)",
-          token: "--color-complementary-3",
-        },
-        {
-          name: "Complementary 4",
-          value: "var(--color-complementary-4)",
-          token: "--color-complementary-4",
-        },
-        {
-          name: "Complementary 5",
-          value: "var(--color-complementary-5)",
-          token: "--color-complementary-5",
-        },
-        {
-          name: "Complementary 6 (Default)",
-          value: "var(--color-complementary-6)",
-          token: "--color-complementary-6",
-        },
-        {
-          name: "Complementary 7",
-          value: "var(--color-complementary-7)",
-          token: "--color-complementary-7",
-        },
-        {
-          name: "Complementary 8",
-          value: "var(--color-complementary-8)",
-          token: "--color-complementary-8",
-        },
-      ]}
-    />
-  ),
-};
-
-export const ComplementaryAlpha: StoryObj = {
-  render: () => (
-    <div style={{ backgroundColor: "var(--bg-muted)", padding: "1rem" }}>
-      <ColorGroup
-        title="Complementary Alpha (透明度付き補色)"
-        colors={[
-          {
-            name: "Complementary A1 (10%)",
-            value: "var(--color-complementary-a1)",
-            token: "--color-complementary-a1",
-          },
-          {
-            name: "Complementary A2 (20%)",
-            value: "var(--color-complementary-a2)",
-            token: "--color-complementary-a2",
-          },
-          {
-            name: "Complementary A3 (30%)",
-            value: "var(--color-complementary-a3)",
-            token: "--color-complementary-a3",
-          },
-          {
-            name: "Complementary A4 (40%)",
-            value: "var(--color-complementary-a4)",
-            token: "--color-complementary-a4",
-          },
-          {
-            name: "Complementary A5 (50%)",
-            value: "var(--color-complementary-a5)",
-            token: "--color-complementary-a5",
-          },
-          {
-            name: "Complementary A6 (60%)",
-            value: "var(--color-complementary-a6)",
-            token: "--color-complementary-a6",
-          },
-          {
-            name: "Complementary A7 (70%)",
-            value: "var(--color-complementary-a7)",
-            token: "--color-complementary-a7",
-          },
-          {
-            name: "Complementary A8 (80%)",
-            value: "var(--color-complementary-a8)",
-            token: "--color-complementary-a8",
-          },
-          {
-            name: "Complementary A9 (90%)",
-            value: "var(--color-complementary-a9)",
-            token: "--color-complementary-a9",
-          },
-        ]}
-      />
-    </div>
-  ),
-};
-
 export const Semantic: StoryObj = {
   render: () => (
     <div>
@@ -434,6 +434,16 @@ export const Semantic: StoryObj = {
             name: "Background Canvas",
             value: "var(--bg-canvas)",
             token: "--bg-canvas",
+          },
+          {
+            name: "Theme Default",
+            value: "var(--theme-default)",
+            token: "--theme-default",
+          },
+          {
+            name: "Theme Foreground",
+            value: "var(--theme-fg)",
+            token: "--theme-fg",
           },
           {
             name: "Accent Default",
@@ -523,6 +533,26 @@ export const UsageExample: StoryObj = {
               --bg-muted
             </div>
           </div>
+        </div>
+
+        <div>
+          <h4 style={{ marginBottom: "0.5rem", fontSize: "0.875rem" }}>
+            テーマカラー
+          </h4>
+          <button
+            type="button"
+            style={{
+              padding: "0.75rem 1.5rem",
+              backgroundColor: "var(--theme-default)",
+              color: "var(--theme-fg)",
+              border: "none",
+              borderRadius: "var(--radius-l2)",
+              fontSize: "1rem",
+              cursor: "pointer",
+            }}
+          >
+            テーマボタン
+          </button>
         </div>
 
         <div>
