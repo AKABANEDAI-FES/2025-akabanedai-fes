@@ -431,6 +431,11 @@ export const Semantic: StoryObj = {
             token: "--bg-muted",
           },
           {
+            name: "Background Canvas",
+            value: "var(--bg-canvas)",
+            token: "--bg-canvas",
+          },
+          {
             name: "Accent Default",
             value: "var(--accent-default)",
             token: "--accent-default",
