@@ -164,73 +164,136 @@ Next.jsでは、**`page.tsx`** ファイルがウェブサイトの**一つのUR
 ### ページの作成手順
 
 1. **フォルダ作成**: `src/app/` 直下に、URLにしたい名前で**新しいフォルダ**を作成します
-   - 例: `src/app/access/` → URLは `/access` になります
+   - 例: `src/app/about/` → URLは `/about` になります
 2. **ファイル作成**: そのフォルダ内に、ページの本体となる **`page.tsx`** を作成します
-3. **スタイルの適用**: ページ固有のスタイルは、同じフォルダ内に**CSS Modules**ファイル（例: `access.module.css`）を作成して適用します
+3. **スタイルの適用**: ページ固有のスタイルは、同じフォルダ内に**CSS Modules**ファイル（例: `page.module.css`）を作成して適用します
 
 | 種類 | ファイルの場所 | 説明 |
 | :--- | :--- | :--- |
 | **ページ本体** | `src/app/アクセス名/page.tsx` | URL（画面）の本体 |
-| **ページスタイル** | `src/app/アクセス名/アクセス名.module.css` | そのページ専用の見た目を設定 |
+| **ページスタイル** | `src/app/アクセス名/page.module.css` | そのページ専用の見た目を設定 |
 
 ## コンポーネントの配置ルール
 
 コンポーネントは、その**再利用性**と**利用範囲**に基づき、配置場所を明確に分けます。
 
-| カテゴリ | 配置場所 | 役割 | 命名規則の例 |
+| カテゴリ | 配置場所 | 役割 | 例 |
 | :--- | :--- | :--- | :--- |
-| **共通・再利用部品** | **`src/components/`** | サイト全体で使われる汎用的なUIや共通レイアウト部品。**どこからでも参照されます。** | `header.tsx`, `button.tsx`, `ui/card.tsx` |
-| **ページ専用部品** | **`src/app/_components/`** | 特定のページ内でのみ利用される部品。**他のページからの参照は想定しません。** | `_components/access/map.tsx`, `_components/banner/hero.tsx` |
+| **共通・再利用部品** | **`src/components/`** | サイト全体で使われる汎用的なUIや共通レイアウト部品。**どこからでも参照されます。** | `header/`, `footer/`, `ui/container/` |
+| **ページ固有部品** | **`src/app/{page}/_components/`** | 特定のページ内でのみ利用される部品。**他のページからの参照は想定しません。** | `src/app/_components/access/`（ルート）<br>`src/app/about/_components/greeting/`（サブページ） |
 
 ### 共通・再利用部品 (`src/components/` 配下)
 
-- **配置ルール**: `src/components/` 以下のサブフォルダ、またはファイル直下に配置
+- **配置ルール**: `src/components/` 以下にコンポーネント名のサブフォルダを作成して配置
 - **用途**:
-  - `Button`, `Card`, `Modal` などの**汎用UI**
   - `Header`, `Footer` などの**サイト共通レイアウト**
+  - `Container`, `Heading`, `Text`, `Button` などの**汎用UI部品**（`ui/` サブディレクトリ内）
 
-### ページ専用部品 (`src/app/_components/` 配下)
+**実際の構成例:**
 
-- **配置ルール**: **`src/app/_components/ページ名/`** フォルダ内に作成します
-  - 例: 「赤羽台祭について」ページ専用 → `src/app/_components/about/`
-- **用途**: 特定のページに特化した**専用の地図**、**カスタムされた情報ボックス**、**特定のバナー**など
+```
+src/components/
+├── header/
+│   ├── header.tsx
+│   ├── header.module.css
+│   └── index.ts
+├── footer/
+│   ├── footer.tsx
+│   ├── footer.module.css
+│   └── index.ts
+└── ui/
+    ├── container/
+    │   ├── container.tsx
+    │   ├── container.module.css
+    │   ├── container.stories.tsx
+    │   └── index.ts
+    └── heading/
+        ├── heading.tsx
+        ├── heading.module.css
+        ├── heading.stories.tsx
+        └── index.ts
+```
+
+### ページ固有部品 (`src/app/{page}/_components/` 配下)
+
+- **配置ルール**: 各ページディレクトリ内の `_components/` フォルダに配置します
+  - **ルートページ**: `src/app/_components/{コンポーネント名}/`
+  - **サブページ**: `src/app/{page}/_components/{コンポーネント名}/`
+- **用途**: 特定のページに特化した部品（専用の地図、カスタム情報ボックス、特定のバナーなど）
+
+**実際の構成例（ルートページ）:**
+
+```
+src/app/_components/
+├── access/
+│   ├── access.tsx
+│   ├── access.module.css
+│   └── index.ts
+├── banner/
+│   ├── banner.tsx
+│   ├── banner.module.css
+│   └── index.ts
+├── parallax/
+│   ├── parallax.tsx
+│   ├── parallax.module.css
+│   └── index.ts
+└── theme/
+    ├── theme.tsx
+    ├── theme.module.css
+    └── index.ts
+```
+
+**サブページの配置例:**
+
+```
+src/app/about/_components/
+├── greeting/
+│   ├── greeting.tsx
+│   ├── greeting.module.css
+│   └── index.ts
+└── history/
+    ├── history.tsx
+    ├── history.module.css
+    └── index.ts
+```
 
 ### ページ本体 (`page.tsx`) での部品利用
 
-`page.tsx`では、**共通部品**と**ページ専用部品**のどちらもインポートして利用可能です。インポートには、ルートエイリアス **`@/`**（`src/` を指す）を利用します。
+`page.tsx`では、**共通部品**と**ページ固有部品**のどちらもインポートして利用可能です。インポートには、ルートエイリアス **`@/`**（`src/` を指す）を利用します。
 
-**コード例 (`src/app/access/page.tsx`)**
+**実際のコード例 (`src/app/page.tsx`)**
 
 ```tsx
-// 共通・再利用部品のインポート (例: Header)
-import { Header } from '@/components/header';
-// ページ専用部品のインポート (例: AccessMap)
-import { AccessMap } from '@/app/_components/access/access-map';
+// 共通・再利用部品のインポート
+import { Container } from '@/components/ui/container';
+// ページ固有部品のインポート
+import { Access } from './_components/access';
+import { Banner } from './_components/banner';
+import { Theme } from './_components/theme';
 
-export default function AccessPage() {
+export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <h1>アクセス情報</h1>
-        {/* ページ専用部品の利用 */}
-        <AccessMap />
-      </main>
+      <Banner />
+      <Container as="main">
+        <Theme />
+        <Access />
+      </Container>
     </>
   );
 }
 ```
 
-### コンポーネントのファイル構成（推奨）
+### コンポーネントのファイル構成
 
-コンポーネントは、以下の構造で構成することで、管理しやすくすることができます。
+実際のプロジェクトでは、以下の構成を採用しています:
 
-| 構成要素 | ファイル名 | 役割 |
-| :--- | :--- | :--- |
-| **部品本体** | `●●.tsx` | コンポーネントのロジックとJSXを定義 |
-| **専用スタイル** | `●●.module.css` | 部品専用のCSS Modules |
-| **Storybook ストーリー** | `●●.stories.tsx` | Storybook での表示例 |
-| **エクスポート窓口** | `index.ts` | ページからのインポートを容易にするためのファイル |
+| 構成要素 | ファイル名 | 用途 | 対象 |
+| :--- | :--- | :--- | :--- |
+| **部品本体** | `●●.tsx` | コンポーネントのロジックとJSXを定義 | 全てのコンポーネント |
+| **専用スタイル** | `●●.module.css` | 部品専用のCSS Modules | 全てのコンポーネント |
+| **エクスポート窓口** | `index.ts` | `export { Foo } from './foo'` の形式で再エクスポート | 全てのコンポーネント |
+| **Storybook ストーリー** | `●●.stories.tsx` | Storybook での表示例とドキュメント | `src/components/ui/` 配下のみ |
 
 ## 開発ガイドライン
 
