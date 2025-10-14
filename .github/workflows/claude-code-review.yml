@@ -34,7 +34,7 @@ jobs:
           FILE="base/.github/copilot-instructions.md"
           if [[ -f "$FILE" ]]; then
             {
-              echo "content<<'EOF'"
+              echo "content<<EOF"
               cat "$FILE"
               echo "EOF"
             } >> "$GITHUB_OUTPUT"
