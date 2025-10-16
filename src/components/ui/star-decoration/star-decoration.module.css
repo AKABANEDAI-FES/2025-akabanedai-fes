@@ -22,7 +22,7 @@
   }
 
   .star {
-    color: var(--accent-default);
+    color: var(--theme-default);
     stroke-width: 4px;
     width: var(--star-size);
     height: var(--star-size);
@@ -34,7 +34,7 @@
 
 
   .divider {
-    background-color: var(--accent-default);
+    background-color: var(--theme-default);
   }
 
   @media (width >= 48rem) {
