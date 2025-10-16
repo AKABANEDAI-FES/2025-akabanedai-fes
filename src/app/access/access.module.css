@@ -5,23 +5,6 @@
     font-family: sans-serif; 
 }
 
-/* --- メインタイトル関連 --- */
-.titleWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 2rem;
-}
-
-.title {
-    font-size: 36px;
-    font-weight: bold;
-    padding-bottom: 0.1;
-    margin-bottom: -25;
-    color: #333;
-}
-
 
 /* --- マップ関連 --- */
 .mapContainer {
@@ -46,24 +29,7 @@
     margin-top: 1.5rem;
 }
 
-.mapButton a{
-    padding: 0.6rem 1.5rem;
-    background-color: #ffd700;
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    margin-left: auto; 
-    font-size: 0.9rem;
-}
-    
 
-
-.mapButton:hover {
-    transform: translateY(-2px);
-}
 
 /* --- 交通案内セクション --- */
 .info{
@@ -74,6 +40,7 @@
     backdrop-filter: blur(4px);
     padding: 3rem;
     border-radius: 15px;
+    --accent-default: #191C4F;
 }
 
 .contentWrapper {
@@ -83,20 +50,6 @@
     display: flex;
     flex-direction: column;
     gap: 7rem; 
-}
-.sectionTitleWrapper {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: 1.5rem; 
-}
-
-.sectionTitle {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 0.1;
-    margin-bottom: -25;
-    color: #333;
 }
 
 
