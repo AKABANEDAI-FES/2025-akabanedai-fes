@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "run-p -c gen lint:*",
     "lint:biome": "biome check",
-    "lint:style": "stylelint '**/*.css' --ignore-path .gitignore",
+    "lint:style": "stylelint \"**/*.css\" --ignore-path .gitignore",
     "format": "run-p format:*",
     "format:biome": "biome check --write",
     "format:style": "stylelint \"src/**/*.css\" --fix --ignore-path .gitignore",
