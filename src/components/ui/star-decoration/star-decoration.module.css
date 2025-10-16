@@ -28,6 +28,11 @@
     height: var(--star-size);
   }
 
+  .star.fill {
+    fill: var(--accent-default);
+  }
+
+
   .divider {
     background-color: var(--accent-default);
   }
