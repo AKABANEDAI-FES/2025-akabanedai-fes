@@ -6,12 +6,20 @@
 }
 
 /* --- マップ関連 --- */
+.mainContent {
+  width: 100%;
+  max-width: 900px; /* .infoから移動 */
+  margin: 4rem auto 0; /* .infoから移動 */
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* マップとinfoの間のスペース */
+}
+
 .mapContainer {
-  margin-top: 2rem;
   width: 100%;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 60px;
+  margin-inline: auto;
   box-sizing: border-box;
 }
 
@@ -31,10 +39,6 @@
 /* --- 交通案内セクション --- */
 .info {
   width: 100%;
-  max-width: 900px;
-  margin: 4rem auto 0;
-  background-color: rgb(255 255 255 / 80%);
-  backdrop-filter: blur(4px);
   padding: 3rem;
   border-radius: 15px;
 
