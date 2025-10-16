@@ -1,7 +1,7 @@
 import type React from "react";
 import { Container } from "@/components/ui/container";
 import { Text } from "@/components/ui/text";
-import styles from "./trouble-infomation.module.css";
+import styles from "./trouble-information.module.css";
 
 const TroubleInfo: React.FC = () => {
   return (

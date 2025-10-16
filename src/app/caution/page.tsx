@@ -8,7 +8,7 @@ import EntryNotice from "./entry-notice";
 import CautionIcon from "./icon-caution.svg";
 import LineDivider from "./line-divider.svg";
 import styles from "./page.module.css";
-import TroubleInfo from "./trouble-infomation";
+import TroubleInfo from "./trouble-information";
 
 export const metadata: Metadata = {};
 
@@ -22,7 +22,7 @@ const CautionPage: React.FC = () => {
               <CautionIcon />
             </span>
             <Heading as="h1">
-              <Text className={styles.text}>ご来場の際の注意事項</Text>
+              <Text className={styles.text}>ご来場の際の注意点</Text>
             </Heading>
           </div>
         </Container>

@@ -19,7 +19,7 @@
 
   /* ★本文よりも前面に来るよう設定 (z-index: 2) */
   z-index: 2;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 
   /* フキダシの見た目 */
   background-color: #d3d3d3;
