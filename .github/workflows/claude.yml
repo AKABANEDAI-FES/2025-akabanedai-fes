@@ -25,6 +25,18 @@ jobs:
       id-token: write
       actions: read # Required for Claude to read CI results on PRs
     steps:
+      - name: Check commenter permission
+        id: check_permission
+        run: |
+          ACTOR="${{ github.event.comment.user.login || github.actor }}"
+          REPO="${{ github.repository }}"
+          PERMISSION=$(gh api repos/$REPO/collaborators/$ACTOR/permission --jq .permission)
+          echo "User permission: $PERMISSION"
+          if [[ "$PERMISSION" != "write" && "$PERMISSION" != "admin" ]]; then
+            echo "User does not have write/admin permission. Exiting."
+            exit 78  # neutral exit code, stops workflow gracefully
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
