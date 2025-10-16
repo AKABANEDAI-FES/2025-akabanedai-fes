@@ -1,67 +1,63 @@
 /* --- ページ全体のコンテナ --- */
 .pageContainer {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-    font-family: sans-serif; 
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  font-family: sans-serif;
 }
-
 
 /* --- マップ関連 --- */
 .mapContainer {
-    margin-top: 2rem;
-    width: 100%;            
-    max-width: 600px;       
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .mapImage {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .mapButton {
-    display: flex;
-    justify-content: flex-end; 
-    margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
 }
 
-
-
 /* --- 交通案内セクション --- */
-.info{
-    width: 100%;
-    max-width: 900px; 
-    margin: 4rem auto 0; 
-    background-color: rgba(255, 255, 255, 0.8); 
-    backdrop-filter: blur(4px);
-    padding: 3rem;
-    border-radius: 15px;
-    --accent-default: #191C4F;
+.info {
+  width: 100%;
+  max-width: 900px;
+  margin: 4rem auto 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 3rem;
+  border-radius: 15px;
+  --accent-default: #191c4f;
 }
 
 .contentWrapper {
-    width: 100%;
-    max-width: 600px; 
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-    gap: 7rem; 
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 }
 
-
 .infoList {
-    list-style: none;
-    padding: 1;
-    margin-top: 30;
-    margin-left: 10;
-    line-height: 1.8;
+  list-style: none;
+  padding: 1;
+  margin-top: 30;
+  margin-left: 10;
+  line-height: 1.8;
 }
 
 .decorationImage {
-    width: 100%; 
-    height: auto; 
+  width: 100%;
+  height: auto;
 }
