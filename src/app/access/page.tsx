@@ -6,7 +6,7 @@ import { Heading } from "@/components/ui/heading";
 import { LinkButton } from "@/components/ui/link-button";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
-import styles from "./access.module.css";
+import styles from "./page.module.css";
 
 export default function AccessPage() {
   return (
