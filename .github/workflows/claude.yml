@@ -33,6 +33,13 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Copy repo instructions to CLAUDE.md
+        run: |
+          FILE=".github/copilot-instructions.md"
+          if [[ -f "$FILE" ]]; then
+            cp "$FILE" "./CLAUDE.md"
+          fi
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
