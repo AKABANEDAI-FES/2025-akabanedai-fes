@@ -17,8 +17,8 @@ const BreakpointIndicator = () => (
       top: "0",
       right: "0",
       padding: "0.5rem 1rem",
-      backgroundColor: "var(--accent-default)",
-      color: "var(--accent-fg)",
+      backgroundColor: "var(--theme-default)",
+      color: "var(--theme-fg)",
       fontSize: "0.75rem",
       fontWeight: "600",
       zIndex: 9999,
@@ -239,8 +239,8 @@ export const ResponsiveLayout: StoryObj = {
             key={num}
             style={{
               padding: "var(--space-lg)",
-              backgroundColor: "var(--accent-default)",
-              color: "var(--accent-fg)",
+              backgroundColor: "var(--theme-default)",
+              color: "var(--theme-fg)",
               borderRadius: "var(--radius-l2)",
               textAlign: "center",
               fontWeight: "600",
@@ -488,9 +488,9 @@ export const ShowHideElements: StoryObj = {
           className="mobile-only"
           style={{
             padding: "var(--space-lg)",
-            backgroundColor: "var(--color-accent-1)",
+            backgroundColor: "var(--color-theme-1)",
             borderRadius: "var(--radius-l2)",
-            border: "2px solid var(--accent-default)",
+            border: "2px solid var(--theme-default)",
           }}
         >
           <strong>モバイルのみ表示</strong>
@@ -503,9 +503,9 @@ export const ShowHideElements: StoryObj = {
           className="tablet-up"
           style={{
             padding: "var(--space-lg)",
-            backgroundColor: "var(--color-complementary-1)",
+            backgroundColor: "var(--color-accent-1)",
             borderRadius: "var(--radius-l2)",
-            border: "2px solid var(--color-complementary-6)",
+            border: "2px solid var(--color-accent-6)",
           }}
         >
           <strong>タブレット以上で表示</strong>
@@ -518,9 +518,9 @@ export const ShowHideElements: StoryObj = {
           className="desktop-up"
           style={{
             padding: "var(--space-lg)",
-            backgroundColor: "var(--color-accent-1)",
+            backgroundColor: "var(--color-theme-1)",
             borderRadius: "var(--radius-l2)",
-            border: "2px solid var(--accent-default)",
+            border: "2px solid var(--theme-default)",
           }}
         >
           <strong>デスクトップ以上で表示</strong>

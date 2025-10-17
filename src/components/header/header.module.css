@@ -9,8 +9,8 @@
 
 .header {
   display: flex;
-  background-color: var(--accent-default);
-  color: var(--accent-fg);
+  background-color: var(--theme-default);
+  color: var(--theme-fg);
   border-radius: var(--radius-full);
   padding: var(--space-md) var(--space-lg);
   padding-right: var(--space-xl);
@@ -19,7 +19,7 @@
 }
 
 .symbol {
-  color: var(--accent-fg);
+  color: var(--theme-fg);
 }
 
 .navigation {

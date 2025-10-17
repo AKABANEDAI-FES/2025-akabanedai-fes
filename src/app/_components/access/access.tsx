@@ -39,7 +39,7 @@ export function Access() {
               </Text>
             </ul>
             <Text className={styles.notice}>
-              駐車場のご用意はございません。また駐輪場は数に限りがございます。ご来場の際は、できる限り公共交通機関をご利用ください。
+              駐車場はございません。また、駐輪場は台数に限りがあります。ご来場の際は、できる限り公共交通機関をご利用ください。
             </Text>
           </BlurredBox>
         </div>
