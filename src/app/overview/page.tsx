@@ -8,7 +8,7 @@ import "./page.module.css";
 export default function OverviewPage() {
   return (
     <Container as="main" className={styles.mainContainer}>
-      <StarDecoration className={styles.myStarDecoration}>
+      <StarDecoration>
         <Heading as="h1" className={styles.headLine}>
           開催概要
         </Heading>
