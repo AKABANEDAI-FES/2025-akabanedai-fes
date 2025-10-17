@@ -3,7 +3,7 @@
   background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(4px);
   color: var(--fg-default);
-  padding: 50px 20px 10px;
+  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-lg);
   border-radius: 15px;
   text-align: center;
   box-sizing: border-box;
@@ -19,15 +19,13 @@
   /* ★本文よりも前面に来るよう設定 (z-index: 2) */
   z-index: 2;
   margin-bottom: 1.6rem;
-
-  /* フキダシの見た目 */
   background-color: var(--color-gray-2);
   border-radius: 15px;
   padding: 10px 20px;
   font-size: 24px;
   font-weight: bold;
   color: var(--fg-default);
-  box-shadow: 0 4px 6px rgb(var(--fg-default) / 10%);
+  box-shadow: 0 4px 6px var(--color-gray-as2);
   margin-top: 0.7rem;
   bottom: 1.4rem;
   width: 17.6rem;
@@ -35,7 +33,7 @@
 }
 
 .contentBox {
-  border: 3px solid var(--accent-default);
+  border: 3px solid var(--theme-default);
   padding: 20px;
   border-radius: 30px;
   color: var(--fg-default);
@@ -46,7 +44,7 @@
   flex: 1;
   position: relative;
   font-weight: bolder;
-  bottom: 3rem;
+  bottom: 2.5rem;
 }
 
 .mainMessage {

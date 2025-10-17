@@ -9,12 +9,9 @@
 }
 
 .mainContent {
-  padding-top: 70px;
   position: relative;
   margin: 0 auto;
-  left: auto;
-  right: auto;
-  top: auto;
+  padding-top: var(--space-3xl);
 }
 
 .mainTitle {
@@ -23,9 +20,10 @@
   justify-content: center;
   font-size: 36px;
   font-weight: normal;
-  color: #1a202c;
-  padding: 11px;
+  color: var(--fg-default);
+  padding: 10px;
   margin-top: 2rem;
+  margin-bottom: 0.2rem;
 }
 
 .text {
@@ -41,11 +39,15 @@
   top: -12px;
 }
 
+.troubleinfo {
+  padding: var(--radius-l1) 0;
+}
+
 .noticeSectionsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
   max-width: 100%;
 }
 
@@ -66,7 +68,7 @@
   height: 100%;
 }
 
-@media (1207px <= width <= 1360px) {
+@media (width >= 1207px) and (width <= 1360px) {
   .dividerWrapper {
     position: relative;
     max-width: 100%;
@@ -78,7 +80,7 @@
   }
 }
 
-@media (768px <= width <= 1206px) {
+@media (width >= 768px) and (width <= 1206px) {
   .icon {
     margin-right: 20px;
     width: 34px;
@@ -97,7 +99,7 @@
   }
 }
 
-@media (431px <= width <= 767px) {
+@media (width >= 431px) and (width <= 767px) {
   .mainTitle {
     font-size: 30px;
   }

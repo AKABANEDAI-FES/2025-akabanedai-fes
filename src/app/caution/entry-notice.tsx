@@ -1,4 +1,3 @@
-import type React from "react";
 import { Text } from "@/components/ui/text";
 import Section from "./section";
 import styles from "./section.module.css";

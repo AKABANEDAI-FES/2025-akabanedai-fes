@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import type React from "react";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import CampusNotice from "./campus-notice";
 import EntryNotice from "./entry-notice";
-import CautionIcon from "./icon-caution.svg";
-import LineDivider from "./line-divider.svg";
+import CautionIcon from "./icon-caution.svg?react";
+import LineDivider from "./line-divider.svg?react";
 import styles from "./page.module.css";
 import TroubleInfo from "./trouble-information";
 
 export const metadata: Metadata = {
-  titile: "ご来場の際の注意点",
+  title: "ご来場の際の注意点",
   description: "赤羽台祭2025へのご来場時の注意事項",
 };
 
@@ -22,7 +21,7 @@ const CautionPage: React.FC = () => {
         <Container>
           <div className={styles.mainTitle}>
             <span className={styles.icon}>
-              <CautionIcon />
+              <CautionIcon aria-hidden="true" />
             </span>
             <Heading as="h1">
               <Text className={styles.text}>ご来場の際の注意点</Text>
@@ -39,8 +38,9 @@ const CautionPage: React.FC = () => {
             <EntryNotice />
             <CampusNotice />
           </div>
-
-          <TroubleInfo />
+          <div className={styles.troubleinfo}>
+            <TroubleInfo />
+          </div>
         </Container>
       </main>
     </div>

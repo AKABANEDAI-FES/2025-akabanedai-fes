@@ -1,4 +1,3 @@
-import type React from "react";
 import { Text } from "@/components/ui/text";
 import Section from "./section";
 import styles from "./section.module.css";
@@ -38,13 +37,12 @@ const CampusNotice: React.FC = () => {
             </Text>
           </li>
         </ul>
-        <div>
-          <p>
+        <footer className={styles.disclaimer}>
+          <Text as="p">
             ※本学では大学祭の様子を記録するため、写真/動画の撮影を行っています。
-            <br />
             ご来場の皆さまのお名前等個人が特定されないよう配慮した上で、広報媒体素材として使用させていただくことがあります。
-          </p>
-        </div>
+          </Text>
+        </footer>
       </div>
     </Section>
   );
