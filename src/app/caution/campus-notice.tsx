@@ -1,11 +1,12 @@
 import type React from "react";
 import { Text } from "@/components/ui/text";
 import Section from "./section";
+import styles from "./section.module.css";
 
 const CampusNotice: React.FC = () => {
   return (
     <Section title="キャンパス内での注意事項" id="campus-notice">
-      <div className="content">
+      <div className={styles.content}>
         <ul>
           <li>
             <Text>火気の使用はご遠慮ください。</Text>
@@ -38,11 +39,11 @@ const CampusNotice: React.FC = () => {
           </li>
         </ul>
         <div>
-          <div>
+          <p>
             ※本学では大学祭の様子を記録するため、写真/動画の撮影を行っています。
             <br />
             ご来場の皆さまのお名前等個人が特定されないよう配慮した上で、広報媒体素材として使用させていただくことがあります。
-          </div>
+          </p>
         </div>
       </div>
     </Section>

@@ -1,16 +1,15 @@
 .troubleSection {
   /* 濃い青色の背景 */
-  background-color: rgb(255 255 255 / 80%);
+  background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(4px);
-  color: black;
-  padding: 50px 20px;
+  color: var(--fg-default);
+  padding: 50px 20px 10px;
   border-radius: 15px;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
   z-index: 1;
-  padding-bottom: 10px;
 }
 
 .sectionTitle {
@@ -22,13 +21,13 @@
   margin-bottom: 1.6rem;
 
   /* フキダシの見た目 */
-  background-color: #d3d3d3;
+  background-color: var(--color-gray-2);
   border-radius: 15px;
   padding: 10px 20px;
   font-size: 24px;
   font-weight: bold;
-  color: #000;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  color: var(--fg-default);
+  box-shadow: 0 4px 6px rgb(var(--fg-default) / 10%);
   margin-top: 0.7rem;
   bottom: 1.4rem;
   width: 17.6rem;
@@ -36,18 +35,14 @@
 }
 
 .contentBox {
-  border: 3px solid #6c5ce7;
-  background-color: rgb(255 255 255 / 80%);
+  border: 3px solid var(--accent-default);
   padding: 20px;
   border-radius: 30px;
-  border-color: black;
-  color: #333;
+  color: var(--fg-default);
   font-family: sans-serif;
   margin: 0 auto;
   min-width: 0;
   max-width: 1265px;
-  margin-left: auto;
-  margin-right: auto;
   flex: 1;
   position: relative;
   font-weight: bolder;
@@ -86,10 +81,6 @@
 }
 
 @media (width <= 767px) {
-  .troubleSection {
-    padding-bottom: 0;
-  }
-
   .sectionTitle {
     font-size: 16px;
     position: relative;
@@ -117,7 +108,6 @@
     display: inline-block;
     font-weight: bolder;
     font-size: 15px;
-    padding-top: -1rem;
   }
 
   .contactInfo {

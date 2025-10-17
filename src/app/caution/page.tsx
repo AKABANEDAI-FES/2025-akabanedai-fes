@@ -10,7 +10,10 @@ import LineDivider from "./line-divider.svg";
 import styles from "./page.module.css";
 import TroubleInfo from "./trouble-information";
 
-export const metadata: Metadata = {};
+export const metadata: Metadata = {
+  titile: "ご来場の際の注意点",
+  description: "赤羽台祭2025へのご来場時の注意事項",
+};
 
 const CautionPage: React.FC = () => {
   return (

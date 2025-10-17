@@ -1,20 +1,17 @@
 .noticeSection {
-  padding: 55px 25px 25px;
+  padding: 6rem 25px 25px 35px;
   position: relative;
-  background-color: rgb(255 255 255 / 80%);
+  background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(4px);
   border-radius: 15px;
-  padding-left: 35px;
-  padding-top: 6rem;
   font-weight: normal;
-  color: black;
+  color: var(--fg-default);
   z-index: 1;
 }
 
 .content {
   position: relative;
-  padding-bottom: 0.1rem;
-  padding-top: 0.1rem;
+  padding: 0.1rem 0;
   z-index: 2;
 }
 
@@ -23,13 +20,13 @@
   top: 2.5rem;
   transform: translateY(-50%);
   z-index: 2;
-  background-color: #d3d3d3;
+  background-color: var(--color-gray-2);
   border-radius: 15px;
   padding: 12px 20px;
   font-size: 24px;
   font-weight: bold;
-  color: #1a202c;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  color: var(--fg-default);
+  box-shadow: 0 4px 6px rgb(var(--fg-default) / 10%);
   border-bottom: none;
 }
 
@@ -47,9 +44,8 @@
 .noticeSection li {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #2d3748;
+  color: var(--fg-default);
   margin-bottom: 1px;
-  padding-left: 0;
   position: static;
 }
 
@@ -72,9 +68,6 @@
   .noticeSection li {
     font-size: 13px;
     line-height: 1.6;
-    color: #2d3748;
-    margin-bottom: 1px;
-    padding-left: 0;
     position: static;
   }
 
