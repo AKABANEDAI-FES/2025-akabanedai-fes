@@ -39,12 +39,10 @@
 /* ✅ 正しい (camelCase) */
 .containerBox { }
 .primaryButton { }
-#mainHeader { }
 
 /* ❌ 誤り (kebab-case) */
 .container-box { }
 .primary-button { }
-#main-header { }
 ```
 
 #### デザイントークン (CSS Variables)
@@ -524,7 +522,7 @@ export default function EventPage() {
 9. **TypeScript**: 型エラーがないか、console文が含まれていないか
 10. **インポート**: パスエイリアス`@/*`を使用しているか
 
-### 8. Development Best Practices
+### 7. Development Best Practices
 
 #### 開発フロー
 
