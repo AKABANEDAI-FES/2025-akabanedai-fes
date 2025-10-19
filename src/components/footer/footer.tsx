@@ -29,6 +29,11 @@ export function Footer() {
             <InstagramBrandIcon className={styles.icon} />
           </a>
         </div>
+        <Text>
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+            プライバシーポリシー
+          </a>
+        </Text>
       </div>
       <Text>&copy;2025 東洋大学赤羽台祭実行委員会</Text>
     </footer>
