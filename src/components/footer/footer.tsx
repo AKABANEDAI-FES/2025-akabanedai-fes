@@ -30,7 +30,7 @@ export function Footer() {
           </a>
         </div>
         <Text>
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+          <a href="/privacy-policy">
             プライバシーポリシー
           </a>
         </Text>
