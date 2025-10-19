@@ -29,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         <MobileMenu />
         <Parallax.Root className={styles.parallax}>
           <div className={styles.overlay}>

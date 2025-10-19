@@ -30,9 +30,7 @@ export function Footer() {
           </a>
         </div>
         <Text>
-          <a href="/privacy-policy">
-            プライバシーポリシー
-          </a>
+          <a href="/privacy-policy">プライバシーポリシー</a>
         </Text>
       </div>
       <Text>&copy;2025 東洋大学赤羽台祭実行委員会</Text>

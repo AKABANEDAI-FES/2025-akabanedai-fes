@@ -2,20 +2,20 @@
   padding-block: 60px;
 }
 
-.privacyPolicy h3 {
+.h3Custom {
   font-size: var(--font-size-xl);
 }
 
 .privacyPolicy > * + * {
-  margin-top: 24px;
+  margin-top: var(--space-lg);
 }
 
 .privacyPolicy a {
-  color: var(--color-theme-5);
+  color: var(--theme-default);
 }
 
 .privacyPolicy a + a {
-  margin-left: 16px;
+  margin-left: var(--space-md);
 }
 
 .privacyPolicy a:hover {

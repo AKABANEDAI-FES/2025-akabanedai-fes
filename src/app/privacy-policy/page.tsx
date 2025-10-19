@@ -20,7 +20,7 @@ export default function Page() {
       <Heading as="h2" variant="secondary">
         Google Analyticsの利用
       </Heading>
-      <h3>アクセスログの取り扱いについて</h3>
+      <Text className={styles.h3Custom}>アクセスログの取り扱いについて</Text>
       <Text>
         赤羽台祭の公式ウェブサイト( http://akabanedai-fes.com/
         で始まるページ。以下「当サイト」といいます。)では、当サイトの利用者動向の調査及び運用改善に役立てるためにGoogle
