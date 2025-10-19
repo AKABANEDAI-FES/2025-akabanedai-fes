@@ -1,9 +1,5 @@
 .privacyPolicy {
-  padding-block: 60px;
-}
-
-.h3Custom {
-  font-size: var(--font-size-xl);
+  padding-block: var(--space-3xl);
 }
 
 .privacyPolicy > * + * {
@@ -12,10 +8,8 @@
 
 .privacyPolicy a {
   color: var(--theme-default);
-}
-
-.privacyPolicy a + a {
-  margin-left: var(--space-md);
+  margin-top: var(--space-md);
+  display: block;
 }
 
 .privacyPolicy a:hover {
@@ -24,6 +18,6 @@
 
 @media (width >= 48rem) {
   .privacyPolicy {
-    padding-block: 80px;
+    padding-block: var(--space-5xl);
   }
 }
