@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/footer";
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
+        {process.env.GA_ID && <GoogleAnalytics gaId={process.env.GA_ID} />}
         <MobileMenu />
         <Parallax.Root className={styles.parallax}>
           <div className={styles.overlay}>
