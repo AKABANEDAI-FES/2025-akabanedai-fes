@@ -1,0 +1,29 @@
+.privacyPolicy {
+  padding-block: 60px;
+}
+
+.privacyPolicy h3 {
+  font-size: var(--font-size-xl);
+}
+
+.privacyPolicy > * + * {
+  margin-top: 24px;
+}
+
+.privacyPolicy a {
+  color: var(--color-theme-5);
+}
+
+.privacyPolicy a + a {
+  margin-left: 16px;
+}
+
+.privacyPolicy a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 48rem) {
+  .privacyPolicy {
+    padding-block: 80px;
+  }
+}
