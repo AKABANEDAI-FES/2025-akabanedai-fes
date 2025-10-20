@@ -35,7 +35,7 @@
 }
 
 /* --- 交通案内セクション --- */
-.infobox{
+.infobox {
   padding: var(--space-2xl);
   border-radius: var(--radius-l3);
 }
