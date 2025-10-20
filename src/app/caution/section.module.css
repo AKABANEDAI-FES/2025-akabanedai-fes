@@ -1,77 +1,39 @@
 .noticeSection {
-  padding: var(--space-4xl) var(--space-xl) var(--space-sm) var(--space-lg);
-  position: relative;
-  background-color: rgb(255 255 255 / 60%);
-  backdrop-filter: blur(4px);
-  border-radius: 15px;
-  font-weight: normal;
-  color: var(--fg-default);
-  z-index: 1;
-}
-
-.content {
-  position: relative;
-  padding: 0;
-  z-index: 2;
+  padding: var(--space-4xl) var(--space-xl) var(--space-sm);
+  border-radius: var(--radius-l3);
 }
 
 .sectionTitle {
   position: absolute;
   top: 2.5rem;
   transform: translateY(-50%);
-  z-index: 2;
-  background-color: var(--color-gray-2);
-  border-radius: 15px;
+  background-color: var(--bg-muted);
+  border-radius: var(--radius-l3);
   padding: var(--space-sm) var(--space-lg);
   font-size: var(--font-size-2xl);
   font-weight: bold;
   color: var(--fg-default);
-  box-shadow: 0 4px 6px var(--color-gray-a2);
+  box-shadow: var(--shadow-md);
   border-bottom: none;
-}
-
-.sectionContent {
-  position: relative;
-  z-index: 1;
 }
 
 .noticeSection ul {
   list-style: disc;
   list-style-position: outside;
-  padding-left: 20px;
+  padding-left: var(--space-md);
 }
 
-.noticeSection li {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--fg-default);
-  margin-bottom: 1px;
-  position: static;
-}
-
-@media (width <= 767px) {
+@media (width <= 766px) {
   .noticeSection {
-    padding: 5rem 20px 1px 29px;
+    padding: var(--space-4xl) var(--space-xl) var(--space-xs);
   }
 
   .sectionTitle {
-    font-size: 16px;
-    top: 2.3rem;
-  }
-
-  .sectionContent {
-    position: relative;
-    z-index: 1;
-    font-size: 13px;
+    top: var(--space-2xl);
+    font-size: var(--font-size-md);
   }
 
   .noticeSection li {
-    font-size: 13px;
     line-height: 1.6;
-    position: static;
-  }
-
-  .noticeSection ul {
-    font-size: 13px;
   }
 }

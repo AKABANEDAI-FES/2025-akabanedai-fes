@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
 import CampusNotice from "./campus-notice";
 import EntryNotice from "./entry-notice";
 import CautionIcon from "./icon-caution.svg";
@@ -11,41 +10,27 @@ import TroubleInfo from "./trouble-information";
 
 export const metadata: Metadata = {
   title: "ご来場の際の注意点",
-  description: "赤羽台祭2025へのご来場時の注意事項",
 };
 
-const CautionPage: React.FC = () => {
+export default function CautionPage() {
   return (
-    <div className={styles.appContainer}>
-      <main className={styles.mainContent}>
-        <Container>
-          <div className={styles.mainTitle}>
-            <span className={styles.icon}>
-              <CautionIcon aria-hidden="true" />
-            </span>
+    <main className={styles.mainContent}>
+      <Heading as="h1" className={styles.mainTitle}>
+        <CautionIcon aria-hidden="true" />
+        ご来場の際の注意点
+      </Heading>
 
-            <Heading as="h1">
-              <Text className={styles.text}>ご来場の際の注意点</Text>
-            </Heading>
-          </div>
-        </Container>
+      <div className={styles.dividerWrapper}>
+        <LineDivider className={styles.lineDivider} />
+      </div>
 
-        <div className={styles.dividerWrapper}>
-          <LineDivider className={styles.lineDivider} />
+      <Container>
+        <div className={styles.noticeSectionsWrapper}>
+          <EntryNotice />
+          <CampusNotice />
         </div>
-
-        <Container>
-          <div className={styles.noticeSectionsWrapper}>
-            <EntryNotice />
-            <CampusNotice />
-          </div>
-          <div className={styles.troubleinfo}>
-            <TroubleInfo />
-          </div>
-        </Container>
-      </main>
-    </div>
+        <TroubleInfo />
+      </Container>
+    </main>
   );
-};
-
-export default CautionPage;
+}

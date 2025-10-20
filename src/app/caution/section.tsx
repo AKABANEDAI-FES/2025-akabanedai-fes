@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { BlurredBox } from "@/components/ui/blurred-box";
 import styles from "./section.module.css";
 
 interface SectionProps
@@ -14,15 +15,13 @@ const Section: React.FC<SectionProps> = ({
   ...props
 }) => {
   return (
-    <section
+    <BlurredBox
       className={[styles.noticeSection, className].filter(Boolean).join(" ")}
       {...props}
     >
       <h2 className={styles.sectionTitle}>{title}</h2>
-      <div className={`${styles.sectionContent} ${styles.content}`}>
-        {children}
-      </div>
-    </section>
+      <div>{children}</div>
+    </BlurredBox>
   );
 };
 

@@ -1,118 +1,68 @@
 .troubleSection {
-  /* 濃い青色の背景 */
-  background-color: rgb(255 255 255 / 60%);
-  backdrop-filter: blur(4px);
   color: var(--fg-default);
   padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-sm);
-  border-radius: 15px;
+  border-radius: var(--radius-l3);
   text-align: center;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
-  z-index: 1;
 }
 
 .sectionTitle {
   position: relative;
   transform: translateY(-50%);
-
-  /* ★本文よりも前面に来るよう設定 (z-index: 2) */
-  z-index: 2;
-  margin-bottom: 1.6rem;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
   background-color: var(--color-gray-2);
-  border-radius: 15px;
+  border-radius: var(--radius-l3);
   padding: var(--space-sm) var(--space-sm);
   font-size: var(--font-size-2xl);
   font-weight: bold;
-  color: var(--fg-default);
-  box-shadow: 0 4px 6px var(--color-gray-a2);
-  margin-top: 0.7rem;
-  bottom: 1.4rem;
-  width: 17.6rem;
-  max-width: 1265px;
+  box-shadow: var(--shadow-md);
+  bottom: var(--space-lg);
+  width: 18.6rem;
 }
 
 .contentBox {
   border: 3px solid var(--theme-default);
-  padding: 20px;
+  padding: var(--space-lg);
   border-radius: 30px;
   color: var(--fg-default);
   margin: 0 auto;
-  min-width: 0;
-  max-width: 1265px;
-  flex: 1;
   position: relative;
   font-weight: bolder;
-  bottom: 2.5rem;
+  bottom: var(--space-2xl);
 }
 
 .mainMessage {
-  font-size: 16px;
   display: flex;
   justify-content: flex-start;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-weight: normal;
+  margin-bottom: var(--space-md);
 }
 
 .description {
-  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 9px;
+  margin-bottom: var(--space-xs);
   font-weight: normal;
 }
 
 .contactInfo {
-  font-size: 16px;
   font-weight: normal;
 }
 
 .troubleExamples {
-  margin: 16px 0;
-  display: inline-block;
+  margin: var(--space-sm) 0;
   font-weight: bolder;
-  font-size: 20px;
 }
 
-.center {
-  text-align: center;
-}
-
-@media (width <= 767px) {
+@media (width <= 766px) {
   .troubleSection {
-    padding: 3.5rem 20px 1px 24px;
+    padding: var(--space-2xl) var(--space-lg) 0;
   }
 
   .sectionTitle {
-    font-size: 16px;
-    position: relative;
-    width: 13rem;
-    margin-top: 0;
-  }
-
-  .mainMessage {
-    font-size: 13px;
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 500;
-    margin-bottom: 15px;
-  }
-
-  .description {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 9px;
-    font-weight: normal;
-  }
-
-  .troubleExamples {
-    margin: 13px 0;
-    display: inline-block;
-    font-weight: bolder;
-    font-size: 15px;
-  }
-
-  .contactInfo {
-    font-size: 13px;
-    font-weight: normal;
+    font-size: var(--font-size-md);
+    width: var(--space-6xl);
   }
 }
