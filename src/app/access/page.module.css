@@ -36,20 +36,25 @@
 
 /* --- 交通案内セクション --- */
 .infobox {
-  padding: var(--space-2xl);
+  padding: var(--space-lg);
   border-radius: var(--radius-l3);
 }
 
 .section {
   width: 100%;
-  padding: var(--space-md);
+  padding: 0;
   margin-inline: auto;
   display: grid;
   gap: var(--space-sm);
 }
 
 @media (width >= 48rem) {
+  .infobox {
+    padding: var(--space-2xl);
+  }
+
   .section {
+    padding: var(--space-md);
     max-width: var(--size-xl);
   }
 }
