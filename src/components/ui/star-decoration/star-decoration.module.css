@@ -29,7 +29,7 @@
   }
 
   .star.fill {
-    fill: var(--accent-default);
+    fill: var(--theme-default);
   }
 
   .divider {
