@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import map from "@/app/_components/access/map.webp";
 import { BlurredBox } from "@/components/ui/blurred-box";
@@ -7,6 +8,10 @@ import { LinkButton } from "@/components/ui/link-button";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "アクセス",
+};
 
 export default function AccessPage() {
   return (
