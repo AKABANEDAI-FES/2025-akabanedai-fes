@@ -1,7 +1,6 @@
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { LinkButton } from "@/components/ui/link-button";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
