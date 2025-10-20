@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
+import { Text, text} from "@/components/ui/text";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
