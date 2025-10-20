@@ -10,9 +10,6 @@
 
 /* --- マップ関連 --- */
 .mainContent {
-  width: 100%;
-  max-width: 900px;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-4xl); /* マップとinfoの間のスペース */
@@ -20,44 +17,41 @@
 
 .mapContainer {
   width: 100%;
-  max-width: 600px;
+  max-width: var(--size-xl);
   margin-inline: auto;
-  box-sizing: border-box;
+  display: grid;
+  gap: var(--space-lg);
+  padding-inline: var(--space-md);
 }
 
 .mapImage {
   width: 100%;
-  height: auto;
-  max-width: 600px;
   box-shadow: var(--shadow-md);
 }
 
 .mapButton {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: var(--space-lg);
+  display: inline-block;
+  margin-left: auto;
 }
 
 /* --- 交通案内セクション --- */
-.info {
-  width: 100%;
+.infobox{
   padding: var(--space-2xl);
   border-radius: var(--radius-l3);
 }
 
-.contentWrapper {
+.section {
+  max-width: var(--size-xl);
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5xl);
+  padding: var(--space-md);
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-sm);
 }
 
 .infoList {
   list-style: none;
-  padding: 1px; /* 1pxにすることで文字の視認性向上 */
-  margin-top: var(--space-xl);
+  line-height: var(--line-heights-relaxed);
+  margin-top: var(--space-sm);
   margin-left: var(--space-sm);
-  line-height: 1.8;
 }
