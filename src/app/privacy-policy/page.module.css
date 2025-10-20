@@ -6,7 +6,7 @@
   margin-top: var(--space-lg);
 }
 
-.privacyPolicy a {
+.anchorLink {
   color: var(--theme-default);
   margin-top: var(--space-md);
   display: block;
