@@ -58,7 +58,7 @@
 
 .infoList {
   list-style: none;
-  padding: 1px; /* 文字の微調整 */
+  padding: 1px; /* 1pxにすることで文字が見やすくなる */
   margin-top: var(--space-xl);
   margin-left: var(--space-sm);
   line-height: 1.8;
