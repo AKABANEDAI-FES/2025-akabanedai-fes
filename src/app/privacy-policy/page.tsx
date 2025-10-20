@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <Container className={styles.privacyPolicy}>
+    <Container as="main" className={styles.privacyPolicy}>
       <Heading as="h1" variant="primary">
         プライバシーポリシー
       </Heading>
