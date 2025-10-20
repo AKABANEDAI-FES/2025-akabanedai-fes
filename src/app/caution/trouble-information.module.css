@@ -3,7 +3,7 @@
   background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(4px);
   color: var(--fg-default);
-  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-lg);
+  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-sm);
   border-radius: 15px;
   text-align: center;
   box-sizing: border-box;
@@ -21,11 +21,11 @@
   margin-bottom: 1.6rem;
   background-color: var(--color-gray-2);
   border-radius: 15px;
-  padding: 10px 20px;
-  font-size: 24px;
+  padding: var(--space-sm) var(--space-sm);
+  font-size: var(--font-size-2xl);
   font-weight: bold;
   color: var(--fg-default);
-  box-shadow: 0 4px 6px var(--color-gray-as2);
+  box-shadow: 0 4px 6px var(--color-gray-a2);
   margin-top: 0.7rem;
   bottom: 1.4rem;
   width: 17.6rem;
@@ -37,7 +37,6 @@
   padding: 20px;
   border-radius: 30px;
   color: var(--fg-default);
-  font-family: sans-serif;
   margin: 0 auto;
   min-width: 0;
   max-width: 1265px;
@@ -79,6 +78,10 @@
 }
 
 @media (width <= 767px) {
+  .troubleSection {
+    padding: 3.5rem 20px 1px 24px;
+  }
+
   .sectionTitle {
     font-size: 16px;
     position: relative;

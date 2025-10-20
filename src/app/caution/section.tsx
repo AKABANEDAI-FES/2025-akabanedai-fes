@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({
 }) => {
   return (
     <section
-      className={`${styles.noticeSection} ${className || ""}`}
+      className={[styles.noticeSection, className].filter(Boolean).join(" ")}
       {...props}
     >
       <h2 className={styles.sectionTitle}>{title}</h2>
