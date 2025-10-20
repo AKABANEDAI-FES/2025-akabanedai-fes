@@ -41,12 +41,17 @@
 }
 
 .section {
-  max-width: var(--size-xl);
   width: 100%;
   padding: var(--space-md);
   margin-inline: auto;
   display: grid;
   gap: var(--space-sm);
+}
+
+@media (width >= 48rem) {
+  .section {
+    max-width: var(--size-xl);
+  }
 }
 
 .infoList {
