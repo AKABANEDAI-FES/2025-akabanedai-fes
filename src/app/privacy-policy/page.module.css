@@ -12,7 +12,7 @@
   display: block;
 }
 
-.anchorLink a:hover {
+.anchorLink:hover {
   text-decoration: underline;
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { Text, text} from "@/components/ui/text";
+import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -30,40 +30,46 @@ export default function Page() {
         Analyticsではクッキー（cookie）を使用し、個人を特定する情報を含まずにアクセスログを収集します。なお、アクセスログの収集方法及び利用方法については、Google
         Analyticsサービス利用規約およびGoogleプライバシーポリシーによって定められています。
       </Text>
-      <div className={text()}>
-        <a
-          href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.anchorLink}
-        >
-          Google Analyticsサービス利用規約 (リンク)
-        </a>
-        <a
-          href="https://policies.google.com/privacy?hl=ja"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.anchorLink}
-        >
-          Googleプライバシーポリシー (リンク)
-        </a>
-      </div>
+      <nav>
+        <Text>
+          <a
+            href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.anchorLink}
+          >
+            Google Analyticsサービス利用規約 (リンク)
+          </a>
+        </Text>
+        <Text>
+          <a
+            href="https://policies.google.com/privacy?hl=ja"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.anchorLink}
+          >
+            Googleプライバシーポリシー (リンク)
+          </a>
+        </Text>
+      </nav>
       <Text>
         なお、Google
         Analyticsのサービス利用による損害については、赤羽台祭実行委員会は責任を負わないものとします。
         Google
         Analyticsによる情報収集を停止する場合には、Googleが提供するブラウザのアドオン（ブラウザに機能を追加するプログラム）をご利用ください。アドオンのダウンロードは以下のページをご覧ください。
       </Text>
-      <div className={text()}>
-        <a
-          href="https://tools.google.com/dlpage/gaoptout?hl=ja"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.anchorLink}
-        >
-          Google Analytics オプトアウト アドオン (リンク)
-        </a>
-      </div>
+      <nav>
+        <Text>
+          <a
+            href="https://tools.google.com/dlpage/gaoptout?hl=ja"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.anchorLink}
+          >
+            Google Analytics オプトアウト アドオン (リンク)
+          </a>
+        </Text>
+      </nav>
     </Container>
   );
 }
