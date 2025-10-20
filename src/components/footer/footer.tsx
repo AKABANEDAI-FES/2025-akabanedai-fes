@@ -1,3 +1,4 @@
+import Link from "next/link";
 import InstagramBrandIcon from "@/assets/instagram-brand.svg";
 import XBrandIcon from "@/assets/x-brand.svg";
 import { Text, text } from "../ui/text";
@@ -30,9 +31,9 @@ export function Footer() {
           </a>
         </div>
         <div className={styles.privacy}>
-          <a className={text()} href="/privacy-policy">
+          <Link className={text()} href="/privacy-policy">
             プライバシーポリシー
-          </a>
+          </Link>
         </div>
       </div>
       <Text>&copy;2025 東洋大学赤羽台祭実行委員会</Text>

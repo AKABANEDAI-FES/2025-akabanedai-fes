@@ -40,6 +40,7 @@ jobs:
         run: pnpm run build
         env:
           BASE_PATH: /09
+          NEXT_PUBLIC_GA_ID: "G-3JQC9N27CG"
 
       - name: Generate timestamp
         shell: bash

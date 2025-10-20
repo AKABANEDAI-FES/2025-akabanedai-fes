@@ -31,25 +31,23 @@ export default function Page() {
         Analyticsサービス利用規約およびGoogleプライバシーポリシーによって定められています。
       </Text>
       <nav>
-        <Text>
-          <a
-            href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.anchorLink}
-          >
-            Google Analyticsサービス利用規約 (リンク)
-          </a>
+        <Text
+          as="a"
+          href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.anchorLink}
+        >
+          Google Analyticsサービス利用規約 (リンク)
         </Text>
-        <Text>
-          <a
-            href="https://policies.google.com/privacy?hl=ja"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.anchorLink}
-          >
-            Googleプライバシーポリシー (リンク)
-          </a>
+        <Text
+          as="a"
+          href="https://policies.google.com/privacy?hl=ja"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.anchorLink}
+        >
+          Googleプライバシーポリシー (リンク)
         </Text>
       </nav>
       <Text>
@@ -59,15 +57,14 @@ export default function Page() {
         Analyticsによる情報収集を停止する場合には、Googleが提供するブラウザのアドオン（ブラウザに機能を追加するプログラム）をご利用ください。アドオンのダウンロードは以下のページをご覧ください。
       </Text>
       <nav>
-        <Text>
-          <a
-            href="https://tools.google.com/dlpage/gaoptout?hl=ja"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.anchorLink}
-          >
-            Google Analytics オプトアウト アドオン (リンク)
-          </a>
+        <Text
+          as="a"
+          href="https://tools.google.com/dlpage/gaoptout?hl=ja"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.anchorLink}
+        >
+          Google Analytics オプトアウト アドオン (リンク)
         </Text>
       </nav>
     </Container>
