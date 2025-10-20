@@ -15,25 +15,21 @@ export default function AccessPage() {
       <StarDecoration>
         <Heading as="h1">アクセス</Heading>
       </StarDecoration>
-      <div className={styles.mapContainer}>
-        <Image
-          src={map}
-          alt="アクセスマップ"
-          className={styles.mapImage}
-          placeholder="blur"
-        />
-        <div className={styles.mapButton}>
-          <LinkButton
-            href="https://maps.app.goo.gl/U9C61wYiw37rwvL7A"
-            target="_blank"
-          >
-            Googleマップはこちら
-          </LinkButton>
-        </div>
-      </div>
-
-      {/* --- 交通案内セクション --- */}
       <div className={styles.mainContent}>
+        <div className={styles.mapContainer}>
+          <Image src={map} alt="アクセスマップ" className={styles.mapImage} />
+          <div className={styles.mapButton}>
+            <LinkButton
+              href="https://maps.app.goo.gl/U9C61wYiw37rwvL7A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Googleマップはこちら
+            </LinkButton>
+          </div>
+        </div>
+
+        {/* --- 交通案内セクション --- */}
         <BlurredBox className={styles.info}>
           <div className={styles.contentWrapper}>
             <section>
