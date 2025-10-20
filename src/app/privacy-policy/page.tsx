@@ -30,7 +30,7 @@ export default function Page() {
         Analyticsではクッキー（cookie）を使用し、個人を特定する情報を含まずにアクセスログを収集します。なお、アクセスログの収集方法及び利用方法については、Google
         Analyticsサービス利用規約およびGoogleプライバシーポリシーによって定められています。
       </Text>
-      <div className={styles.linkGroup}>
+      <div>
         <a
           href="https://marketingplatform.google.com/about/analytics/terms/jp/"
           target="_blank"
@@ -54,14 +54,16 @@ export default function Page() {
         Google
         Analyticsによる情報収集を停止する場合には、Googleが提供するブラウザのアドオン（ブラウザに機能を追加するプログラム）をご利用ください。アドオンのダウンロードは以下のページをご覧ください。
       </Text>
-      <a
-        href="https://tools.google.com/dlpage/gaoptout?hl=ja"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={text()}
-      >
-        Google Analytics オプトアウト アドオン (リンク)
-      </a>
+      <div>
+        <a
+          href="https://tools.google.com/dlpage/gaoptout?hl=ja"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={text()}
+        >
+          Google Analytics オプトアウト アドオン (リンク)
+        </a>
+      </div>
     </Container>
   );
 }
