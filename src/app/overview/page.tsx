@@ -1,6 +1,7 @@
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { LinkButton } from "@/components/ui/link-button";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
@@ -76,15 +77,6 @@ export default function OverviewPage() {
                 <td></td>
                 <td className={styles.mytd}>
                   <Text>〒115-8650 東京都北区赤羽台1丁目7-11</Text>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td className={styles.mytd}>
-                  <Text>
-                    ※入口や会場案内については
-                    <a href="../_components/access/access.tsx">こちら</a>
-                  </Text>
                 </td>
               </tr>
               <tr>
