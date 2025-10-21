@@ -39,10 +39,15 @@ export default function AccessPage() {
               </Heading>
             </StarDecoration>
             <ul className={styles.infoList}>
-              <Text as="li">JR「赤羽駅」西口から 徒歩10分</Text>
-              <Text as="li">
-                東京メトロ南北線・埼玉高速鉄道「赤羽岩淵駅」出入口2から 徒歩12分
-              </Text>
+              <li>
+                <Text>JR「赤羽駅」西口から 徒歩10分</Text>
+              </li>
+              <li>
+                <Text>
+                  東京メトロ南北線・埼玉高速鉄道「赤羽岩淵駅」出入口2から
+                  徒歩12分
+                </Text>
+              </li>
             </ul>
           </div>
           <div className={styles.section}>
@@ -52,8 +57,12 @@ export default function AccessPage() {
               </Heading>
             </StarDecoration>
             <ul className={styles.infoList}>
-              <Text as="li">国際興業バス「赤羽台三丁目」バス停から徒歩3分</Text>
-              <Text as="li">国際興業バス「法善寺交番」バス停から徒歩3分</Text>
+              <li>
+                <Text>国際興業バス「赤羽台三丁目」バス停から徒歩3分</Text>
+              </li>
+              <li>
+                <Text>国際興業バス「法善寺交番」バス停から徒歩3分</Text>
+              </li>
             </ul>
           </div>
           <div className={styles.section}>

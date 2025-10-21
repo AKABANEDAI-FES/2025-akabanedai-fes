@@ -1,6 +1,6 @@
 /* --- ページ全体のコンテナ --- */
 .pageContainer {
-  padding-top: var(--space-4xl);
+  padding-top: var(--space-2xl);
   padding-bottom: var(--space-4xl);
   display: flex;
   flex-direction: column;
@@ -12,14 +12,15 @@
 .mainContent {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4xl); /* マップとinfoの間のスペース */
+  gap: var(--space-xl); /* マップとinfoの間のスペース */
 }
 
 .mapContainer {
   width: 100%;
   max-width: var(--size-xl);
   margin-inline: auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
   padding-inline: var(--space-md);
 }
@@ -38,12 +39,14 @@
 .infobox {
   padding: var(--space-lg);
   border-radius: var(--radius-l3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
 }
 
 .section {
   width: 100%;
   padding: 0;
-  margin-inline: auto;
   display: grid;
   gap: var(--space-sm);
 }
@@ -51,11 +54,23 @@
 @media (width >= 48rem) {
   .infobox {
     padding: var(--space-2xl);
+    max-width: var(--size-2xl);
+    margin-inline: auto;
   }
 
   .section {
     padding: var(--space-md);
-    max-width: var(--size-xl);
+  }
+}
+
+@media (width >= 64rem) {
+  /* 視認性向上のためにmapContainerとinfoboxのmax-widthを変更 */
+  .mapContainer {
+    max-width: var(--size-3xl);
+  }
+
+  .infobox {
+    max-width: var(--size-4xl);
   }
 }
 
