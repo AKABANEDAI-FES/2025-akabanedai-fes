@@ -33,10 +33,6 @@
   padding: 0;
 }
 
-.tdPaddingLeft {
-  padding-left: var(--space-xl);
-}
-
 .blackStarIcon {
   width: 1em;
   height: 1em;
@@ -45,12 +41,39 @@
   fill: currentcolor;
 }
 
+.mydl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xs) var(--space-xl);
+}
+
+.mydt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md); /* アイコンとテキストの間のスペース */
+}
+
+.mydd {
+  grid-column-start: 2;
+  margin-left: 0;
+}
+
+.mydt + dd,
+.mydd + dt {
+  margin-top: var(--space-sm);
+}
+
 @media (width >= 48rem) {
   .headLine {
     margin-top: var(--space-4xl);
   }
 
-  .tdPaddingLeft {
-    padding-left: var(--space-5xl);
+  .mydl {
+    gap: var(--space-xs) var(--space-5xl);
+  }
+
+  .mydt + dd,
+  .mydd + dt {
+    margin-top: var(--space-md);
   }
 }
