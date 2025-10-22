@@ -1,0 +1,83 @@
+.mainContainer > * {
+  margin-bottom: var(--space-5xl);
+}
+
+.headLine {
+  margin-top: var(--space-2xl);
+}
+
+.firstGroup {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.firstGroup > * {
+  margin-bottom: var(--space-xl);
+}
+
+.firstGroup > *:last-child {
+  margin-bottom: 0;
+}
+
+.secondGroup {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.secondHeading {
+  display: flex;
+  column-gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: 0;
+}
+
+.blackStarIcon {
+  width: 1em;
+  height: 1em;
+  margin-right: var(--space-sm);
+  display: inline;
+  fill: currentcolor;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-xs) var(--space-xl);
+}
+
+.infoLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md); /* 星形アイコンとテキストの間のスペース */
+}
+
+.infoContent {
+  grid-column-start: 2;
+  margin-left: 0;
+}
+
+.infoLabel + dd,
+.infoContent + dt {
+  margin-top: var(--space-sm);
+}
+
+@media (width >= 48rem) {
+  .headLine {
+    margin-top: var(--space-4xl);
+  }
+
+  .infoSection {
+    gap: var(--space-xs) var(--space-5xl);
+  }
+
+  .infoLabel + dd,
+  .infoContent + dt {
+    margin-top: var(--space-md);
+  }
+}
