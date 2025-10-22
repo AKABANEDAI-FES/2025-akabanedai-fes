@@ -12,7 +12,11 @@
   padding-bottom: var(--space-md);
 }
 
-.firstGroup * {
+.noPadding {
+  padding: 0;
+}
+
+.firstGroup > * {
   margin-bottom: var(--space-xl);
 }
 

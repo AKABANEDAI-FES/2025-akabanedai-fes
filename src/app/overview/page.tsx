@@ -18,21 +18,29 @@ export default function OverviewPage() {
         <Heading as="h2" variant="secondary">
           赤羽台祭について
         </Heading>
-        <Text>
-          赤羽台祭（あかばねだいさい）は、東洋大学赤羽台キャンパスで毎年開催される大学祭です。情報連携学部、社会福祉デザイン学部、健康スポーツ科学部の3つの学部が、特色を生かしたさまざまな催しを展開します。
-        </Text>
+        <Container className={styles.noPadding}>
+          <Text>
+            赤羽台祭（あかばねだいさい）は、東洋大学赤羽台キャンパスで毎年開催される大学祭です。
+          </Text>
+          <Text>
+            情報連携学部、社会福祉デザイン学部、健康スポーツ科学部の3つの学部が、特色を生かしたさまざまな催しを展開します。
+          </Text>
+        </Container>
 
-        <Text>
-          開催期間中は、学生団体や地域の皆さまと協力してつくりあげた展示や体験型企画、ステージイベントなどが行われます。
-          <br />
-          {/* <Text></Text> */}
-          普段は落ち着いた雰囲気の赤羽台キャンパスが、この期間は活気にあふれたにぎやかな場所となります。
-        </Text>
-
-        <Text>
-          この大学祭が、あなたと新しい何かを繋ぐきっかけとなりますように。
-          <br></br>皆さまのご来場を心よりお待ちしております。
-        </Text>
+        <Container className={styles.noPadding}>
+          <Text>
+            開催期間中は、学生団体や地域の皆さまと協力してつくりあげた展示や体験型企画、ステージイベントなどが行われます。
+          </Text>
+          <Text>
+            普段は落ち着いた雰囲気の赤羽台キャンパスが、この期間は活気にあふれたにぎやかな場所となります。
+          </Text>
+        </Container>
+        <Container className={styles.noPadding}>
+          <Text>
+            この大学祭が、あなたと新しい何かを繋ぐきっかけとなりますように。
+          </Text>
+          <Text>皆さまのご来場を心よりお待ちしております。</Text>
+        </Container>
       </BlurredBox>
 
       <BlurredBox className={styles.secondGroup}>
