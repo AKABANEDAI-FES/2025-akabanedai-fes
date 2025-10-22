@@ -54,69 +54,69 @@ export default function OverviewPage() {
         </Container>
 
         <Container>
-          <dl className={styles.mydl}>
-            <dt className={styles.mydt}>
+          <dl className={styles.infoSection}>
+            <dt className={styles.infoLabel}>
               <Text>
                 <Star className={styles.blackStarIcon} />
                 開催日時
               </Text>
             </dt>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>1日目：2025年11月2日(日)10:00～18:00</Text>
             </dd>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>2日目：2025年11月3日(月)10:00～18:00</Text>
             </dd>
 
-            <dt className={styles.mydt}>
+            <dt className={styles.infoLabel}>
               <Text>
                 <Star className={styles.blackStarIcon} />
                 会場
               </Text>
             </dt>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>東洋大学赤羽台キャンパス</Text>
             </dd>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>〒115-8650 東京都北区赤羽台1丁目7-11</Text>
             </dd>
 
-            <dt className={styles.mydt}>
+            <dt className={styles.infoLabel}>
               <Text>
                 <Star className={styles.blackStarIcon} />
                 来場について
               </Text>
             </dt>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>事前予約やチケットについては不要です</Text>
             </dd>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>入場料は無料です</Text>
             </dd>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>※一部体験や飲食出店は有料です</Text>
             </dd>
 
-            <dt className={styles.mydt}>
+            <dt className={styles.infoLabel}>
               <Text>
                 <Star className={styles.blackStarIcon} />
                 主催
               </Text>
             </dt>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>赤羽台祭実行委員会</Text>
             </dd>
 
-            <dt className={styles.mydt}>
+            <dt className={styles.infoLabel}>
               <Text>
                 <Star className={styles.blackStarIcon} />
                 お問い合わせ
               </Text>
             </dt>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>support[at]akabanedai-fes.com</Text>
             </dd>
-            <dd className={styles.mydd}>
+            <dd className={styles.infoContent}>
               <Text>※ ご連絡の際は[at]を@に変更してお送りください。</Text>
             </dd>
           </dl>

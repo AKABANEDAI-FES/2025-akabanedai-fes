@@ -45,25 +45,25 @@
   fill: currentcolor;
 }
 
-.mydl {
+.infoSection {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--space-xs) var(--space-xl);
 }
 
-.mydt {
+.infoLabel {
   display: flex;
   align-items: center;
-  gap: var(--space-md); /* アイコンとテキストの間のスペース */
+  gap: var(--space-md); /* 星形アイコンとテキストの間のスペース */
 }
 
-.mydd {
+.infoContent {
   grid-column-start: 2;
   margin-left: 0;
 }
 
-.mydt + dd,
-.mydd + dt {
+.infoLabel + dd,
+.infoContent + dt {
   margin-top: var(--space-sm);
 }
 
@@ -72,12 +72,12 @@
     margin-top: var(--space-4xl);
   }
 
-  .mydl {
+  .infoSection {
     gap: var(--space-xs) var(--space-5xl);
   }
 
-  .mydt + dd,
-  .mydd + dt {
+  .infoLabel + dd,
+  .infoContent + dt {
     margin-top: var(--space-md);
   }
 }
