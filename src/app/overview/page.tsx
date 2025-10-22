@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import Star from "../../assets/star.svg";
 import styles from "./page.module.css";
-import "./page.module.css";
 export default function OverviewPage() {
   return (
     <Container as="main" className={styles.mainContainer}>
@@ -23,7 +23,8 @@ export default function OverviewPage() {
         </Text>
         <Text>
           開催期間中は、学生団体や地域の皆さまと協力してつくりあげた展示や体験型企画、ステージイベントなどが行われます。
-          <br></br>
+          <br />
+          {/* <Text></Text> */}
           普段は落ち着いた雰囲気の赤羽台キャンパスが、この期間は活気にあふれたにぎやかな場所となります。
         </Text>
 
@@ -48,16 +49,18 @@ export default function OverviewPage() {
             <tbody>
               <tr>
                 <td>
-                  <Text>✦開催日時</Text>
+                  <Text>
+                    <Star className={styles.blackStarIcon}></Star>開催日時
+                  </Text>
                 </td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>1日目：2025年11月2日(日)10:00～18:00</Text>
                 </td>
               </tr>
 
               <tr>
                 <td></td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>2日目：2025年11月3日(月)10:00～18:00</Text>
                 </td>
               </tr>
@@ -66,21 +69,23 @@ export default function OverviewPage() {
               </tr>
               <tr>
                 <td>
-                  <Text>✦会場</Text>
+                  <Text>
+                    <Star className={styles.blackStarIcon}></Star>会場
+                  </Text>
                 </td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>東洋大学赤羽台キャンパス</Text>
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>〒115-8650 東京都北区赤羽台1丁目7-11</Text>
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>事前予約やチケットについては不要です</Text>
                 </td>
               </tr>
@@ -90,15 +95,17 @@ export default function OverviewPage() {
 
               <tr>
                 <td>
-                  <Text>✦来場について</Text>
+                  <Text>
+                    <Star className={styles.blackStarIcon}></Star>来場について
+                  </Text>
                 </td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>入場料は無料です</Text>
                 </td>
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>※一部体験や飲食出店は有料です</Text>
                 </td>
               </tr>
@@ -107,9 +114,11 @@ export default function OverviewPage() {
               </tr>
               <tr>
                 <td>
-                  <Text>✦主催</Text>
+                  <Text>
+                    <Star className={styles.blackStarIcon}></Star>主催
+                  </Text>
                 </td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>赤羽台祭実行委員会</Text>
                 </td>
               </tr>
@@ -118,15 +127,17 @@ export default function OverviewPage() {
               </tr>
               <tr>
                 <td>
-                  <Text>✦お問い合わせ</Text>
+                  <Text>
+                    <Star className={styles.blackStarIcon}></Star>お問い合わせ
+                  </Text>
                 </td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>support[at]akabanedai-fes.com</Text>
                 </td>
               </tr>
               <tr>
                 <td> &nbsp;</td>
-                <td className={styles.mytd}>
+                <td className={styles.tdPaddingLeft}>
                   <Text>※ ご連絡の際は[at]を@に変更してお送りください。</Text>
                 </td>
               </tr>
