@@ -28,6 +28,10 @@
     height: var(--star-size);
   }
 
+  .star.fill {
+    fill: var(--theme-default);
+  }
+
   .divider {
     background-color: var(--theme-default);
   }

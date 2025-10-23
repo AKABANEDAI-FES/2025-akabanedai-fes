@@ -1,10 +1,10 @@
 import Image from "next/image";
+import map from "@/assets/map.webp";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./access.module.css";
 import entrance from "./entrance.webp";
-import map from "./map.webp";
 
 export function Access() {
   return (
