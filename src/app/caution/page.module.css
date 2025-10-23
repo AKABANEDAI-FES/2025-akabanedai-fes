@@ -36,7 +36,7 @@
   height: 100%;
 }
 
-@media (width >= 767px) and (width <= 1023px) {
+@media (width > 48rem) and (width <= 64rem) {
   .dividerWrapper {
     position: relative;
     display: block;
@@ -45,7 +45,7 @@
   }
 }
 
-@media (width <= 766px) {
+@media (width <= 48rem) {
   .mainContent {
     position: relative;
     margin: 0 auto;
