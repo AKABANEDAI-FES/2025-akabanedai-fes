@@ -1,6 +1,6 @@
 .troubleSection {
   color: var(--fg-default);
-  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-sm);
+  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-lg);
   border-radius: var(--radius-l3);
   text-align: center;
   box-sizing: border-box;
@@ -11,7 +11,7 @@
 .sectionTitle {
   position: relative;
   transform: translateY(-50%);
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
   background-color: var(--color-gray-2);
   border-radius: var(--radius-l3);
@@ -20,7 +20,7 @@
   font-weight: bold;
   box-shadow: var(--shadow-md);
   bottom: var(--space-lg);
-  width: 18.6rem;
+  width: 18.6rem; /* var(--space--lg)だと狭すぎて改行され、--space-xlだと広すぎてしまうためてこの値を使用 */
 }
 
 .contentBox {
