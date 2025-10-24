@@ -10,7 +10,7 @@
   justify-content: center;
   font-weight: normal;
   padding: var(--space-xs);
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-4xl);
 }
 
 .noticeSectionsWrapper {
@@ -25,7 +25,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-  margin-top: -4rem; /* タイトルとその下の線の間隔を詰めるために使用 */
+  margin-top: -4.5rem; /* タイトルとその下の線の間隔を詰めるために使用 */
   margin-bottom: var(--space-3xl);
 }
 

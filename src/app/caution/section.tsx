@@ -16,7 +16,11 @@ export default function Section({
   ...props
 }: SectionProps) {
   return (
-    <BlurredBox className={clsx(styles.noticeSection, className)} {...props}>
+    <BlurredBox
+      as="section"
+      className={clsx(styles.noticeSection, className)}
+      {...props}
+    >
       <h2 className={styles.sectionTitle}>{title}</h2>
       <div>{children}</div>
     </BlurredBox>

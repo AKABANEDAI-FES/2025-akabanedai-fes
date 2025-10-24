@@ -1,7 +1,7 @@
 import { Text } from "@/components/ui/text";
 import Section from "./section";
 
-const CampusNotice: React.FC = () => {
+export default function CampusNotice() {
   return (
     <Section title="キャンパス内での注意事項">
       <ul>
@@ -28,6 +28,4 @@ const CampusNotice: React.FC = () => {
       </Text>
     </Section>
   );
-};
-
-export default CampusNotice;
+}

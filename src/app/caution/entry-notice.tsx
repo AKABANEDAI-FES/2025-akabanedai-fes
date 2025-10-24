@@ -1,7 +1,7 @@
 import { Text } from "@/components/ui/text";
 import Section from "./section";
 
-const EntryNotice: React.FC = () => {
+export default function EntryNotice() {
   return (
     <Section title="入退場について">
       <ul>
@@ -16,6 +16,4 @@ const EntryNotice: React.FC = () => {
       <Text>※公共交通機関はアクセスのページをご確認ください。</Text>
     </Section>
   );
-};
-
-export default EntryNotice;
+}

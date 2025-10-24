@@ -24,7 +24,7 @@ export default function CautionPage() {
         <LineDivider className={styles.lineDivider} />
       </div>
 
-      <Container>
+      <Container as="div">
         <div className={styles.noticeSectionsWrapper}>
           <EntryNotice />
           <CampusNotice />
