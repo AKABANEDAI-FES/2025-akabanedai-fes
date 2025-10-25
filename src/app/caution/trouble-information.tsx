@@ -1,11 +1,10 @@
-import type React from "react";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./trouble-information.module.css";
 
-const TroubleInfo: React.FC = () => {
+export default function TroubleInfo() {
   return (
     <BlurredBox id="trouble-info" className={styles.troubleSection}>
       <Container>
@@ -37,6 +36,4 @@ const TroubleInfo: React.FC = () => {
       </Container>
     </BlurredBox>
   );
-};
-
-export default TroubleInfo;
+}

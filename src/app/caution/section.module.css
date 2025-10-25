@@ -14,7 +14,6 @@
   font-weight: bold;
   color: var(--fg-default);
   box-shadow: var(--shadow-md);
-  border-bottom: none;
 }
 
 .noticeSection ul {
