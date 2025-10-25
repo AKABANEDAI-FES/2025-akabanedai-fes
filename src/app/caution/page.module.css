@@ -1,0 +1,65 @@
+.mainContent {
+  position: relative;
+  margin: 0 auto;
+  padding-top: var(--space-2xl);
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  padding: var(--space-xs);
+  margin-top: var(--space-4xl);
+}
+
+.noticeSectionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.dividerWrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: -4.5rem; /* タイトルとその下の線の間隔を詰めるために使用 */
+  margin-bottom: var(--space-3xl);
+}
+
+.lineDivider {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media (width > 48rem) and (width <= 64rem) {
+  .dividerWrapper {
+    position: relative;
+    display: block;
+    margin-top: -2.5rem;
+    margin-bottom: var(--space-2xl);
+  }
+}
+
+@media (width <= 48rem) {
+  .mainContent {
+    position: relative;
+    margin: 0 auto;
+    padding-top: var(--space-xl);
+  }
+
+  .noticeSectionsWrapper {
+    margin-top: -3rem; /* 線とその下の要素の間隔を狭めるために使用 */
+    gap: var(--space-lg);
+  }
+
+  .dividerWrapper {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: var(--space-3xl);
+  }
+}
