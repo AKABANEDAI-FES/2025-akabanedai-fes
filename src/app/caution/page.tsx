@@ -29,6 +29,8 @@ export default function CautionPage() {
           <EntryNotice />
           <CampusNotice />
         </div>
+      </Container>
+      <Container>
         <TroubleInfo />
       </Container>
     </main>

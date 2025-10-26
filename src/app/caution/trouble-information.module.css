@@ -1,6 +1,6 @@
 .troubleSection {
   color: var(--fg-default);
-  padding: var(--space-2xl) var(--space-xl) var(--space-sm) var(--space-md);
+  padding: var(--space-2xl) var(--space-3xl) var(--space-sm) var(--space-xl);
   border-radius: var(--radius-l3);
   text-align: center;
   box-sizing: border-box;
@@ -20,14 +20,13 @@
   font-weight: bold;
   box-shadow: var(--shadow-md);
   bottom: var(--space-lg);
-  max-width: 18.6rem; /* var(--space--lg)だと狭すぎて改行され、--space-xlだと広すぎてしまうためてこの値を使用 */
-  width: 100%;
+  width: calc(var(--space-7xl) + var(--space-xl));
 }
 
 .contentBox {
   border: 3px solid var(--theme-default);
   padding: var(--space-lg);
-  border-radius: 30px;
+  border-radius: calc(var(--radius-l3) + var(--radius-l2) * 2);
   margin: 0 auto;
   position: relative;
   font-weight: bolder;
@@ -58,11 +57,11 @@
 
 @media (width <= 48rem) {
   .troubleSection {
-    padding: var(--space-2xl) var(--space-lg) 0;
+    padding: var(--space-2xl) var(--space-xl) 0;
   }
 
   .sectionTitle {
     font-size: var(--font-size-md);
-    width: var(--space-6xl);
+    width: calc(var(--space-6xl) + var(--space-md));
   }
 }

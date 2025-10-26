@@ -25,7 +25,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-  margin-top: -4.5rem; /* タイトルとその下の線の間隔を詰めるために使用 */
+  margin-top: calc(var(--space-3xl) * -1);
   margin-bottom: var(--space-3xl);
 }
 
@@ -40,7 +40,7 @@
   .dividerWrapper {
     position: relative;
     display: block;
-    margin-top: -2.5rem;
+    margin-top: calc(var(--space-xl) * -1);
     margin-bottom: var(--space-2xl);
   }
 }
@@ -53,7 +53,7 @@
   }
 
   .noticeSectionsWrapper {
-    margin-top: -3rem; /* 線とその下の要素の間隔を狭めるために使用 */
+    margin-top: calc(var(--space-2xl) * -1);
     gap: var(--space-lg);
   }
 

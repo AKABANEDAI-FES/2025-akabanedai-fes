@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { JSX, ReactNode } from "react";
 import { BlurredBox } from "@/components/ui/blurred-box";
+import { Heading } from "@/components/ui/heading";
 import styles from "./section.module.css";
 
 interface SectionProps
@@ -21,7 +22,9 @@ export default function Section({
       className={clsx(styles.noticeSection, className)}
       {...props}
     >
-      <h2 className={styles.sectionTitle}>{title}</h2>
+      <Heading as="h2" className={styles.sectionTitle}>
+        {title}
+      </Heading>
       <div>{children}</div>
     </BlurredBox>
   );
