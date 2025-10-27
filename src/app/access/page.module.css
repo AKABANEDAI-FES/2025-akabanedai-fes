@@ -1,0 +1,81 @@
+/* --- ページ全体のコンテナ --- */
+.pageContainer {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xl);
+}
+
+/* --- マップ関連 --- */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* マップとinfoの間のスペース */
+}
+
+.mapContainer {
+  width: 100%;
+  max-width: var(--size-xl);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-inline: var(--space-md);
+}
+
+.mapImage {
+  width: 100%;
+  box-shadow: var(--shadow-md);
+}
+
+.mapButton {
+  display: inline-block;
+  margin-left: auto;
+}
+
+/* --- 交通案内セクション --- */
+.infobox {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.section {
+  width: 100%;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (width >= 48rem) {
+  .infobox {
+    padding: var(--space-2xl);
+    max-width: var(--size-2xl);
+    margin-inline: auto;
+  }
+
+  .section {
+    padding: var(--space-md);
+  }
+}
+
+@media (width >= 64rem) {
+  /* 視認性向上のためにmapContainerとinfoboxのmax-widthを変更 */
+  .mapContainer {
+    max-width: var(--size-3xl);
+  }
+
+  .infobox {
+    max-width: var(--size-4xl);
+  }
+}
+
+.infoList {
+  list-style: none;
+  line-height: var(--line-heights-relaxed);
+  margin-top: var(--space-sm);
+  margin-left: var(--space-sm);
+}
