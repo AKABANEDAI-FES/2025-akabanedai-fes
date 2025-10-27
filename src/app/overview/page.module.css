@@ -14,11 +14,8 @@
   margin-top: var(--space-xl);
 }
 
-.secondHeading {
-  display: flex;
-  column-gap: var(--space-xl);
-  margin-bottom: var(--space-xl);
-  padding: 0;
+.wordSpaced {
+  word-spacing: var(--space-md);
 }
 
 .blackStarIcon {

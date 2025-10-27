@@ -86,30 +86,26 @@ export default function OverviewPage() {
       </BlurredBox>
 
       <BlurredBox className={styles.section}>
-        <Container className={styles.secondHeading}>
-          <Heading as="h2" variant="secondary">
-            第9回赤羽台 祭開催概要
-          </Heading>
-        </Container>
+        <Heading as="h2" variant="secondary" className={styles.wordSpaced}>
+          第9回赤羽台祭 開催概要
+        </Heading>
 
-        <Container>
-          <dl className={styles.infoSection}>
-            {descriptions.map(({ term, details }) => (
-              <Fragment key={term}>
-                <Text as="dt" className={styles.infoLabel}>
-                  <Star className={styles.blackStarIcon} />
-                  {term}
+        <dl className={styles.infoSection}>
+          {descriptions.map(({ term, details }) => (
+            <Fragment key={term}>
+              <Text as="dt" className={styles.infoLabel}>
+                <Star className={styles.blackStarIcon} />
+                {term}
+              </Text>
+              {details.map((detail, idx) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: this is static content
+                <Text as="dd" key={idx} className={styles.infoContent}>
+                  {detail}
                 </Text>
-                {details.map((detail, idx) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: this is static content
-                  <Text as="dd" key={idx} className={styles.infoContent}>
-                    {detail}
-                  </Text>
-                ))}
-              </Fragment>
-            ))}
-          </dl>
-        </Container>
+              ))}
+            </Fragment>
+          ))}
+        </dl>
       </BlurredBox>
     </Container>
   );
