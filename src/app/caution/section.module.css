@@ -16,10 +16,8 @@
   box-shadow: var(--shadow-md);
 }
 
-.noticeSection ul {
-  list-style: disc;
-  list-style-position: outside;
-  padding-left: var(--space-md);
+.noticeSection li{
+  margin-left: var(--space-md);
 }
 
 @media (width <= 48rem) {
@@ -33,6 +31,6 @@
   }
 
   .noticeSection li {
-    line-height: 1.6;
+    line-height: var(--line-heights-normal);
   }
 }

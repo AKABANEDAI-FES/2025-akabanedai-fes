@@ -4,7 +4,6 @@ import Section from "./section";
 export default function CampusNotice() {
   return (
     <Section title="キャンパス内での注意事項">
-      <ul>
         <Text as="li">火気の使用はご遠慮ください。</Text>
         <Text as="li">キャンパス内は全面禁煙となっております。</Text>
         <Text as="li">
@@ -20,7 +19,6 @@ export default function CampusNotice() {
         <Text as="li">
           他のお客様への迷惑行為や、スタッフの指示に従わない等の行為が見受けられた場合、ご退場頂いたり、入場をお断りする場合があります。
         </Text>
-      </ul>
 
       <Text>
         ※本学では大学祭の様子を記録するため、写真/動画の撮影を行っています。
