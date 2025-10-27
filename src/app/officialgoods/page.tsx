@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
-import styles from "./page.module.css";
 import { StarDecoration } from "@/components/ui/star-decoration";
-import { BlurredBox } from "@/components/ui/blurred-box";
+import { Text } from "@/components/ui/text";
 import Star from "../../assets/star.svg";
-import Image from "next/image";
+import GoodsA from "./Goods_A.webp";
+import GoodsB from "./Goods_B.webp";
+import GoodsC from "./Goods_C.webp";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "公式グッズ販売",
@@ -18,48 +21,57 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Container as="main" className={styles.officialGoods}>
-      <StarDecoration>
-        <Heading as="h1" variant="primary">
-          公式グッズ販売
-        </Heading>
-      </StarDecoration>
+      <Heading as="h1" variant="primary">
+        公式グッズ販売
+      </Heading>
+      <StarDecoration />
 
-      <BlurredBox>
-        <Text>赤羽台祭のキャラクター公式です。</Text>
+      <BlurredBox className={styles.blurredBoxContainer}>
+        <Text>赤羽台祭×こもれび祭コラボグッズ×白山祭コラボグッズ</Text>
 
         {/* 1. トートバッグ */}
-        <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
-          トートバッグ
-        </Heading>
+        <div className={styles.goodsTitleBox}>
+          <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
+            トートバッグ
+          </Heading>
+        </div>
         <Image
-          src="/images/goods/tote_bag.png" // ※画像パスはご自身のものに変更
-          alt="トートバック"
+          src={GoodsC}
+          alt="トートバッグ"
           width={400}
           height={400}
+          className={styles.goodsImage}
         />
 
         {/* 2. ステッカーA */}
-        <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
-          ステッカーA
-        </Heading>
+        <div className={styles.goodsTitleBox}>
+          <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
+            ステッカーA
+          </Heading>
+        </div>
         <Image
-          src="/images/goods/sticker_a.png" // ※画像パスはご自身のものに変更
+          src={GoodsA}
           alt="ステッカーA"
           width={400}
           height={400}
+          className={styles.goodsImage}
         />
 
         {/* 3. ステッカーB */}
-        <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
-          ステッカーB
-        </Heading>
+        <div className={styles.goodsTitleBox}>
+          <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
+            ステッカーB
+          </Heading>
+        </div>
         <Image
-          src="/images/goods/sticker_b.png" // ※画像パスはご自身のものに変更
+          src={GoodsB}
           alt="ステッカーB"
           width={400}
           height={400}
+          className={styles.goodsImage}
         />
 
+        {/* 去年のグッズ */}
         <div className={styles.lastYearGoods}>
           <Text>
             以下の去年のグッズも販売しています！
@@ -70,22 +82,45 @@ export default function Page() {
           <ul className={styles.goodsList}>
             <li>
               <Star className={styles.listIcon} aria-hidden="true" />
+              <span>アクリルキーホルダー</span>
+            </li>
+            <li>
+              <Star className={styles.listIcon} aria-hidden="true" />
               <span>クリアファイル</span>
             </li>
             <li>
               <Star className={styles.listIcon} aria-hidden="true" />
               <span>ボールペン</span>
             </li>
-            <li>
-              <Star className={styles.listIcon} aria-hidden="true" />
-              <span>キーホルダー</span>
-            </li>
+          </ul>
+          <ul className={styles.goodsList}>
+            <li>イニャーグッズ</li>
             <li>
               <Star className={styles.listIcon} aria-hidden="true" />
               <span>イニャーハンドタオル</span>
             </li>
           </ul>
         </div>
+
+        {/* 販売場所セクション */}
+        <section className={styles.salesSection}>
+          <Heading as="h3" variant="secondary" className={styles.salesHeading}>
+            販売場所
+          </Heading>
+
+          <StarDecoration />
+
+          <ul className={styles.goodsList}>
+            <li>
+              <Star className={styles.listIcon} aria-hidden="true" />
+              <span>インフォメーション</span>
+            </li>
+            <li>
+              <Star className={styles.listIcon} aria-hidden="true" />
+              <span>WELLB 3F「縁日」付近</span>
+            </li>
+          </ul>
+        </section>
       </BlurredBox>
     </Container>
   );
