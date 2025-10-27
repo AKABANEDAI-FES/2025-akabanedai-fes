@@ -1,0 +1,77 @@
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 360px;
+  display: grid;
+  place-items: center;
+  background: var(--color-gray-2);
+  border-radius: var(--radius-l2);
+  overflow: hidden;
+}
+
+.controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.ctrl {
+  pointer-events: auto;
+  border: none;
+  background: var(--color-gray-a7);
+  color: var(--bg-default);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin: 0 var(--space-xs);
+}
+
+.ctrl:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.indicator {
+  margin-top: var(--space-xs);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-gray-4);
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: var(--color-gray-8);
+}
