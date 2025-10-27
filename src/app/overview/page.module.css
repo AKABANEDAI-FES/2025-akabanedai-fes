@@ -55,8 +55,8 @@
     gap: var(--space-xs) var(--space-5xl);
   }
 
-  .infoLabel + dd,
-  .infoContent + dt {
+  .infoLabel,
+  .infoLabel + .infoContent {
     margin-top: var(--space-md);
   }
 }
