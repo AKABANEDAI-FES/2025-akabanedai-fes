@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: "@akabanedaifes",
-    card: "summary_largeage",
+    card: "summary_large_image",
   },
   robots: process.env.ROBOTS,
 };
