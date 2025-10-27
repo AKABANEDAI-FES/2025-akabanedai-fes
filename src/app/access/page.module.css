@@ -38,7 +38,6 @@
 /* --- 交通案内セクション --- */
 .infobox {
   padding: var(--space-lg);
-  border-radius: var(--radius-l3);
   display: flex;
   flex-direction: column;
   gap: var(--space-3xl);
