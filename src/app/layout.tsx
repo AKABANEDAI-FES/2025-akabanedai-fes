@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "赤羽台祭",
   },
   description:
-    "東洋大学赤羽台キャンパス大学祭「赤羽台祭」は、2025/11/02(土), 03(日)に開催！",
+    "東洋大学赤羽台キャンパス大学祭「赤羽台祭」は、2025/11/02(日), 03(月)に開催！",
   openGraph: {
     metadataBase: new URL("https://akabanedai-fes.com/"),
     url: "https://akabanedai-fes.com/",
