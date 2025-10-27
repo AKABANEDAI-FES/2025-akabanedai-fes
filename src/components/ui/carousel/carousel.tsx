@@ -48,7 +48,7 @@ function Root({
 
   const embla = useEmblaCarousel(
     { loop },
-    plugins as Parameters<typeof useEmblaCarousel>[1]
+    plugins as Parameters<typeof useEmblaCarousel>[1],
   );
 
   return (
@@ -100,7 +100,7 @@ function Indicator({ className, ...props }: IndicatorProps) {
 
   const onDotButtonClick = useCallback(
     (index: number) => api?.scrollTo(index),
-    [api]
+    [api],
   );
 
   const onInit = useCallback((emblaApi: EmblaCarouselType) => {
@@ -128,7 +128,10 @@ function Indicator({ className, ...props }: IndicatorProps) {
           key={`snap-${snap}`}
           type="button"
           onClick={() => onDotButtonClick(index)}
-          className={clsx(styles.dot, index === selectedIndex && styles.dotActive)}
+          className={clsx(
+            styles.dot,
+            index === selectedIndex && styles.dotActive,
+          )}
           aria-current={index === selectedIndex ? "true" : undefined}
           aria-label={`Go to slide ${index + 1}`}
         />

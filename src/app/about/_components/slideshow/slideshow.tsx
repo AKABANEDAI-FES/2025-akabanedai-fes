@@ -18,7 +18,7 @@ export function Slideshow() {
     slideshow3,
     slideshow4,
     slideshow5,
-  ]
+  ];
   return (
     <section>
       <StarDecoration className={styles.heading}>

@@ -27,35 +27,6 @@
   overflow: hidden;
 }
 
-.controls {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: none;
-}
-
-.ctrl {
-  pointer-events: auto;
-  border: none;
-  background: var(--color-gray-a7);
-  color: var(--bg-default);
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  font-size: 20px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  margin: 0 var(--space-xs);
-}
-
-.ctrl:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
 .indicator {
   margin-top: var(--space-xs);
   display: flex;
