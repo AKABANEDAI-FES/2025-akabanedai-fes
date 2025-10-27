@@ -12,12 +12,16 @@ function Root({ children, className, ...props }: StarDecoration.RootProps) {
   );
 }
 
-function Decoration({ className, ...props }: StarDecoration.DecorationProps) {
+function Decoration({
+  className,
+  fill,
+  ...props
+}: StarDecoration.DecorationProps) {
   return (
     <div className={clsx(styles.decoration, className)} {...props}>
-      <Star className={styles.star} />
+      <Star className={clsx(styles.star, fill && styles.fill)} />
       <Divider className={styles.divider} />
-      <Star className={styles.star} />
+      <Star className={clsx(styles.star, fill && styles.fill)} />
     </div>
   );
 }
@@ -25,13 +29,14 @@ function Decoration({ className, ...props }: StarDecoration.DecorationProps) {
 export type Props = {
   children?: React.ReactNode;
   className?: string;
+  fill?: boolean;
 };
 
-export function StarDecoration({ children, ...props }: Props) {
+export function StarDecoration({ children, fill, ...props }: Props) {
   return (
     <Root {...props}>
       {children}
-      <Decoration />
+      <Decoration fill={fill} />
     </Root>
   );
 }
@@ -41,5 +46,7 @@ StarDecoration.Decoration = Decoration;
 
 export namespace StarDecoration {
   export type RootProps = JSX.IntrinsicElements["div"];
-  export type DecorationProps = JSX.IntrinsicElements["div"];
+  export type DecorationProps = JSX.IntrinsicElements["div"] & {
+    fill?: boolean;
+  };
 }
