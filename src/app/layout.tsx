@@ -8,6 +8,7 @@ import { Parallax } from "./_components/parallax";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://akabanedai-fes.com/"),
   title: {
     template: "%s | 赤羽台祭",
     default: "赤羽台祭",
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
   description:
     "東洋大学赤羽台キャンパス大学祭「赤羽台祭」は、2025/11/02(日), 03(月)に開催！",
   openGraph: {
-    metadataBase: new URL("https://akabanedai-fes.com/"),
     url: "https://akabanedai-fes.com/",
     type: "website",
     title: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     site: "@akabanedaifes",
-    card: "summary_large_image",
+    card: "summary_largeage",
   },
   robots: process.env.ROBOTS,
 };
