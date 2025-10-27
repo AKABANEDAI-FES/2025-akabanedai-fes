@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Fragment } from "react";
 import Star from "@/assets/star.svg";
 import { BlurredBox } from "@/components/ui/blurred-box";
@@ -48,6 +49,10 @@ const descriptions = [
     ],
   },
 ];
+
+export const metadata: Metadata = {
+  title: "開催概要",
+};
 
 export default function OverviewPage() {
   return (
