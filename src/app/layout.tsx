@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   },
   description:
     "東洋大学赤羽台キャンパス大学祭「赤羽台祭」は、2025/11/02(土), 03(日)に開催！",
+  openGraph: {
+    url: "https://akabanedai-fes.com/",
+    type: "website",
+    title: {
+      template: "%s | 赤羽台祭 [東洋大学赤羽台キャンパス大学祭]",
+      default: "赤羽台祭 [東洋大学赤羽台キャンパス大学祭]",
+    },
+    siteName: "赤羽台祭",
+  },
   twitter: {
     site: "@akabanedaifes",
     card: "summary_large_image",
