@@ -5,10 +5,10 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import GoodsA from "../../assets/Goods_A.webp";
+import GoodsB from "../../assets/Goods_B.webp";
+import GoodsC from "../../assets/Goods_C.webp";
 import Star from "../../assets/star.svg";
-import GoodsA from "./Goods_A.webp";
-import GoodsB from "./Goods_B.webp";
-import GoodsC from "./Goods_C.webp";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -29,7 +29,6 @@ export default function Page() {
       <BlurredBox className={styles.blurredBoxContainer}>
         <Text>赤羽台祭×こもれび祭コラボグッズ×白山祭コラボグッズ</Text>
 
-        {/* 1. トートバッグ */}
         <div className={styles.goodsTitleBox}>
           <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
             トートバッグ
@@ -43,7 +42,6 @@ export default function Page() {
           className={styles.goodsImage}
         />
 
-        {/* 2. ステッカーA */}
         <div className={styles.goodsTitleBox}>
           <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
             ステッカーA
@@ -57,7 +55,6 @@ export default function Page() {
           className={styles.goodsImage}
         />
 
-        {/* 3. ステッカーB */}
         <div className={styles.goodsTitleBox}>
           <Heading as="h2" variant="secondary" className={styles.goodsHeading}>
             ステッカーB
@@ -71,7 +68,6 @@ export default function Page() {
           className={styles.goodsImage}
         />
 
-        {/* 去年のグッズ */}
         <div className={styles.lastYearGoods}>
           <Text>
             以下の去年のグッズも販売しています！
@@ -102,7 +98,6 @@ export default function Page() {
           </ul>
         </div>
 
-        {/* 販売場所セクション */}
         <section className={styles.salesSection}>
           <Heading as="h3" variant="secondary" className={styles.salesHeading}>
             販売場所
