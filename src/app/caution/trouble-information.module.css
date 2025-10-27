@@ -26,7 +26,7 @@
 .contentBox {
   border: 3px solid var(--theme-default);
   padding: var(--space-lg);
-  border-radius: calc(var(--radius-l3) + var(--radius-l2)*2);
+  border-radius: calc(var(--radius-l3) + var(--radius-l2) * 2);
   margin: 0 auto;
   position: relative;
   font-weight: bolder;

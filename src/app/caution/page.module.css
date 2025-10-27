@@ -25,7 +25,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-  margin-top: calc(var(--space-3xl)*-1);
+  margin-top: calc(var(--space-3xl) * -1);
   margin-bottom: var(--space-3xl);
 }
 
@@ -40,7 +40,7 @@
   .dividerWrapper {
     position: relative;
     display: block;
-    margin-top: calc(var(--space-xl)*-1);
+    margin-top: calc(var(--space-xl) * -1);
     margin-bottom: var(--space-2xl);
   }
 }
@@ -53,7 +53,7 @@
   }
 
   .noticeSectionsWrapper {
-    margin-top: calc(var(--space-2xl)*-1);
+    margin-top: calc(var(--space-2xl) * -1);
     gap: var(--space-lg);
   }
 
