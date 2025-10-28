@@ -1,65 +1,89 @@
 .mainContent {
-  position: relative;
-  margin: 0 auto;
-  padding-top: var(--space-2xl);
+  padding-top: var(--space-4xl);
+  margin-top: var(--space-md);
+  display: grid;
+  grid-template-areas:
+    "title"
+    "divider"
+    "content";
 }
 
 .mainTitle {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: normal;
-  padding: var(--space-xs);
-  margin-top: var(--space-4xl);
+  grid-area: title;
+  font-weight: var(--font-weight-normal);
 }
 
-.noticeSectionsWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2xl);
-  margin-bottom: var(--space-xl);
-}
-
-.dividerWrapper {
-  position: relative;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  margin-top: calc(var(--space-3xl) * -1);
-  margin-bottom: var(--space-3xl);
+.mainTitle > svg {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .lineDivider {
   width: 100%;
-  display: block;
-  margin: 0 auto;
-  height: 100%;
+  height: auto;
+  grid-area: divider;
 }
 
-@media (width >= 48rem) and (width < 64rem) {
-  .dividerWrapper {
-    position: relative;
-    display: block;
-    margin-top: calc(var(--space-xl) * -1);
-    margin-bottom: var(--space-2xl);
-  }
+.container {
+  grid-area: content;
+  margin-block: var(--space-2xl);
+  margin-block-end: 0;
+  display: grid;
+  gap: var(--space-xl);
 }
 
-@media (width < 48rem) {
+.section {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.section > * + * {
+  margin-top: var(--space-xl);
+}
+
+.sectionTitle {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--bg-muted);
+  border-radius: var(--radius-l3);
+  box-shadow: var(--shadow-md);
+  width: fit-content;
+}
+
+.list {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.contentBox {
+  border: 2px solid var(--theme-default);
+  border-radius: var(--radius-l3);
+  padding: var(--space-md);
+}
+
+.description {
+  text-align: center;
+}
+
+.troubleExamples {
+  padding: var(--space-lg);
+  font-weight: var(--font-weight-black);
+}
+
+@media (width >= 64rem) {
   .mainContent {
-    position: relative;
-    margin: 0 auto;
-    padding-top: var(--space-xl);
+    padding-top: var(--space-4xl);
+    grid-template-areas:
+      "title"
+      "content";
   }
 
-  .noticeSectionsWrapper {
-    margin-top: calc(var(--space-2xl) * -1);
-    gap: var(--space-lg);
+  .lineDivider {
+    grid-area: title;
   }
 
-  .dividerWrapper {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: var(--space-3xl);
+  .section {
+    padding: var(--space-xl) var(--space-lg);
   }
 }
