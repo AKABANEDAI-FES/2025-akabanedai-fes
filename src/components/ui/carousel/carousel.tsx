@@ -5,8 +5,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import type React from "react";
 import {
   createContext,
+  use,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useState,
@@ -18,7 +18,7 @@ type EmblaCtx = ReturnType<typeof useEmblaCarousel>;
 const EmblaContext = createContext<EmblaCtx | undefined>(undefined);
 
 const useCarousel = () => {
-  const ctx = useContext(EmblaContext);
+  const ctx = use(EmblaContext);
   if (!ctx) {
     throw new Error("useCarousel must be used within <Carousel.Root>");
   }
@@ -52,11 +52,11 @@ function Root({
   );
 
   return (
-    <EmblaContext.Provider value={embla}>
+    <EmblaContext value={embla}>
       <section className={clsx(styles.root, className)} {...props}>
         {children}
       </section>
-    </EmblaContext.Provider>
+    </EmblaContext>
   );
 }
 
