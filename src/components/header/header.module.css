@@ -83,7 +83,7 @@
   top: calc(var(--space-sm) + 0.5lh);
   transform: translateX(calc((var(--gutter) - var(--rail-width)) / 2));
   bottom: calc(-1 * (var(--space-sm) + 0.5lh));
-  width: 2px;
+  width: var(--rail-width);
   background: var(--theme-default);
 }
 
