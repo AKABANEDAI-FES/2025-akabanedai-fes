@@ -85,11 +85,13 @@
 .content {
   width: var(--size-full);
   height: var(--size-full);
+  font-size: var(--font-size-2xl);
   display: grid;
   place-items: center;
   position: relative;
   opacity: 0;
   transform: translateY(64px);
+  overflow: auto;
   will-change: transform, opacity;
 }
 
@@ -106,8 +108,11 @@
   animation: slideOut var(--content-out) ease-in forwards;
 }
 
+.accordion {
+  min-width: 18.5rem; /* コンテンツが収まる最小幅 */
+}
+
 .accordionTrigger {
-  font-size: var(--font-size-xl);
   color: var(--theme-fg);
   display: flex;
   gap: var(--space-md);
@@ -126,6 +131,75 @@
   width: 1.5em;
   height: 1.5em;
   stroke-width: 4px;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.accordionTrigger[data-state="open"] svg {
+  transform: rotate(-180deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: padding-bottom 0.25s ease;
+}
+
+.accordionContent[data-state="open"] {
+  animation: collapseIn 0.25s ease;
+}
+
+.accordionContent[data-state="closed"] {
+  animation: collapseOut 0.25s ease;
+}
+
+.itemList {
+  --gutter: calc(1.5em + var(--space-md));
+  --rail-width: 2px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-left: var(--gutter);
+}
+
+.itemList::before {
+  content: "";
+  position: absolute;
+  left: calc((1.5em - var(--rail-width)) / 2);
+  top: 0;
+  bottom: 0;
+  width: var(--rail-width);
+  background: var(--bg-default);
+}
+
+.itemLink {
+  color: var(--theme-fg);
+  font-size: var(--font-size-xl);
+}
+
+.itemLink[aria-disabled="true"] {
+  opacity: 0.5;
+}
+
+@keyframes collapseIn {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--height);
+  }
+}
+
+@keyframes collapseOut {
+  from {
+    height: var(--height);
+  }
+
+  to {
+    height: 0;
+  }
 }
 
 @keyframes circleReveal {
@@ -195,6 +269,17 @@
   .content[data-state="closed"] {
     opacity: 0;
     transform: none;
+  }
+
+  .accordionTrigger svg {
+    transition: none;
+  }
+
+  .accordionContent,
+  .accordionContent[data-state="open"],
+  .accordionContent[data-state="closed"] {
+    animation: none;
+    transition: none;
   }
 }
 

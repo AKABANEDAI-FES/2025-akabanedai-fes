@@ -13,17 +13,13 @@ import {
 } from "react";
 import Star from "@/assets/star.svg";
 import SymbolIcon from "@/assets/symbol.svg";
+import { Text } from "../ui/text";
 import Menu from "./menu.svg";
 import styles from "./mobile-menu.module.css";
-
-const navItems = [
-  { label: "企画情報" },
-  { label: "赤羽台祭について" },
-  { label: "公式コンテンツ" },
-  { label: "ご来場の皆様へ" },
-];
+import { navigation } from "./nav";
 
 export function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const [backdropVars, setBackdropVars] = useState<CSSProperties>({
     "--cx": "50vw",
@@ -72,7 +68,11 @@ export function MobileMenu() {
       <Dialog.Root
         persistentElements={[() => triggerRef.current]}
         trapFocus={false}
-        onOpenChange={measure}
+        open={isOpen}
+        onOpenChange={(e) => {
+          setIsOpen(e.open);
+          measure();
+        }}
       >
         <Dialog.Trigger
           className={clsx(styles.menuButton)}
@@ -84,19 +84,39 @@ export function MobileMenu() {
         <Dialog.Backdrop className={styles.backdrop} style={backdropVars} />
         <Dialog.Positioner className={styles.positioner}>
           <Dialog.Content className={styles.content}>
-            <Accordion.Root>
-              {navItems.map((item) => (
-                <Accordion.Item key={item.label} value={item.label}>
-                  <Accordion.ItemTrigger
-                    className={styles.accordionTrigger}
-                    disabled
-                  >
+            <Accordion.Root className={styles.accordion}>
+              {navigation.map((section) => (
+                <Accordion.Item key={section.label} value={section.label}>
+                  <Accordion.ItemTrigger className={styles.accordionTrigger}>
                     <Accordion.ItemIndicator>
                       <Star />
                     </Accordion.ItemIndicator>
-                    {item.label}
+                    {section.label}
                   </Accordion.ItemTrigger>
-                  <Accordion.ItemContent>{null}</Accordion.ItemContent>
+                  <Accordion.ItemContent className={styles.accordionContent}>
+                    <ul className={styles.itemList}>
+                      {section.items.map((item) => (
+                        <Text as="li" key={item.label}>
+                          {item.href ? (
+                            <Link
+                              href={item.href}
+                              className={styles.itemLink}
+                              onNavigate={() => setIsOpen(false)}
+                            >
+                              {item.label}
+                            </Link>
+                          ) : (
+                            <span
+                              className={styles.itemLink}
+                              aria-disabled="true"
+                            >
+                              {item.label}
+                            </span>
+                          )}
+                        </Text>
+                      ))}
+                    </ul>
+                  </Accordion.ItemContent>
                 </Accordion.Item>
               ))}
             </Accordion.Root>
