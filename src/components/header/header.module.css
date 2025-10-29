@@ -1,6 +1,4 @@
 .container {
-  --symbol-size: 3.125rem;
-
   position: sticky;
   top: 0;
   z-index: 10;
@@ -23,7 +21,7 @@
 .symbol {
   color: var(--theme-fg);
   height: var(--symbol-size);
-  width: var(--symbol-size);
+  aspect-ratio: 1 / 1;
 }
 
 .navigation {
@@ -44,7 +42,7 @@
 /* トリガーとメニューの隙間を埋める */
 .menuContent::before {
   content: "";
-  height: calc((var(--symbol-size) - 1lh) / 2 + var(--space-md));
+  height: calc((3.125rem - 1lh) / 2 + var(--space-md));
 }
 
 .menuNavList {
