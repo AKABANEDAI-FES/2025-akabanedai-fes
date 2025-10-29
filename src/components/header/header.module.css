@@ -1,4 +1,6 @@
 .container {
+  --symbol-size: 3.125rem;
+
   position: sticky;
   top: 0;
   z-index: 10;
@@ -20,8 +22,8 @@
 
 .symbol {
   color: var(--theme-fg);
-  height: 3.125rem;
-  aspect-ratio: 1 / 1;
+  height: var(--symbol-size);
+  width: var(--symbol-size);
 }
 
 .navigation {
@@ -42,7 +44,7 @@
 /* トリガーとメニューの隙間を埋める */
 .menuContent::before {
   content: "";
-  height: calc((3.125rem - 1lh) / 2 + var(--space-md)); /* (シンボルの高さ - トリガーの高さ) / 2 + ヘッダーの上下余白 */
+  height: calc((var(--symbol-size) - 1lh) / 2 + var(--space-md));
 }
 
 .menuNavList {
