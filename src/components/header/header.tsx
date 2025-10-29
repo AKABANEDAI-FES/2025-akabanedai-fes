@@ -38,10 +38,8 @@ export function Header({ className, ...props }: Props) {
                             {item.label}
                           </NavigationMenu.Link>
                         ) : (
-                          // biome-ignore lint/a11y/useSemanticElements: リンクでないメニュー項目のため
                           <Text
                             as="span"
-                            role="link"
                             aria-disabled="true"
                             className={styles.menuNavLink}
                           >
