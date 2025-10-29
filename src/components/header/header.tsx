@@ -33,7 +33,7 @@ export function Header({ className, ...props }: Props) {
                             key={item.label}
                             href={item.href}
                             className={styles.menuNavLink}
-                            render={<Link href="#" />}
+                            render={<Link href={item.href} />}
                           >
                             {item.label}
                           </NavigationMenu.Link>
