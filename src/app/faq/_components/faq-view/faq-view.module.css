@@ -1,0 +1,15 @@
+.faqItem {
+  margin-bottom: var(--space-lg);
+}
+
+.question {
+  margin-bottom: var(--space-sm);
+  display: flex;
+  flex-direction: row;
+}
+
+.answer {
+  margin-bottom: var(--space-sm);
+  display: flex;
+  flex-direction: row;
+}

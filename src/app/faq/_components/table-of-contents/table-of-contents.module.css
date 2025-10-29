@@ -1,0 +1,16 @@
+.tocContainer {
+  width: 100%;
+  max-width: var(--size-xl);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  background-color: #EFF6F9;
+  padding: var(--space-xs);
+
+}
+
+.tocList {
+    padding-left: 0;
+}

@@ -1,2 +1,6 @@
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp
+
 patchedDependencies:
   '@zag-js/dialog': patches/@zag-js__dialog.patch
