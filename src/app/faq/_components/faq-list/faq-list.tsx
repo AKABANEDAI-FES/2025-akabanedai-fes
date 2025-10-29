@@ -1,8 +1,7 @@
-// faq-list.tsx
-import styles from "./faq-list.module.css";
-import faqData from "./faq.json";
-import { FaqView } from "../faq-view";
 import { Text } from "@/components/ui/text";
+import { FaqView } from "../faq-view";
+import faqData from "./faq.json";
+import styles from "./faq-list.module.css";
 
 interface FaqListProps {
   qa_id: string;

@@ -6,11 +6,10 @@
   flex-direction: column;
   margin-top: var(--space-lg);
   margin-bottom: var(--space-2xl);
-  background-color: #EFF6F9;
+  background-color: #eff6f9;
   padding: var(--space-xs);
-
 }
 
 .tocList {
-    padding-left: 0;
+  padding-left: 0;
 }
