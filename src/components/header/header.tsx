@@ -30,7 +30,6 @@ export function Header({ className, ...props }: Props) {
                       <Text as="li" key={item.label}>
                         {item.href ? (
                           <NavigationMenu.Link
-                            key={item.label}
                             href={item.href}
                             className={styles.menuNavLink}
                             render={<Link href={item.href} />}
