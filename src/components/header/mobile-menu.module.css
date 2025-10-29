@@ -127,7 +127,7 @@
   cursor: not-allowed;
 }
 
-.accordionTrigger svg {
+.accordionIndicator svg {
   width: 1.5em;
   height: 1.5em;
   stroke-width: 4px;
@@ -136,7 +136,8 @@
 }
 
 .accordionTrigger[data-state="open"] svg {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
+  fill: var(--theme-fg);
 }
 
 .accordionContent {

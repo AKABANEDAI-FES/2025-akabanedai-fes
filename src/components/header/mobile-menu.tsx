@@ -88,7 +88,9 @@ export function MobileMenu() {
               {navigation.map((section) => (
                 <Accordion.Item key={section.label} value={section.label}>
                   <Accordion.ItemTrigger className={styles.accordionTrigger}>
-                    <Accordion.ItemIndicator>
+                    <Accordion.ItemIndicator
+                      className={styles.accordionIndicator}
+                    >
                       <Star />
                     </Accordion.ItemIndicator>
                     {section.label}
