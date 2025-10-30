@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import logo from "@/assets/logo.webp";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { Heading } from "@/components/ui/heading";
@@ -38,9 +40,51 @@ export default function AboutPage() {
           </Text>
         </div>
       </section>
-      <StarDecoration>
+      <StarDecoration className={styles.logoTitle}>
         <Heading as="h1">ロゴ</Heading>
       </StarDecoration>
+      <section className={styles.logoSection}>
+        <div className={styles.logocontainer}>
+          <Image src={logo} alt="ロゴ" className={styles.logoimage} />
+        </div>
+        <Heading as="h3" className={styles.logoSubtitle}>
+          「つながるリンク、広がる輪」
+        </Heading>
+        <div className={styles.logoDescriptionBox}>
+          <Text as="p" className={styles.themedescriptionText}>
+            今年のテーマである「Link」から着想を得て、「繋ぐ」をモチーフに、学部を横断するロゴを制作しました。
+            赤羽台の地形のイメージ、INIADのi、WELLBのWのデザインも取り入れ、INIADとWELLBの学生が協力して赤羽台祭を創り上げていく様子をイメージしました。
+          </Text>
+        </div>
+      </section>
+      <StarDecoration className={styles.greetingTitle}>
+        <Heading as="h1">委員長挨拶</Heading>
+      </StarDecoration>
+      <section className={styles.greetingSection}>
+        <Heading as="h3" className={styles.greetingHeader}>
+          INIAD部門 委員長 佐藤仁輝
+        </Heading>
+        <div className={styles.greetingbox}>
+          <Text as="p" className={styles.themedescriptionText}>
+            赤羽台祭Webサイトをご覧いただきありがとうございます！
+            今年は「Link（繋ぐ）」をテーマに情報連携学部と福祉社会学部の繋がりを意識して準備してきました。
+            学部間の交流だけでなく、地域の方々との「Link」も創出できるような企画を用意しています。
+            ぜひ赤羽台祭をお楽しみください！
+          </Text>
+        </div>
+        <Heading as="h3" className={styles.greetingHeader}>
+          WELLB & HELSPO部門 委員長 委員長 宮城勇
+        </Heading>
+        <div className={styles.greetingbox}>
+          <Text as="p" className={styles.themedescriptionText}>
+            今年のテーマは「Link（繋ぐ）」です。地域の皆さまとの「繋がり」を大切に、スローガン「つながるリンク、広がる輪」のもと、学部や世代を超えたコミュニケーションが、新たな価値を届ける行事になり、未来につながる一日となればと願います。
+          </Text>
+        </div>
+      </section>
+      <StarDecoration className={styles.lastyeartitle}>
+        <Heading as="h1">昨年度の様子</Heading>
+      </StarDecoration>
+      <section className={styles.lastyearSection}></section>
     </Container>
   );
 }
