@@ -82,6 +82,12 @@
     --border-default: var(--color-gray-3);
     --border-muted: var(--color-gray-2);
 
+    /* ---------- Semantic: Location ---------- */
+    --location-iniad: #01a3c1;
+    --location-wellb: #b47f3b;
+    --location-helspo: #5b8944;
+    --location-other: #182349;
+
     /* ---------- Spacing ---------- */
     --space-xs: 0.5rem;
     --space-sm: 0.75rem;
