@@ -2,7 +2,7 @@
 
 import { Tabs } from "@ark-ui/react/tabs";
 import Image, { type StaticImageData } from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import type { Program } from "@/types/program";
 import { getPrograms } from "@/utils/program";
@@ -96,7 +96,7 @@ const mapData = {
 export function ProgramMap() {
   const [where, setWhere] = useState<keyof typeof mapData>("iniad");
   const [selected, setSelected] = useState(0);
-  const programs = getPrograms();
+  const programs = useMemo(() => getPrograms(), []);
   const filter = mapData[where].filter;
 
   return (
