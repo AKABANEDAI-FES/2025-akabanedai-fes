@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: "企画マップ",
 };
 
-type Where = "iniad" | "wellb" | "helspo" | "other";
-
 export default function ProgramMapPage() {
   return (
     <Container as="main" className={styles.container}>
