@@ -1,6 +1,6 @@
 export type Program = {
   title: string;
-  officialtitle: string;
+  officialTitle: string;
   organization: string;
   description: string;
   placement: string;
