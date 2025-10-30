@@ -27,9 +27,4 @@ export const Many: Story = {
   args: {
     programs: samplePrograms,
   },
-  render: () => (
-    <div style={{ display: "grid", gap: "var(--space-md)" }}>
-      <ProgramList programs={samplePrograms} />
-    </div>
-  ),
 };
