@@ -38,7 +38,7 @@ function ProgramItem({ program }: { program: Program }) {
       </Heading>
       <Text className={styles.programOrganization}>{program.organization}</Text>
       <Text className={styles.programLocation}>
-        <Pin style={{ fill: whereToColor(program.where) }} />
+        <Pin data-location={program.where?.toLocaleLowerCase()} />
         {formatLocation(program)}
       </Text>
       <div className={styles.programTagList}>
@@ -57,17 +57,4 @@ function formatLocation(program: Program): string {
     return `${program.placement}（${program.where}）`;
   }
   return program.placement;
-}
-
-function whereToColor(where: string | null): string {
-  switch (where?.toLowerCase()) {
-    case "iniad":
-      return "var(--location-iniad)";
-    case "wellb":
-      return "var(--location-wellbe)";
-    case "helspo":
-      return "var(--location-helspo)";
-    default:
-      return "var(--location-other)";
-  }
 }
