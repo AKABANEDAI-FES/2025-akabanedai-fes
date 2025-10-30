@@ -79,7 +79,7 @@ export const sponsorshipData = {
     {
       sponsor: "朝霞市商工会青年部",
       logoPath: logo9,
-      url: "朝霞市商工会青年部 (asakaseinenbu.org)",
+      url: "https://asakaseinenbu.org",
     },
     {
       sponsor: "ブックスページワン イトーヨーカドー赤羽店",

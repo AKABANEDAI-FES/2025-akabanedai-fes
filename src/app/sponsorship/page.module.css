@@ -25,14 +25,14 @@
 
 .sponsorshipGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(0, 1fr);
   gap: var(--space-xl);
   width: 90vw;
 }
 
-@media (width < 48rem) {
+@media (width >= 48rem) {
   .sponsorshipGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }

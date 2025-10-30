@@ -49,7 +49,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
   const [isZoom, setIsZoom] = useState(false);
   return (
     <>
-      <Text className={styles.sponsorName}>
+      <Text className={styles.sponsorName} as="div">
         <Star className={styles.blackStarIcon} />
         {sponsor} 様
       </Text>
@@ -61,7 +61,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
               alt={`${sponsor}のロゴ`}
               className={styles.logo}
             />
-            <Dialog.Root open={isZoom}>
+            <Dialog.Root open={isZoom} onOpenChange={(e) => setIsZoom(e.open)}>
               <Dialog.Trigger
                 onClick={(e) => {
                   e.stopPropagation();
