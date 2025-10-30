@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import InfomationCenter from "@/assets/InfomationCenter.png";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration/star-decoration";
@@ -31,7 +33,16 @@ export default function faqPage() {
           <FaqList qa_id="ご案内・その他" />
         </div>
       </Container>
-      <Text>インフォメーションはこちら↓</Text>
+
+      <div className={styles.infomationCenterContainer}>
+        <Text>インフォメーションセンターはこちら↓</Text>
+        <Image
+          src={InfomationCenter}
+          alt="インフォメーションセンターはINIAD中庭にございます"
+          className={styles.mapImage}
+        />
+        <Text>INIAD中庭 / 飲食可能スペース入口前</Text>
+      </div>
     </Container>
   );
 }
