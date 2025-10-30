@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "タイムテーブル",
 };
 
-export default function () {
+export default function TimeTable() {
   return (
     <Container as="main" className={styles.mainContent}>
       <StarDecoration>

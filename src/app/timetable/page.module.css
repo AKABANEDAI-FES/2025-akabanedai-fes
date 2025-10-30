@@ -6,6 +6,8 @@
 
 .timetable {
   margin-bottom: var(--space-xl);
+  width: 100%;
+  height: auto;
 }
 
 .section {
