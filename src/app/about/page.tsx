@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { Divider } from "@/components/ui/divider";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
@@ -18,9 +19,11 @@ export default function AboutPage() {
       </StarDecoration>
 
       <section className={styles.themeSection}>
-        <Heading as="h2" className={styles.themeTitle}>
-          今年度のテーマ ― 「Link(繋ぐ)」
-        </Heading>
+        <div className={styles.themeTitle}>
+          <Heading as="h2">今年度のテーマ</Heading>
+          <Divider className={styles.themedivider} />
+          <p>「Link（繋ぐ）」</p>
+        </div>
 
         <div className={styles.descriptionBox}>
           <Text as="p" className={styles.descriptionText}>
