@@ -1,21 +1,18 @@
 "use client";
 
-import { type RefCallback, useCallback, useState } from "react";
+import { useState } from "react";
+import { ProgramList } from "@/components/program-list";
+import { Container } from "@/components/ui/container";
+import { programs } from "@/constants/programs";
 import {
   type Caution,
   cautions,
-  programs,
   type Tag,
   tags,
   type Where,
   where,
-} from "@/assets/programs";
-import Star from "@/assets/star.svg";
-import { Container } from "@/components/ui/container";
-import { Divider } from "@/components/ui/divider";
-import { Heading } from "@/components/ui/heading";
+} from "@/types/program";
 import { Filter } from "../filter";
-import styles from "./theme.module.css";
 
 export function Content() {
   const [selectedWhere, setSelectedWhere] = useState<Where[]>([]);
@@ -59,8 +56,8 @@ export function Content() {
           )
         }
       />
-      {programs
-        .filter(({ where, tags, cautions }) =>
+      <ProgramList
+        programs={programs.filter(({ where, tags, cautions }) =>
           [
             (where !== null && selectedWhere.includes(where)) ||
               selectedWhere.length === 0,
@@ -68,12 +65,8 @@ export function Content() {
             selectedCaution.length === 0 ||
               !selectedCaution.some((caution) => cautions.includes(caution)),
           ].every(Boolean),
-        )
-        .map(({ programName, formalProgramName, contestNumber }) => (
-          <div key={`${formalProgramName}-${contestNumber}`}>
-            <h3>{programName}</h3>
-          </div>
-        ))}
+        )}
+      />
     </Container>
   );
 }
