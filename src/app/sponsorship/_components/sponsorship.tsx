@@ -84,7 +84,9 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                       type="button"
                       tabIndex={-1}
                     >
-                      <Image src={logoPath} alt={`${sponsor}のロゴ拡大`}
+                      <Image
+                        src={logoPath}
+                        alt={`${sponsor}のロゴ拡大`}
                         className={styles.modalImage}
                       />
                     </button>
