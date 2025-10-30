@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import { useState } from "react";
-import { Text } from "@/components/ui/text";
 import { Divider } from "@/components/ui/divider";
+import { Text } from "@/components/ui/text";
 import styles from "./faq-view.module.css";
 
 interface QA {
@@ -17,15 +17,15 @@ interface FaqViewProps {
 export function FaqView({ qa }: FaqViewProps) {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
-const toggle = (index: number) => {
-  if (openIndexes.includes(index)) {
-    // すでに開いている → 閉じる
-    setOpenIndexes(openIndexes.filter((i) => i !== index));
-  } else {
-    // 閉じている → 開く
-    setOpenIndexes([...openIndexes, index]);
-  }
-};
+  const toggle = (index: number) => {
+    if (openIndexes.includes(index)) {
+      // すでに開いている → 閉じる
+      setOpenIndexes(openIndexes.filter((i) => i !== index));
+    } else {
+      // 閉じている → 開く
+      setOpenIndexes([...openIndexes, index]);
+    }
+  };
 
   return (
     <div>
@@ -44,14 +44,14 @@ const toggle = (index: number) => {
             </div>
 
             {/* 矢印 */}
-              <span
-                className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
-              />
+            <span
+              className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
+            />
           </button>
 
           {/* Aを表示 */}
           {openIndexes.includes(index) && (
-            <div >
+            <div>
               <Divider className={styles.divider} />
               <div className={styles.answer}>
                 <Text>A.</Text>

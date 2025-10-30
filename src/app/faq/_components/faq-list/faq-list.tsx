@@ -1,7 +1,7 @@
+import Star from "@/assets/star.svg";
 import { Text } from "@/components/ui/text";
 import { FaqView } from "../faq-view";
 import faqData from "./faq.json";
-import Star from "@/assets/star.svg";
 import styles from "./faq-list.module.css";
 
 interface FaqListProps {

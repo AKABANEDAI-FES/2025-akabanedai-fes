@@ -1,12 +1,14 @@
+import Star from "@/assets/star.svg";
 import { Divider } from "@/components/ui/divider";
 import { Text } from "@/components/ui/text";
 import styles from "./table-of-contents.module.css";
-import Star from "@/assets/star.svg";
 
 export function TableOfContents() {
   return (
     <div className={styles.tocContainer}>
-      <h2><Text className={styles.tocName}>目次</Text></h2>
+      <h2>
+        <Text className={styles.tocName}>目次</Text>
+      </h2>
       <Divider />
       <ul className={styles.tocList}>
         <li className={styles.listItems}>
