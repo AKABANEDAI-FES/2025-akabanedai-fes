@@ -1,0 +1,8 @@
+.programs {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.programHeading {
+  text-align: center;
+}
