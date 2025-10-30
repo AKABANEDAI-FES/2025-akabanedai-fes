@@ -5,7 +5,7 @@
   gap: var(--space-xs);
   width: 100%;
   background-color: var(--bg-canvas);
-  border: var(--border-default) solid 0.15rem;
+  border: var(--theme-default) solid 2px;
   border-radius: var(--radius-l3);
   padding: var(--space-xs);
   word-break: keep-all;
@@ -41,7 +41,7 @@
   user-select: none;
   font-size: var(--font-size-sm);
   word-break: keep-all;
-  box-shadow: var(--shadow-xs);
+  border: var(--theme-default) solid 2px;
   overflow-wrap: anywhere;
   transition: background-color 0.2s ease;
 }

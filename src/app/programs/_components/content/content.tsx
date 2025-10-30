@@ -13,13 +13,14 @@ import {
   where,
 } from "@/types/program";
 import { Filter } from "../filter";
+import styles from "./content.module.css";
 
 export function Content() {
   const [selectedWhere, setSelectedWhere] = useState<Where[]>([]);
   const [selectedTag, setSelectedTag] = useState<Tag[]>([]);
   const [selectedCaution, setSelectedCaution] = useState<Caution[]>([]);
   return (
-    <Container as="div">
+    <Container as="div" className={styles.content}>
       <Filter
         options={where}
         selected={selectedWhere}
@@ -55,6 +56,7 @@ export function Content() {
               : [...curr, option],
           )
         }
+        isInitOpen={false}
       />
       <ProgramList
         programs={programs.filter(({ where, tags, cautions }) =>
