@@ -50,7 +50,7 @@
 .themedescriptionBox::before {
   content: "";
   position: absolute;
-  inset: -3%;
+  inset: 0;
   z-index: -1;
   border-radius: var(--radius-l2);
   background-color: var(--bg-canvas);
@@ -59,7 +59,6 @@
 
 @media (width >= 48rem) {
   .themedescriptionBox::before {
-    inset: -1%;
     transform: rotate(2deg);
   }
 }
@@ -129,6 +128,7 @@
   font-weight: var(--font-weight-bold);
   text-align: left;
   margin-top: var(--space-md);
+  width: 95%;
 }
 
 .greetingbox {

@@ -73,7 +73,9 @@ export default function AboutPage() {
           </Text>
         </div>
         <Heading as="h3" className={styles.greetingHeader}>
-          WELLB & HELSPO部門 委員長 委員長 宮城勇
+          WELLB &
+          <br />
+          HELSPO部門 委員長 宮城勇
         </Heading>
         <div className={styles.greetingbox}>
           <Text as="p" className={styles.themedescriptionText}>
