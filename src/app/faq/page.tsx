@@ -3,7 +3,7 @@ import Image from "next/image";
 import InfomationCenter from "@/assets/InfomationCenter.png";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
-import { StarDecoration } from "@/components/ui/star-decoration/star-decoration";
+import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import { FaqList } from "./_components/faq-list";
 import { TableOfContents } from "./_components/table-of-contents";
