@@ -62,12 +62,12 @@ function formatLocation(program: Program): string {
 function whereToColor(where: string | null): string {
   switch (where?.toLowerCase()) {
     case "iniad":
-      return "#01a3c1";
+      return "var(--location-iniad)";
     case "wellb":
-      return "#b47f3b";
+      return "var(--location-wellbe)";
     case "helspo":
-      return "#5b8944";
+      return "var(--location-helspo)";
     default:
-      return "#182349";
+      return "var(--location-other)";
   }
 }
