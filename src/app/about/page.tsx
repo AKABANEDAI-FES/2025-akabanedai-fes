@@ -25,7 +25,6 @@ export default function AboutPage() {
           <Divider className={styles.themedivider} />
           <span>「Link（繋ぐ）」</span>
         </div>
-
         <div className={styles.themedescriptionBox}>
           <Text as="p" className={styles.themedescriptionText}>
             リンク（Link）という言葉には、「輪の環」そして「つながり」という意味があります。
@@ -39,7 +38,9 @@ export default function AboutPage() {
           </Text>
         </div>
       </section>
-      <section className={styles.LogoSection}></section>
+      <StarDecoration>
+        <Heading as="h1">ロゴ</Heading>
+      </StarDecoration>
     </Container>
   );
 }
