@@ -1,0 +1,29 @@
+.mainContent {
+  margin-top: var(--space-2xl);
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+.timetable {
+  margin-bottom: var(--space-xl);
+}
+
+.section {
+  display: grid;
+  padding: var(--space-xl) 0;
+}
+
+@media (width >= 64rem) {
+  .mainContent {
+    margin-top: var(--space-3xl);
+    gap: var(--space-3xl);
+  }
+
+  .timetable {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+}
