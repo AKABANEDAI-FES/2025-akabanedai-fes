@@ -1,0 +1,43 @@
+@layer components {
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    color: var(--theme-default);
+    border: 1px solid var(--theme-default);
+    border-radius: var(--radius-full);
+    padding: 0.125em 0.5em;
+  }
+
+  .tag svg {
+    width: 1.1em;
+    height: 1.1em;
+  }
+
+  .tag[data-size="sm"] {
+    font-size: var(--font-size-xs);
+  }
+
+  .tag[data-size="md"] {
+    font-size: var(--font-size-sm);
+  }
+
+  .tag[data-size="lg"] {
+    font-size: var(--font-size-md);
+  }
+
+  @media (width >= 48rem) {
+    .tag[data-size="sm"] {
+      font-size: var(--font-size-sm);
+    }
+
+    .tag[data-size="md"] {
+      font-size: var(--font-size-md);
+    }
+
+    .tag[data-size="lg"] {
+      font-size: var(--font-size-lg);
+    }
+  }
+}
