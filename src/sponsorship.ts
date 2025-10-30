@@ -112,8 +112,8 @@ export const sponsorshipData = {
       logoPath: logo14,
       url: "https://www.bivio.jp/",
     },
-    // ],
-    // product: [
+  ],
+  product: [
     {
       sponsor: "株式会社王将フードサービス",
       logoPath: null,
@@ -205,5 +205,4 @@ export const sponsorshipData = {
       url: "https://www.sakura.ad.jp/",
     },
   ],
-  product: [],
 };
