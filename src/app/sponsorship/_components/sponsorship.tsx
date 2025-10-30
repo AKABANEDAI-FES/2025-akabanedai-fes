@@ -68,6 +68,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                   e.preventDefault();
                   setIsZoom(true);
                 }}
+                className={styles.zoomButton}
               >
                 <Zoom className={styles.zoomIcon} />
               </Dialog.Trigger>

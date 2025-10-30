@@ -9,7 +9,7 @@ import { sponsorshipData } from "@/sponsorship";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "ご協賛",
+  title: "協賛",
 };
 
 export default function SponsorshipPage() {
