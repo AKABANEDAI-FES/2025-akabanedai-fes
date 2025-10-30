@@ -2,7 +2,6 @@
 
 import { Dialog } from "@ark-ui/react";
 import { Portal } from "@ark-ui/react/portal";
-import { Popover } from "@base-ui-components/react/popover";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { type FC, useState } from "react";
@@ -75,18 +74,18 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
               <Portal>
                 <Dialog.Positioner>
                   <Dialog.Content>
-                    {/* biome-ignore lint/a11y/noStaticElementInteractions: <explanation> */}
-                    {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <div
+                    <button
                       className={styles.modalOverlay}
                       onClick={(e) => {
                         e.stopPropagation();
                         e.preventDefault();
                         setIsZoom(false);
                       }}
+                      type="button"
+                      tabIndex={0}
                     >
                       <Image src={logoPath} alt={`${sponsor}のロゴ拡大`} />
-                    </div>
+                    </button>
                   </Dialog.Content>
                 </Dialog.Positioner>
               </Portal>

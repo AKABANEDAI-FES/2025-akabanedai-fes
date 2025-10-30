@@ -45,13 +45,15 @@
   position: absolute;
   bottom: 0;
   right: calc(-1 * var(--font-size-4xl));
-  width: var(--font-size-4xl) !important;
-  height: var(--font-size-4xl) !important;
+  width: var(--font-size-4xl);
+  height: var(--font-size-4xl);
   color: var(--color-text-secondary);
   padding: var(--space-xs);
   border-radius: var(--radius-l3);
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 .zoomIcon:hover {

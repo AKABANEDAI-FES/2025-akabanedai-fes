@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Sponsorship } from "@/app/sponsorship/_components/sponsorship";
 import InstagramBrandIcon from "@/assets/instagram-brand.svg";
 import XBrandIcon from "@/assets/x-brand.svg";
 import { sponsorshipData } from "@/sponsorship";
@@ -13,7 +12,7 @@ export function Footer() {
       <Heading as="h5">協賛企業様</Heading>
       <Text className={styles.sponsors}>
         {sponsorshipData.ad.map(({ sponsor }, i) => (
-          <span className={styles.sponsor} key={i}>
+          <span className={styles.sponsor} key={sponsor}>
             {sponsor}
             {i < sponsorshipData.ad.length - 1 ? " / " : ""}
           </span>
