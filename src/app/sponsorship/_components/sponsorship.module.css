@@ -52,7 +52,9 @@
   padding: var(--space-xs);
   border-radius: var(--radius-l3);
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 .zoomIcon:hover {

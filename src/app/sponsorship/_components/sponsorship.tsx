@@ -8,7 +8,6 @@ import { type FC, useState } from "react";
 import Star from "@/assets/star.svg";
 import Zoom from "@/assets/zoom.svg";
 import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
 import styles from "./sponsorship.module.css";
 
 type SponsorshipProps = {
