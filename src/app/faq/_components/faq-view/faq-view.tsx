@@ -46,6 +46,10 @@ export function FaqView({ qa }: FaqViewProps) {
             {/* 矢印 */}
             <span
               className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
+              aria-hidden="true"
+            />
+            <span
+              className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
             />
           </button>
 
