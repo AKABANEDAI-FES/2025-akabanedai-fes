@@ -12,7 +12,7 @@ import styles from "./sponsorship.module.css";
 
 type SponsorshipProps = {
   sponsor: string;
-  logoPath: StaticImageData | null;
+  logoPath: string | null;
   url: string | null;
 };
 
@@ -59,6 +59,8 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
               src={logoPath}
               alt={`${sponsor}のロゴ`}
               className={styles.logo}
+              width={280}
+              height={200}
             />
             <Dialog.Root open={isZoom} onOpenChange={(e) => setIsZoom(e.open)}>
               <Dialog.Trigger
@@ -88,6 +90,8 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                         src={logoPath}
                         alt={`${sponsor}のロゴ拡大`}
                         className={styles.modalImage}
+                        width={280}
+                        height={200}
                       />
                     </button>
                   </Dialog.Content>
