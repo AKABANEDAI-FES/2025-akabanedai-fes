@@ -24,8 +24,4 @@
   .timetable {
     margin-bottom: var(--space-2xl);
   }
-
-  .section {
-    padding: var(--space-2xl) 0;
-  }
 }
