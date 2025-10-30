@@ -1,0 +1,9 @@
+.pageContainer {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xl);
+  transition: padding 0.3s ease, margin 0.3s ease;
+}
