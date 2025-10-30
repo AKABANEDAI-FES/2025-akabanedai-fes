@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Program } from "@/types/program";
-import { Tag } from "../tag/tag";
+import { Tag } from "../tag";
 import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
 import Pin from "./pin.svg";
