@@ -49,10 +49,10 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
   const [isZoom, setIsZoom] = useState(false);
   return (
     <>
-      <Text className={styles.sponsorName} as="div">
+      <Heading as="h6" className={styles.sponsorName}>
         <Star className={styles.blackStarIcon} />
         {sponsor} 様
-      </Text>
+      </Heading>
       <div className={styles.logoBox}>
         {logoPath ? (
           <div className={styles.zoomIconWrapper}>
@@ -82,7 +82,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                         setIsZoom(false);
                       }}
                       type="button"
-                      tabIndex={0}
+                      tabIndex={-1}
                     >
                       <Image src={logoPath} alt={`${sponsor}のロゴ拡大`} />
                     </button>

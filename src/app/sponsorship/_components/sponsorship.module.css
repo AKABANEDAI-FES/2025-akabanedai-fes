@@ -20,6 +20,7 @@
   align-items: center;
   gap: var(--space-sm);
   min-width: 0;
+  font-size: var(--font-size-sm);
 }
 
 .logoBox {
@@ -48,9 +49,7 @@
   padding: var(--space-xs);
   border-radius: var(--radius-l3);
   cursor: pointer;
-  transition:
-    color 0.2s,
-    background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 .zoomIcon:hover {
