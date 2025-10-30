@@ -8,7 +8,7 @@ export function getPrograms(): Program[] {
     organization: program.団体名,
     description: program.紹介文,
     placement: program.教室 ?? "",
-    contest: program.企画コンテスト ?? "",
+    contest: program.企画コンテスト,
     where: program.where,
     logo: `/logo/${program.logo}`,
     tags: program.タグ,

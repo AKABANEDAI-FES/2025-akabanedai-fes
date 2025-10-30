@@ -4,7 +4,7 @@ export type Program = {
   organization: string;
   description: string;
   placement: string;
-  contest: string | number;
+  contest: number;
   where: string | null;
   logo: string;
   tags: string[];
