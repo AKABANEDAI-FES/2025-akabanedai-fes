@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Star from "@/assets/star.svg";
 import { Heading } from "@/components/ui/heading";
 import styles from "./filter.module.css";
@@ -21,24 +21,48 @@ export const Filter = <T extends string | number>({
   isInitOpen = true,
 }: FilterProps<T>) => {
   const [isOpen, setIsOpen] = useState(isInitOpen);
+  const [loading, setLoading] = useState(true);
+
+  const optionsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+  const changeOpen = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <button
-      className={styles.filterContainer}
-      onClick={() => setIsOpen(!isOpen)}
-      onKeyDown={() => setIsOpen(!isOpen)}
+      className={isOpen ? styles.filterContainer : styles.filterContainerClosed}
+      onClick={changeOpen}
+      onKeyDown={changeOpen}
       type="button"
       tabIndex={0}
     >
       <Heading as="h3" className={styles.filterTitle}>
-        <Star className={styles.blackStarIcon} />
+        <Star
+          className={isOpen ? styles.blackStarIconOpen : styles.blackStarIcon}
+          key={+isOpen}
+        />
         {title}
       </Heading>
-      {isOpen && (
-        <div className={styles.options}>
+      {!loading && (
+        <div
+          className={styles.options}
+          ref={optionsRef}
+          style={{
+            maxHeight: isOpen
+              ? (optionsRef.current?.scrollHeight ?? 500) + 4
+              : 0,
+          }}
+        >
           {options.map((option) => (
             <button
               key={option}
-              onClick={() => onSelect(option)}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onSelect(option);
+              }}
               type="button"
               className={
                 selected.includes(option)
