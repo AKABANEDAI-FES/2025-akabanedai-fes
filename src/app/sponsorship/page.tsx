@@ -4,8 +4,8 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import { sponsorshipData } from "@/sponsorship";
 import { Sponsorship } from "./_components/sponsorship";
-import { sponsorshipData } from "./_constants/sponsorship";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function SponsorshipPage() {
       <BlurredBox as="section" className={styles.section}>
         <Heading as="h2">企業の皆様へ</Heading>
         <Text>
-          第10回赤羽台祭の開催にあたりまして、本年度も多くの企業様から
+          第9回赤羽台祭の開催にあたりまして、本年度も多くの企業様から
           ご協賛を賜りましたこと、心より御礼申し上げます。
           <br />
           ご協賛いただきました協賛金・協賛品は、大学祭の運営費用や各種イベント景品として
