@@ -3,7 +3,7 @@ import logo29 from "../public/sponsorship/1-1-basic-rgb-whiteback.png";
 import logo19 from "../public/sponsorship/2.greenbokujo-1.png";
 import logo2 from "../public/sponsorship/3.co-yard-1.png";
 import logo20 from "../public/sponsorship/3.utahiroba.jpg";
-import logo5 from "../public/sponsorship/5.sogo-saitama-logo-1.png";
+import logo5 from "../public/sponsorship/5.sogo-saitama-1.png";
 import logo21 from "../public/sponsorship/5.yanagiya.jpg";
 import logo22 from "../public/sponsorship/6.big_echo.jpg";
 import logo3 from "../public/sponsorship/6.kiya.jpg";
@@ -25,6 +25,7 @@ import logo16 from "../public/sponsorship/14.lipps_website.jpg";
 import logo17 from "../public/sponsorship/15.anrakutei_website.jpg";
 import logo13 from "../public/sponsorship/15.apire-1.png";
 import logo14 from "../public/sponsorship/17.vivio-1.png";
+import logo30 from "../public/sponsorship/oyatsu-company.png";
 import logo12 from "../public/sponsorship/pizza-la.jpg";
 import logo28 from "../public/sponsorship/yomiuriland.jpg";
 
@@ -136,7 +137,7 @@ export const sponsorshipData = {
     },
     {
       sponsor: "株式会社おやつカンパニー",
-      logoPath: null,
+      logoPath: logo30,
       url: "https://www.snackcompany.co.jp/",
     },
     {
