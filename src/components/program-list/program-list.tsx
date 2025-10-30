@@ -14,7 +14,10 @@ export function ProgramList({ programs }: Props) {
   return (
     <div className={styles.programList}>
       {programs.map((program) => (
-        <ProgramItem key={program.title} program={program} />
+        <ProgramItem
+          key={`${program.officialTitle}-${program.organization}-${program.contest}`}
+          program={program}
+        />
       ))}
     </div>
   );
