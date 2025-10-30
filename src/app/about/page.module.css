@@ -1,0 +1,44 @@
+.mainContent {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xl);
+}
+
+.themeSection {
+  width: var(--size-full);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.themeTitle {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-heights-tight);
+  text-align: center;
+  font-feature-settings: "palt";
+}
+
+.descriptionBox {
+  width: var(--size-full);
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-l2);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+
+.descriptionText {
+  color: var(--fg-default);
+  font-size: var(--font-size-md);
+  line-height: var(--line-heights-relaxed);
+}
+

@@ -16,12 +16,12 @@ importers:
       '@ark-ui/react':
         specifier: ^5.25.1
         version: 5.25.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@next/third-parties':
-        specifier: ^15.5.3
-        version: 15.5.3(next@15.5.3(@babel/core@7.28.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@base-ui-components/react':
         specifier: 1.0.0-beta.4
         version: 1.0.0-beta.4(@types/react@19.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@next/third-parties':
+        specifier: ^15.5.3
+        version: 15.5.3(next@15.5.3(@babel/core@7.28.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
