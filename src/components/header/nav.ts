@@ -12,7 +12,7 @@ export const navigation: Navigation[] = [
     items: [
       { label: "タイムテーブル" },
       { label: "企画一覧" },
-      { label: "企画マップ" },
+      { label: "企画マップ", href: "/programmap" },
     ],
   },
   {
