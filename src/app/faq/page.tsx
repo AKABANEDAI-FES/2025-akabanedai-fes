@@ -41,7 +41,6 @@ export default function faqPage() {
           alt="インフォメーションセンターはINIAD中庭にございます"
           className={styles.mapImage}
         />
-        <Text>INIAD中庭 / 飲食可能スペース入口前</Text>
       </div>
     </Container>
   );
