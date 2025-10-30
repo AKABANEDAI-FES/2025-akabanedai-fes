@@ -1,98 +1,4 @@
 import type { Program } from "@/types/program";
-import logo1 from "../../public/logo/image01.png";
-import logo3 from "../../public/logo/image02.png";
-import logo4 from "../../public/logo/image03.png";
-import logo5 from "../../public/logo/image04.png";
-import logo6 from "../../public/logo/image05.png";
-import logo7 from "../../public/logo/image06.png";
-import logo8 from "../../public/logo/image07.png";
-import logo9 from "../../public/logo/image08.png";
-import logo10 from "../../public/logo/image09.png";
-import logo11 from "../../public/logo/image10.png";
-import logo12 from "../../public/logo/image11.png";
-import logo13 from "../../public/logo/image12.png";
-import logo14 from "../../public/logo/image13.png";
-import logo16 from "../../public/logo/image14.png";
-import logo17 from "../../public/logo/image15.png";
-import logo18 from "../../public/logo/image16.png";
-import logo19 from "../../public/logo/image17.png";
-import logo20 from "../../public/logo/image18.png";
-import logo21 from "../../public/logo/image19.png";
-import logo22 from "../../public/logo/image20.png";
-import logo23 from "../../public/logo/image21.png";
-import logo24 from "../../public/logo/image22.png";
-import logo27 from "../../public/logo/image23.png";
-import logo28 from "../../public/logo/image24.png";
-import logo29 from "../../public/logo/image25.png";
-import logo30 from "../../public/logo/image26.png";
-import logo31 from "../../public/logo/image27.png";
-import logo32 from "../../public/logo/image28.png";
-import logo33 from "../../public/logo/image29.png";
-import logo34 from "../../public/logo/image30.png";
-import logo35 from "../../public/logo/image31.png";
-import logo36 from "../../public/logo/image32.png";
-import logo37 from "../../public/logo/image40.png";
-import logo38 from "../../public/logo/image41.png";
-import logo39 from "../../public/logo/image42.png";
-import logo40 from "../../public/logo/image43.png";
-import logo41 from "../../public/logo/image44.png";
-import logo42 from "../../public/logo/image45.png";
-import logo43 from "../../public/logo/image46.png";
-import logo44 from "../../public/logo/image47.png";
-import logo25 from "../../public/logo/image48.png";
-import logo45 from "../../public/logo/image49.png";
-import logo46 from "../../public/logo/image50.png";
-import logo47 from "../../public/logo/image51.png";
-import logo48 from "../../public/logo/image52.png";
-import logo49 from "../../public/logo/image60.png";
-import logo50 from "../../public/logo/image61.png";
-import logo51 from "../../public/logo/image62.png";
-import logo52 from "../../public/logo/image63.png";
-import logo53 from "../../public/logo/image64.png";
-import logo54 from "../../public/logo/image65.png";
-import logo55 from "../../public/logo/image66.png";
-import logo56 from "../../public/logo/image67.png";
-import logo57 from "../../public/logo/image68.png";
-import logo58 from "../../public/logo/image69.png";
-import logo59 from "../../public/logo/image70.png";
-import logo60 from "../../public/logo/image71.png";
-import logo61 from "../../public/logo/image72.png";
-import logo62 from "../../public/logo/image73.png";
-import logo63 from "../../public/logo/image74.png";
-import logo64 from "../../public/logo/image75.png";
-import logo65 from "../../public/logo/image76.png";
-import logo66 from "../../public/logo/image77.png";
-import logo67 from "../../public/logo/image78.png";
-import logo68 from "../../public/logo/image79.png";
-import logo69 from "../../public/logo/image80.png";
-import logo70 from "../../public/logo/image81.png";
-import logo71 from "../../public/logo/image82.png";
-import logo72 from "../../public/logo/image83.png";
-import logo73 from "../../public/logo/image84.png";
-import logo74 from "../../public/logo/image85.png";
-import logo75 from "../../public/logo/image86.png";
-import logo76 from "../../public/logo/image87.png";
-import logo77 from "../../public/logo/image88.png";
-import logo78 from "../../public/logo/image89.png";
-import logo79 from "../../public/logo/image90.png";
-import logo80 from "../../public/logo/image91.png";
-import logo81 from "../../public/logo/image92.png";
-import logo2 from "../../public/logo/image93.png";
-import logo15 from "../../public/logo/image95.png";
-import logo82 from "../../public/logo/image96.png";
-import logo83 from "../../public/logo/image97.png";
-import logo84 from "../../public/logo/image98.png";
-import logo85 from "../../public/logo/image99.png";
-import logo86 from "../../public/logo/image100.png";
-import logo87 from "../../public/logo/image101.png";
-import logo88 from "../../public/logo/image102.png";
-import logo89 from "../../public/logo/image103.png";
-import logo90 from "../../public/logo/image104.png";
-import logo91 from "../../public/logo/image105.png";
-import logo92 from "../../public/logo/image106.png";
-import logo26 from "../../public/logo/image107.png";
-import logo93 from "../../public/logo/image107.png";
-import logo94 from "../../public/logo/image108.png";
 
 export const programs: Program[] = [
   {
@@ -104,7 +10,7 @@ export const programs: Program[] = [
     placement: "4106教室",
     contest: 2308,
     where: "INIAD",
-    logo: logo1,
+    logo: "/logo/image01.png",
     tags: ["実習団体&研究室", "体験あり", "展示"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -117,7 +23,7 @@ export const programs: Program[] = [
     placement: "アリーナ",
     contest: 3905,
     where: "HELSPO",
-    logo: logo2,
+    logo: "/logo/image93.png",
     tags: ["遊び", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -130,7 +36,7 @@ export const programs: Program[] = [
     placement: "3105教室",
     contest: 2106,
     where: "INIAD",
-    logo: logo3,
+    logo: "/logo/image02.png",
     tags: ["展示"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -143,7 +49,7 @@ export const programs: Program[] = [
     placement: "3114教室",
     contest: 2103,
     where: "INIAD",
-    logo: logo4,
+    logo: "/logo/image03.png",
     tags: ["展示", "体験あり"],
     cautions: [],
   },
@@ -156,7 +62,7 @@ export const programs: Program[] = [
     placement: "第2会議室",
     contest: 1903,
     where: "INIAD",
-    logo: logo5,
+    logo: "/logo/image04.png",
     tags: ["遊び", "体験あり", "展示"],
     cautions: ["年齢制限があります。", "時間がかかる可能性があります。"],
   },
@@ -169,7 +75,7 @@ export const programs: Program[] = [
     placement: "4217教室",
     contest: 2201,
     where: "INIAD",
-    logo: logo6,
+    logo: "/logo/image05.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -182,7 +88,7 @@ export const programs: Program[] = [
     placement: "2313教室",
     contest: 1904,
     where: "INIAD",
-    logo: logo7,
+    logo: "/logo/image06.png",
     tags: ["体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -195,7 +101,7 @@ export const programs: Program[] = [
     placement: "4213教室",
     contest: 2301,
     where: "INIAD",
-    logo: logo8,
+    logo: "/logo/image07.png",
     tags: ["実習団体&研究室", "体験あり", "展示"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -208,7 +114,7 @@ export const programs: Program[] = [
     placement: "第1会議室",
     contest: 1902,
     where: "INIAD",
-    logo: logo9,
+    logo: "/logo/image08.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: [],
   },
@@ -221,7 +127,7 @@ export const programs: Program[] = [
     placement: "4114教室",
     contest: 2306,
     where: "INIAD",
-    logo: logo10,
+    logo: "/logo/image09.png",
     tags: ["展示", "体験あり", "物品販売"],
     cautions: [],
   },
@@ -234,7 +140,7 @@ export const programs: Program[] = [
     placement: "3213教室",
     contest: 2101,
     where: "INIAD",
-    logo: logo11,
+    logo: "/logo/image10.png",
     tags: ["実習団体&研究室", "体験あり", "展示"],
     cautions: ["年齢制限があります。", "時間がかかる可能性があります。"],
   },
@@ -247,7 +153,7 @@ export const programs: Program[] = [
     placement: "4205教室",
     contest: 2305,
     where: "INIAD",
-    logo: logo12,
+    logo: "/logo/image11.png",
     tags: ["実習団体&研究室", "展示", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -260,7 +166,7 @@ export const programs: Program[] = [
     placement: "4110教室",
     contest: 2307,
     where: "INIAD",
-    logo: logo13,
+    logo: "/logo/image12.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: [],
   },
@@ -273,7 +179,7 @@ export const programs: Program[] = [
     placement: "4209教室",
     contest: 2302,
     where: "INIAD",
-    logo: logo14,
+    logo: "/logo/image13.png",
     tags: ["展示", "体験あり"],
     cautions: [],
   },
@@ -286,7 +192,7 @@ export const programs: Program[] = [
     placement: "アリーナ",
     contest: 3906,
     where: "HELSPO",
-    logo: logo15,
+    logo: "/logo/image95.png",
     tags: ["遊び", "体験あり"],
     cautions: ["年齢制限があります。", "時間がかかる可能性があります。"],
   },
@@ -299,7 +205,7 @@ export const programs: Program[] = [
     placement: "周遊",
     contest: 1706,
     where: "INIAD",
-    logo: logo16,
+    logo: "/logo/image14.png",
     tags: ["遊び", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -313,7 +219,7 @@ export const programs: Program[] = [
     placement: "INIAD プレゼンテーションハブ",
     contest: 1703,
     where: "INIAD",
-    logo: logo17,
+    logo: "/logo/image15.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -326,7 +232,7 @@ export const programs: Program[] = [
     placement: "4205教室",
     contest: 2303,
     where: "INIAD",
-    logo: logo18,
+    logo: "/logo/image16.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -339,7 +245,7 @@ export const programs: Program[] = [
     placement: "3205・3209教室",
     contest: 2102,
     where: "INIAD",
-    logo: logo19,
+    logo: "/logo/image17.png",
     tags: ["遊び", "体験あり", "展示"],
     cautions: [],
   },
@@ -352,7 +258,7 @@ export const programs: Program[] = [
     placement: "3102教室",
     contest: 2105,
     where: "INIAD",
-    logo: logo20,
+    logo: "/logo/image18.png",
     tags: ["遊び", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -365,7 +271,7 @@ export const programs: Program[] = [
     placement: "第1会議室",
     contest: 1901,
     where: "INIAD",
-    logo: logo21,
+    logo: "/logo/image19.png",
     tags: ["実習団体&研究室"],
     cautions: [],
   },
@@ -378,7 +284,7 @@ export const programs: Program[] = [
     placement: "4205教室",
     contest: 2304,
     where: "INIAD",
-    logo: logo22,
+    logo: "/logo/image20.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: [
       "年齢制限があります。",
@@ -396,7 +302,7 @@ export const programs: Program[] = [
     placement: "3101教室",
     contest: 2107,
     where: "INIAD",
-    logo: logo23,
+    logo: "/logo/image21.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -410,7 +316,7 @@ export const programs: Program[] = [
     placement: "INIAD メディアセンター",
     contest: 1704,
     where: "INIAD",
-    logo: logo24,
+    logo: "/logo/image22.png",
     tags: ["実習団体&研究室", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -423,7 +329,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5301,
     where: "屋外",
-    logo: logo25,
+    logo: "/logo/image23.png",
     tags: ["飲食"],
     cautions: [],
   },
@@ -436,7 +342,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1301,
     where: "屋外",
-    logo: logo26,
+    logo: "/logo/image107.png",
     tags: ["遊び", "ステージ 企画"],
     cautions: [],
   },
@@ -449,7 +355,7 @@ export const programs: Program[] = [
     placement: "3110教室",
     contest: 2104,
     where: "INIAD",
-    logo: logo27,
+    logo: "/logo/image24.png",
     tags: ["体験あり", "遊び", "展示"],
     cautions: ["年齢制限があります。", "時間がかかる可能性があります。"],
   },
@@ -462,7 +368,7 @@ export const programs: Program[] = [
     placement: "INIAD プレゼンテーションハブ",
     contest: 1701,
     where: "INIAD",
-    logo: logo28,
+    logo: "/logo/image25.png",
     tags: ["実習団体&研究室", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -475,7 +381,7 @@ export const programs: Program[] = [
     placement: "INIAD ホール",
     contest: 1705,
     where: "INIAD",
-    logo: logo29,
+    logo: "/logo/image26.png",
     tags: ["展示", "ステージ 企画"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -488,7 +394,7 @@ export const programs: Program[] = [
     placement: "4102教室",
     contest: 2309,
     where: "INIAD",
-    logo: logo30,
+    logo: "/logo/image27.png",
     tags: ["実習団体&研究室", "展示"],
     cautions: [],
   },
@@ -502,7 +408,7 @@ export const programs: Program[] = [
     placement: "屋外",
     contest: null,
     where: "屋外",
-    logo: logo31,
+    logo: "/logo/image28.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -515,7 +421,7 @@ export const programs: Program[] = [
     placement: "4101教室",
     contest: 2203,
     where: "INIAD",
-    logo: logo32,
+    logo: "/logo/image29.png",
     tags: ["体験あり", "遊び", "展示"],
     cautions: [],
   },
@@ -528,7 +434,7 @@ export const programs: Program[] = [
     placement: "屋外",
     contest: null,
     where: "屋外",
-    logo: logo33,
+    logo: "/logo/image30.png",
     tags: ["展示"],
     cautions: [],
   },
@@ -541,7 +447,7 @@ export const programs: Program[] = [
     placement: "2317教室",
     contest: 1905,
     where: "INIAD",
-    logo: logo34,
+    logo: "/logo/image31.png",
     tags: ["遊び", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -554,7 +460,7 @@ export const programs: Program[] = [
     placement: "INIAD プレゼンテーションハブ",
     contest: 1702,
     where: "INIAD",
-    logo: logo35,
+    logo: "/logo/image32.png",
     tags: ["実習団体&研究室"],
     cautions: [],
   },
@@ -567,7 +473,7 @@ export const programs: Program[] = [
     placement: "4105教室",
     contest: 2202,
     where: "INIAD",
-    logo: logo36,
+    logo: "/logo/image40.png",
     tags: ["遊び", "体験あり"],
     cautions: [],
   },
@@ -580,7 +486,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5302,
     where: "屋外",
-    logo: logo37,
+    logo: "/logo/image41.png",
     tags: ["遊び", "飲食"],
     cautions: [],
     isEating: true,
@@ -594,7 +500,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5201,
     where: "屋外",
-    logo: logo38,
+    logo: "/logo/image42.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -608,7 +514,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5307,
     where: "屋外",
-    logo: logo39,
+    logo: "/logo/image43.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -621,7 +527,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5306,
     where: "屋外",
-    logo: logo40,
+    logo: "/logo/image44.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -635,7 +541,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: null,
     where: "屋外",
-    logo: logo41,
+    logo: "/logo/image45.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -649,7 +555,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5203,
     where: "屋外",
-    logo: logo42,
+    logo: "/logo/image46.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -663,7 +569,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5202,
     where: "屋外",
-    logo: logo43,
+    logo: "/logo/image47.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -677,7 +583,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5303,
     where: "屋外",
-    logo: logo44,
+    logo: "/logo/image48.png",
     tags: ["飲食", "物品販売"],
     cautions: [],
     isEating: true,
@@ -691,7 +597,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: null,
     where: "屋外",
-    logo: logo45,
+    logo: "/logo/image49.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -705,7 +611,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5304,
     where: "屋外",
-    logo: logo46,
+    logo: "/logo/image50.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -719,7 +625,7 @@ export const programs: Program[] = [
     placement: "なかみち広場",
     contest: 5305,
     where: "屋外",
-    logo: logo47,
+    logo: "/logo/image51.png",
     tags: ["飲食"],
     cautions: [],
     isEating: true,
@@ -733,7 +639,7 @@ export const programs: Program[] = [
     placement: "食堂実習室",
     contest: 3501,
     where: "HELSPO",
-    logo: logo48,
+    logo: "/logo/image52.png",
     tags: ["飲食", "実習団体&研究室", "展示"],
     cautions: [],
     isEating: true,
@@ -747,7 +653,7 @@ export const programs: Program[] = [
     placement: "20311教室",
     contest: 2905,
     where: "WELLB",
-    logo: logo49,
+    logo: "/logo/image60.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -760,7 +666,7 @@ export const programs: Program[] = [
     placement: "保育実習室",
     contest: 3301,
     where: "WELLB",
-    logo: logo50,
+    logo: "/logo/image61.png",
     tags: ["実習団体&研究室"],
     cautions: ["年齢制限があります。", "時間がかかる可能性があります。"],
   },
@@ -773,7 +679,7 @@ export const programs: Program[] = [
     placement: "20405教室",
     contest: 3105,
     where: "WELLB",
-    logo: logo51,
+    logo: "/logo/image62.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -786,7 +692,7 @@ export const programs: Program[] = [
     placement: "20202教室",
     contest: 2703,
     where: "WELLB",
-    logo: logo52,
+    logo: "/logo/image63.png",
     tags: ["遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -799,7 +705,7 @@ export const programs: Program[] = [
     placement: "実験工房・20313教室\n",
     contest: null,
     where: null,
-    logo: logo53,
+    logo: "/logo/image64.png",
     tags: ["展示", "物品販売", "体験あり"],
     cautions: [],
   },
@@ -812,7 +718,7 @@ export const programs: Program[] = [
     placement: "20304教室",
     contest: 2902,
     where: "WELLB",
-    logo: logo54,
+    logo: "/logo/image65.png",
     tags: ["物品販売", "展示", "体験あり"],
     cautions: [],
   },
@@ -825,7 +731,7 @@ export const programs: Program[] = [
     placement: "20501教室",
     contest: 3201,
     where: "WELLB",
-    logo: logo55,
+    logo: "/logo/image66.png",
     tags: ["物品販売", "遊び", "体験あり"],
     cautions: [],
   },
@@ -838,7 +744,7 @@ export const programs: Program[] = [
     placement: "20208教室",
     contest: 2709,
     where: "WELLB",
-    logo: logo56,
+    logo: "/logo/image67.png",
     tags: ["体験あり", "展示", "遊び"],
     cautions: [],
   },
@@ -851,7 +757,7 @@ export const programs: Program[] = [
     placement: "20206教室",
     contest: 2707,
     where: "WELLB",
-    logo: logo57,
+    logo: "/logo/image68.png",
     tags: ["展示", "実習団体&研究室", "物品販売"],
     cautions: [],
   },
@@ -864,7 +770,7 @@ export const programs: Program[] = [
     placement: "20502教室",
     contest: 3202,
     where: "WELLB",
-    logo: logo58,
+    logo: "/logo/image69.png",
     tags: ["実習団体&研究室"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -877,7 +783,7 @@ export const programs: Program[] = [
     placement: "20312教室",
     contest: 2906,
     where: "WELLB",
-    logo: logo59,
+    logo: "/logo/image70.png",
     tags: ["遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -890,7 +796,7 @@ export const programs: Program[] = [
     placement: "20207教室",
     contest: 2708,
     where: null,
-    logo: logo60,
+    logo: "/logo/image71.png",
     tags: ["物品販売", "展示", "実習団体&研究室"],
     cautions: [],
   },
@@ -903,7 +809,7 @@ export const programs: Program[] = [
     placement: "30301教室",
     contest: 3901,
     where: "WELLB",
-    logo: logo61,
+    logo: "/logo/image72.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -916,7 +822,7 @@ export const programs: Program[] = [
     placement: "20401教室",
     contest: 3101,
     where: "WELLB",
-    logo: logo62,
+    logo: "/logo/image73.png",
     tags: ["遊び", "体験あり"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -929,7 +835,7 @@ export const programs: Program[] = [
     placement: "20508教室",
     contest: 3203,
     where: "WELLB",
-    logo: logo63,
+    logo: "/logo/image74.png",
     tags: ["体験あり", "展示", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -942,7 +848,7 @@ export const programs: Program[] = [
     placement: "20204教室",
     contest: 2705,
     where: "WELLB",
-    logo: logo64,
+    logo: "/logo/image75.png",
     tags: ["展示", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -955,7 +861,7 @@ export const programs: Program[] = [
     placement: "20203教室",
     contest: 2704,
     where: "WELLB",
-    logo: logo65,
+    logo: "/logo/image76.png",
     tags: ["遊び", "体験あり", "展示"],
     cautions: [],
   },
@@ -968,7 +874,7 @@ export const programs: Program[] = [
     placement: "20205教室",
     contest: 2706,
     where: "WELLB",
-    logo: logo66,
+    logo: "/logo/image77.png",
     tags: ["展示", "遊び"],
     cautions: [],
   },
@@ -981,7 +887,7 @@ export const programs: Program[] = [
     placement: "20301教室",
     contest: 2901,
     where: "WELLB",
-    logo: logo67,
+    logo: "/logo/image78.png",
     tags: ["展示", "体験あり"],
     cautions: [],
   },
@@ -994,7 +900,7 @@ export const programs: Program[] = [
     placement: "20305教室",
     contest: 2903,
     where: "WELLB",
-    logo: logo68,
+    logo: "/logo/image79.png",
     tags: ["遊び", "展示"],
     cautions: [],
   },
@@ -1007,7 +913,7 @@ export const programs: Program[] = [
     placement: "30301教室",
     contest: 3903,
     where: "HELSPO",
-    logo: logo69,
+    logo: "/logo/image80.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -1020,7 +926,7 @@ export const programs: Program[] = [
     placement: "30301教室",
     contest: 3902,
     where: "WELLB",
-    logo: logo70,
+    logo: "/logo/image81.png",
     tags: ["遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1033,7 +939,7 @@ export const programs: Program[] = [
     placement: "30303教室",
     contest: 3904,
     where: "HELSPO",
-    logo: logo71,
+    logo: "/logo/image82.png",
     tags: ["遊び", "体験あり"],
     cautions: [],
   },
@@ -1046,7 +952,7 @@ export const programs: Program[] = [
     placement: "20402教室",
     contest: 3102,
     where: "WELLB",
-    logo: logo72,
+    logo: "/logo/image83.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1059,7 +965,7 @@ export const programs: Program[] = [
     placement: "20403教室",
     contest: 3103,
     where: "WELLB",
-    logo: logo73,
+    logo: "/logo/image84.png",
     tags: ["展示"],
     cautions: [],
   },
@@ -1072,7 +978,7 @@ export const programs: Program[] = [
     placement: "アリーナ",
     contest: 3907,
     where: "HELSPO",
-    logo: logo74,
+    logo: "/logo/image85.png",
     tags: ["遊び", "体験あり"],
     cautions: [],
   },
@@ -1085,7 +991,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1204,
     where: "屋外",
-    logo: logo75,
+    logo: "/logo/image86.png",
     tags: ["ステージ 企画"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1098,7 +1004,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1306,
     where: "屋外",
-    logo: logo76,
+    logo: "/logo/image87.png",
     tags: ["ステージ 企画", "実習団体&研究室"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1111,7 +1017,7 @@ export const programs: Program[] = [
     placement: "ECZ",
     contest: 2907,
     where: "WELLB",
-    logo: logo77,
+    logo: "/logo/image88.png",
     tags: ["遊び", "体験あり", "展示"],
     cautions: [],
   },
@@ -1124,7 +1030,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1308,
     where: "屋外",
-    logo: logo78,
+    logo: "/logo/image89.png",
     tags: ["ステージ 企画", "体験あり", "遊び"],
     cautions: [],
   },
@@ -1137,7 +1043,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1303,
     where: "屋外",
-    logo: logo79,
+    logo: "/logo/image90.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1150,7 +1056,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1307,
     where: "屋外",
-    logo: logo80,
+    logo: "/logo/image91.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1163,7 +1069,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1304,
     where: "屋外",
-    logo: logo81,
+    logo: "/logo/image92.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1176,7 +1082,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1201,
     where: "屋外",
-    logo: logo82,
+    logo: "/logo/image96.png",
     tags: ["ステージ 企画", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1189,7 +1095,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1202,
     where: "屋外",
-    logo: logo83,
+    logo: "/logo/image97.png",
     tags: ["ステージ 企画", "体験あり", "遊び"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1202,7 +1108,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1203,
     where: "屋外",
-    logo: logo84,
+    logo: "/logo/image98.png",
     tags: ["ステージ 企画", "体験あり"],
     cautions: [],
   },
@@ -1215,7 +1121,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1302,
     where: "屋外",
-    logo: logo85,
+    logo: "/logo/image99.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1228,7 +1134,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: 1305,
     where: "屋外",
-    logo: logo86,
+    logo: "/logo/image100.png",
     tags: ["ステージ 企画"],
     cautions: [],
   },
@@ -1241,7 +1147,7 @@ export const programs: Program[] = [
     placement: "メインステージ",
     contest: null,
     where: "屋外",
-    logo: logo87,
+    logo: "/logo/image101.png",
     tags: ["ステージ 企画"],
     cautions: ["時間がかかる可能性があります。"],
   },
@@ -1254,7 +1160,7 @@ export const programs: Program[] = [
     placement: "20302・20303教室",
     contest: null,
     where: "WELLB",
-    logo: logo88,
+    logo: "/logo/image102.png",
     tags: ["物品販売"],
     cautions: [],
   },
@@ -1267,7 +1173,7 @@ export const programs: Program[] = [
     placement: "エスカレーター前",
     contest: 2701,
     where: "WELLB",
-    logo: logo89,
+    logo: "/logo/image103.png",
     tags: ["展示"],
     cautions: [],
   },
@@ -1280,7 +1186,7 @@ export const programs: Program[] = [
     placement: "20310教室",
     contest: 2904,
     where: "WELLB",
-    logo: logo90,
+    logo: "/logo/image104.png",
     tags: ["展示", "体験あり"],
     cautions: [],
   },
@@ -1293,7 +1199,7 @@ export const programs: Program[] = [
     placement: "学生ホール",
     contest: 2908,
     where: "WELLB",
-    logo: logo91,
+    logo: "/logo/image105.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -1306,7 +1212,7 @@ export const programs: Program[] = [
     placement: "HELSPOホール",
     contest: 3908,
     where: "HELSPO",
-    logo: logo92,
+    logo: "/logo/image106.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -1319,7 +1225,7 @@ export const programs: Program[] = [
     placement: "20201教室",
     contest: 2702,
     where: "WELLB",
-    logo: logo93,
+    logo: "/logo/image107.png",
     tags: ["遊び"],
     cautions: [],
   },
@@ -1332,7 +1238,7 @@ export const programs: Program[] = [
     placement: "20204教室",
     contest: 3104,
     where: "WELLB",
-    logo: logo94,
+    logo: "/logo/image108.png",
     tags: ["実習団体&研究室", "遊び", "体験あり"],
     cautions: [],
   },

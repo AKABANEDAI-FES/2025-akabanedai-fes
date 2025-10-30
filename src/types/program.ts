@@ -40,7 +40,7 @@ export type Program = {
   /** 棟 */
   where: Where | null;
   /** ロゴ画像のパス */
-  logo: StaticImageData;
+  logo: string;
   /** タグの配列 */
   tags: Tag[];
   /** 注意事項の配列。 */
