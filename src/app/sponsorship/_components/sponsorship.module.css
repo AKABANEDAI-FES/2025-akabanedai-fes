@@ -36,6 +36,41 @@
   object-fit: contain;
 }
 
+.zoomIconWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.zoomIcon {
+  position: absolute;
+  bottom: 0;
+  right: calc(-1 * var(--font-size-4xl));
+  width: var(--font-size-4xl) !important;
+  height: var(--font-size-4xl) !important;
+  color: var(--color-text-secondary);
+  padding: var(--space-xs);
+  border-radius: var(--radius-l3);
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.zoomIcon:hover {
+  background-color: var(--bg-muted);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(219 219 219 / 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
 .noLogo {
   font-size: var(--font-size-2xl);
 }

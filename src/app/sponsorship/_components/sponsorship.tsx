@@ -1,7 +1,13 @@
+"use client";
+
+import { Dialog } from "@ark-ui/react";
+import { Portal } from "@ark-ui/react/portal";
+import { Popover } from "@base-ui-components/react/popover";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import type { FC } from "react";
+import { type FC, useState } from "react";
 import Star from "@/assets/star.svg";
+import Zoom from "@/assets/zoom.svg";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import styles from "./sponsorship.module.css";
@@ -41,6 +47,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
   sponsor,
   logoPath,
 }) => {
+  const [isZoom, setIsZoom] = useState(false);
   return (
     <>
       <Text className={styles.sponsorName}>
@@ -49,11 +56,42 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
       </Text>
       <div className={styles.logoBox}>
         {logoPath ? (
-          <Image
-            src={logoPath}
-            alt={`${sponsor}のロゴ`}
-            className={styles.logo}
-          />
+          <div className={styles.zoomIconWrapper}>
+            <Image
+              src={logoPath}
+              alt={`${sponsor}のロゴ`}
+              className={styles.logo}
+            />
+            <Dialog.Root open={isZoom}>
+              <Dialog.Trigger
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  setIsZoom(true);
+                }}
+              >
+                <Zoom className={styles.zoomIcon} />
+              </Dialog.Trigger>
+              <Portal>
+                <Dialog.Positioner>
+                  <Dialog.Content>
+                    {/* biome-ignore lint/a11y/noStaticElementInteractions: <explanation> */}
+                    {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+                    <div
+                      className={styles.modalOverlay}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        setIsZoom(false);
+                      }}
+                    >
+                      <Image src={logoPath} alt={`${sponsor}のロゴ拡大`} />
+                    </div>
+                  </Dialog.Content>
+                </Dialog.Positioner>
+              </Portal>
+            </Dialog.Root>
+          </div>
         ) : (
           <Heading as="h3" className={styles.noLogo}>
             {sponsor}
