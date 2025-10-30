@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
-import { Heading } from "@/components/ui/heading";
 import { Divider } from "@/components/ui/divider";
+import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "赤羽台祭について | 赤羽台祭 2025 公式サイト",
-  description: "第9回赤羽台祭のテーマ「Link(繋ぐ)」についての詳細や、私たちの想いを紹介します。",
+  description:
+    "第9回赤羽台祭のテーマ「Link(繋ぐ)」についての詳細や、私たちの想いを紹介します。",
 };
 
 export default function AboutPage() {

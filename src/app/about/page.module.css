@@ -1,5 +1,5 @@
 .mainContent {
-  padding-block: var(--space-xl);
+  padding-block: var(--space-3xl);
   display: grid;
   gap: var(--space-xl);
 }
@@ -16,17 +16,17 @@
   display: flex;
   justify-content: center;
   width: auto;
-  align-items: center; /* baselineだときれいにそろわないためcenterに変更 */
+  align-items: center;
   gap: var(--space-md);
   line-height: var(--line-heights-tight);
-  font-size: var(--font-size-7xl);
-  font-weight: bold;
+  white-space: nowrap;
   font-feature-settings: "palt";
+  font-size: clamp(var(--font-size-xs), 7vw, var(--font-size-7xl));
+  font-weight: var(--font-weight-bold);
 }
 
-
 .themeTitle h2 {
-  font-size: var(--font-size-3xl);
+  font-size: clamp(var(--font-size-xs), 3.5vw, var(--font-size-3xl));
 }
 
 .themedivider {
@@ -37,21 +37,35 @@
 }
 
 .descriptionBox {
-  width: var(--size-full);
-  background-color: var(--bg-muted);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-l2);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  width: 95%;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  padding: var(--space-lg);
+  position: relative;
+  border: 3px solid var(--theme-default);
+  border-radius: var(--radius-l2);
+  box-shadow: var(--space-sm);
 }
 
+.descriptionBox::before {
+  content: "";
+  position: absolute;
+  inset: -3%;
+  z-index: -1;
+  border-radius: var(--radius-l2);
+  background-color: var(--bg-canvas);
+  transform: rotate(4deg);
+}
+
+@media (width >= 48rem) {
+  .descriptionBox::before {
+    inset: -1%;
+    transform: rotate(2deg);
+  }
+}
 
 .descriptionText {
   color: var(--fg-default);
   font-size: var(--font-size-md);
   line-height: var(--line-heights-relaxed);
 }
-
