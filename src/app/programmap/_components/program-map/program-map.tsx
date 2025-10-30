@@ -76,7 +76,7 @@ const mapData = {
     },
   },
   helspo: {
-    label: "HELPSO",
+    label: "HELSPO",
     details: [],
     filter: (programs) => {
       return programs.filter(
