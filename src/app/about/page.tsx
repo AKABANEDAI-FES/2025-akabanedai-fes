@@ -23,22 +23,23 @@ export default function AboutPage() {
         <div className={styles.themeTitle}>
           <Heading as="h2">今年度のテーマ</Heading>
           <Divider className={styles.themedivider} />
-          <p>「Link（繋ぐ）」</p>
+          <span>「Link（繋ぐ）」</span>
         </div>
 
-        <div className={styles.descriptionBox}>
-          <Text as="p" className={styles.descriptionText}>
+        <div className={styles.themedescriptionBox}>
+          <Text as="p" className={styles.themedescriptionText}>
             リンク（Link）という言葉には、「輪の環」そして「つながり」という意味があります。
             私たちは、これまでの大学祭が築いてきた歴史や経験、そして人と人との出会い、その一つひとつを大切な「リンク」だと考えています。
           </Text>
-          <Text as="p" className={styles.descriptionText}>
+          <Text as="p" className={styles.themedescriptionText}>
             これらの「リンク」が強く結びつき、大学祭に関わるすべての人が一つになることで、第9回赤羽台祭の大きな「輪」が広がっていく。そんな想いを、このテーマに込めました。
           </Text>
-          <Text as="p" className={styles.descriptionText}>
+          <Text as="p" className={styles.themedescriptionText}>
             「この大学祭が、あなたと何かを繋ぐきっかけになりますように。」
           </Text>
         </div>
       </section>
+      <section className={styles.LogoSection}></section>
     </Container>
   );
 }
