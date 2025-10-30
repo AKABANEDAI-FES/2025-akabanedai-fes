@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import timetable from "@/app/timetable/timetable.webp";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import styles from "./page.module.css";
-import timetable from "./timetable.webp";
 
 export const metadata: Metadata = {
   title: "タイムテーブル",
@@ -29,7 +29,8 @@ export default function () {
           ※タイムテーブルは変更になる場合がございます。ご了承ください。
         </Text>
         <Text>
-          ※11/2のINIAD卒業生対象イベントはINIAD HUB-1の2階学生食堂で開催しています。
+          ※11/2のINIAD卒業生対象イベントはINIAD
+          HUB-1の2階学生食堂で開催しています。
         </Text>
       </BlurredBox>
     </Container>
