@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "FAQ - よくあるご質問",
 };
 
-export default function faqPage() {
+export default function FaqPage() {
   return (
     <Container as="main" className={styles.pageContainer}>
       <StarDecoration>
