@@ -34,9 +34,7 @@ export const Filter = <T extends string | number>({
     <button
       className={isOpen ? styles.filterContainer : styles.filterContainerClosed}
       onClick={changeOpen}
-      onKeyDown={changeOpen}
       type="button"
-      tabIndex={0}
     >
       <Heading as="h3" className={styles.filterTitle}>
         <Star
