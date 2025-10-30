@@ -1,32 +1,32 @@
-import logo18 from "@/assets/sponsorship/1.kinujyo.jpg";
-import logo29 from "@/assets/sponsorship/1-1-basic-rgb-whiteback.png";
-import logo19 from "@/assets/sponsorship/2.greenbokujo-1.png";
-import logo2 from "@/assets/sponsorship/3.co-yard-1.png";
-import logo20 from "@/assets/sponsorship/3.utahiroba.jpg";
-import logo5 from "@/assets/sponsorship/5.sogo-saitama-logo-1.png";
-import logo21 from "@/assets/sponsorship/5.yanagiya.jpg";
-import logo22 from "@/assets/sponsorship/6.big_echo.jpg";
-import logo3 from "@/assets/sponsorship/6.kiya.jpg";
-import logo10 from "@/assets/sponsorship/7.bookspage-one.png";
-import logo23 from "@/assets/sponsorship/7.pasera.jpg";
-import logo24 from "@/assets/sponsorship/8.guidline_tokyotower.jpg";
-import logo9 from "@/assets/sponsorship/8.shokokai-1.png";
-import logo11 from "@/assets/sponsorship/9.angel-step-ad-1.png";
-import logo25 from "@/assets/sponsorship/9.hakone.jpg";
-import logo1 from "@/assets/sponsorship/10.amika-1.png";
-import logo26 from "@/assets/sponsorship/10.ikenohira.png";
-import logo7 from "@/assets/sponsorship/11.inatsuke-jichikai-1.png";
-import logo27 from "@/assets/sponsorship/11.mannanlife.jpg";
-import logo6 from "@/assets/sponsorship/12.inatsuke-choemon-1.png";
-import logo4 from "@/assets/sponsorship/13.maeno-yakkyoku-1.png";
-import logo15 from "@/assets/sponsorship/13.samyangjapan.png";
-import logo8 from "@/assets/sponsorship/14.jyohoku-sinkin-1.png";
-import logo16 from "@/assets/sponsorship/14.lipps_website.jpg";
-import logo17 from "@/assets/sponsorship/15.anrakutei_website.jpg";
-import logo13 from "@/assets/sponsorship/15.apire-1.png";
-import logo14 from "@/assets/sponsorship/17.vivio-1.png";
-import logo12 from "@/assets/sponsorship/pizza-la.jpg";
-import logo28 from "@/assets/sponsorship/yomiuriland.jpg";
+import logo18 from "../public/sponsorship/1.kinujyo.jpg";
+import logo29 from "../public/sponsorship/1-1-basic-rgb-whiteback.png";
+import logo19 from "../public/sponsorship/2.greenbokujo-1.png";
+import logo2 from "../public/sponsorship/3.co-yard-1.png";
+import logo20 from "../public/sponsorship/3.utahiroba.jpg";
+import logo5 from "../public/sponsorship/5.sogo-saitama-logo-1.png";
+import logo21 from "../public/sponsorship/5.yanagiya.jpg";
+import logo22 from "../public/sponsorship/6.big_echo.jpg";
+import logo3 from "../public/sponsorship/6.kiya.jpg";
+import logo10 from "../public/sponsorship/7.bookspage-one.png";
+import logo23 from "../public/sponsorship/7.pasera.jpg";
+import logo24 from "../public/sponsorship/8.guidline_tokyotower.jpg";
+import logo9 from "../public/sponsorship/8.shokokai-1.png";
+import logo11 from "../public/sponsorship/9.angel-step-ad-1.png";
+import logo25 from "../public/sponsorship/9.hakone.jpg";
+import logo1 from "../public/sponsorship/10.amika-1.png";
+import logo26 from "../public/sponsorship/10.ikenohira.png";
+import logo7 from "../public/sponsorship/11.inatsuke-jichikai-1.png";
+import logo27 from "../public/sponsorship/11.mannanlife.jpg";
+import logo6 from "../public/sponsorship/12.inatsuke-choemon-1.png";
+import logo4 from "../public/sponsorship/13.maeno-yakkyoku-1.png";
+import logo15 from "../public/sponsorship/13.samyangjapan.png";
+import logo8 from "../public/sponsorship/14.jyohoku-sinkin-1.png";
+import logo16 from "../public/sponsorship/14.lipps_website.jpg";
+import logo17 from "../public/sponsorship/15.anrakutei_website.jpg";
+import logo13 from "../public/sponsorship/15.apire-1.png";
+import logo14 from "../public/sponsorship/17.vivio-1.png";
+import logo12 from "../public/sponsorship/pizza-la.jpg";
+import logo28 from "../public/sponsorship/yomiuriland.jpg";
 
 export const sponsorshipData = {
   ad: [
@@ -112,8 +112,8 @@ export const sponsorshipData = {
       logoPath: logo14,
       url: "https://www.bivio.jp/",
     },
-  ],
-  product: [
+    // ],
+    // product: [
     {
       sponsor: "株式会社王将フードサービス",
       logoPath: null,
@@ -205,4 +205,5 @@ export const sponsorshipData = {
       url: "https://www.sakura.ad.jp/",
     },
   ],
+  product: [],
 };
