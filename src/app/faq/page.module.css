@@ -7,15 +7,17 @@
   gap: var(--space-3xl);
 }
 
-.mainContent {
+.tocSection {
+  width: 100%;
+  padding: var(--space-md);
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
 }
 
-.faqSections {
+.faqSection {
   width: 100%;
-  max-width: var(--size-xl);
+  padding: var(--space-md);
   margin-inline: auto;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,7 @@
 import { Text } from "@/components/ui/text";
 import { FaqView } from "../faq-view";
 import faqData from "./faq.json";
+import Star from "@/assets/star.svg";
 import styles from "./faq-list.module.css";
 
 interface FaqListProps {
@@ -16,7 +17,10 @@ export function FaqList({ qa_id }: FaqListProps) {
 
   return (
     <div className={styles.faqList}>
-      <Text>{section.id}</Text>
+      <div className={styles.sectionHeader}>
+        <Star className={styles.blackStarIcon} />
+        <Text className={styles.sectionName}>{section.id}</Text>
+      </div>
       <FaqView qa={section.qa} />
     </div>
   );

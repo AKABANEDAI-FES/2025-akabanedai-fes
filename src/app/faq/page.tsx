@@ -8,7 +8,7 @@ import { TableOfContents } from "./_components/table-of-contents";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "FAQ - よくある質問",
+  title: "FAQ - よくあるご質問",
 };
 
 export default function faqPage() {
@@ -17,10 +17,10 @@ export default function faqPage() {
       <StarDecoration>
         <Heading as="h1">よくあるご質問</Heading>
       </StarDecoration>
-      <div className={styles.mainContent}>
+      <Container as="section" className={styles.tocSection}>
         <TableOfContents />
-      </div>
-      <div className={styles.faqSections}>
+      </Container>
+      <Container as="section" className={styles.faqSection}>
         <div id="赤羽台祭について">
           <FaqList qa_id="赤羽台祭について" />
         </div>
@@ -30,7 +30,7 @@ export default function faqPage() {
         <div id="ご案内・その他">
           <FaqList qa_id="ご案内・その他" />
         </div>
-      </div>
+      </Container>
       <Text>インフォメーションはこちら↓</Text>
     </Container>
   );
