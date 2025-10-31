@@ -11,7 +11,7 @@ export const navigation: Navigation[] = [
   {
     label: "企画情報",
     items: [
-      { label: "タイムテーブル" },
+      { label: "タイムテーブル", href: "/timetable" },
       { label: "企画一覧", href: "/programs" },
       { label: "企画マップ", href: "/programmap" },
     ],
