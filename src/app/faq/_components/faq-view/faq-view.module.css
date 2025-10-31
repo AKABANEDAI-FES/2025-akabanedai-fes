@@ -1,6 +1,6 @@
 .faqItem {
   margin-bottom: var(--space-lg);
-  border: 2px solid var(--theme-default);
+  border: 2px solid var(--bg-muted);
   border-radius: var(--radius-l3);
   padding: var(--space-md);
   background-color: var(--bg-default);
@@ -12,6 +12,7 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
 .questionText {
@@ -29,8 +30,8 @@
 /* ▼ 矢印 */
 .arrow {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +40,8 @@
 .arrow::before {
   content: "";
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   border-left: 2px solid var(--theme-default);
   border-top: 2px solid var(--theme-default);
   transform: rotate(-135deg);
@@ -49,7 +50,7 @@
 }
 
 .arrowOpen::before {
-  transform: translate(-50%, -20%) rotate(45deg);
+  transform: translateY(calc(-1em * 0.2)) rotate(45deg);
 }
 
 .answer {
@@ -63,7 +64,7 @@
 @keyframes fadeSlideIn {
   0% {
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(-0.5rem);
   }
 
   100% {

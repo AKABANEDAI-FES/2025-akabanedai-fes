@@ -28,7 +28,7 @@ export function FaqView({ qa }: FaqViewProps) {
   };
 
   return (
-    <div>
+    <ul>
       {qa.map((item, index) => (
         <div key={item.q} className={styles.faqItem}>
           <button
@@ -36,7 +36,6 @@ export function FaqView({ qa }: FaqViewProps) {
             className={styles.question}
             onClick={() => toggle(index)}
             aria-expanded={openIndexes.includes(index)}
-            style={{ cursor: "pointer" }}
           >
             <div className={styles.questionText}>
               <Text>Q.</Text>
@@ -47,9 +46,6 @@ export function FaqView({ qa }: FaqViewProps) {
             <span
               className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
               aria-hidden="true"
-            />
-            <span
-              className={`${styles.arrow} ${openIndexes.includes(index) ? styles.arrowOpen : ""}`}
             />
           </button>
 
@@ -65,6 +61,6 @@ export function FaqView({ qa }: FaqViewProps) {
           )}
         </div>
       ))}
-    </div>
+    </ul>
   );
 }
