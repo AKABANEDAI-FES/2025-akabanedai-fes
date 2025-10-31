@@ -10,7 +10,7 @@ export function getPrograms(): Program[] {
     placement: program.教室 ?? "",
     contest: program.企画コンテスト,
     where: program.where as Where | null,
-    logo: `${process.env.BASE_PATH ?? ""}${program.logo}`,
+    logo: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo/${program.logo}`,
     tags: program.タグ as Tag[],
     cautions: (program.caution ?? []) as Caution[],
   }));
