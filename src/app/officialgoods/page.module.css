@@ -1,9 +1,9 @@
 .officialGoods {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: var(--space-lg);
-	padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--space-md);
 }
 
 .officialGoods > h1 {
@@ -11,137 +11,136 @@
 }
 
 .goodsHeading {
-	font-size: var(--font-size-2xl);
-	font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-normal);
 }
 
 .goodsTitleBox {
-	border: 1px solid var(--theme-default);
-	padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-lg);
-	margin-top: var(--space-xl);
-	width: 15.625rem;
-	text-align: center;
-	position: relative;
-	z-index: 1;
-	background-color: transparent;
+  border: 1px solid var(--theme-default);
+  padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-lg);
+  margin-top: var(--space-xl);
+  width: 15.625rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
 }
 
 .goodsTitleBox::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--bg-canvas);
-	transform: rotate(5deg);
-	z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-canvas);
+  transform: rotate(5deg);
+  z-index: -1;
 }
 
 .lastYearGoods {
-	position: relative;
-	border: 3px solid var(--theme-default);
-	padding: var(--space-lg) var(--space-2xl) var(--space-lg) var(--space-4xl);
-	margin-top: var(--space-xl);
-	text-align: center;
-	max-width: 36.9375rem;
-	background-color: transparent;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
+  position: relative;
+  border: 3px solid var(--theme-default);
+  padding: var(--space-lg) var(--space-2xl) var(--space-lg) var(--space-4xl);
+  margin-top: var(--space-xl);
+  text-align: center;
+  max-width: 36.9375rem;
+  background-color: transparent;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   width: fit-content;
 }
 
 .lastYearGoods::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 1px solid var(--theme-default);
-	transform: rotate(5deg);
-	z-index: -1;
-	background-color: transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--theme-default);
+  transform: rotate(5deg);
+  z-index: -1;
+  background-color: transparent;
 }
 
 .lastYearGoodsTitle {
-	font-size: var(--font-size-2xl);
+  font-size: var(--font-size-2xl);
   padding-bottom: var(--font-size-2xl);
 }
 
 .goodsList {
-	list-style-type: none;
-	padding-left: 0;
-	text-align: left;
-	margin-top: var(--space-xd);
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-xs);
-	width: 100%;
-	box-sizing: border-box;
-	font-size: var(--font-size-lg);
-	margin-bottom: var(--space-lg);
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  margin-top: var(--space-xd);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .goodsList li {
-	display: flex;
-	align-items: center;
-	font-size: var(--font-size-lg);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-lg);
 }
 
 .goodsList li:not(:has(> .listIcon)) {
-	padding-left: calc(var(--space-md) + var(--space-xs));
+  padding-left: calc(var(--space-md) + var(--space-xs));
 }
 
 .listIcon {
-	width: var(--space-md);
-	height: var(--space-md);
-	fill: var(--fg-default);
-	margin-right: var(--space-xs);
+  width: var(--space-md);
+  height: var(--space-md);
+  fill: var(--fg-default);
+  margin-right: var(--space-xs);
 }
 
 .goodsImage {
-	max-width: 100%;
-	height: auto;
-	margin-top: var(--space-xl);
-	margin-bottom: var(--space-2xl);
+  max-width: 100%;
+  height: auto;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .salesSection {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 90%;
-	max-width: 500px;
-	margin-top: var(--space-2xl);
-	padding: var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg) 0;
 }
 
 .salesHeading {
-	margin-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .salesListBox {
-	padding: var(--space-lg);
-	margin-top: var(--space-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-md);
 }
 
 .salesListBox .goodsList {
-	margin-top: 0;
-	display: inline-flex;
-	width: auto;
-	padding-left: 0;
+  margin-top: 0;
+  display: inline-flex;
+  width: auto;
+  padding-left: 0;
 }
 
 .goodsListSubheading {
-	color: var(--fg-default);
-	text-align: left;
-	width: 100%;
-	max-width: 100%;
-	box-sizing: border-box;
-	font-size: var(--font-size-xl);
+  color: var(--fg-default);
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: var(--font-size-xl);
 }
-
