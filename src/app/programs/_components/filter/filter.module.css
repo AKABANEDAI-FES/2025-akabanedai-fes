@@ -1,60 +1,80 @@
-.filterContainer,
-.filterContainerClosed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-xs);
+.filterRoot {
+  width: 100%;
+}
+
+.filterItem {
   width: 100%;
   background-color: var(--bg-canvas);
-  border: var(--theme-default) solid 2px;
+  border: 2px solid var(--theme-default);
   border-radius: var(--radius-l3);
   padding: var(--space-xs);
   word-break: keep-all;
-  transition: gap 0.2s ease;
 }
 
-.filterContainerClosed {
-  gap: 0;
+.filterTrigger {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }
 
 .filterTitle {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-right: auto;
+  width: 100%;
   font-size: var(--font-size-md);
 }
 
-.blackStarIcon,
-.blackStarIconOpen {
+.indicatorWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.indicatorWrapper[data-state="open"] {
+  transform: rotate(90deg);
+}
+
+.blackStarIcon {
   width: 1em;
   height: 1em;
   fill: currentcolor;
-  animation: rotate 0.2s ease-out;
-  transition: height 0.2s ease;
 }
 
-@keyframes rotate {
+.filterContent {
+  overflow: hidden;
+}
+
+.filterContent[data-state="open"] {
+  animation: slideDown 0.2s ease-out;
+}
+
+.filterContent[data-state="closed"] {
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideDown {
   from {
-    transform: rotate(90deg);
+    height: 0;
   }
 
   to {
-    transform: rotate(0deg);
+    height: var(--height);
   }
 }
 
-.blackStarIconOpen {
-  animation: rotate2 0.2s ease-out forwards;
-}
-
-@keyframes rotate2 {
+@keyframes slideUp {
   from {
-    transform: rotate(0deg);
+    height: var(--height);
   }
 
   to {
-    transform: rotate(90deg);
+    height: 0;
   }
 }
 
@@ -63,8 +83,7 @@
   grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
   gap: var(--space-sm);
   width: 100%;
-  overflow: hidden;
-  transition: max-height 0.2s ease;
+  padding-top: var(--space-xs);
 }
 
 .option,
@@ -76,7 +95,7 @@
   user-select: none;
   font-size: var(--font-size-sm);
   word-break: keep-all;
-  border: var(--theme-default) solid 2px;
+  border: 2px solid var(--theme-default);
   overflow-wrap: anywhere;
   transition: background-color 0.2s ease;
 }

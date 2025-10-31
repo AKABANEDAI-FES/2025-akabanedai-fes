@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Accordion } from "@ark-ui/react";
 import Star from "@/assets/star.svg";
 import { Heading } from "@/components/ui/heading";
 import styles from "./filter.module.css";
@@ -18,61 +18,46 @@ export const Filter = <T extends string | number>({
   title,
   selected,
   onSelect,
-  isInitOpen = true,
+  isInitOpen = false,
 }: FilterProps<T>) => {
-  const [isOpen, setIsOpen] = useState(isInitOpen);
-  const [loading, setLoading] = useState(true);
-
-  const optionsRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-  const changeOpen = () => {
-    setIsOpen(!isOpen);
-  };
   return (
-    <button
-      className={isOpen ? styles.filterContainer : styles.filterContainerClosed}
-      onClick={changeOpen}
-      type="button"
+    <Accordion.Root
+      defaultValue={isInitOpen ? [title] : []}
+      collapsible
+      className={styles.filterRoot}
     >
-      <Heading as="h3" className={styles.filterTitle}>
-        <Star
-          className={isOpen ? styles.blackStarIconOpen : styles.blackStarIcon}
-          key={+isOpen}
-        />
-        {title}
-      </Heading>
-      {!loading && (
-        <div
-          className={styles.options}
-          ref={optionsRef}
-          style={{
-            maxHeight: isOpen
-              ? (optionsRef.current?.scrollHeight ?? 500) + 4
-              : 0,
-          }}
-        >
-          {options.map((option) => (
-            <button
-              key={option}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                onSelect(option);
-              }}
-              type="button"
-              className={
-                selected.includes(option)
-                  ? styles.selectedOption
-                  : styles.option
-              }
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      )}
-    </button>
+      <Accordion.Item value={title} className={styles.filterItem}>
+        <Accordion.ItemTrigger className={styles.filterTrigger}>
+          <Heading as="h3" className={styles.filterTitle}>
+            <Accordion.ItemIndicator className={styles.indicatorWrapper}>
+              <Star className={styles.blackStarIcon} />
+            </Accordion.ItemIndicator>
+            {title}
+          </Heading>
+        </Accordion.ItemTrigger>
+        <Accordion.ItemContent className={styles.filterContent}>
+          <div className={styles.options}>
+            {options.map((option) => (
+              <button
+                key={option}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onSelect(option);
+                }}
+                type="button"
+                className={
+                  selected.includes(option)
+                    ? styles.selectedOption
+                    : styles.option
+                }
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </Accordion.ItemContent>
+      </Accordion.Item>
+    </Accordion.Root>
   );
 };
