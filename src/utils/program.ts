@@ -1,5 +1,5 @@
 import programs from "@/assets/programs.json";
-import type { Program } from "@/types/program";
+import type { Caution, Program, Tag, Where } from "@/types/program";
 
 export function getPrograms(): Program[] {
   return programs.map((program) => ({
@@ -9,9 +9,9 @@ export function getPrograms(): Program[] {
     description: program.紹介文,
     placement: program.教室 ?? "",
     contest: program.企画コンテスト,
-    where: program.where,
+    where: program.where as Where | null,
     logo: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo/${program.logo}`,
-    tags: program.タグ,
-    caution: program.caution ?? [],
+    tags: program.タグ as Tag[],
+    cautions: (program.caution ?? []) as Caution[],
   }));
 }
