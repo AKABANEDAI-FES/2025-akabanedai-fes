@@ -19,7 +19,7 @@
 	border: 1px solid var(--theme-default);
 	padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-lg);
 	margin-top: var(--space-xl);
-	width: 250px;
+	width: 15.625rem;
 	text-align: center;
 	position: relative;
 	z-index: 1;
@@ -44,7 +44,7 @@
 	padding: var(--space-lg) var(--space-2xl) var(--space-lg) var(--space-4xl);
 	margin-top: var(--space-xl);
 	text-align: center;
-	max-width: 591px;
+	max-width: 36.9375rem;
 	background-color: transparent;
 	z-index: 1;
 	display: flex;
