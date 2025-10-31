@@ -1,7 +1,7 @@
 import Star from "@/assets/star.svg";
 import { Divider } from "@/components/ui/divider";
-import { Text } from "@/components/ui/text";
 import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import styles from "./table-of-contents.module.css";
 
 export function TableOfContents() {
