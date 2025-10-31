@@ -11,7 +11,3 @@
     padding-top: var(--space-3xl);
   }
 }
-
-.divider {
-  border-bottom: 1px solid var(--border-default);
-}
