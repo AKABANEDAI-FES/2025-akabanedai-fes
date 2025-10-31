@@ -1,0 +1,12 @@
+.container {
+  padding-top: var(--space-4xl);
+  padding-block: var(--space-3xl);
+  display: grid;
+  gap: var(--space-3xl);
+}
+
+@media (width >= 48rem) {
+  .container {
+    padding-top: var(--space-3xl);
+  }
+}

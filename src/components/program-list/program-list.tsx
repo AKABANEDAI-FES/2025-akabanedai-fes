@@ -42,7 +42,7 @@ function ProgramItem({ program }: { program: Program }) {
         {formatLocation(program)}
       </Text>
       <div className={styles.programTagList}>
-        {program.tags.map((tag) => (
+        {Array.from(new Set(program.tags)).map((tag) => (
           <Tag key={tag} size="sm" className={styles.programTag}>
             {tag}
           </Tag>
