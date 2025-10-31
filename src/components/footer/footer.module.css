@@ -8,6 +8,15 @@
   padding: var(--space-3xl) var(--space-md);
 }
 
+.sponsors {
+  text-align: center;
+  max-width: 800px;
+}
+
+.sponsor {
+  word-break: keep-all;
+}
+
 .contact {
   display: flex;
   flex-direction: column;

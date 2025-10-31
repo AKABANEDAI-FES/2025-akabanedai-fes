@@ -1,0 +1,77 @@
+.programList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.programItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: subgrid;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  grid-template-areas:
+    "logo title"
+    "logo organization"
+    "logo location"
+    "logo tags";
+  grid-row: span 4;
+  gap: var(--space-xs) var(--space-lg);
+  background-color: var(--bg-canvas);
+  padding: var(--space-md);
+  border: 2px solid var(--theme-default);
+  border-radius: var(--radius-l3);
+}
+
+.programLogo {
+  grid-area: logo;
+  width: 6rem;
+  height: 6rem;
+  border-radius: var(--radius-l2);
+  object-fit: contain;
+}
+
+.programTitle {
+  grid-area: title;
+}
+
+.programOrganization {
+  grid-area: organization;
+}
+
+.programLocation {
+  grid-area: location;
+  display: inline-flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.programTagList {
+  grid-area: tags;
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.programTag {
+  height: fit-content;
+}
+
+@media (width >= 48rem) {
+  .programList {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .programItem {
+    padding: var(--space-lg);
+  }
+
+  .programLogo {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.pin {
+  flex-shrink: 0;
+}
