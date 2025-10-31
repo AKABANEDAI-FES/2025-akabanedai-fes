@@ -104,7 +104,7 @@ export default function Page() {
 					販売場所
 				</Heading>
 
-				<StarDecoration />
+				<StarDecoration fill />
 
 				<BlurredBox className={styles.salesListBox}>
 					<ul className={styles.goodsList}>
