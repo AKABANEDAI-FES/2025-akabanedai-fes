@@ -5,11 +5,11 @@ import faqData from "./faq.json";
 import styles from "./faq-list.module.css";
 
 interface FaqListProps {
-  qa_id: string;
+  qaId: string;
 }
 
-export function FaqList({ qa_id }: FaqListProps) {
-  const section = faqData.faq.find((section) => section.id === qa_id);
+export function FaqList({ qaId }: FaqListProps) {
+  const section = faqData.faq.find((section) => section.id === qaId);
 
   if (!section) {
     return (

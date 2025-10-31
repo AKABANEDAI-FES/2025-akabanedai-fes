@@ -1,7 +1,9 @@
+import { Fragment } from "react";
 import Star from "@/assets/star.svg";
 import { Divider } from "@/components/ui/divider";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import faqData from "../faq-list/faq.json";
 import styles from "./table-of-contents.module.css";
 
 export function TableOfContents() {
@@ -12,26 +14,17 @@ export function TableOfContents() {
       </Heading>
       <Divider />
       <ul className={styles.tocList}>
-        <li className={styles.listItems}>
-          <Star className={styles.blackStarIcon} />
-          <a href="#赤羽台祭について" className={styles.tocLink}>
-            <Text>赤羽台祭について</Text>
-          </a>
-        </li>
-        <Divider />
-        <li className={styles.listItems}>
-          <Star className={styles.blackStarIcon} />
-          <a href="#施設について" className={styles.tocLink}>
-            <Text>施設について</Text>
-          </a>
-        </li>
-        <Divider />
-        <li className={styles.listItems}>
-          <Star className={styles.blackStarIcon} />
-          <a href="#ご案内・その他" className={styles.tocLink}>
-            <Text>ご案内・その他</Text>
-          </a>
-        </li>
+        {faqData.faq.map((section, index) => (
+          <Fragment key={section.id}>
+            <li className={styles.listItems}>
+              <Star className={styles.blackStarIcon} />
+              <a href={`#${section.id}`} className={styles.tocLink}>
+                <Text>{section.id}</Text>
+              </a>
+            </li>
+            {index < faqData.faq.length - 1 && <Divider aria-hidden />}
+          </Fragment>
+        ))}
       </ul>
     </div>
   );

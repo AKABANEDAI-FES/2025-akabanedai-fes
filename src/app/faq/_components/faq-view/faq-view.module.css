@@ -2,7 +2,6 @@
   margin-bottom: var(--space-lg);
   border: 2px solid var(--theme-default);
   border-radius: var(--radius-l3);
-  padding: var(--space-md);
   background-color: var(--bg-default);
 }
 
@@ -13,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  padding: var(--space-md);
 }
 
 .questionText {
@@ -20,11 +20,6 @@
   gap: var(--space-md);
   flex-direction: row;
   text-align: left;
-}
-
-.divider {
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-sm);
 }
 
 /* ▼ 矢印 */
@@ -37,7 +32,7 @@
   justify-content: center;
 }
 
-.arrow::before {
+.arrow span::before {
   content: "";
   display: block;
   width: 0.5rem;
@@ -49,26 +44,47 @@
   transition: transform 0.3s ease;
 }
 
-.arrowOpen::before {
+.arrow[data-state="open"] span::before {
   transform: translateY(calc(-1em * 0.2)) rotate(45deg);
+}
+
+.faqItem [data-scope="accordion"][data-part="item-content"] {
+  overflow: hidden;
+  transition: padding-bottom 0.25s ease;
+}
+
+.faqItem [data-scope="accordion"][data-part="item-content"][data-state="open"] {
+  animation: collapseIn 0.25s ease;
+}
+
+.faqItem
+  [data-scope="accordion"][data-part="item-content"][data-state="closed"] {
+  animation: collapseOut 0.25s ease;
 }
 
 .answer {
   display: flex;
   flex-direction: row;
   gap: var(--space-md);
-  animation: fadeSlideIn 0.35s ease forwards;
+  padding: var(--space-md);
 }
 
-/* 開くときのアニメーション */
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-0.5rem);
+@keyframes collapseIn {
+  from {
+    height: 0;
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  to {
+    height: var(--height);
+  }
+}
+
+@keyframes collapseOut {
+  from {
+    height: var(--height);
+  }
+
+  to {
+    height: 0;
   }
 }
