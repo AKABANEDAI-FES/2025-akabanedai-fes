@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import iconIniad from "@/assets/Frame-6.webp";
 import logo from "@/assets/logo.webp";
+import iconWellb from "@/assets/Vector.webp";
 import { Container } from "@/components/ui/container";
 import { Divider } from "@/components/ui/divider";
 import { Heading } from "@/components/ui/heading";
@@ -61,9 +63,16 @@ export default function AboutPage() {
         <Heading as="h1">委員長挨拶</Heading>
       </StarDecoration>
       <section className={styles.greetingSection}>
-        <Heading as="h3" className={styles.greetingHeader}>
-          INIAD部門 委員長 佐藤仁輝
-        </Heading>
+        <div className={styles.greetingHeader}>
+          <Image
+            src={iconIniad}
+            alt="情報連携学部アイコン"
+            className={styles.greetingIcon}
+          />
+          <Heading as="h3" className={styles.greetingHeaderText}>
+            INIAD部門 委員長 佐藤仁輝
+          </Heading>
+        </div>
         <div className={styles.greetingbox}>
           <Text as="p" className={styles.themedescriptionText}>
             赤羽台祭Webサイトをご覧いただきありがとうございます！
@@ -72,11 +81,18 @@ export default function AboutPage() {
             ぜひ赤羽台祭をお楽しみください！
           </Text>
         </div>
-        <Heading as="h3" className={styles.greetingHeader}>
-          WELLB &
-          <br />
-          HELSPO部門 委員長 宮城勇
-        </Heading>
+        <div className={styles.greetingHeader}>
+          <Image
+            src={iconWellb}
+            alt="福祉社会学部アイコン"
+            className={styles.greetingIcon}
+          />
+          <Heading as="h3" className={styles.greetingHeaderText}>
+            WELLB &
+            <br />
+            HELSPO部門 委員長 宮城勇
+          </Heading>
+        </div>
         <div className={styles.greetingbox}>
           <Text as="p" className={styles.themedescriptionText}>
             今年のテーマは「Link（繋ぐ）」です。地域の皆さまとの「繋がり」を大切に、スローガン「つながるリンク、広がる輪」のもと、学部や世代を超えたコミュニケーションが、新たな価値を届ける行事になり、未来につながる一日となればと願います。

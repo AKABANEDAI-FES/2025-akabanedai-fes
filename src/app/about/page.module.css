@@ -124,11 +124,24 @@
 }
 
 .greetingHeader {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
   margin-top: var(--space-md);
   width: 95%;
+}
+
+.greetingIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+
+.greetingHeaderText {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  line-height: var(--line-heights-tight);
 }
 
 .greetingbox {
