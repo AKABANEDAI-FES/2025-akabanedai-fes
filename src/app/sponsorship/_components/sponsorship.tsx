@@ -2,7 +2,7 @@
 
 import { Dialog } from "@ark-ui/react";
 import { Portal } from "@ark-ui/react/portal";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { type FC, useState } from "react";
 import Star from "@/assets/star.svg";
@@ -56,7 +56,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
         {logoPath ? (
           <div className={styles.zoomIconWrapper}>
             <Image
-              src={logoPath}
+              src={`${process.env.BASE_PATH ?? ""}/${logoPath}`}
               alt={`${sponsor}のロゴ`}
               className={styles.logo}
               width={280}
@@ -87,7 +87,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                       tabIndex={-1}
                     >
                       <Image
-                        src={logoPath}
+                        src={`${process.env.BASE_PATH ?? ""}/${logoPath}`}
                         alt={`${sponsor}のロゴ拡大`}
                         className={styles.modalImage}
                         width={280}
