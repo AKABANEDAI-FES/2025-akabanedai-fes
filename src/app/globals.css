@@ -179,5 +179,6 @@
     color: var(--fg-default);
     min-height: 100dvh;
     font-family: var(--font-sans-jp);
+    container-type: inline-size;
   }
 }

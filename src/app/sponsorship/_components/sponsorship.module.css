@@ -1,0 +1,95 @@
+.sponsorshipBox {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background-color: var(--bg-default);
+  box-shadow: var(--shadow-xs);
+  padding: var(--space-md);
+  border-radius: var(--radius-l3);
+  justify-self: stretch;
+}
+
+.blackStarIcon {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
+
+.sponsorName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+  font-size: var(--font-size-sm);
+}
+
+.logoBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 280px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.zoomIconWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (width <= 400px) {
+  .zoomIconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.zoomButton {
+  width: fit-content;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.zoomIcon {
+  padding: var(--space-xs);
+  border-radius: var(--radius-l3);
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.zoomIcon:hover {
+  background-color: var(--bg-muted);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(219 219 219 / 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.noLogo {
+  font-size: var(--font-size-2xl);
+}
+
+.modalImage {
+  width: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}

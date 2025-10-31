@@ -1,12 +1,12 @@
-<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+<svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation" class="pin-icon">
 <style>
-  [data-location="iniad"] path {
+  .pin-icon[data-location="iniad"] path {
     fill: var(--location-iniad);
   }
-  [data-location="wellb"] path {
+  .pin-icon[data-location="wellb"] path {
     fill: var(--location-wellb);
   }
-  [data-location="helspo"] path {
+  .pin-icon[data-location="helspo"] path {
     fill: var(--location-helspo);
   }
 </style>

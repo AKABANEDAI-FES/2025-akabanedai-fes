@@ -62,7 +62,7 @@ jobs:
         run: pnpm run build
         env:
           ROBOTS: "noindex, nofollow"
-          BASE_PATH: ${{ steps.setup-pages.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.setup-pages.outputs.base_path }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

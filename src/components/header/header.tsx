@@ -33,6 +33,12 @@ export function Header({ className, ...props }: Props) {
                             href={item.href}
                             className={styles.menuNavLink}
                             render={<Link href={item.href} />}
+                            target={item.external ? "_blank" : undefined}
+                            aria-label={
+                              item.external
+                                ? "（新しいタブで開きます）"
+                                : undefined
+                            }
                           >
                             {item.label}
                           </NavigationMenu.Link>
