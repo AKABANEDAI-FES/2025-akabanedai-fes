@@ -7,7 +7,7 @@ import styles from "./table-of-contents.module.css";
 export function TableOfContents() {
   return (
     <div className={styles.tocContainer}>
-      <Heading as="h2" variant="secondary">
+      <Heading as="h2" variant="secondary" className={styles.tocHeading}>
         <Text className={styles.tocName}>目次</Text>
       </Heading>
       <Divider />

@@ -7,6 +7,10 @@
   padding: var(--space-sm);
 }
 
+.tocHeading {
+  font-weight: var(--font-weight-normal);
+}
+
 .tocList {
   padding-left: 0;
 }
