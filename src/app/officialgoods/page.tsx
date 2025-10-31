@@ -21,10 +21,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Container as="main" className={styles.officialGoods}>
-      <Heading as="h1" variant="primary">
-        公式グッズ販売
-      </Heading>
-      <StarDecoration />
+      <StarDecoration>
+        <Heading as="h1" variant="primary">
+          公式グッズ販売
+        </Heading>
+      </StarDecoration>
 
       <Text>赤羽台祭×こもれび祭コラボグッズ×白山祭コラボグッズ</Text>
 
