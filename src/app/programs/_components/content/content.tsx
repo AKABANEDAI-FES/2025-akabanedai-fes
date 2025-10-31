@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { ProgramList } from "@/components/program-list";
 import { Container } from "@/components/ui/container";
-import { programs } from "@/constants/programs";
 import {
   type Caution,
   cautions,
@@ -12,6 +11,7 @@ import {
   type Where,
   where,
 } from "@/types/program";
+import { getPrograms } from "@/utils/program";
 import { Filter } from "../filter";
 import styles from "./content.module.css";
 
@@ -59,15 +59,16 @@ export function Content() {
         isInitOpen={false}
       />
       <ProgramList
-        programs={programs.filter(({ where, tags, cautions }) =>
-          [
-            (where !== null && selectedWhere.includes(where)) ||
-              selectedWhere.length === 0,
-            selectedTag.every((tag) => tags.includes(tag)),
-            selectedCaution.length === 0 ||
-              !selectedCaution.some((caution) => cautions.includes(caution)),
-          ].every(Boolean),
-        )}
+        programs={getPrograms()
+          .filter(({ where, tags, cautions }) =>
+            [
+              (where !== null && selectedWhere.includes(where)) ||
+                selectedWhere.length === 0,
+              selectedTag.every((tag) => tags.includes(tag)),
+              selectedCaution.length === 0 ||
+                !selectedCaution.some((caution) => cautions.includes(caution)),
+            ].every(Boolean),
+          )}
       />
     </Container>
   );

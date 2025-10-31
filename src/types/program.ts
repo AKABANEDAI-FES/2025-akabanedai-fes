@@ -44,7 +44,7 @@ export type Program = {
   /** タグの配列 */
   tags: Tag[];
   /** 注意事項の配列。 */
-  cautions: string[];
+  cautions: Caution[];
 
   isEating?: boolean;
 };
