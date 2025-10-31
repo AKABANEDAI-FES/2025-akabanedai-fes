@@ -34,14 +34,14 @@ export default function FaqPage() {
         </div>
       </Container>
 
-      <div className={styles.infomationCenterContainer}>
+      <Container className={styles.infomationCenterContainer}>
         <Text>インフォメーションセンターはこちら↓</Text>
         <Image
           src={InfomationCenter}
           alt="インフォメーションセンターはINIAD中庭にございます"
           className={styles.mapImage}
         />
-      </div>
+      </Container>
     </Container>
   );
 }
