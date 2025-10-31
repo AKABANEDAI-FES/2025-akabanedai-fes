@@ -87,9 +87,8 @@ export default function AboutPage() {
             className={styles.greetingIcon}
           />
           <Heading as="h3" className={styles.greetingHeaderText}>
-            WELLB &
-            <br />
-            HELSPO部門 委員長 宮城勇
+            <span>WELLB &</span>
+            <span>HELSPO部門 委員長 宮城勇</span>
           </Heading>
         </div>
         <div className={styles.greetingBox}>
