@@ -59,16 +59,15 @@ export function Content() {
         isInitOpen={false}
       />
       <ProgramList
-        programs={getPrograms()
-          .filter(({ where, tags, cautions }) =>
-            [
-              (where !== null && selectedWhere.includes(where)) ||
-                selectedWhere.length === 0,
-              selectedTag.every((tag) => tags.includes(tag)),
-              selectedCaution.length === 0 ||
-                !selectedCaution.some((caution) => cautions.includes(caution)),
-            ].every(Boolean),
-          )}
+        programs={getPrograms().filter(({ where, tags, cautions }) =>
+          [
+            (where !== null && selectedWhere.includes(where)) ||
+              selectedWhere.length === 0,
+            selectedTag.every((tag) => tags.includes(tag)),
+            selectedCaution.length === 0 ||
+              !selectedCaution.some((caution) => cautions.includes(caution)),
+          ].every(Boolean),
+        )}
       />
     </Container>
   );

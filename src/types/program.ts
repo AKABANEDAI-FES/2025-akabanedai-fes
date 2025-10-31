@@ -1,5 +1,3 @@
-import type { StaticImageData } from "next/image";
-
 export const tags = [
   "実習団体&研究室",
   "体験あり",
