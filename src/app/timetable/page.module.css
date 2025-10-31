@@ -5,8 +5,8 @@
 }
 
 .timetableContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
@@ -23,7 +23,7 @@
 
 @media (width >= 48rem) {
   .timetableContainer {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
   }
 }
