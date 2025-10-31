@@ -1,6 +1,6 @@
 .faqItem {
   margin-bottom: var(--space-lg);
-  border: 2px solid var(--bg-muted);
+  border: 2px solid var(--theme-default);
   border-radius: var(--radius-l3);
   padding: var(--space-md);
   background-color: var(--bg-default);
