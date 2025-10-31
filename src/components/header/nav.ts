@@ -39,11 +39,6 @@ export const navigation: Navigation[] = [
       { label: "アクセス", href: "/access" },
       { label: "ご来場の際の注意点", href: "/caution" },
       { label: "よくあるご質問", href: "/faq" },
-      {
-        label: "来場者アンケート",
-        href: "https://forms.gle/hwYbjhXsf9ofecYL9",
-        external: true,
-      },
     ],
   },
 ];
