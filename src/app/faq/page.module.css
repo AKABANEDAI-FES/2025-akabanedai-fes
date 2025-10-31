@@ -35,3 +35,9 @@
 .mapImage {
   width: 100%;
 }
+
+@media (width >= 48rem) {
+  .mapImage {
+    max-width: 600px;
+  }
+}
