@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { programs } from "@/constants/programs";
+import { getPrograms } from "@/utils/program";
 import { ProgramList } from "./program-list";
 
 const meta = {
@@ -10,6 +10,8 @@ const meta = {
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof ProgramList>;
+
+const programs = getPrograms();
 
 export default meta;
 type Story = StoryObj<typeof meta>;
