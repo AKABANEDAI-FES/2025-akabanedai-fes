@@ -20,6 +20,7 @@
   padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-md);
   margin-top: var(--space-xl);
   width: var(--size-64);
+  max-width: 90%;
   text-align: center;
   position: relative;
   z-index: 1;
