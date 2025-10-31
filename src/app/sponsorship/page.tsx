@@ -21,16 +21,6 @@ export default function SponsorshipPage() {
         </Heading>
       </StarDecoration>
       <BlurredBox as="section" className={styles.section}>
-        <Heading as="h2">企業の皆様へ</Heading>
-        <Text>
-          第9回赤羽台祭の開催にあたりまして、本年度も多くの企業様から
-          ご協賛を賜りましたこと、心より御礼申し上げます。
-          <br />
-          ご協賛いただきました協賛金・協賛品は、大学祭の運営費用や各種イベント景品として
-          大切に活用させていただいております。
-        </Text>
-      </BlurredBox>
-      <BlurredBox as="section" className={styles.section}>
         <Heading as="h2" className={styles.wordSpaced}>
           広告協賛いただいた企業様
         </Heading>
