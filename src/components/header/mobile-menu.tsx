@@ -104,6 +104,12 @@ export function MobileMenu() {
                               href={item.href}
                               className={styles.itemLink}
                               onNavigate={() => setIsOpen(false)}
+                              target={item.external ? "_blank" : undefined}
+                              aria-label={
+                                item.external
+                                  ? "（新しいタブで開きます）"
+                                  : undefined
+                              }
                             >
                               {item.label}
                             </Link>
