@@ -3,6 +3,7 @@ type Navigation = {
   items: {
     label: string;
     href?: string;
+    external?: boolean;
   }[];
 };
 
@@ -27,7 +28,7 @@ export const navigation: Navigation[] = [
     label: "公式コンテンツ",
     items: [
       { label: "マスコットキャラクター" },
-      { label: "パンフレット" },
+      { label: "パンフレット", href: "/9thpamphlet.pdf", external: true },
       { label: "公式グッズ" },
       { label: "マップ", href: "/campusmap" },
     ],
