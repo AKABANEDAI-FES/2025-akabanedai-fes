@@ -1,8 +1,11 @@
 "use client";
 
+import { Tabs } from "@ark-ui/react/tabs";
 import { useState } from "react";
+import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import styles from "./introduction.module.css";
 
 type Character = {
@@ -18,54 +21,63 @@ type Props = {
 
 export const Introduction = ({ characters }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeCharacter = characters[activeIndex];
 
   return (
-    <section className={styles.introduction}>
-      <div className={styles.body}>
-        <div className={styles.main}>
-          <div
-            className={styles.imagePlaceholder}
-            style={{ backgroundColor: activeCharacter.themeColor }}
-          />
-        </div>
-        <div className={styles.content}>
-          <div className={styles.tabs}>
-            {characters.map((character, index) => (
-              <button
-                key={character.name}
-                type="button"
-                className={styles.tab}
-                data-active={index === activeIndex}
-                onClick={() => setActiveIndex(index)}
-                style={{
+    <BlurredBox as="section" className={styles.container}>
+      <div
+        className={styles.imagePlaceholder}
+        // style={{ backgroundColor: activeCharacter.themeColor }}
+      />
+      <Tabs.Root
+        value={activeIndex.toString()}
+        onValueChange={(e) => setActiveIndex(Number.parseInt(e.value, 10))}
+        className={styles.content}
+      >
+        <Tabs.List className={styles.tabList}>
+          {characters.map((character, index) => (
+            <Tabs.Trigger
+              key={character.name}
+              value={index.toString()}
+              className={styles.tabTrigger}
+              style={
+                {
                   "--indicator-color": character.themeColor,
-                } as React.CSSProperties}
-              >
-                <div
-                  className={styles.tabImagePlaceholder}
-                  style={{ backgroundColor: character.themeColor }}
-                />
-              </button>
-            ))}
-          </div>
-          <div className={styles.description}>
+                } as React.CSSProperties
+              }
+            >
+              <div
+                className={styles.tabImagePlaceholder}
+                style={{ backgroundColor: character.themeColor }}
+              />
+              <VisuallyHidden>{character.name}</VisuallyHidden>
+            </Tabs.Trigger>
+          ))}
+        </Tabs.List>
+        {characters.map((character, index) => (
+          <Tabs.Content
+            key={character.name}
+            value={index.toString()}
+            className={styles.tabContent}
+          >
             <div
-              className={styles.descriptionBackground}
-              style={{ backgroundColor: activeCharacter.themeColor }}
-            />
-            <div className={styles.descriptionContent}>
-              <Heading as="h3">{activeCharacter.name}</Heading>
-              <Text>{activeCharacter.description}</Text>
+              className={styles.description}
+              style={
+                {
+                  "--theme-color": character.themeColor,
+                } as React.CSSProperties
+              }
+            >
+              <Heading as="h2">{character.name}</Heading>
+              <Text>{character.description}</Text>
               <div className={styles.xAccount}>
                 <XIcon />
-                <Text as="span">{activeCharacter.xAccount}</Text>
+                <Text as="span">{character.xAccount}</Text>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </Tabs.Content>
+        ))}
+      </Tabs.Root>
+    </BlurredBox>
   );
 };
 
@@ -73,8 +85,8 @@ function XIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"

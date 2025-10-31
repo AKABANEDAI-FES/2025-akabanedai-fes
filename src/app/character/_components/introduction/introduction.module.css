@@ -1,94 +1,107 @@
-.introduction {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-}
-
-.body {
+.container {
   display: grid;
-  gap: var(--space-2xl);
+  gap: var(--space-md);
+  padding: var(--space-xl);
 }
 
 @media (width >= 48rem) {
-  .body {
+  .container {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
   }
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .imagePlaceholder {
+  position: relative;
   width: 100%;
   max-width: 25rem;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-l3);
-  box-shadow: var(--shadow-md);
-}
-
-@media (width >= 48rem) {
-  .imagePlaceholder {
-    max-width: 28rem;
-  }
+  border: var(--border-muted) solid 4px;
+  margin-inline: auto;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-}
-
-.tabs {
-  display: flex;
   gap: var(--space-md);
-  justify-content: center;
 }
 
-@media (width >= 48rem) {
-  .tabs {
-    justify-content: flex-start;
+@media (width > 48rem) {
+  .content {
+    gap: var(--space-2xl);
   }
 }
 
-.tab {
+.tabList {
+  display: flex;
+  gap: var(--space-xl);
+  width: 100%;
+  justify-content: center;
+}
+
+@media (width > 48rem) {
+  .tabList {
+    justify-content: space-evenly;
+  }
+}
+
+.tabTrigger {
   position: relative;
   border-radius: var(--radius-full);
-  padding: 0.25rem;
+  padding: var(--space-2xs);
   border: 3px solid transparent;
   transition: all 0.2s ease;
   cursor: pointer;
   background-color: transparent;
+  width: 100%;
+  max-width: 5rem;
+  aspect-ratio: 1;
 }
 
-.tab:hover {
+@media (width >= 48rem) {
+  .tabTrigger {
+    max-width: 15rem;
+  }
+}
+
+.tabTrigger:hover {
   transform: scale(1.05);
 }
 
-.tab[data-active="true"] {
+.tabTrigger[data-state="active"] {
   border-color: var(--indicator-color);
-  box-shadow: 0 0 0 2px var(--bg-default);
+  box-shadow: 0 0 0 var(--shadow-sm) var(--bg-default);
 }
 
 .tabImagePlaceholder {
-  width: 6rem;
-  height: 6rem;
+  position: relative;
+  aspect-ratio: 1;
   border-radius: var(--radius-full);
   transition: transform 0.2s ease;
 }
 
-@media (width >= 48rem) {
-  .tabImagePlaceholder {
-    width: 8rem;
-    height: 8rem;
-  }
+.tabImagePlaceholder::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: var(--bg-default) 4px solid;
+  border-radius: var(--radius-full);
 }
 
-.tab[data-active="true"] .tabImagePlaceholder {
+.tabTrigger[data-state="active"] .tabImagePlaceholder {
   transform: scale(1.05);
+}
+
+.tabContent {
+  display: none;
+}
+
+.tabContent[data-state="open"] {
+  display: block;
 }
 
 .description {
@@ -97,10 +110,8 @@
   flex-direction: column;
   gap: var(--space-md);
   padding: var(--space-xl);
-  border: 1px solid var(--border-default);
+  border: 4px solid var(--border-muted);
   border-radius: var(--radius-l2);
-  background-color: var(--bg-default);
-  overflow: hidden;
 }
 
 @media (width >= 48rem) {
@@ -109,33 +120,17 @@
   }
 }
 
-.descriptionBackground {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150%;
-  height: 150%;
-  transform: translate(-50%, -50%) rotate(-5deg);
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: var(--radius-l3);
-}
-
 @media (width >= 48rem) {
-  .descriptionBackground {
+  .description::before {
     width: 130%;
     height: 130%;
     transform: translate(-50%, -50%) rotate(-4deg);
   }
 }
 
-.descriptionContent {
+.description > * {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
 }
 
 .xAccount {
@@ -145,4 +140,18 @@
   margin-top: var(--space-sm);
   color: var(--fg-muted);
   font-size: var(--font-size-sm);
+}
+
+.description::before,
+.imagePlaceholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-canvas);
+  transform: rotate(5deg);
+  border-radius: var(--radius-l3);
+  z-index: -1;
 }

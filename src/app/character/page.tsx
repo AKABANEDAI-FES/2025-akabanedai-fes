@@ -36,7 +36,6 @@ export default function CharacterPage() {
         <Heading as="h1">キャラクター</Heading>
       </StarDecoration>
       <Introduction characters={characters} />
-      <div className={styles.divider} />
       <Gallery images={galleryImages} />
     </Container>
   );
