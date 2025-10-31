@@ -30,7 +30,7 @@ export function FaqView({ qa }: FaqViewProps) {
   return (
     <ul>
       {qa.map((item, index) => (
-        <div key={item.q} className={styles.faqItem}>
+        <li key={item.q} className={styles.faqItem}>
           <button
             type="button"
             className={styles.question}
@@ -59,7 +59,7 @@ export function FaqView({ qa }: FaqViewProps) {
               </div>
             </div>
           )}
-        </div>
+        </li>
       ))}
     </ul>
   );
