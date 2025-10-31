@@ -19,7 +19,7 @@ export const navigation: Navigation[] = [
     label: "赤羽台祭について",
     items: [
       { label: "開催概要", href: "/overview" },
-      { label: "今年度の赤羽台祭について" },
+      { label: "今年度の赤羽台祭について", href: "/about" },
       { label: "協賛" },
     ],
   },

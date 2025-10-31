@@ -65,12 +65,11 @@
 
 .themedescriptionText {
   color: var(--fg-default);
-  font-size: var(--font-size-md);
   line-height: var(--line-heights-relaxed);
 }
 
 .logoTitle {
-  margin-top: var(--space-4xl);
+  margin-top: var(--space-2xl);
 }
 
 .logoSection {
@@ -97,21 +96,18 @@
 }
 
 .logoSubtitle {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
   text-align: center;
   margin-top: var(--space-md);
 }
 
 .logoDescriptionBox {
-  width: 95%;
   background-color: var(--bg-canvas);
   border-radius: var(--radius-l2);
   padding: var(--space-lg);
 }
 
 .greetingTitle {
-  margin-top: var(--space-4xl);
+  margin-top: var(--space-2xl);
 }
 
 .greetingSection {
@@ -132,14 +128,12 @@
 }
 
 .greetingIcon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.75em;
+  height: 1.75em;
   flex-shrink: 0;
 }
 
 .greetingHeaderText {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
   margin: 0;
   line-height: var(--line-heights-tight);
 }
@@ -151,15 +145,12 @@
   padding: var(--space-lg);
 }
 
-.lastyearTitle {
-  margin-top: var(--space-4xl);
-}
+@media (width >= 48rem) {
+  .logoTitle {
+    margin-top: var(--space-3xl);
+  }
 
-.lastyearSection {
-  width: var(--size-full);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-lg);
-  margin-top: var(--space-xl);
+  .greetingTitle {
+    margin-top: var(--space-3xl);
+  }
 }

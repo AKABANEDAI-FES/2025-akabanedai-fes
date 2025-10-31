@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import iconIniad from "@/assets/Frame-6.webp";
 import logo from "@/assets/logo.webp";
-import iconWellb from "@/assets/Vector.webp";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import Circle from "./circle.svg";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "赤羽台祭について | 赤羽台祭 2025 公式サイト",
-  description:
-    "第9回赤羽台祭のテーマ「Link(繋ぐ)」についての詳細や、私たちの想いを紹介します。",
+  title: "今年度の赤羽台祭について",
 };
 
 export default function AboutPage() {
@@ -48,7 +45,7 @@ export default function AboutPage() {
         <div className={styles.logoContainer}>
           <Image src={logo} alt="ロゴ画像" className={styles.logoImage} />
         </div>
-        <Heading as="h3" className={styles.logoSubtitle}>
+        <Heading as="h3" variant="secondary" className={styles.logoSubtitle}>
           「つながるリンク、広がる輪」
         </Heading>
         <div className={styles.logoDescriptionBox}>
@@ -63,12 +60,12 @@ export default function AboutPage() {
       </StarDecoration>
       <section className={styles.greetingSection}>
         <div className={styles.greetingHeader}>
-          <Image
-            src={iconIniad}
-            alt="情報連携学部アイコン"
-            className={styles.greetingIcon}
-          />
-          <Heading as="h3" className={styles.greetingHeaderText}>
+          <Circle role="presentation" className={styles.greetingIcon} />
+          <Heading
+            as="h3"
+            variant="secondary"
+            className={styles.greetingHeaderText}
+          >
             INIAD部門 委員長 佐藤仁輝
           </Heading>
         </div>
@@ -81,14 +78,13 @@ export default function AboutPage() {
           </Text>
         </div>
         <div className={styles.greetingHeader}>
-          <Image
-            src={iconWellb}
-            alt="福祉社会学部アイコン"
-            className={styles.greetingIcon}
-          />
-          <Heading as="h3" className={styles.greetingHeaderText}>
-            <span>WELLB &</span>
-            <span>HELSPO部門 委員長 宮城勇</span>
+          <Circle role="presentation" className={styles.greetingIcon} />
+          <Heading
+            as="h3"
+            variant="secondary"
+            className={styles.greetingHeaderText}
+          >
+            WELLB & HELSPO部門 委員長 宮城勇
           </Heading>
         </div>
         <div className={styles.greetingBox}>
@@ -97,10 +93,6 @@ export default function AboutPage() {
           </Text>
         </div>
       </section>
-      <StarDecoration className={styles.lastyearTitle}>
-        <Heading as="h1">昨年度の様子</Heading>
-      </StarDecoration>
-      <section className={styles.lastyearSection}></section>
     </Container>
   );
 }
