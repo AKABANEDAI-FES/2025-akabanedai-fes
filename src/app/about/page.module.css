@@ -29,7 +29,7 @@
   font-size: clamp(var(--font-size-xs), 3.5vw, var(--font-size-3xl));
 }
 
-.themedivider {
+.themeDivider {
   background-color: var(--theme-default);
   align-self: center;
   width: var(--space-2xl);
@@ -42,7 +42,7 @@
   flex-direction: column;
   padding: var(--space-lg);
   position: relative;
-  border: 3px solid var(--theme-default);
+  border: 2px solid var(--theme-default);
   border-radius: var(--radius-l2);
   box-shadow: var(--shadow-sm);
 }
@@ -82,7 +82,7 @@
   margin-top: var(--space-xl);
 }
 
-.logocontainer {
+.logoContainer {
   width: 100%;
   max-width: var(--size-xl);
   margin-inline: auto;
@@ -92,7 +92,7 @@
   padding-inline: var(--space-md);
 }
 
-.logoimage {
+.logoImage {
   width: 100%;
 }
 
@@ -144,14 +144,14 @@
   line-height: var(--line-heights-tight);
 }
 
-.greetingbox {
+.greetingBox {
   width: 95%;
   background-color: var(--bg-canvas);
   border-radius: var(--radius-l2);
   padding: var(--space-lg);
 }
 
-.lastyeartitle {
+.lastyearTitle {
   margin-top: var(--space-4xl);
 }
 

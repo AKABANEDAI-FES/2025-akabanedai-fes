@@ -4,7 +4,6 @@ import iconIniad from "@/assets/Frame-6.webp";
 import logo from "@/assets/logo.webp";
 import iconWellb from "@/assets/Vector.webp";
 import { Container } from "@/components/ui/container";
-import { Divider } from "@/components/ui/divider";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
@@ -26,7 +25,7 @@ export default function AboutPage() {
       <section className={styles.themeSection}>
         <div className={styles.themeTitle}>
           <Heading as="h2">今年度のテーマ</Heading>
-          <Divider className={styles.themedivider} />
+          <span className={styles.themeDivider} />
           <span>「Link（繋ぐ）」</span>
         </div>
         <div className={styles.themedescriptionBox}>
@@ -46,8 +45,8 @@ export default function AboutPage() {
         <Heading as="h1">ロゴ</Heading>
       </StarDecoration>
       <section className={styles.logoSection}>
-        <div className={styles.logocontainer}>
-          <Image src={logo} alt="ロゴ" className={styles.logoimage} />
+        <div className={styles.logoContainer}>
+          <Image src={logo} alt="ロゴ画像" className={styles.logoImage} />
         </div>
         <Heading as="h3" className={styles.logoSubtitle}>
           「つながるリンク、広がる輪」
@@ -73,7 +72,7 @@ export default function AboutPage() {
             INIAD部門 委員長 佐藤仁輝
           </Heading>
         </div>
-        <div className={styles.greetingbox}>
+        <div className={styles.greetingBox}>
           <Text as="p" className={styles.themedescriptionText}>
             赤羽台祭Webサイトをご覧いただきありがとうございます！
             今年は「Link（繋ぐ）」をテーマに情報連携学部と福祉社会学部の繋がりを意識して準備してきました。
@@ -93,13 +92,13 @@ export default function AboutPage() {
             HELSPO部門 委員長 宮城勇
           </Heading>
         </div>
-        <div className={styles.greetingbox}>
+        <div className={styles.greetingBox}>
           <Text as="p" className={styles.themedescriptionText}>
             今年のテーマは「Link（繋ぐ）」です。地域の皆さまとの「繋がり」を大切に、スローガン「つながるリンク、広がる輪」のもと、学部や世代を超えたコミュニケーションが、新たな価値を届ける行事になり、未来につながる一日となればと願います。
           </Text>
         </div>
       </section>
-      <StarDecoration className={styles.lastyeartitle}>
+      <StarDecoration className={styles.lastyearTitle}>
         <Heading as="h1">昨年度の様子</Heading>
       </StarDecoration>
       <section className={styles.lastyearSection}></section>
