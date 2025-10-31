@@ -7,10 +7,19 @@ import { BlurredBox } from "@/components/ui/blurred-box";
 import type { Program } from "@/types/program";
 import { getPrograms } from "@/utils/program";
 import { FloorProgram } from "../floor-program";
+import helspo1f from "./map/HELSPO_1f.webp";
+import helspo3f from "./map/HELSPO_3f.webp";
 import iniad1f from "./map/INIAD_1f.webp";
 import iniad2f from "./map/INIAD_2f.webp";
 import iniad3f from "./map/INIAD_3f.webp";
 import iniad4f from "./map/INIAD_4f.webp";
+import outside from "./map/OUTSIDE.webp";
+import wellb1f from "./map/WELLB_1f.webp";
+import wellb2f from "./map/WELLB_2f.webp";
+import wellb3f from "./map/WELLB_3f.webp";
+import wellb4f from "./map/WELLB_4f.webp";
+import wellb5f from "./map/WELLB_5f.webp";
+import wellb6f from "./map/WELLB_6f.webp";
 import MapSvg from "./map.svg";
 import styles from "./program-map.module.css";
 
@@ -68,25 +77,82 @@ const mapData = {
   },
   wellb: {
     label: "WELLB",
-    details: [],
-    filter: (programs) => {
+    details: [
+      {
+        label: "1F",
+        image: wellb1f,
+      },
+      {
+        label: "2F",
+        image: wellb2f,
+      },
+      {
+        label: "3F",
+        image: wellb3f,
+      },
+      {
+        label: "4F",
+        image: wellb4f,
+      },
+      {
+        label: "5F",
+        image: wellb5f,
+      },
+      {
+        label: "6F",
+        image: wellb6f,
+      },
+    ],
+    filter: (programs, index) => {
+      const floor = index + 1;
+      const specific = [
+        ["実験工房・20313教室"],
+        ["エスカレーター前"],
+        ["学生ホール", "ECZ", "実験工房・20313教室"],
+        [],
+        [],
+        ["保育実習室"],
+      ];
       return programs.filter(
-        (program) => program.where?.toLocaleLowerCase() === "wellb",
+        (program) =>
+          program.where?.toLocaleLowerCase() === "wellb" &&
+          (program.placement.at(2) === `${floor}` ||
+            specific[index].includes(program.placement)),
       );
     },
   },
   helspo: {
     label: "HELSPO",
-    details: [],
-    filter: (programs) => {
+    details: [
+      {
+        label: "1F",
+        image: helspo1f,
+      },
+      {
+        label: "3F",
+        image: helspo3f,
+      },
+    ],
+    filter: (programs, index) => {
+      const floor = index === 0 ? 1 : 3;
+      const specific = [["食堂実習室"], ["アリーナ"]];
+
       return programs.filter(
-        (program) => program.where?.toLocaleLowerCase() === "helspo",
+        (program) =>
+          program.where?.toLocaleLowerCase() === "helspo" &&
+          (program.placement.at(2) === `${floor}` ||
+            specific[index].includes(program.placement)),
       );
     },
   },
   other: {
     label: "屋外",
-    details: [],
+    details: [
+      {
+        label: "1F",
+        image: outside,
+      },
+    ],
     filter: (programs) => {
       return programs.filter((program) => program.where === "屋外");
     },
@@ -123,13 +189,25 @@ export function ProgramMap() {
           />
         </Tabs.Content>
         <Tabs.Content className={styles.tabContent} value="wellb">
-          <p>Wellbのマップは現在準備中です。</p>
+          <TabContent
+            location="wellb"
+            selected={selected}
+            setSelected={setSelected}
+          />
         </Tabs.Content>
         <Tabs.Content className={styles.tabContent} value="helspo">
-          <p>Helspoのマップは現在準備中です。</p>
+          <TabContent
+            location="helspo"
+            selected={selected}
+            setSelected={setSelected}
+          />
         </Tabs.Content>
         <Tabs.Content className={styles.tabContent} value="other">
-          <p>屋外のマップは現在準備中です。</p>
+          <TabContent
+            location="other"
+            selected={selected}
+            setSelected={setSelected}
+          />
         </Tabs.Content>
       </Tabs.Root>
       <FloorProgram programs={filter(programs, selected)} />
@@ -143,8 +221,13 @@ type TabContentProps = {
   setSelected: (index: number) => void;
 };
 
-function TabContent({ location, selected, setSelected }: TabContentProps) {
+function TabContent({
+  location,
+  selected: _selected,
+  setSelected,
+}: TabContentProps) {
   const data = mapData[location];
+  const selected = Math.min(_selected, data.details.length - 1);
 
   const handlePrevious = () => {
     setSelected(Math.max(0, selected - 1));

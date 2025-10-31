@@ -109,7 +109,11 @@
   }
 
   .tabContent {
-    height: var(--size-lg);
+    min-height: var(--size-lg);
+  }
+
+  .tabContent[data-state="open"] {
+    display: grid;
   }
 
   .subTabTrigger {
