@@ -56,7 +56,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
         {logoPath ? (
           <div className={styles.zoomIconWrapper}>
             <Image
-              src={`${process.env.BASE_PATH ?? ""}${logoPath}`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${logoPath}`}
               alt={`${sponsor}のロゴ`}
               className={styles.logo}
               width={280}
@@ -87,7 +87,7 @@ const SponsorshipContent: FC<Omit<SponsorshipProps, "url">> = ({
                       tabIndex={-1}
                     >
                       <Image
-                        src={`${process.env.BASE_PATH ?? ""}${logoPath}`}
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${logoPath}`}
                         alt={`${sponsor}のロゴ拡大`}
                         className={styles.modalImage}
                         width={280}
