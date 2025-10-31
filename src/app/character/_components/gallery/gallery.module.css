@@ -5,18 +5,9 @@
   gap: var(--space-2xl);
 }
 
-.gallery::before,
-.gallery::after {
-  content: "";
-  position: absolute;
-  border-radius: var(--radius-full);
-  border: 2px solid var(--border-muted);
-  pointer-events: none;
-  z-index: -1;
-}
-
 .grid {
   display: grid;
+  padding: var(--space-nd);
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
@@ -28,13 +19,20 @@
   }
 }
 
-.imagePlaceholder {
+.imageWrapper {
   aspect-ratio: 1 / 1;
-  background-color: var(--bg-muted);
   border-radius: var(--radius-l2);
+  background-color: var(--bg-canvas);
+  padding: var(--space-sm);
   transition: transform 0.2s ease;
 }
 
-.imagePlaceholder:hover {
+.imageWrapper:hover {
   transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

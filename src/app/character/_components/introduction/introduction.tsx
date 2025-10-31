@@ -1,6 +1,7 @@
 "use client";
 
 import { Tabs } from "@ark-ui/react/tabs";
+import Image from "next/image";
 import { useState } from "react";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
@@ -10,9 +11,10 @@ import styles from "./introduction.module.css";
 
 type Character = {
   name: string;
+  picture: string;
   description: string;
   themeColor: string;
-  xAccount: string;
+  xAccount?: string;
 };
 
 type Props = {
@@ -23,11 +25,24 @@ export const Introduction = ({ characters }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <BlurredBox as="section" className={styles.container}>
-      <div
-        className={styles.imagePlaceholder}
-        // style={{ backgroundColor: activeCharacter.themeColor }}
-      />
+    <BlurredBox
+      as="section"
+      className={styles.container}
+      style={
+        {
+          "--theme-color": characters[activeIndex].themeColor,
+        } as React.CSSProperties
+      }
+    >
+      <div className={styles.imgWrapper}>
+        <Image
+          className={styles.imageWrapper}
+          src={characters[activeIndex].picture}
+          alt={characters[activeIndex].name}
+          width={300}
+          height={300}
+        />
+      </div>
       <Tabs.Root
         value={activeIndex.toString()}
         onValueChange={(e) => setActiveIndex(Number.parseInt(e.value, 10))}
@@ -39,16 +54,16 @@ export const Introduction = ({ characters }: Props) => {
               key={character.name}
               value={index.toString()}
               className={styles.tabTrigger}
-              style={
-                {
-                  "--indicator-color": character.themeColor,
-                } as React.CSSProperties
-              }
             >
-              <div
-                className={styles.tabImagePlaceholder}
-                style={{ backgroundColor: character.themeColor }}
-              />
+              <div className={styles.tabImageWrapper}>
+                <Image
+                  style={{ backgroundColor: character.themeColor }}
+                  src={character.picture}
+                  alt={character.name}
+                  width={300}
+                  height={300}
+                />
+              </div>
               <VisuallyHidden>{character.name}</VisuallyHidden>
             </Tabs.Trigger>
           ))}
@@ -59,20 +74,15 @@ export const Introduction = ({ characters }: Props) => {
             value={index.toString()}
             className={styles.tabContent}
           >
-            <div
-              className={styles.description}
-              style={
-                {
-                  "--theme-color": character.themeColor,
-                } as React.CSSProperties
-              }
-            >
+            <div className={styles.description}>
               <Heading as="h2">{character.name}</Heading>
               <Text>{character.description}</Text>
-              <div className={styles.xAccount}>
-                <XIcon />
-                <Text as="span">{character.xAccount}</Text>
-              </div>
+              {character.xAccount && (
+                <div className={styles.xAccount}>
+                  <XIcon />
+                  <Text as="span">{character.xAccount}</Text>
+                </div>
+              )}
             </div>
           </Tabs.Content>
         ))}

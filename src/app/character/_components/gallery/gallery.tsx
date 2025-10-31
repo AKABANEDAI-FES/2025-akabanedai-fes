@@ -1,9 +1,11 @@
+import Image from "next/image";
+import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import styles from "./gallery.module.css";
 
 type Props = {
-  images: unknown[];
+  images: string[];
 };
 
 export const Gallery = ({ images }: Props) => {
@@ -12,12 +14,19 @@ export const Gallery = ({ images }: Props) => {
       <StarDecoration>
         <Heading as="h2">ギャラリー</Heading>
       </StarDecoration>
-      <div className={styles.grid}>
-        {images.map((_, index) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: this is static content
-          <div key={index} className={styles.imagePlaceholder} />
+      <BlurredBox className={styles.grid}>
+        {images.map((image) => (
+          <div key={image} className={styles.imageWrapper}>
+            <Image
+              src={image}
+              alt=""
+              className={styles.image}
+              width={200}
+              height={200}
+            />
+          </div>
         ))}
-      </div>
+      </BlurredBox>
     </section>
   );
 };
