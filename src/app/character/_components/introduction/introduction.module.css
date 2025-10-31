@@ -1,5 +1,4 @@
 .introduction {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -75,16 +74,16 @@
 }
 
 .tabImagePlaceholder {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: var(--radius-full);
   transition: transform 0.2s ease;
 }
 
 @media (width >= 48rem) {
   .tabImagePlaceholder {
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 
@@ -93,6 +92,7 @@
 }
 
 .description {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -100,10 +100,49 @@
   border: 1px solid var(--border-default);
   border-radius: var(--radius-l2);
   background-color: var(--bg-default);
+  overflow: hidden;
 }
 
 @media (width >= 48rem) {
   .description {
     padding: var(--space-2xl);
   }
+}
+
+.descriptionBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: var(--radius-l3);
+}
+
+@media (width >= 48rem) {
+  .descriptionBackground {
+    width: 130%;
+    height: 130%;
+    transform: translate(-50%, -50%) rotate(-4deg);
+  }
+}
+
+.descriptionContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.xAccount {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  color: var(--fg-muted);
+  font-size: var(--font-size-sm);
 }
