@@ -19,7 +19,7 @@
   border: 1px solid var(--theme-default);
   padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-md);
   margin-top: var(--space-xl);
-  width: 15.625rem;
+  width: var(--size-64);
   text-align: center;
   position: relative;
   z-index: 1;
