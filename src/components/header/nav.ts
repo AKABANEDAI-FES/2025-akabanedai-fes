@@ -27,7 +27,7 @@ export const navigation: Navigation[] = [
     label: "公式コンテンツ",
     items: [
       { label: "マスコットキャラクター" },
-      { label: "パンフレット" },
+      { label: "パンフレット", href: "9thpamphlet.pdf" },
       { label: "公式グッズ" },
       { label: "マップ", href: "/campusmap" },
     ],
