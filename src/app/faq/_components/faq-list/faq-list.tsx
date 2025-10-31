@@ -12,7 +12,11 @@ export function FaqList({ qa_id }: FaqListProps) {
   const section = faqData.faq.find((section) => section.id === qa_id);
 
   if (!section) {
-    return <Text>該当するFAQが見つかりません。</Text>;
+    return (
+      <div>
+        <Text>該当するFAQが見つかりません。</Text>
+      </div>
+    );
   }
 
   return (
