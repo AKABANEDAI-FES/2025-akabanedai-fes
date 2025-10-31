@@ -37,7 +37,24 @@
 }
 
 @media (width >= 48rem) {
+  .pageContainer {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-5xl);
+    gap: var(--space-4xl);
+  }
+
+  .tocSection,
+  .faqSection {
+    padding: var(--space-lg);
+  }
+
   .mapImage {
     max-width: 600px;
+  }
+}
+
+@media (width >= 64rem) {
+  .pageContainer {
+    padding-top: var(--space-4xl);
   }
 }
