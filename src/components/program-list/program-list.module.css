@@ -71,3 +71,7 @@
     height: 8rem;
   }
 }
+
+.pin {
+  flex-shrink: 0;
+}

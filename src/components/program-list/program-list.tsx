@@ -38,7 +38,7 @@ function ProgramItem({ program }: { program: Program }) {
       </Heading>
       <Text className={styles.programOrganization}>{program.organization}</Text>
       <Text className={styles.programLocation}>
-        <Pin data-location={program.where?.toLocaleLowerCase()} />
+        <Pin data-location={program.where?.toLocaleLowerCase()} className={styles.pin}/>
         {formatLocation(program)}
       </Text>
       <div className={styles.programTagList}>
