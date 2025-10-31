@@ -23,7 +23,6 @@
   max-width: 90%;
   text-align: center;
   position: relative;
-  z-index: 1;
   background-color: transparent;
 }
 
@@ -41,7 +40,7 @@
 
 .lastYearGoods {
   position: relative;
-  border: 1px solid var(--theme-default);
+  border: 2px solid var(--theme-default);
   padding: var(--space-lg) var(--space-2xl) var(--space-lg) var(--space-4xl);
   margin-top: var(--space-xl);
   text-align: center;
