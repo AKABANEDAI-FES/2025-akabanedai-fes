@@ -38,7 +38,7 @@ export const navigation: Navigation[] = [
     items: [
       { label: "アクセス", href: "/access" },
       { label: "ご来場の際の注意点", href: "/caution" },
-      { label: "よくあるご質問" },
+      { label: "よくあるご質問", href: "/faq" },
     ],
   },
 ];

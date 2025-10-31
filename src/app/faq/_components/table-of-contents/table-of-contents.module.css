@@ -1,0 +1,43 @@
+.tocContainer {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-canvas);
+  padding: var(--space-sm);
+}
+
+.tocHeading {
+  font-weight: var(--font-weight-normal);
+}
+
+.tocList {
+  padding-left: 0;
+}
+
+.listItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--space-xs);
+  gap: var(--space-sm);
+}
+
+.blackStarIcon {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
+
+.tocLink {
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.tocLink:hover {
+  background-color: var(--color-gray-a1);
+}
+
+.tocName {
+  font-size: var(--font-size-2xl);
+}
