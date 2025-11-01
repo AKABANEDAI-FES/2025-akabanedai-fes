@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function ProgramsPage() {
-  // const [selectedWhere, setSelectedWhere] = useState<Where[]>([]);
   return (
     <Container as="main" className={styles.pageContainer}>
       <StarDecoration>

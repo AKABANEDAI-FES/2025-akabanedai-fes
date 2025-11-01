@@ -16,30 +16,43 @@ const ALLERGY_NOTICE_TEXT = "模擬店で提供する食品のアレルギー成
 const ALLERGY_NOTICE_LINK =
   "https://akabanedai-fes.com/09/r8-akabanedaifes-allergy.pdf";
 
+function encodeTitle(title: string) {
+  const prod = process.env.NODE_ENV === "production";
+  return prod ? title : encodeURIComponent(title);
+}
+
 export async function generateStaticParams() {
-  // 1. ビルド時に静的に生成したいすべての「title」の値を配列で返す
-  //    ※ 通常はAPIやローカルデータから取得します
-  const programTitles = getPrograms().map((p) => ({
-    // title: p.logo.replace("/logo/image", "").replace(".png", ""),
-    title: encodeURIComponent(p.officialTitle),
+  const programs = getPrograms();
+  if (new Set(programs.map((p) => p.officialTitle)).size !== programs.length) {
+    const duplicateTitles = programs
+      .map((p) => p.officialTitle)
+      .filter((title, index, self) => self.indexOf(title) !== index);
+    throw new Error(
+      `Duplicate official titles found: ${duplicateTitles.join(", ")}`,
+    );
+  }
+  const programTitles = programs.map((p) => ({
+    title: encodeTitle(p.officialTitle),
   }));
 
   return programTitles;
 }
 
-function getProgramByTitle(title: string) {
+function getProgramByTitle(encoded: string) {
   return getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title,
+    (p) => p.officialTitle === decodeURIComponent(encoded),
   );
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { title: string };
-}): Promise<Metadata> {
-  const encodedTitle = params.title;
-  const program = getProgramByTitle(encodedTitle);
+type PageProps = {
+  params: Promise<{
+    title: string;
+  }>;
+};
+
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const { title } = await props.params;
+  const program = getProgramByTitle(title);
 
   if (!program) {
     return notFound();
@@ -54,8 +67,8 @@ export async function generateMetadata({
   };
 }
 
-async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
-  const { title } = await params;
+export default async function ProgramDetailPage(props: PageProps) {
+  const { title } = await props.params;
   const program = getProgramByTitle(title);
   if (!program) return notFound();
   return (
@@ -133,11 +146,10 @@ async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
                     ))}
                   </ul>
                 )}
-                {!program.cautions ||
-                  (program.cautions.length === 0 && (
-                    <Text>特記事項はありません。</Text>
-                  ))}
               </BlurredBox>
+              {(!program.cautions || program.cautions.length === 0) && (
+                <Text>特記事項はありません。</Text>
+              )}
             </div>
           </div>
           <div className={styles.programTagList}>
@@ -156,5 +168,3 @@ async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
     </Container>
   );
 }
-
-export default ProgramItem;
