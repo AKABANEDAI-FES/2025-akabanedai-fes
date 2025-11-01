@@ -104,8 +104,3 @@
   background-color: var(--theme-default);
   color: var(--theme-fg);
 }
-
-.option:hover,
-.selectedOption:hover {
-  background-color: var(--bg-muted);
-}
