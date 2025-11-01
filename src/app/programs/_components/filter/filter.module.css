@@ -97,6 +97,10 @@
   outline-offset: 2px;
 }
 
+.option[data-state="on"]:focus-visible {
+  outline-color: var(--accent-default);
+}
+
 @media (width >= 48rem) {
   .filterTrigger {
     padding: var(--space-sm) var(--space-md);

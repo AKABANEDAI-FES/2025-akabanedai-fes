@@ -44,6 +44,10 @@
   outline-offset: var(--space-xs);
 }
 
+.tabTrigger:focus-visible {
+  outline-color: var(--accent-default);
+}
+
 .tabTrigger > img {
   width: 70.7107%; /* √2 */
   aspect-ratio: 1 / 1;
