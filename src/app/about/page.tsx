@@ -50,8 +50,9 @@ export default function AboutPage() {
         </Heading>
         <div className={styles.logoDescriptionBox}>
           <Text as="p" className={styles.themedescriptionText}>
-            今年のテーマである「Link」から着想を得て、「繋ぐ」をモチーフに、学部を横断するロゴを制作しました。
-            赤羽台の地形のイメージ、INIADのi、WELLBのWのデザインも取り入れ、INIADとWELLBの学生が協力して赤羽台祭を創り上げていく様子をイメージしました。
+            今年のテーマである「Link(繋ぐ)」から、星を繋げて描く星座や宇宙をモチーフにロゴを制作しました。
+            惑星の周回軌道をイメージした同心円をデザインに取り入れ、つながりと広がりを表現しています。
+            星々が結ばれていくように、人と人との関わりや新たな発見が連鎖していってほしいという願いを込めました。
           </Text>
         </div>
       </section>
