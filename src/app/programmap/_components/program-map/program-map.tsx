@@ -69,7 +69,7 @@ const mapData = {
       ];
       return programs.filter(
         (program) =>
-          program.where?.toLocaleLowerCase() === "iniad" &&
+          program.where?.toLowerCase() === "iniad" &&
           (program.placement.startsWith(floor.toString()) ||
             specific[floor - 1].includes(program.placement)),
       );
@@ -115,7 +115,7 @@ const mapData = {
       ];
       return programs.filter(
         (program) =>
-          program.where?.toLocaleLowerCase() === "wellb" &&
+          program.where?.toLowerCase() === "wellb" &&
           (program.placement.at(2) === `${floor}` ||
             specific[index].includes(program.placement)),
       );
@@ -139,7 +139,7 @@ const mapData = {
 
       return programs.filter(
         (program) =>
-          program.where?.toLocaleLowerCase() === "helspo" &&
+          program.where?.toLowerCase() === "helspo" &&
           (program.placement.at(2) === `${floor}` ||
             specific[index].includes(program.placement)),
       );

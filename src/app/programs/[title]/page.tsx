@@ -97,7 +97,7 @@ export default async function ProgramDetailPage(props: PageProps) {
             className={styles.programHeading}
           >
             <Pin
-              data-location={program.where?.toLocaleLowerCase()}
+              data-location={program.where?.toLowerCase()}
               className={styles.pin}
             />
             {program.placement}
