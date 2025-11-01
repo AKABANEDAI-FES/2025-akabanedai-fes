@@ -1,4 +1,5 @@
 import { Accordion } from "@ark-ui/react";
+import Chevron from "@/assets/chevron.svg";
 import { Divider } from "@/components/ui/divider";
 import { Text } from "@/components/ui/text";
 import styles from "./faq-view.module.css";
@@ -28,8 +29,8 @@ export function FaqView({ qa }: FaqViewProps) {
             </div>
 
             {/* 矢印 */}
-            <Accordion.ItemIndicator className={styles.arrow}>
-              <span aria-hidden="true" />
+            <Accordion.ItemIndicator className={styles.arrow} asChild>
+              <Chevron />
             </Accordion.ItemIndicator>
           </Accordion.ItemTrigger>
 
