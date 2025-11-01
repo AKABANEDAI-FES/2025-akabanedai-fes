@@ -60,11 +60,6 @@
   transform: scale(1.05);
 }
 
-.tabTrigger[data-state="active"] {
-  border-color: var(--accent-default);
-  box-shadow: 0 0 0 var(--shadow-sm) var(--bg-default);
-}
-
 .tabContent {
   display: grid;
   grid-row: 1 / -1;
@@ -101,11 +96,6 @@
 }
 
 .description {
-  --star-size: 2.5rem;
-  --c: var(--theme-default);
-  --w: 2px;
-  --gap: var(--star-size);
-
   grid-area: description;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -133,7 +123,7 @@
     calc(100% - var(--gap)) no-repeat;
 }
 
-.upRightStar {
+.topRightStar {
   position: absolute;
   top: calc(-1 * var(--star-size) / 2);
   right: calc(-1 * var(--star-size) / 2);
