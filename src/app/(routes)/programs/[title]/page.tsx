@@ -123,7 +123,7 @@ export default async function ProgramDetailPage(props: PageProps) {
                 <Text as="li" key={item}>
                   {item === ALLERGY_NOTICE_TEXT ? (
                     <a
-                      href="/r8-akabanedaifes-allergy.pdf"
+                      href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/r8-akabanedaifes-allergy.pdf`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.boldLink}
