@@ -1,0 +1,87 @@
+.navigation {
+  margin-left: auto;
+}
+
+.navigationList {
+  list-style: none;
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.menuContent {
+  display: grid;
+  pointer-events: auto;
+}
+
+/* トリガーとメニューの隙間を埋める */
+.menuContent::before {
+  content: "";
+  height: calc((3.125rem - 1lh) / 2 + var(--space-md));
+}
+
+.menuNavList {
+  --dot-size: 0.5rem;
+  --rail-width: 2px;
+  --gutter: var(--space-xl);
+
+  display: grid;
+  position: relative;
+  padding-left: var(--gutter);
+  padding-right: calc(var(--gutter) / 2);
+}
+
+.menuNavList > li {
+  position: relative;
+  padding-block: var(--space-sm);
+}
+
+.menuNavList > li::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--gutter) * -1);
+  top: calc(var(--space-sm) + 0.5lh);
+  transform: translateY(-50%)
+    translateX(calc((var(--gutter) - var(--dot-size)) / 2));
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: var(--radius-full);
+  background: var(--theme-default);
+}
+
+.menuNavList > li::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--gutter) * -1);
+  top: calc(var(--space-sm) + 0.5lh);
+  transform: translateX(calc((var(--gutter) - var(--rail-width)) / 2));
+  bottom: calc(-1 * (var(--space-sm) + 0.5lh));
+  width: var(--rail-width);
+  background: var(--theme-default);
+}
+
+.menuNavList > li:first-child::after {
+  top: calc(-1 * (var(--space-sm) + 0.5lh));
+}
+
+.menuNavList > li:last-child::after {
+  display: none;
+}
+
+.menuNavLink {
+  color: var(--theme-default);
+  font-weight: var(--font-weight-bold);
+}
+
+.menuNavLink[aria-disabled="true"] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.positioner {
+  --easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 0.32s;
+
+  transition-property: top, left, right, bottom;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--easing);
+}

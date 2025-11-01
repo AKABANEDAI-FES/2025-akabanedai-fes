@@ -2,7 +2,7 @@ type Navigation = {
   label: string;
   items: {
     label: string;
-    href?: string;
+    href: string;
     external?: boolean;
   }[];
 };
