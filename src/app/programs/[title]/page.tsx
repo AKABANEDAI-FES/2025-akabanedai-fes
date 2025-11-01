@@ -136,7 +136,7 @@ async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
                 {!program.cautions ||
                   (program.cautions.length === 0 && (
                     <Text>特記事項はありません。</Text>
-                ))}
+                  ))}
               </BlurredBox>
             </div>
           </div>
