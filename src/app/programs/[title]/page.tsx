@@ -154,10 +154,10 @@ export default async function ProgramDetailPage(props: PageProps) {
         </div>
       </BlurredBox>
       {program.contest && (
-        <div className={styles.programContest}>
+        <Text className={styles.programContest}>
           <Vote className={styles.vote} />
-          <Text>{program.contest}</Text>
-        </div>
+          {program.contest}
+        </Text>
       )}
     </Container>
   );
