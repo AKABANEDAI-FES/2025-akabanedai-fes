@@ -3,8 +3,13 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { LinkButton } from "@/components/ui/link-button";
 import { StarDecoration } from "@/components/ui/star-decoration";
+import { createMetadata } from "@/utils/seo";
 import cover from "./cover.webp";
 import styles from "./page.module.css";
+
+export const metadata = createMetadata({
+  title: "パンフレット",
+});
 
 export default function PamphletPage() {
   return (
