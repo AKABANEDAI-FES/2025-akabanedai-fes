@@ -39,7 +39,7 @@ export async function generateStaticParams() {
 
 function getProgramByTitle(title: string) {
   return getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title
+    (p) => encodeURIComponent(p.officialTitle) === title,
   );
 }
 
@@ -67,7 +67,7 @@ export async function generateMetadata({
 async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
   const { title } = await params;
   const program = getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title
+    (p) => encodeURIComponent(p.officialTitle) === title,
   );
   if (!program) return notFound();
   return (
