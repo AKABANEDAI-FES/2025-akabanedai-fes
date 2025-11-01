@@ -1,0 +1,13 @@
+.privacyPolicy > * + * {
+  margin-top: var(--space-lg);
+}
+
+.anchorLink {
+  color: var(--theme-default);
+  margin-top: var(--space-md);
+  display: block;
+}
+
+.anchorLink:hover {
+  text-decoration: underline;
+}

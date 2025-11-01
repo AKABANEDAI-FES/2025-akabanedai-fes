@@ -6,12 +6,12 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Banner />
       <Container as="main" className={styles.container}>
         <Theme />
         <Access />
       </Container>
-    </>
+    </div>
   );
 }

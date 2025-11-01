@@ -1,0 +1,32 @@
+.mainContainer > * + * {
+  margin-top: var(--space-3xl);
+}
+
+.section {
+  padding: var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.section > * + * {
+  margin-top: var(--space-xl);
+}
+
+.sponsorshipWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.sponsorshipGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(0, 1fr);
+  gap: var(--space-xl);
+  width: 90vw;
+}
+
+@media (width >= 48rem) {
+  .sponsorshipGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

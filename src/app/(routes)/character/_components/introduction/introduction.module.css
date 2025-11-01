@@ -1,0 +1,165 @@
+.container {
+  padding: var(--space-xl);
+}
+
+.content {
+  width: var(--size-full);
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-areas:
+    "image"
+    "tablist"
+    "description";
+  grid-template-columns: 1fr;
+}
+
+@media (width >= 48rem) {
+  .content {
+    gap: var(--space-2xl);
+    grid-template: "image tablist" auto "image description" 1fr / 1fr 1fr;
+  }
+}
+
+.tabList {
+  grid-area: tablist;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  justify-items: center;
+}
+
+.tabTrigger {
+  border-radius: var(--radius-full);
+  padding: var(--space-2xs);
+  border: 3px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: var(--image-color);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 10rem;
+  display: grid;
+  place-items: center;
+  outline: 2px solid var(--theme-default);
+  outline-offset: var(--space-xs);
+}
+
+.tabTrigger:focus-visible {
+  outline-color: var(--accent-default);
+}
+
+.tabTrigger > img {
+  width: 70.7107%; /* √2 */
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+@media (width >= 48rem) {
+  .tabTrigger {
+    max-width: 15rem;
+  }
+}
+
+.tabTrigger:hover {
+  transform: scale(1.05);
+}
+
+.tabContent {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.tabContent[data-state="open"] {
+  visibility: visible;
+}
+
+.tabContent[data-state="open"] > * {
+  pointer-events: auto;
+}
+
+.imageFrame {
+  grid-area: image;
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  max-width: 25rem;
+  aspect-ratio: 3 / 4;
+  border: var(--theme-default) solid 2px;
+}
+
+.mainVisual {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.description {
+  grid-area: description;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--space-md);
+}
+
+.descriptionFrame {
+  --star-size: 2.5rem;
+  --c: var(--theme-default);
+  --w: 2px;
+  --gap: var(--star-size);
+
+  position: relative;
+  padding: var(--space-md);
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(var(--c), var(--c)) top left / calc(100% - var(--gap))
+    var(--w) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / var(--w)
+    calc(100% - var(--gap)) no-repeat,
+    linear-gradient(var(--c), var(--c)) bottom right / calc(100% - var(--gap))
+    var(--w) no-repeat,
+    linear-gradient(var(--c), var(--c)) top left / var(--w)
+    calc(100% - var(--gap)) no-repeat;
+}
+
+.topRightStar {
+  position: absolute;
+  top: calc(-1 * var(--star-size) / 2);
+  right: calc(-1 * var(--star-size) / 2);
+  height: var(--star-size);
+  width: var(--star-size);
+  color: var(--theme-default);
+  stroke-width: 4px;
+}
+
+.bottomLeftStar {
+  position: absolute;
+  bottom: calc(-1 * var(--star-size) / 2);
+  left: calc(-1 * var(--star-size) / 2);
+  height: var(--star-size);
+  width: var(--star-size);
+  color: var(--theme-default);
+  stroke-width: 4px;
+}
+
+@media (width >= 48rem) {
+  .descriptionFrame {
+    padding: var(--space-xl);
+  }
+}
+
+.descriptionFrame::before,
+.imageFrame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--image-color);
+  transform: rotate(5deg);
+  border-radius: var(--radius-l3);
+  z-index: -1;
+}

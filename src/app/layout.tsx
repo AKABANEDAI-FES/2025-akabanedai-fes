@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header/header";
 import { MobileMenu } from "@/components/header/mobile-menu";
+import { Providers } from "@/components/providers";
 import { Parallax } from "./_components/parallax";
 import styles from "./layout.module.css";
 
@@ -42,17 +43,19 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <MobileMenu />
-        <Parallax.Root className={styles.parallax}>
-          <div className={styles.overlay}>
-            <Header className={styles.header} />
-          </div>
-          <Parallax.Layer className={styles.layer} />
-          <Parallax.Content className={styles.content}>
-            <div>{children}</div>
-            <Footer />
-          </Parallax.Content>
-        </Parallax.Root>
+        <Providers>
+          <MobileMenu />
+          <Parallax.Root className={styles.parallax}>
+            <div className={styles.overlay}>
+              <Header className={styles.header} />
+            </div>
+            <Parallax.Layer className={styles.layer} />
+            <Parallax.Content className={styles.content}>
+              {children}
+              <Footer />
+            </Parallax.Content>
+          </Parallax.Root>
+        </Providers>
       </body>
     </html>
   );

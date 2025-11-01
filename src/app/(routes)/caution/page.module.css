@@ -1,0 +1,85 @@
+.mainContent {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "divider"
+    "content";
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: title;
+  font-weight: var(--font-weight-normal);
+}
+
+.mainTitle > svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.lineDivider {
+  width: 100%;
+  height: auto;
+  grid-area: divider;
+}
+
+.container {
+  grid-area: content;
+  margin-top: var(--space-2xl);
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.section {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.section > * + * {
+  margin-top: var(--space-xl);
+}
+
+.sectionTitle {
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--bg-muted);
+  border-radius: var(--radius-l3);
+  box-shadow: var(--shadow-md);
+  width: fit-content;
+}
+
+.list {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.contentBox {
+  border: 2px solid var(--theme-default);
+  border-radius: var(--radius-l3);
+  padding: var(--space-md);
+}
+
+.description {
+  text-align: center;
+}
+
+.troubleExamples {
+  padding: var(--space-lg);
+  font-weight: var(--font-weight-black);
+}
+
+@media (width >= 64rem) {
+  .mainContent {
+    grid-template-areas:
+      "title"
+      "content";
+  }
+
+  .lineDivider {
+    grid-area: title;
+  }
+
+  .section {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}

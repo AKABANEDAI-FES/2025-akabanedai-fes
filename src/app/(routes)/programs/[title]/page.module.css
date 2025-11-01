@@ -1,0 +1,91 @@
+.programItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-block: var(--space-lg);
+  padding-inline: var(--space-sm);
+}
+
+.blackStarIcon {
+  fill: var(--theme-default);
+  width: auto;
+  height: 1em;
+}
+
+.programTitle {
+  text-align: center;
+  background-color: var(--theme-default);
+  color: var(--theme-fg);
+  border-radius: var(--radius-l2);
+  padding: var(--space-xs);
+}
+
+.programLogo {
+  margin-top: 0;
+  width: 100%;
+  border-radius: var(--radius-l2);
+  object-fit: contain;
+  justify-self: center;
+}
+
+.programOrganization {
+  font-size: var(--font-size-3xl);
+}
+
+.pin {
+  width: 1em;
+  height: 1em;
+}
+
+.programHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.programTagList {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.programTag {
+  height: fit-content;
+}
+
+.programInfo > * + * {
+  margin-top: 1em;
+}
+
+.programContest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--theme-default);
+  padding: 0.125em 0.5em;
+  border-radius: var(--radius-l2);
+  gap: var(--space-xs);
+  background: var(--bg-default);
+}
+
+.boldLink {
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+
+.vote {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@media (width >= 48rem) {
+  .programItem {
+    grid-template-columns: 1fr 1fr;
+    margin-block: var(--space-2xl);
+    padding-inline: 0;
+  }
+
+  .programLogo {
+    align-items: start;
+  }
+}
