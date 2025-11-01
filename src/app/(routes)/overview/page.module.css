@@ -1,9 +1,5 @@
-.mainContainer > * {
-  margin-bottom: var(--space-3xl);
-}
-
-.headLine {
-  margin-top: var(--space-2xl);
+.mainContainer > * + * {
+  margin-top: var(--space-3xl);
 }
 
 .section {
@@ -47,10 +43,6 @@
 }
 
 @media (width >= 48rem) {
-  .headLine {
-    margin-top: var(--space-4xl);
-  }
-
   .infoSection {
     gap: var(--space-xs) var(--space-5xl);
   }

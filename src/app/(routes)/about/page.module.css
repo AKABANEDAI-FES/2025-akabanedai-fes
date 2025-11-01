@@ -1,5 +1,4 @@
 .mainContent {
-  padding-block: var(--space-3xl);
   display: grid;
   gap: var(--space-xl);
 }

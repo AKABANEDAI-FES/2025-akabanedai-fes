@@ -49,7 +49,7 @@ export default function RootLayout({
           </div>
           <Parallax.Layer className={styles.layer} />
           <Parallax.Content className={styles.content}>
-            <div>{children}</div>
+            {children}
             <Footer />
           </Parallax.Content>
         </Parallax.Root>

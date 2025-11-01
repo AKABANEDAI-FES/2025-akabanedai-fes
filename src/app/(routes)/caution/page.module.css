@@ -1,6 +1,4 @@
 .mainContent {
-  padding-top: var(--space-4xl);
-  margin-top: var(--space-md);
   display: grid;
   grid-template-areas:
     "title"
@@ -29,8 +27,7 @@
 
 .container {
   grid-area: content;
-  margin-block: var(--space-2xl);
-  margin-block-end: 0;
+  margin-top: var(--space-2xl);
   display: grid;
   gap: var(--space-xl);
 }
@@ -73,7 +70,6 @@
 
 @media (width >= 64rem) {
   .mainContent {
-    padding-top: var(--space-4xl);
     grid-template-areas:
       "title"
       "content";

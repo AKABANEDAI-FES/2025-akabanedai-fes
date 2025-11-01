@@ -1,7 +1,3 @@
-.privacyPolicy {
-  padding-block: var(--space-3xl);
-}
-
 .privacyPolicy > * + * {
   margin-top: var(--space-lg);
 }
@@ -14,10 +10,4 @@
 
 .anchorLink:hover {
   text-decoration: underline;
-}
-
-@media (width >= 48rem) {
-  .privacyPolicy {
-    padding-block: var(--space-5xl);
-  }
 }

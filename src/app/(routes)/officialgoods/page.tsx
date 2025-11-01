@@ -101,11 +101,11 @@ export default function Page() {
       </div>
 
       <section className={styles.salesSection}>
-        <Heading as="h3" variant="secondary" className={styles.salesHeading}>
-          販売場所
-        </Heading>
-
-        <StarDecoration fill />
+        <StarDecoration fill>
+          <Heading as="h3" variant="secondary">
+            販売場所
+          </Heading>
+        </StarDecoration>
 
         <BlurredBox className={styles.salesListBox}>
           <ul className={styles.goodsList}>

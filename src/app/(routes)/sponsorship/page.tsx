@@ -16,12 +16,10 @@ export default function SponsorshipPage() {
   return (
     <Container as="main" className={styles.mainContainer}>
       <StarDecoration>
-        <Heading as="h1" className={styles.headLine}>
-          協賛企業様一覧
-        </Heading>
+        <Heading as="h1">協賛企業様一覧</Heading>
       </StarDecoration>
       <BlurredBox as="section" className={styles.section}>
-        <Heading as="h2" className={styles.wordSpaced}>
+        <Heading as="h2" variant="secondary">
           広告協賛いただいた企業様
         </Heading>
         <Text>(順不同・敬称略)</Text>
@@ -37,7 +35,9 @@ export default function SponsorshipPage() {
             ))}
           </div>
         </div>
-        <Heading as="h2">物品協賛いただいた企業様</Heading>
+        <Heading as="h2" variant="secondary">
+          物品協賛いただいた企業様
+        </Heading>
         <Text>(順不同・敬称略)</Text>
         <div className={styles.sponsorshipWrapper}>
           <div className={styles.sponsorshipGrid}>

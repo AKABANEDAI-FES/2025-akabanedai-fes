@@ -1,5 +1,4 @@
 .mainContent {
-  margin-top: var(--space-2xl);
   display: grid;
   gap: var(--space-2xl);
 }
@@ -18,7 +17,6 @@
 
 .section {
   display: grid;
-  padding: var(--space-xl) 0;
 }
 
 @media (width >= 48rem) {
@@ -29,11 +27,6 @@
 }
 
 @media (width >= 64rem) {
-  .mainContent {
-    margin-top: var(--space-3xl);
-    gap: var(--space-3xl);
-  }
-
   .timetableContainer {
     margin-bottom: var(--space-2xl);
     gap: var(--space-2xl);

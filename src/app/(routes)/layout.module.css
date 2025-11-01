@@ -1,0 +1,10 @@
+.layout {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-2xl);
+}
+
+@media (width >= 48rem) {
+  .layout {
+    padding-bottom: var(--space-4xl);
+  }
+}

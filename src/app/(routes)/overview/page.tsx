@@ -58,9 +58,7 @@ export default function OverviewPage() {
   return (
     <Container as="main" className={styles.mainContainer}>
       <StarDecoration>
-        <Heading as="h1" className={styles.headLine}>
-          開催概要
-        </Heading>
+        <Heading as="h1">開催概要</Heading>
       </StarDecoration>
 
       <BlurredBox as="section" className={styles.section}>
