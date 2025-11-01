@@ -18,7 +18,12 @@ export function Footer() {
           </span>
         ))}
       </Text>
+
       <div className={styles.contact}>
+        <Text className={styles.kouen}>
+          <span>後援</span>
+          <span>東洋大学/東洋大学甫水会/東洋大学校友会/西赤羽商店街連合会</span>
+        </Text>
         <Text className={styles.email}>
           <span>お問い合わせ先</span>
           <span>support[at]akabanedai-fes.com</span>
