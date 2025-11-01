@@ -1,24 +1,19 @@
 .pageContainer {
-  padding-top: var(--space-2xl);
+  padding-top: var(--space-4xl);
   padding-bottom: var(--space-4xl);
 }
 
 .programItem {
   display: grid;
-  padding-top: var(--space-2xl);
-  grid-template-areas:
-    "logo"
-    "organization"
-    "location"
-    "description"
-    "caution"
-    "tags";
+  gap: var(--space-lg);
+  margin-block: var(--space-lg);
+  padding-inline: var(--space-sm);
 }
 
 .blackStarIcon {
   fill: var(--theme-default);
-  width: 1.25rem;
-  height: 1.25rem;
+  width: auto;
+  height: 1em;
 }
 
 .programTitle {
@@ -31,7 +26,6 @@
 
 .programLogo {
   margin-top: 0;
-  grid-area: logo;
   width: 100%;
   max-height: 30rem;
   border-radius: var(--radius-l2);
@@ -40,57 +34,32 @@
 }
 
 .programOrganization {
-  grid-area: organization;
   font-size: var(--font-size-3xl);
 }
 
 .pin {
-  width: 1.25rem;
-  max-height: 1.25rem;
+  width: 1em;
+  height: 1em;
 }
 
-.programLocation {
-  grid-area: location;
-  display: inline-flex;
+.programHeading {
+  display: flex;
   align-items: center;
+  gap: var(--space-xs);
 }
 
 .programTagList {
-  grid-area: tags;
   display: flex;
   gap: var(--space-xs);
   flex-wrap: wrap;
-}
-
-.programDescription {
-  grid-area: description;
-}
-
-.programDescriptionTitle {
-  display: inline-flex;
-  align-items: center;
-}
-
-.blurredBox {
-  padding: var(--space-xs);
-}
-
-.programCaution {
-  grid-area: caution;
-}
-
-.programCautionTitle {
-  grid-area: caution;
-  display: inline-flex;
-  align-items: center;
 }
 
 .programTag {
   height: fit-content;
 }
 
-.programInfo > * {
-  margin-bottom: var(--space-xl); /* 各セクションの下にマージンを追加 */
+.programInfo > * + * {
+  margin-top: 1em;
 }
 
 .programContest {
@@ -115,41 +84,17 @@
 }
 
 @media (width >= 48rem) {
+  .pageContainer {
+    padding-top: var(--space-2xl);
+  }
+
   .programItem {
-    grid-template-areas:
-      "logo organization"
-      "logo location"
-      "logo description"
-      "logo caution"
-      "logo tags";
     grid-template-columns: 1fr 1fr;
+    margin-block: var(--space-2xl);
+    padding-inline: 0;
   }
 
   .programLogo {
     align-items: start;
-  }
-
-  .programInfo {
-    padding-left: var(--space-xl);
-  }
-
-  .programInfo > * {
-    margin-bottom: var(--space-xl);
-  }
-
-  /* programInfo の最後の要素の下マージンは不要 */
-  .programInfo > *:last-child {
-    margin-bottom: 0;
-  }
-
-  .blackStarIcon {
-    fill: var(--theme-default);
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .pin {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 }

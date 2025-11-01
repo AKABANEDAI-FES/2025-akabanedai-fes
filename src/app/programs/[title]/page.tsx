@@ -75,16 +75,14 @@ export default async function ProgramDetailPage(props: PageProps) {
       <Heading as="h1" variant="primary" className={styles.programTitle}>
         {program.title}
       </Heading>
-      <div className={styles.programItem}>
-        <BlurredBox>
-          <Image
-            src={program.logo}
-            alt=""
-            width={128}
-            height={128}
-            className={styles.programLogo}
-          />
-        </BlurredBox>
+      <BlurredBox className={styles.programItem}>
+        <Image
+          src={program.logo}
+          alt=""
+          width={128}
+          height={128}
+          className={styles.programLogo}
+        />
         <div className={styles.programInfo}>
           <Heading
             as="h2"
@@ -94,9 +92,9 @@ export default async function ProgramDetailPage(props: PageProps) {
             {program.organization}
           </Heading>
           <Heading
-            as="h2"
+            as="h3"
             variant="secondary"
-            className={styles.programLocation}
+            className={styles.programHeading}
           >
             <Pin
               data-location={program.where?.toLocaleLowerCase()}
@@ -104,52 +102,47 @@ export default async function ProgramDetailPage(props: PageProps) {
             />
             {program.placement}
           </Heading>
-          <div className={styles.programDescription}>
-            <div className={styles.programDescriptionTitle}>
-              <Star className={styles.blackStarIcon} />
-              <Heading as="h2" variant="secondary">
-                企画説明
-              </Heading>
-            </div>
-            <BlurredBox className={styles.blurredBox}>
-              <Text>{program.description}</Text>
-            </BlurredBox>
-          </div>
-          <div className={styles.programCaution}>
-            <div className={styles.programCautionTitle}>
-              <Star className={styles.blackStarIcon} />
-              <Heading as="h2" variant="secondary">
-                注意事項
-              </Heading>
-            </div>
+          <Heading
+            as="h3"
+            variant="secondary"
+            className={styles.programHeading}
+          >
+            <Star className={styles.blackStarIcon} />
+            企画説明
+          </Heading>
+          <Text>{program.description}</Text>
+          <Heading
+            as="h2"
+            variant="secondary"
+            className={styles.programHeading}
+          >
+            <Star className={styles.blackStarIcon} />
+            注意事項
+          </Heading>
 
-            <div>
-              <BlurredBox className={styles.blurredBox}>
-                {program.cautions && program.cautions.length > 0 && (
-                  <ul>
-                    {program.cautions.map((item) => (
-                      <li key={item}>
-                        {item === ALLERGY_NOTICE_TEXT ? (
-                          <a
-                            href={ALLERGY_NOTICE_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.boldLink}
-                          >
-                            {item}
-                          </a>
-                        ) : (
-                          item
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </BlurredBox>
-              {(!program.cautions || program.cautions.length === 0) && (
-                <Text>特記事項はありません。</Text>
-              )}
-            </div>
+          <div>
+            {!program.cautions || program.cautions.length === 0 ? (
+              <Text>特記事項はありません。</Text>
+            ) : (
+              <ul>
+                {program.cautions.map((item) => (
+                  <Text as="li" key={item}>
+                    {item === ALLERGY_NOTICE_TEXT ? (
+                      <a
+                        href={ALLERGY_NOTICE_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.boldLink}
+                      >
+                        {item}
+                      </a>
+                    ) : (
+                      item
+                    )}
+                  </Text>
+                ))}
+              </ul>
+            )}
           </div>
           <div className={styles.programTagList}>
             {program.tags.map((tag) => (
@@ -159,11 +152,13 @@ export default async function ProgramDetailPage(props: PageProps) {
             ))}
           </div>
         </div>
-      </div>
-      <div className={styles.programContest}>
-        <Vote className={styles.vote} />
-        <Text>{program.contest}</Text>
-      </div>
+      </BlurredBox>
+      {program.contest && (
+        <div className={styles.programContest}>
+          <Vote className={styles.vote} />
+          <Text>{program.contest}</Text>
+        </div>
+      )}
     </Container>
   );
 }
