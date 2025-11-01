@@ -3,15 +3,15 @@ import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import styles from "./gallery.module.css";
-import gallery01 from "./gallery01.png";
-import gallery02 from "./gallery02.png";
-import gallery03 from "./gallery03.png";
-import gallery04 from "./gallery04.png";
-import gallery05 from "./gallery05.png";
-import gallery06 from "./gallery06.png";
-import gallery07 from "./gallery07.png";
-import gallery08 from "./gallery08.png";
-import gallery09 from "./gallery09.png";
+import gallery01 from "./gallery01.webp";
+import gallery02 from "./gallery02.webp";
+import gallery03 from "./gallery03.webp";
+import gallery04 from "./gallery04.webp";
+import gallery05 from "./gallery05.webp";
+import gallery06 from "./gallery06.webp";
+import gallery07 from "./gallery07.webp";
+import gallery08 from "./gallery08.webp";
+import gallery09 from "./gallery09.webp";
 
 const galleryImages = [
   gallery01,

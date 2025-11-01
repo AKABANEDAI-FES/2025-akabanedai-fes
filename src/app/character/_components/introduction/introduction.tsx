@@ -6,8 +6,8 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import styles from "./introduction.module.css";
-import inya from "./inya.png";
-import welion from "./welion.png";
+import inya from "./inya.webp";
+import welion from "./welion.webp";
 
 const characters = [
   {
