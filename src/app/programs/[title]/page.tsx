@@ -16,17 +16,12 @@ const ALLERGY_NOTICE_TEXT = "模擬店で提供する食品のアレルギー成
 const ALLERGY_NOTICE_LINK =
   "https://akabanedai-fes.com/09/r8-akabanedaifes-allergy.pdf";
 
-function encodeTitle(title: string) {
-  const prod = process.env.NODE_ENV === "production";
-  return prod ? title : encodeURIComponent(title);
-}
-
 export async function generateStaticParams() {
   // 1. ビルド時に静的に生成したいすべての「title」の値を配列で返す
   //    ※ 通常はAPIやローカルデータから取得します
   const programTitles = getPrograms().map((p) => ({
     // title: p.logo.replace("/logo/image", "").replace(".png", ""),
-    title: encodeTitle(p.officialTitle),
+    title: encodeURIComponent(p.officialTitle),
   }));
 
   return programTitles;
@@ -61,9 +56,7 @@ export async function generateMetadata({
 
 async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
   const { title } = await params;
-  const program = getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title,
-  );
+  const program = getProgramByTitle(title);
   if (!program) return notFound();
   return (
     <Container as="main" className={styles.pageContainer}>
