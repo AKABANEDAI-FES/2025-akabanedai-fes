@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import campusMap from "@/assets/campusmap.webp";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
+import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "キャンパスマップ",
-};
+});
 
 export default function CampusMapPage() {
   return (

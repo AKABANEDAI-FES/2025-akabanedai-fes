@@ -494,11 +494,11 @@ src/app/about/
 
 ```tsx
 // page.tsx
-import type { Metadata } from 'next';
+import { createMetadata } from "@/utils/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: 'イベント情報',
-};
+});
 
 export default function EventPage() {
   return (

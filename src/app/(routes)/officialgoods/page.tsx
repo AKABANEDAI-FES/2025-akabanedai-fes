@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Star from "@/assets/star.svg";
 import { BlurredBox } from "@/components/ui/blurred-box";
@@ -6,17 +5,15 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import GoodsA from "./Goods_A.webp";
 import GoodsB from "./Goods_B.webp";
 import GoodsC from "./Goods_C.webp";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "公式グッズ販売",
-  openGraph: {
-    title: "公式グッズ販売",
-  },
-};
+});
 
 export default function Page() {
   return (

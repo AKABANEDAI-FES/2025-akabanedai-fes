@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "プライバシーポリシー",
-  openGraph: {
-    title: "プライバシーポリシー",
-  },
-};
+});
 
 export default function Page() {
   return (
