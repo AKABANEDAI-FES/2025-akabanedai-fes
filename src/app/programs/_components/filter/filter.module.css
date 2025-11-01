@@ -1,5 +1,7 @@
 .filterRoot {
   width: 100%;
+  display: grid;
+  gap: var(--space-sm);
 }
 
 .filterItem {
@@ -86,8 +88,7 @@
   padding-top: var(--space-xs);
 }
 
-.option,
-.selectedOption {
+.option {
   padding: var(--space-xs) var(--space-sm);
   text-align: center;
   border-radius: var(--radius-l1);
@@ -98,9 +99,11 @@
   border: 2px solid var(--theme-default);
   overflow-wrap: anywhere;
   transition: background-color 0.2s ease;
+  background-color: transparent;
+  color: inherit;
 }
 
-.selectedOption {
+.option[data-state="on"] {
   background-color: var(--theme-default);
   color: var(--theme-fg);
 }
