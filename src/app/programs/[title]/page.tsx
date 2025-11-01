@@ -12,13 +12,18 @@ import { Text } from "@/components/ui/text";
 import { getPrograms } from "@/utils/program";
 import styles from "./page.module.css";
 
-const ALLERGY_NOTICE_TEXT = "模擬店で提供する食品のアレルギー成分表示はこちら";
+const ALLERGY_NOTICE_TEXT =
+  "模擬店で提供する食品のアレルギー成分表示はこちら" as const;
 const ALLERGY_NOTICE_LINK =
   "https://akabanedai-fes.com/09/r8-akabanedaifes-allergy.pdf";
 
+// function encodeTitle(title: string) {
+//   // const prod = process.env.NODE_ENV === "production";
+//   // return prod ? title : encodeURIComponent(title);
+// }
+
 function encodeTitle(title: string) {
-  const prod = process.env.NODE_ENV === "production";
-  return prod ? title : encodeURIComponent(title);
+  return encodeURIComponent(title);
 }
 
 export async function generateStaticParams() {
@@ -34,7 +39,7 @@ export async function generateStaticParams() {
 
 function getProgramByTitle(title: string) {
   return getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title,
+    (p) => encodeURIComponent(p.officialTitle) === title
   );
 }
 
@@ -62,7 +67,7 @@ export async function generateMetadata({
 async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
   const { title } = await params;
   const program = getPrograms().find(
-    (p) => encodeURIComponent(p.officialTitle) === title,
+    (p) => encodeURIComponent(p.officialTitle) === title
   );
   if (!program) return notFound();
   return (
@@ -120,9 +125,9 @@ async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
 
             <div>
               <BlurredBox className={styles.blurredBox}>
-                {program.caution && program.caution.length > 0 && (
+                {program.cautions && program.cautions.length > 0 && (
                   <ul>
-                    {program.caution.map((item) => (
+                    {program.cautions.map((item) => (
                       <li key={item}>
                         {item === ALLERGY_NOTICE_TEXT ? (
                           <a
@@ -140,11 +145,10 @@ async function ProgramItem({ params }: { params: Promise<{ title: string }> }) {
                     ))}
                   </ul>
                 )}
-                {!program.caution ||
-                  (program.caution.length === 0 && (
-                    <Text>特記事項はありません。</Text>
-                  ))}
               </BlurredBox>
+              {(!program.cautions || program.cautions.length === 0) && (
+                <Text>特記事項はありません。</Text>
+              )}
             </div>
           </div>
           <div className={styles.programTagList}>

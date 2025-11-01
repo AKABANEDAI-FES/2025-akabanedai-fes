@@ -10,7 +10,7 @@
     "logo"
     "organization"
     "location"
-    "descripotion"
+    "description"
     "caution"
     "tags";
 }
@@ -22,7 +22,6 @@
 }
 
 .programTitle {
-  grid-area: title;
   text-align: center;
   background-color: var(--theme-default);
   color: var(--color-gray-1);
