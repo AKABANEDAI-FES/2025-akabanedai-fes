@@ -67,7 +67,8 @@
 }
 
 .mapImage {
-  max-width: var(--size-sm);
+  width: var(--size-sm);
+  max-width: var(--size-full);
   margin-inline: auto;
   object-fit: contain;
 }
@@ -136,6 +137,6 @@
   }
 
   .mapImage {
-    max-width: var(--size-full);
+    width: var(--size-full);
   }
 }
