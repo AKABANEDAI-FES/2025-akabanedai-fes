@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import CautionIcon from "./icon-caution.svg";
 import LineDivider from "./line-divider.svg";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "ご来場の際の注意点",
-};
+});
 
 export default function CautionPage() {
   return (

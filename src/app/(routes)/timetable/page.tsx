@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import day1 from "./day1.webp";
 import day2 from "./day2.webp";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "タイムテーブル",
-};
+});
 
 export default function TimeTable() {
   return (

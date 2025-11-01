@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import logo from "@/assets/logo.webp";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import Circle from "./circle.svg";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "今年度の赤羽台祭について",
-};
+});
 
 export default function AboutPage() {
   return (

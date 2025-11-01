@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Sponsorship } from "@/app/(routes)/sponsorship/_components";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
@@ -6,11 +5,12 @@ import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
 import { sponsorshipData } from "@/sponsorship";
+import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "協賛",
-};
+});
 
 export default function SponsorshipPage() {
   return (

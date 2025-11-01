@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Fragment } from "react";
 import Star from "@/assets/star.svg";
 import { BlurredBox } from "@/components/ui/blurred-box";
@@ -6,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { StarDecoration } from "@/components/ui/star-decoration";
 import { Text } from "@/components/ui/text";
+import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
 const descriptions = [
@@ -50,9 +50,9 @@ const descriptions = [
   },
 ];
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "開催概要",
-};
+});
 
 export default function OverviewPage() {
   return (
