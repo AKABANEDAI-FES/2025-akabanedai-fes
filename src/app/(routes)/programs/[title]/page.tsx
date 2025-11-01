@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Pin from "@/assets/pin.svg";
 import Star from "@/assets/star.svg";
@@ -10,6 +9,7 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import type { Program } from "@/types/program";
 import { getPrograms } from "@/utils/program";
+import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
 const ALLERGY_NOTICE_TEXT = "模擬店で提供する食品のアレルギー成分表示はこちら";
@@ -47,7 +47,7 @@ type PageProps = {
   }>;
 };
 
-export async function generateMetadata(props: PageProps): Promise<Metadata> {
+export async function generateMetadata(props: PageProps) {
   const { title } = await props.params;
   const program = getProgramBySlug(title);
 
@@ -55,13 +55,10 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     throw new Error("Program not found");
   }
 
-  return {
+  return createMetadata({
     title: program.title,
     description: program.description,
-    openGraph: {
-      title: program.title,
-    },
-  };
+  });
 }
 
 export default async function ProgramDetailPage(props: PageProps) {
