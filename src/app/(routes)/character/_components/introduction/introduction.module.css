@@ -5,7 +5,7 @@
 .content {
   width: var(--size-full);
   display: grid;
-  gap: var(--space-lg);
+  gap: var(--space-2xl);
   grid-template-areas:
     "image"
     "tablist"
@@ -15,7 +15,6 @@
 
 @media (width >= 48rem) {
   .content {
-    gap: var(--space-2xl);
     grid-template: "image tablist" auto "image description" 1fr / 1fr 1fr;
   }
 }
