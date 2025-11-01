@@ -43,8 +43,6 @@ export const Introduction = () => {
               <Image
                 src={character.picture}
                 alt={character.name}
-                width={300}
-                height={300}
               />
               <VisuallyHidden>{character.name}</VisuallyHidden>
             </Tabs.Trigger>
