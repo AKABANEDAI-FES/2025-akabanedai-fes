@@ -1,69 +1,51 @@
-"use client";
-
 import { Tabs } from "@ark-ui/react/tabs";
 import Image from "next/image";
-import { useState } from "react";
+import Star from "@/assets/star.svg";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import styles from "./introduction.module.css";
+import inya from "./inya.png";
+import welion from "./welion.png";
 
-type Character = {
-  name: string;
-  picture: string;
-  description: string;
-  themeColor: string;
-  xAccount?: string;
-};
+const characters = [
+  {
+    name: "イニャー",
+    picture: inya,
+    description:
+      "ボクの名前はイニャー！東洋大学赤羽台祭実行委員会INIAD部門の公式マスコットだニャ！ボクは電波の妖精！猫ではないニャ！ボクの特技はインターネットの速度を変えることなんだニャ！ウイルスの退治もできるからそんな時はボクを呼んでほしいニャ！電波を泳いで向かうニャ！今回の赤羽台祭にはボクもたくさん登場するから探してみてニャ！",
+    themeColor: "var(--bg-canvas)",
+  },
+  {
+    name: "ウェリオン",
+    picture: welion,
+    description:
+      '僕の名前はウェリオン！自分の"幸せ"を実現する「ライフデザイン」と、良好で満たされている状態「ウェルビーイング」に相応しい動物のライオン。「健康」や「幸せ」をイメージとした穏やかな緑と黄色をしているよ。しっぽはクローバーをモチーフに、王冠はWELLB のWの形ガウ！',
+    themeColor: "var(--color-accent-5)",
+  },
+];
 
-type Props = {
-  characters: Character[];
-};
-
-export const Introduction = ({ characters }: Props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+export const Introduction = () => {
   return (
-    <BlurredBox
-      as="section"
-      className={styles.container}
-      style={
-        {
-          "--theme-color": characters[activeIndex].themeColor,
-        } as React.CSSProperties
-      }
-    >
-      <div className={styles.imgWrapper}>
-        <Image
-          className={styles.imageWrapper}
-          src={characters[activeIndex].picture}
-          alt={characters[activeIndex].name}
-          width={300}
-          height={300}
-        />
-      </div>
-      <Tabs.Root
-        value={activeIndex.toString()}
-        onValueChange={(e) => setActiveIndex(Number.parseInt(e.value, 10))}
-        className={styles.content}
-      >
+    <BlurredBox as="section" className={styles.container}>
+      <Tabs.Root className={styles.content} defaultValue="0">
         <Tabs.List className={styles.tabList}>
           {characters.map((character, index) => (
             <Tabs.Trigger
               key={character.name}
               value={index.toString()}
+              style={
+                { "--image-color": character.themeColor } as React.CSSProperties
+              }
               className={styles.tabTrigger}
             >
-              <div className={styles.tabImageWrapper}>
-                <Image
-                  style={{ backgroundColor: character.themeColor }}
-                  src={character.picture}
-                  alt={character.name}
-                  width={300}
-                  height={300}
-                />
-              </div>
+              <Image
+                src={character.picture}
+                alt={character.name}
+                width={300}
+                height={300}
+              />
               <VisuallyHidden>{character.name}</VisuallyHidden>
             </Tabs.Trigger>
           ))}
@@ -72,17 +54,27 @@ export const Introduction = ({ characters }: Props) => {
           <Tabs.Content
             key={character.name}
             value={index.toString()}
+            style={
+              { "--image-color": character.themeColor } as React.CSSProperties
+            }
             className={styles.tabContent}
           >
+            <div className={styles.imageFrame}>
+              <Image
+                className={styles.mainVisual}
+                src={character.picture}
+                alt={character.name}
+              />
+            </div>
             <div className={styles.description}>
-              <Heading as="h2">{character.name}</Heading>
-              <Text>{character.description}</Text>
-              {character.xAccount && (
-                <div className={styles.xAccount}>
-                  <XIcon />
-                  <Text as="span">{character.xAccount}</Text>
-                </div>
-              )}
+              <Heading as="h2" variant="secondary">
+                {character.name}
+              </Heading>
+              <div className={styles.descriptionFrame}>
+                <Text>{character.description}</Text>
+                <Star className={styles.upRightStar} />
+                <Star className={styles.bottomLeftStar} />
+              </div>
             </div>
           </Tabs.Content>
         ))}
@@ -90,19 +82,3 @@ export const Introduction = ({ characters }: Props) => {
     </BlurredBox>
   );
 };
-
-function XIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <title>X (Twitter)</title>
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
