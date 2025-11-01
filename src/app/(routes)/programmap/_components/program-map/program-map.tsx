@@ -159,6 +159,14 @@ const mapData = {
   },
 } as const satisfies MapData;
 
+const maxHeight = Object.values(mapData)
+  .flatMap((location) => location.details.map((detail) => detail.image.height))
+  .reduce((a, b) => Math.max(a, b), 0);
+
+const maxWidth = Object.values(mapData)
+  .flatMap((location) => location.details.map((detail) => detail.image.width))
+  .reduce((a, b) => Math.max(a, b), 0);
+
 export function ProgramMap() {
   const [where, setWhere] = useState<keyof typeof mapData>("iniad");
   const [selected, setSelected] = useState(0);
@@ -264,7 +272,12 @@ function TabContent({
             className={styles.subTabContent}
           >
             <div className={styles.mapContainer}>
-              <Image src={detail.image} alt="" />
+              <Image
+                src={detail.image}
+                style={{ aspectRatio: maxWidth / maxHeight }}
+                alt=""
+                className={styles.mapImage}
+              />
               <MapSvg data-location={location} />
             </div>
           </Tabs.Content>
@@ -274,6 +287,7 @@ function TabContent({
       <div className={styles.carousel}>
         <Image
           src={data.details[selected].image}
+          style={{ aspectRatio: maxHeight / maxWidth }}
           alt=""
           className={styles.mapImage}
         />

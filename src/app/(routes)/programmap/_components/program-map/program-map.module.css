@@ -67,10 +67,9 @@
 }
 
 .mapImage {
-  width: var(--size-full);
   max-width: var(--size-sm);
   margin-inline: auto;
-  padding-block: var(--space-md);
+  object-fit: contain;
 }
 
 .carouselAction {
@@ -126,5 +125,9 @@
 
   .carousel {
     display: none;
+  }
+
+  .mapImage {
+    max-width: var(--size-full);
   }
 }
