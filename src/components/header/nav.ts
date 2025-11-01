@@ -29,7 +29,7 @@ export const navigation: Navigation[] = [
     items: [
       { label: "マスコットキャラクター", href: "/character" },
       { label: "公式グッズ", href: "/officialgoods" },
-      { label: "パンフレット", href: "/9thpamphlet.pdf", external: true },
+      { label: "パンフレット", href: "/pamphlet" },
       { label: "マップ", href: "/campusmap" },
     ],
   },
