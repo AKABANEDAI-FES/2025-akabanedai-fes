@@ -1,51 +1,48 @@
 .filterRoot {
-  width: 100%;
   display: grid;
   gap: var(--space-sm);
 }
 
 .filterItem {
-  width: 100%;
   background-color: var(--bg-canvas);
   border: 2px solid var(--theme-default);
   border-radius: var(--radius-l3);
-  padding: var(--space-xs);
-  word-break: keep-all;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
 }
 
 .filterTrigger {
-  display: flex;
-  width: 100%;
-  padding: 0;
-  background: none;
-  border: none;
   cursor: pointer;
-  text-align: left;
-}
-
-.filterTitle {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center start;
+  gap: var(--space-xs);
   font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-xs);
 }
 
-.indicatorWrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-}
-
-.indicatorWrapper[data-state="open"] {
-  transform: rotate(90deg);
-}
-
-.blackStarIcon {
+.indicator {
   width: 1em;
   height: 1em;
   fill: currentcolor;
+  transition: transform 0.2s ease;
+}
+
+.indicator[data-state="open"] {
+  transform: rotate(90deg);
+}
+
+.chevron {
+  width: 1em;
+  height: 1em;
+  transition: transform 0.2s ease;
+  transform: rotate(180deg);
+}
+
+.chevron[data-state="open"] {
+  transform: rotate(0deg);
 }
 
 .filterContent {
@@ -81,29 +78,31 @@
 }
 
 .options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   width: 100%;
-  padding-top: var(--space-xs);
+  padding: var(--space-xs);
 }
 
 .option {
-  padding: var(--space-xs) var(--space-sm);
-  text-align: center;
-  border-radius: var(--radius-l1);
   cursor: pointer;
   user-select: none;
-  font-size: var(--font-size-sm);
-  word-break: keep-all;
-  border: 2px solid var(--theme-default);
-  overflow-wrap: anywhere;
-  transition: background-color 0.2s ease;
-  background-color: transparent;
-  color: inherit;
 }
 
 .option[data-state="on"] {
   background-color: var(--theme-default);
   color: var(--theme-fg);
+  outline: 2px solid var(--theme-default);
+  outline-offset: 2px;
+}
+
+@media (width >= 48rem) {
+  .filterTrigger {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .options {
+    padding: var(--space-sm) var(--space-md);
+  }
 }

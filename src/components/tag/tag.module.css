@@ -15,28 +15,28 @@
     height: 1.1em;
   }
 
-  .tag[data-size="sm"] {
+  .sm {
     font-size: var(--font-size-xs);
   }
 
-  .tag[data-size="md"] {
+  .md {
     font-size: var(--font-size-sm);
   }
 
-  .tag[data-size="lg"] {
+  .lg {
     font-size: var(--font-size-md);
   }
 
   @media (width >= 48rem) {
-    .tag[data-size="sm"] {
+    .sm {
       font-size: var(--font-size-sm);
     }
 
-    .tag[data-size="md"] {
+    .md {
       font-size: var(--font-size-md);
     }
 
-    .tag[data-size="lg"] {
+    .lg {
       font-size: var(--font-size-lg);
     }
   }

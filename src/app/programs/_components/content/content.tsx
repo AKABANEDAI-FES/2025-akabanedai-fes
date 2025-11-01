@@ -26,19 +26,19 @@ export function Content() {
         <Filter
           options={where}
           value={selectedWhere}
-          title="場所"
+          label="場所"
           onValueChange={setSelectedWhere}
         />
         <Filter
           options={tags}
           value={selectedTag}
-          title="タグ"
+          label="タグ"
           onValueChange={setSelectedTag}
         />
         <Filter
           options={cautions}
           value={selectedCaution}
-          title="注意事項のある企画を除外"
+          label="注意事項のある企画を除外"
           onValueChange={setSelectedCaution}
           defaultOpen={false}
         />

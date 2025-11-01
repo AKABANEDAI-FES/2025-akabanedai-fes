@@ -2,34 +2,37 @@
 
 import { Accordion } from "@ark-ui/react";
 import { ToggleGroup } from "@ark-ui/react/toggle-group";
+import clsx from "clsx";
 import type { ComponentProps } from "react";
+import Chevron from "@/assets/chevron.svg";
 import Star from "@/assets/star.svg";
-import { Heading } from "@/components/ui/heading";
+import { tag } from "@/components/tag";
 import styles from "./filter.module.css";
 
 type FilterProps<T extends string> = {
   options: readonly T[];
   value: readonly T[];
-  title: string;
+  label: string;
   onValueChange: (value: T[]) => void;
   defaultOpen?: boolean;
 };
 
 export const Filter = <T extends string>({
   options,
-  title,
+  label,
   value,
   onValueChange,
 }: FilterProps<T>) => {
   return (
-    <Accordion.Item value={title} className={styles.filterItem}>
+    <Accordion.Item value={label} className={styles.filterItem}>
       <Accordion.ItemTrigger className={styles.filterTrigger}>
-        <Heading as="h3" className={styles.filterTitle}>
-          <Accordion.ItemIndicator className={styles.indicatorWrapper}>
-            <Star className={styles.blackStarIcon} />
-          </Accordion.ItemIndicator>
-          {title}
-        </Heading>
+        <Accordion.ItemIndicator className={styles.indicator} asChild>
+          <Star />
+        </Accordion.ItemIndicator>
+        {label}
+        <Accordion.ItemIndicator className={styles.chevron} asChild>
+          <Chevron />
+        </Accordion.ItemIndicator>
       </Accordion.ItemTrigger>
       <Accordion.ItemContent className={styles.filterContent}>
         <ToggleGroup.Root
@@ -44,7 +47,7 @@ export const Filter = <T extends string>({
             <ToggleGroup.Item
               key={option}
               value={option}
-              className={styles.option}
+              className={clsx(tag({ size: "md" }), styles.option)}
             >
               {option}
             </ToggleGroup.Item>
