@@ -40,10 +40,7 @@ export const Introduction = () => {
               }
               className={styles.tabTrigger}
             >
-              <Image
-                src={character.picture}
-                alt={character.name}
-              />
+              <Image src={character.picture} alt={character.name} />
               <VisuallyHidden>{character.name}</VisuallyHidden>
             </Tabs.Trigger>
           ))}
