@@ -13,8 +13,6 @@ import { createMetadata } from "@/utils/seo";
 import styles from "./page.module.css";
 
 const ALLERGY_NOTICE_TEXT = "模擬店で提供する食品のアレルギー成分表示はこちら";
-const ALLERGY_NOTICE_LINK =
-  "https://akabanedai-fes.com/09/r8-akabanedaifes-allergy.pdf";
 
 function generateSlug(program: Program) {
   const prod = process.env.NODE_ENV === "production";
@@ -125,7 +123,7 @@ export default async function ProgramDetailPage(props: PageProps) {
                 <Text as="li" key={item}>
                   {item === ALLERGY_NOTICE_TEXT ? (
                     <a
-                      href={ALLERGY_NOTICE_LINK}
+                      href="/r8-akabanedaifes-allergy.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.boldLink}
