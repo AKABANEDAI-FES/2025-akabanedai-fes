@@ -3,6 +3,7 @@
 import { Tabs } from "@ark-ui/react/tabs";
 import Image, { type StaticImageData } from "next/image";
 import { useMemo, useState } from "react";
+import Chevron from "@/assets/chevron.svg";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import type { Program } from "@/types/program";
 import { getPrograms } from "@/utils/program";
@@ -299,7 +300,7 @@ function TabContent({
             disabled={selected === 0}
             aria-label="前の階へ"
           >
-            <ChevronLeftIcon />
+            <Chevron className={styles.chevronLeft} />
           </button>
           <div className={styles.floorLabel}>
             {data.details[selected].label}
@@ -311,50 +312,10 @@ function TabContent({
             disabled={selected === data.details.length - 1}
             aria-label="次の階へ"
           >
-            <ChevronRightIcon />
+            <Chevron className={styles.chevronRight} />
           </button>
         </div>
       </div>
     </>
-  );
-}
-
-function ChevronLeftIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <title>左矢印</title>
-      <path d="M15 18l-6-6 6-6" />
-    </svg>
-  );
-}
-
-function ChevronRightIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <title>右矢印</title>
-      <path d="M9 18l6-6-6-6" />
-    </svg>
   );
 }

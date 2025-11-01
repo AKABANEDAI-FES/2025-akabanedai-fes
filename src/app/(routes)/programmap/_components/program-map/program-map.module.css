@@ -91,6 +91,14 @@
   cursor: not-allowed;
 }
 
+.chevronLeft {
+  transform: rotate(-90deg);
+}
+
+.chevronRight {
+  transform: rotate(90deg);
+}
+
 .floorLabel {
   text-align: center;
   font-size: var(--font-size-2xl);
