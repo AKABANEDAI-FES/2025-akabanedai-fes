@@ -71,7 +71,7 @@ export default async function ProgramDetailPage(props: PageProps) {
     throw new Error("Program not found");
   }
   return (
-    <Container as="main" className={styles.pageContainer}>
+    <Container as="main">
       <Heading as="h1" variant="primary" className={styles.programTitle}>
         {program.title}
       </Heading>
