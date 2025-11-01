@@ -15,7 +15,7 @@ export default function ProgramsPage() {
       <StarDecoration>
         <Heading as="h1">企画一覧</Heading>
       </StarDecoration>
-      <Content></Content>
+      <Content />
     </Container>
   );
 }

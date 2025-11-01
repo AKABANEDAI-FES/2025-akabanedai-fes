@@ -13,6 +13,7 @@ import {
 } from "@/types/program";
 import { getPrograms } from "@/utils/program";
 import { Filter } from "../filter";
+import { FilterGroup } from "../filter/filter";
 import styles from "./content.module.css";
 
 export function Content() {
@@ -21,43 +22,27 @@ export function Content() {
   const [selectedCaution, setSelectedCaution] = useState<Caution[]>([]);
   return (
     <Container as="div" className={styles.content}>
-      <Filter
-        options={where}
-        selected={selectedWhere}
-        title="場所"
-        onSelect={(option) =>
-          setSelectedWhere((curr) =>
-            curr.includes(option)
-              ? curr.filter((o) => o !== option)
-              : [...curr, option],
-          )
-        }
-      />
-      <Filter
-        options={tags}
-        selected={selectedTag}
-        title="タグ"
-        onSelect={(option) =>
-          setSelectedTag((curr) =>
-            curr.includes(option)
-              ? curr.filter((o) => o !== option)
-              : [...curr, option],
-          )
-        }
-      />
-      <Filter
-        options={cautions}
-        selected={selectedCaution}
-        title="注意事項のある企画を除外"
-        onSelect={(option) =>
-          setSelectedCaution((curr) =>
-            curr.includes(option)
-              ? curr.filter((o) => o !== option)
-              : [...curr, option],
-          )
-        }
-        isInitOpen={false}
-      />
+      <FilterGroup>
+        <Filter
+          options={where}
+          value={selectedWhere}
+          label="場所"
+          onValueChange={setSelectedWhere}
+        />
+        <Filter
+          options={tags}
+          value={selectedTag}
+          label="タグ"
+          onValueChange={setSelectedTag}
+        />
+        <Filter
+          options={cautions}
+          value={selectedCaution}
+          label="注意事項のある企画を除外"
+          onValueChange={setSelectedCaution}
+          defaultOpen={false}
+        />
+      </FilterGroup>
       <ProgramList
         programs={getPrograms().filter(({ where, tags, cautions }) =>
           [
