@@ -20,7 +20,7 @@
 .programTitle {
   text-align: center;
   background-color: var(--theme-default);
-  color: var(--color-gray-1);
+  color: var(--theme-fg);
   border-radius: var(--radius-l2);
   padding: var(--space-xs);
 }
@@ -70,7 +70,7 @@
   padding: 0.125em 0.5em;
   border-radius: var(--radius-l2);
   gap: var(--space-xs);
-  background: var(--color-gray-1);
+  background: var(--bg-default);
 }
 
 .boldLink {
