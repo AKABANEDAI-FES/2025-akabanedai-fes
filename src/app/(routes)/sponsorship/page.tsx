@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sponsorship } from "@/app/sponsorship/_components";
+import { Sponsorship } from "@/app/(routes)/sponsorship/_components";
 import { BlurredBox } from "@/components/ui/blurred-box";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
