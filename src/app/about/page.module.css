@@ -93,6 +93,7 @@
 
 .logoImage {
   width: 100%;
+  background-color: var(--bg-default);
 }
 
 .logoSubtitle {
