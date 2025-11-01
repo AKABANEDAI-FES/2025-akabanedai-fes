@@ -5,6 +5,7 @@
 
 .programItem {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   margin-block: var(--space-lg);
   padding-inline: var(--space-sm);
@@ -27,7 +28,6 @@
 .programLogo {
   margin-top: 0;
   width: 100%;
-  max-height: 30rem;
   border-radius: var(--radius-l2);
   object-fit: contain;
   justify-self: center;
