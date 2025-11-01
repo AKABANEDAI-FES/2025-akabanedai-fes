@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLocationState } from "@location-state/core";
 import { ProgramList } from "@/components/program-list";
 import { Container } from "@/components/ui/container";
 import {
@@ -17,9 +17,22 @@ import { FilterGroup } from "../filter/filter";
 import styles from "./content.module.css";
 
 export function Content() {
-  const [selectedWhere, setSelectedWhere] = useState<Where[]>([]);
-  const [selectedTag, setSelectedTag] = useState<Tag[]>([]);
-  const [selectedCaution, setSelectedCaution] = useState<Caution[]>([]);
+  const [selectedWhere, setSelectedWhere] = useLocationState<Where[]>({
+    name: "where",
+    defaultValue: [],
+    storeName: "url",
+  });
+  const [selectedTag, setSelectedTag] = useLocationState<Tag[]>({
+    name: "tag",
+    defaultValue: [],
+    storeName: "url",
+  });
+  const [selectedCaution, setSelectedCaution] = useLocationState<Caution[]>({
+    name: "caution",
+    defaultValue: [],
+    storeName: "url",
+  });
+
   return (
     <Container as="div" className={styles.content}>
       <FilterGroup>
