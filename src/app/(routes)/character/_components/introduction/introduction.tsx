@@ -66,7 +66,9 @@ export const Introduction = () => {
                 {character.name}
               </Heading>
               <div className={styles.descriptionFrame}>
-                <Text>{character.description}</Text>
+                <Text className={styles.descriptionText}>
+                  {character.description}
+                </Text>
                 <Star className={styles.topRightStar} />
                 <Star className={styles.bottomLeftStar} />
               </div>

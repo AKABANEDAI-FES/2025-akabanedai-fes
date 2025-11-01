@@ -99,11 +99,43 @@
   object-fit: contain;
 }
 
+.tabContent[data-state="open"] .mainVisual {
+  animation: slideUpFadeIn 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabContent[data-state="open"] .mainVisual {
+    animation: none;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0.6;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .description {
   grid-area: description;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: var(--space-md);
+}
+
+.tabContent[data-state="open"] .descriptionText {
+  animation: slideUpFadeIn 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabContent[data-state="open"] .descriptionText {
+    animation: none;
+  }
 }
 
 .descriptionFrame {
@@ -162,4 +194,28 @@
   transform: rotate(5deg);
   border-radius: var(--radius-l3);
   z-index: -1;
+}
+
+.tabContent[data-state="open"] .descriptionFrame::before,
+.tabContent[data-state="open"] .imageFrame::before {
+  animation: slideUpFadeInRotated 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabContent[data-state="open"] .descriptionFrame::before,
+  .tabContent[data-state="open"] .imageFrame::before {
+    animation: none;
+  }
+}
+
+@keyframes slideUpFadeInRotated {
+  from {
+    opacity: 0.6;
+    transform: translateY(2rem) rotate(5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(5deg);
+  }
 }
