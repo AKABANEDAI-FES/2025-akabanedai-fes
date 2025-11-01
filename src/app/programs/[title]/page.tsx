@@ -120,30 +120,28 @@ export default async function ProgramDetailPage(props: PageProps) {
             注意事項
           </Heading>
 
-          <div>
-            {!program.cautions || program.cautions.length === 0 ? (
-              <Text>特記事項はありません。</Text>
-            ) : (
-              <ul>
-                {program.cautions.map((item) => (
-                  <Text as="li" key={item}>
-                    {item === ALLERGY_NOTICE_TEXT ? (
-                      <a
-                        href={ALLERGY_NOTICE_LINK}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.boldLink}
-                      >
-                        {item}
-                      </a>
-                    ) : (
-                      item
-                    )}
-                  </Text>
-                ))}
-              </ul>
-            )}
-          </div>
+          {!program.cautions || program.cautions.length === 0 ? (
+            <Text>特記事項はありません。</Text>
+          ) : (
+            <ul>
+              {program.cautions.map((item) => (
+                <Text as="li" key={item}>
+                  {item === ALLERGY_NOTICE_TEXT ? (
+                    <a
+                      href={ALLERGY_NOTICE_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.boldLink}
+                    >
+                      {item}
+                    </a>
+                  ) : (
+                    item
+                  )}
+                </Text>
+              ))}
+            </ul>
+          )}
           <div className={styles.programTagList}>
             {program.tags.map((tag) => (
               <Tag key={tag} size="sm" className={styles.programTag}>
