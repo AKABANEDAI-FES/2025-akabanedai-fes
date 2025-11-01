@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Pin from "@/assets/pin.svg";
 import type { Program } from "@/types/program";
 import { Tag } from "../tag";
@@ -25,7 +26,10 @@ export function ProgramList({ programs }: Props) {
 
 function ProgramItem({ program }: { program: Program }) {
   return (
-    <div className={styles.programItem}>
+    <Link
+      href={`/programs/${encodeURIComponent(program.title)}`}
+      className={styles.programItem}
+    >
       <Image
         src={program.logo}
         alt=""
@@ -39,7 +43,7 @@ function ProgramItem({ program }: { program: Program }) {
       <Text className={styles.programOrganization}>{program.organization}</Text>
       <Text className={styles.programLocation}>
         <Pin
-          data-location={program.where?.toLocaleLowerCase()}
+          data-location={program.where?.toLowerCase()}
           className={styles.pin}
         />
         {formatLocation(program)}
@@ -51,7 +55,7 @@ function ProgramItem({ program }: { program: Program }) {
           </Tag>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -12,6 +12,7 @@ export const cautions = [
   "時間がかかる可能性があります。",
   "年齢制限があります。",
   "服が濡れたり汚れたりする可能性があります。",
+  "模擬店で提供する食品のアレルギー成分表示はこちら",
 ] as const;
 
 export const where = ["INIAD", "HELSPO", "屋外", "WELLB"] as const;
