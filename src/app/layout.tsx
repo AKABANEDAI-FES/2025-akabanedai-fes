@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header/header";
 import { MobileMenu } from "@/components/header/mobile-menu";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Providers } from "@/components/providers";
 import { Parallax } from "./_components/parallax";
 import styles from "./layout.module.css";
@@ -45,6 +46,7 @@ export default function RootLayout({
         )}
         <Providers>
           <MobileMenu />
+          <ScrollToTop />
           <Parallax.Root className={styles.parallax}>
             <div className={styles.overlay}>
               <Header className={styles.header} />
