@@ -1,0 +1,34 @@
+.trigger {
+  top: 50vh;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 999;
+}
+
+.scrollToTop[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (width >= 48rem) {
+  .scrollToTop {
+    width: 8rem;
+    height: 8rem;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+  }
+}
