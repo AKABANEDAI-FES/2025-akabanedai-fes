@@ -1,6 +1,6 @@
 const html = `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <link
     rel="canonical"
@@ -11,6 +11,9 @@ const html = `
     content="0; URL=https://2025-programming-experience.akabanedai.workers.dev"
   />
 </head>
+<body>
+</body>
+</html>
 `;
 
 export const dynamic = "force-static";
