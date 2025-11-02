@@ -1,13 +1,14 @@
 .trigger {
   top: 50vh;
+  left: 50%;
 }
 
 .scrollToTop {
   position: fixed;
   bottom: var(--space-md);
   right: var(--space-md);
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -16,7 +17,7 @@
   transition:
     opacity 0.3s ease,
     visibility 0.3s ease;
-  z-index: 999;
+  z-index: 1;
 }
 
 .scrollToTop[data-visible="true"] {
