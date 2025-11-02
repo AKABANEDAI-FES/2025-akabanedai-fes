@@ -112,12 +112,12 @@ export const sponsorshipData = {
     {
       sponsor: "株式会社KINUJO",
       logoPath: "/sponsorship/1.kinujyo.jpg",
-      url: "https://www.kinujo.jp/",
+      url: "https://kinujo.jp/",
     },
     {
       sponsor: "伊香保グリーン牧場",
       logoPath: "/sponsorship/2.greenbokujo-1.png",
-      url: "https://www.greenbokujo.jp/",
+      url: "https://www.greenbokujo.jp//",
     },
     {
       sponsor: "株式会社歌広場",
