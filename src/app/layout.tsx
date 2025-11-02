@@ -7,6 +7,7 @@ import { MobileMenu } from "@/components/header/mobile-menu";
 import { Providers } from "@/components/providers";
 import { Parallax } from "./_components/parallax";
 import styles from "./layout.module.css";
+import { BackToTopButton } from "@/components/back-to-topbutton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://akabanedai-fes.com/"),
@@ -54,6 +55,7 @@ export default function RootLayout({
               {children}
               <Footer />
             </Parallax.Content>
+            <BackToTopButton scrollThreshold={300} />
           </Parallax.Root>
         </Providers>
       </body>

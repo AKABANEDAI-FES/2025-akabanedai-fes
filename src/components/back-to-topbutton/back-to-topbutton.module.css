@@ -1,0 +1,40 @@
+/* app/Page.module.css */
+
+/* ボタンの共通スタイル */
+.button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  /* シンプルな見た目 */
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #333; /* 濃い灰色 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+
+  /* アニメーション */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* 非表示状態 */
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* クリック無効化 */
+  transform: translateY(10px); /* 少し下に隠す */
+}
+
+/* 表示状態 */
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

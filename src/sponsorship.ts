@@ -107,22 +107,22 @@ export const sponsorshipData = {
     {
       sponsor: "株式会社おやつカンパニー",
       logoPath: "/sponsorship/oyatsu-company.png",
-      url: "https://www.snackcompany.co.jp/",
+      url: "https://www.oyatsu.co.jp/",
     },
     {
       sponsor: "株式会社KINUJO",
       logoPath: "/sponsorship/1.kinujyo.jpg",
-      url: "https://www.kinujyo.co.jp/",
+      url: "https://www.kinujo.jp/",
     },
     {
       sponsor: "伊香保グリーン牧場",
       logoPath: "/sponsorship/2.greenbokujo-1.png",
-      url: "https://www.greenbokujo.com/",
+      url: "https://www.greenbokujo.jp/",
     },
     {
       sponsor: "株式会社歌広場",
       logoPath: "/sponsorship/3.utahiroba.jpg",
-      url: "https://www.utahiroba.com/",
+      url: "https://www.utahiro.com/",
     },
     {
       sponsor: "株式会社柳屋本店",
@@ -142,7 +142,7 @@ export const sponsorshipData = {
     {
       sponsor: "株式会社ニュートン",
       logoPath: "/sponsorship/7.pasera.jpg",
-      url: "https://www.pasera.jp/",
+      url: "https://www.newton-co.jp/i/",
     },
     {
       sponsor: "株式会社ＴＯＫＹＯ ＴＯＷＥＲ",
