@@ -3,7 +3,7 @@ import type { Caution, Program, Tag, Where } from "@/types/program";
 
 export function getPrograms(): Program[] {
   return programs.map((program) => ({
-    title: program.企画名,
+    title: program.企画名.trim(),
     officialTitle: program.正式企画名,
     organization: program.団体名,
     description: program.紹介文,
