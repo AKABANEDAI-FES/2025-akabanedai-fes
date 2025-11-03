@@ -18,7 +18,10 @@ export default function PamphletPage() {
         <Heading as="h1">パンフレット</Heading>
       </StarDecoration>
       <Image src={cover} alt="パンフレット表紙" className={styles.cover} />
-      <LinkButton href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/9thpamphlet.pdf`} download>
+      <LinkButton
+        href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/9thpamphlet.pdf`}
+        download
+      >
         ダウンロード（24.2MB）
       </LinkButton>
     </Container>
