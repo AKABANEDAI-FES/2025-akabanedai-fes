@@ -67,7 +67,7 @@ export default function AboutPage() {
             variant="secondary"
             className={styles.greetingHeaderText}
           >
-            INIAD部門 委員長 佐藤仁輝
+            INIAD部門 委員長 佐藤仁暉
           </Heading>
         </div>
         <div className={styles.greetingBox}>
