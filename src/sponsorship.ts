@@ -106,7 +106,7 @@ export const sponsorshipData = {
     },
     {
       sponsor: "株式会社おやつカンパニー",
-      logoPath: "/sponsorship/oyatsu-company.png",
+      logoPath: null,
       url: "https://www.oyatsu.co.jp/",
     },
     {
