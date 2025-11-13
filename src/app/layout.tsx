@@ -6,6 +6,7 @@ import { Header } from "@/components/header/header";
 import { MobileMenu } from "@/components/header/mobile-menu";
 import { Providers } from "@/components/providers";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { Announcement } from "./_components/announcement";
 import { Parallax } from "./_components/parallax";
 import styles from "./layout.module.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
         <Providers>
+          <Announcement />
           <MobileMenu />
           <Parallax.Root className={styles.parallax} id="parallax-root">
             <div className={styles.overlay}>
