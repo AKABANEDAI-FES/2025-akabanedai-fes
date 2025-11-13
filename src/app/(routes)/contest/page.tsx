@@ -20,8 +20,8 @@ export default function CampusMapPage() {
       <StarDecoration>
         <Heading as="h1">企画コンテスト</Heading>
       </StarDecoration>
-      <div className={styles.content}>
-        <Heading as="h2" variant="secondary" className={styles.contestHeading}>
+      <section className={styles.content}>
+        <Heading as="h2" variant="secondary">
           最終結果
         </Heading>
         <Image
@@ -49,7 +49,7 @@ export default function CampusMapPage() {
           alt="企画コンテストの結果5"
           className={styles.result}
         />
-      </div>
+      </section>
     </Container>
   );
 }
