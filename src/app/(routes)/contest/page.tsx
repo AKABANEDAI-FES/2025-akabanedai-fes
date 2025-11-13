@@ -22,33 +22,33 @@ export default function CampusMapPage() {
       </StarDecoration>
       <div className={styles.content}>
         <Heading as="h2" variant="secondary" className={styles.contestHeading}>
-        最終結果
-      </Heading>
+          最終結果
+        </Heading>
         <Image
-					src={result1}
-					alt="企画コンテストの結果１"
-					className={styles.result}
-				/>
-				<Image
-					src={result2}
-					alt="企画コンテストの結果２"
-					className={styles.result}
-				/>
-				<Image
-					src={result3}
-					alt="企画コンテストの結果３"
-					className={styles.result}
-				/>
+          src={result1}
+          alt="企画コンテストの結果１"
+          className={styles.result}
+        />
         <Image
-					src={result4}
-					alt="企画コンテストの結果4"
-					className={styles.result}
-				/>
-				<Image
-					src={result5}
-					alt="企画コンテストの結果5"
-					className={styles.result}
-				/>
+          src={result2}
+          alt="企画コンテストの結果２"
+          className={styles.result}
+        />
+        <Image
+          src={result3}
+          alt="企画コンテストの結果３"
+          className={styles.result}
+        />
+        <Image
+          src={result4}
+          alt="企画コンテストの結果4"
+          className={styles.result}
+        />
+        <Image
+          src={result5}
+          alt="企画コンテストの結果5"
+          className={styles.result}
+        />
       </div>
     </Container>
   );
